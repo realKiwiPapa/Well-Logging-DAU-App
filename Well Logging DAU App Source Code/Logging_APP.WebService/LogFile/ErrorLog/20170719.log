@@ -1,0 +1,8 @@
+[记录时间：16:02:44.175]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00923: FROM keyword not found where expected
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetA1DataByView(String view_name, Byte[] data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 696
+
+消息：

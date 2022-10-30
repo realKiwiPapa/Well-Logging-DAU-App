@@ -1,0 +1,2 @@
+2017/12/8 9:58:52：：异常信息：ORA-02292: integrity constraint (LOGGINGAPPUSER.SYS_FILE_UPLOAD_FK1) violated - child record found
+2018/1/3 10:52:42：：异常信息：ORA-02292: integrity constraint (LOGGINGAPPUSER.SYS_FILE_UPLOAD_FK1) violated - child record found

@@ -1,0 +1,3286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LoggingModel.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="10.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="LoggingModelStoreContainer">
+    <EntitySet Name="COM_BASE_STRATA_LAYER2" EntityType="LoggingModel.Store.COM_BASE_STRATA_LAYER2" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="COM_JOB_INFO" EntityType="LoggingModel.Store.COM_JOB_INFO" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="COM_JOB_INTERVAL" EntityType="LoggingModel.Store.COM_JOB_INTERVAL" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="COM_LOG_CEMENT_EVALUATION_INF" EntityType="LoggingModel.Store.COM_LOG_CEMENT_EVALUATION_INF" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="COM_LOG_COM_CURVEDATA" EntityType="LoggingModel.Store.COM_LOG_COM_CURVEDATA" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="COM_LOG_COM_CURVEDATA_CACHE" EntityType="LoggingModel.Store.COM_LOG_COM_CURVEDATA_CACHE" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="COM_LOG_DEV_AZI" EntityType="LoggingModel.Store.COM_LOG_DEV_AZI" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="COM_LOG_LAYER" EntityType="LoggingModel.Store.COM_LOG_LAYER" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="COM_LOG_RESULT" EntityType="LoggingModel.Store.COM_LOG_RESULT" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="COM_LOG_WELL_TRAJECTORY" EntityType="LoggingModel.Store.COM_LOG_WELL_TRAJECTORY" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="COM_WELLBORE_BASIC" EntityType="LoggingModel.Store.COM_WELLBORE_BASIC" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="COM_WELLSTRUCTURE_DATA" EntityType="LoggingModel.Store.COM_WELLSTRUCTURE_DATA" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="COM_WELLSTRUCTURE_DRAW" EntityType="LoggingModel.Store.COM_WELLSTRUCTURE_DRAW" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="COM_WELL_BASIC" EntityType="LoggingModel.Store.COM_WELL_BASIC" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_BASE" EntityType="LoggingModel.Store.DM_LOG_BASE" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_CLASS_MEET" EntityType="LoggingModel.Store.DM_LOG_CLASS_MEET" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_CONTACT_WILL" EntityType="LoggingModel.Store.DM_LOG_CONTACT_WILL" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_DATA_SUBMITTED" EntityType="LoggingModel.Store.DM_LOG_DATA_SUBMITTED" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_DOWNHOLE_EQUIP" EntityType="LoggingModel.Store.DM_LOG_DOWNHOLE_EQUIP" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_DRILL_STATE" EntityType="LoggingModel.Store.DM_LOG_DRILL_STATE" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_GEO_DES_ITEM" EntityType="LoggingModel.Store.DM_LOG_GEO_DES_ITEM" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_ITEM" EntityType="LoggingModel.Store.DM_LOG_ITEM" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_ITEMS" EntityType="LoggingModel.Store.DM_LOG_ITEMS" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_JOB_SUMMAY" EntityType="LoggingModel.Store.DM_LOG_JOB_SUMMAY" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_LOGGING_INTERPRETATION" EntityType="LoggingModel.Store.DM_LOG_LOGGING_INTERPRETATION" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_OPS_PLAN" EntityType="LoggingModel.Store.DM_LOG_OPS_PLAN" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_PREDICTED_ITEM" EntityType="LoggingModel.Store.DM_LOG_PREDICTED_ITEM" store:Type="Tables" store:Schema="LOGGINGAPPUSER" store:Name="DM_LOG_PREDICTED_ITEM">
+      <DefiningQuery>SELECT 
+      "DM_LOG_PREDICTED_ITEM"."PREDICTED_LOGGING_ITEMS_ID" AS "PREDICTED_LOGGING_ITEMS_ID", 
+      "DM_LOG_PREDICTED_ITEM"."PREDICTED_LOGGING_NAME" AS "PREDICTED_LOGGING_NAME", 
+      "DM_LOG_PREDICTED_ITEM"."PRE_ST_DEP" AS "PRE_ST_DEP", 
+      "DM_LOG_PREDICTED_ITEM"."PRE_EN_DEP" AS "PRE_EN_DEP", 
+      "DM_LOG_PREDICTED_ITEM"."PRE_SCALE" AS "PRE_SCALE", 
+      "DM_LOG_PREDICTED_ITEM"."NOTE" AS "NOTE", 
+      "DM_LOG_PREDICTED_ITEM"."LOG_ITEM_ID" AS "LOG_ITEM_ID"
+      FROM "LOGGINGAPPUSER"."DM_LOG_PREDICTED_ITEM" "DM_LOG_PREDICTED_ITEM"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DM_LOG_PROCESS" EntityType="LoggingModel.Store.DM_LOG_PROCESS" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_RADIATION_STATUS" EntityType="LoggingModel.Store.DM_LOG_RADIATION_STATUS" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_SOURCE_DATA" EntityType="LoggingModel.Store.DM_LOG_SOURCE_DATA" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_STP_BASE" EntityType="LoggingModel.Store.DM_LOG_STP_BASE" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_STRATA_LAYERED" EntityType="LoggingModel.Store.DM_LOG_STRATA_LAYERED" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_TASK" EntityType="LoggingModel.Store.DM_LOG_TASK" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_THREE_CROSS" EntityType="LoggingModel.Store.DM_LOG_THREE_CROSS" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_TRANSACTION" EntityType="LoggingModel.Store.DM_LOG_TRANSACTION" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_TRANSACTION_STATIC_FLOW" EntityType="LoggingModel.Store.DM_LOG_TRANSACTION_STATIC_FLOW" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_TRANSACTION_STATUSE" EntityType="LoggingModel.Store.DM_LOG_TRANSACTION_STATUSE" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_UP_EQUIP" EntityType="LoggingModel.Store.DM_LOG_UP_EQUIP" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_WORK_ANING" EntityType="LoggingModel.Store.DM_LOG_WORK_ANING" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_WORK_DETAILS" EntityType="LoggingModel.Store.DM_LOG_WORK_DETAILS" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_WORK_HOLDUP_DETAILS" EntityType="LoggingModel.Store.DM_LOG_WORK_HOLDUP_DETAILS" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="DM_LOG_WORK_PERSONNEL" EntityType="LoggingModel.Store.DM_LOG_WORK_PERSONNEL" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="HS_GROUP" EntityType="LoggingModel.Store.HS_GROUP" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="HS_RELATION" EntityType="LoggingModel.Store.HS_RELATION" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="HS_ROLE" EntityType="LoggingModel.Store.HS_ROLE" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="HS_USER" EntityType="LoggingModel.Store.HS_USER" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="HS_VIEW" EntityType="LoggingModel.Store.HS_VIEW" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="MD_APPLICATIONFILES" EntityType="LoggingModel.Store.MD_APPLICATIONFILES" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="MD_APPLICATIONS" EntityType="LoggingModel.Store.MD_APPLICATIONS" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="MD_FILE_ARTIFACTS" EntityType="LoggingModel.Store.MD_FILE_ARTIFACTS" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="MD_REPOVERSIONS" EntityType="LoggingModel.Store.MD_REPOVERSIONS" store:Type="Tables" store:Schema="LOGGINGAPPUSER" store:Name="MD_REPOVERSIONS">
+      <DefiningQuery>SELECT 
+      "MD_REPOVERSIONS"."REVISION" AS "REVISION"
+      FROM "LOGGINGAPPUSER"."MD_REPOVERSIONS" "MD_REPOVERSIONS"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MD_TABLESPACES" EntityType="LoggingModel.Store.MD_TABLESPACES" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="MD_USER_PRIVILEGES" EntityType="LoggingModel.Store.MD_USER_PRIVILEGES" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PC_PROJECT_ASSOC" EntityType="LoggingModel.Store.PC_PROJECT_ASSOC" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PKL_LOG_DEPARTMENT_REQUISITION" EntityType="LoggingModel.Store.PKL_LOG_DEPARTMENT_REQUISITION" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PKL_LOG_DOWNHOLE_INSTRUMENT" EntityType="LoggingModel.Store.PKL_LOG_DOWNHOLE_INSTRUMENT" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PKL_LOG_DRILL_STATUS" EntityType="LoggingModel.Store.PKL_LOG_DRILL_STATUS" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PKL_LOG_EXEC_UNIT" EntityType="LoggingModel.Store.PKL_LOG_EXEC_UNIT" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PKL_LOG_ITEM" EntityType="LoggingModel.Store.PKL_LOG_ITEM" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PKL_LOG_ITEM_ARCHIVE" EntityType="LoggingModel.Store.PKL_LOG_ITEM_ARCHIVE" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PKL_LOG_ITEM_BAK" EntityType="LoggingModel.Store.PKL_LOG_ITEM_BAK" store:Type="Tables" store:Schema="LOGGINGAPPUSER" store:Name="PKL_LOG_ITEM_BAK">
+      <DefiningQuery>SELECT 
+      "PKL_LOG_ITEM_BAK"."LOG_ITEM_ID" AS "LOG_ITEM_ID", 
+      "PKL_LOG_ITEM_BAK"."LOG_ITEM_TYPE1" AS "LOG_ITEM_TYPE1", 
+      "PKL_LOG_ITEM_BAK"."LOG_ITEM_TYPE2" AS "LOG_ITEM_TYPE2", 
+      "PKL_LOG_ITEM_BAK"."LOG_ITEM_TYPE3" AS "LOG_ITEM_TYPE3", 
+      "PKL_LOG_ITEM_BAK"."LOG_ITEM_TYPE4" AS "LOG_ITEM_TYPE4", 
+      "PKL_LOG_ITEM_BAK"."WRITER" AS "WRITER", 
+      "PKL_LOG_ITEM_BAK"."WRITING_DATE" AS "WRITING_DATE", 
+      "PKL_LOG_ITEM_BAK"."VERIFIER" AS "VERIFIER", 
+      "PKL_LOG_ITEM_BAK"."VERIFICATION_DATE" AS "VERIFICATION_DATE", 
+      "PKL_LOG_ITEM_BAK"."REMARK" AS "REMARK"
+      FROM "LOGGINGAPPUSER"."PKL_LOG_ITEM_BAK" "PKL_LOG_ITEM_BAK"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PKL_LOG_MARKET_TYPE" EntityType="LoggingModel.Store.PKL_LOG_MARKET_TYPE" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PKL_LOG_OPS_CURVE" EntityType="LoggingModel.Store.PKL_LOG_OPS_CURVE" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PKL_LOG_OPS_PERPOSE" EntityType="LoggingModel.Store.PKL_LOG_OPS_PERPOSE" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PKL_LOG_OPS_PROJECT" EntityType="LoggingModel.Store.PKL_LOG_OPS_PROJECT" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PKL_LOG_OPS_TECHNOLOGY" EntityType="LoggingModel.Store.PKL_LOG_OPS_TECHNOLOGY" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PKL_LOG_RADIATION" EntityType="LoggingModel.Store.PKL_LOG_RADIATION" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PKL_LOG_REQUISITION_TYPE" EntityType="LoggingModel.Store.PKL_LOG_REQUISITION_TYPE" store:Type="Tables" store:Schema="LOGGINGAPPUSER" store:Name="PKL_LOG_REQUISITION_TYPE">
+      <DefiningQuery>SELECT 
+      "PKL_LOG_REQUISITION_TYPE"."REQUISITION_TYPE_ID" AS "REQUISITION_TYPE_ID", 
+      "PKL_LOG_REQUISITION_TYPE"."REQUISITION_TYPE_NAME" AS "REQUISITION_TYPE_NAME", 
+      "PKL_LOG_REQUISITION_TYPE"."LOG_TYPE_CD" AS "LOG_TYPE_CD", 
+      "PKL_LOG_REQUISITION_TYPE"."WRITER" AS "WRITER", 
+      "PKL_LOG_REQUISITION_TYPE"."WRITING_DATE" AS "WRITING_DATE", 
+      "PKL_LOG_REQUISITION_TYPE"."VERIFIER" AS "VERIFIER", 
+      "PKL_LOG_REQUISITION_TYPE"."VERIFICATION_DATE" AS "VERIFICATION_DATE", 
+      "PKL_LOG_REQUISITION_TYPE"."REMARK" AS "REMARK"
+      FROM "LOGGINGAPPUSER"."PKL_LOG_REQUISITION_TYPE" "PKL_LOG_REQUISITION_TYPE"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PKL_LOG_TEAM" EntityType="LoggingModel.Store.PKL_LOG_TEAM" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PKL_LOG_TYPE" EntityType="LoggingModel.Store.PKL_LOG_TYPE" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PKL_LOG_WELL_SORT" EntityType="LoggingModel.Store.PKL_LOG_WELL_SORT" store:Type="Tables" store:Schema="LOGGINGAPPUSER" store:Name="PKL_LOG_WELL_SORT">
+      <DefiningQuery>SELECT 
+      "PKL_LOG_WELL_SORT"."WELL_SORT_ID" AS "WELL_SORT_ID", 
+      "PKL_LOG_WELL_SORT"."WELL_SORT" AS "WELL_SORT", 
+      "PKL_LOG_WELL_SORT"."WRITER" AS "WRITER", 
+      "PKL_LOG_WELL_SORT"."WRITING_DATE" AS "WRITING_DATE", 
+      "PKL_LOG_WELL_SORT"."VERIFIER" AS "VERIFIER", 
+      "PKL_LOG_WELL_SORT"."VERIFICATION_DATE" AS "VERIFICATION_DATE", 
+      "PKL_LOG_WELL_SORT"."REMARK" AS "REMARK"
+      FROM "LOGGINGAPPUSER"."PKL_LOG_WELL_SORT" "PKL_LOG_WELL_SORT"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PKL_LOG_WELL_TYPE" EntityType="LoggingModel.Store.PKL_LOG_WELL_TYPE" store:Type="Tables" store:Schema="LOGGINGAPPUSER" store:Name="PKL_LOG_WELL_TYPE">
+      <DefiningQuery>SELECT 
+      "PKL_LOG_WELL_TYPE"."WELL_TYPE_ID" AS "WELL_TYPE_ID", 
+      "PKL_LOG_WELL_TYPE"."WELL_TYPE" AS "WELL_TYPE", 
+      "PKL_LOG_WELL_TYPE"."WRITER" AS "WRITER", 
+      "PKL_LOG_WELL_TYPE"."WRITING_DATE" AS "WRITING_DATE", 
+      "PKL_LOG_WELL_TYPE"."VERIFIER" AS "VERIFIER", 
+      "PKL_LOG_WELL_TYPE"."VERIFICATION_DATE" AS "VERIFICATION_DATE", 
+      "PKL_LOG_WELL_TYPE"."REMARK" AS "REMARK"
+      FROM "LOGGINGAPPUSER"."PKL_LOG_WELL_TYPE" "PKL_LOG_WELL_TYPE"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PKL_LOG_WORK_TYPE" EntityType="LoggingModel.Store.PKL_LOG_WORK_TYPE" store:Type="Tables" store:Schema="LOGGINGAPPUSER" store:Name="PKL_LOG_WORK_TYPE">
+      <DefiningQuery>SELECT 
+      "PKL_LOG_WORK_TYPE"."COMBINATION_NAME_ID" AS "COMBINATION_NAME_ID", 
+      "PKL_LOG_WORK_TYPE"."COMBINATION_NAME_NAME" AS "COMBINATION_NAME_NAME", 
+      "PKL_LOG_WORK_TYPE"."WRITER" AS "WRITER", 
+      "PKL_LOG_WORK_TYPE"."WRITING_DATE" AS "WRITING_DATE", 
+      "PKL_LOG_WORK_TYPE"."VERIFIER" AS "VERIFIER", 
+      "PKL_LOG_WORK_TYPE"."VERIFICATION_DATE" AS "VERIFICATION_DATE", 
+      "PKL_LOG_WORK_TYPE"."REMARK" AS "REMARK"
+      FROM "LOGGINGAPPUSER"."PKL_LOG_WORK_TYPE" "PKL_LOG_WORK_TYPE"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PRO_LOG_BIG_ORIGINAL_DATA" EntityType="LoggingModel.Store.PRO_LOG_BIG_ORIGINAL_DATA" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_BIT_PROGRAM" EntityType="LoggingModel.Store.PRO_LOG_BIT_PROGRAM" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_CABLE" EntityType="LoggingModel.Store.PRO_LOG_CABLE" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_CASIN" EntityType="LoggingModel.Store.PRO_LOG_CASIN" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_CEMENT" EntityType="LoggingModel.Store.PRO_LOG_CEMENT" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_CORE" EntityType="LoggingModel.Store.PRO_LOG_CORE" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_DATA_PUBLISH" EntityType="LoggingModel.Store.PRO_LOG_DATA_PUBLISH" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_INSTRUMENT" EntityType="LoggingModel.Store.PRO_LOG_INSTRUMENT" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_ORIGINAL_DATA" EntityType="LoggingModel.Store.PRO_LOG_ORIGINAL_DATA" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_PROCESSING_CURVE" EntityType="LoggingModel.Store.PRO_LOG_PROCESSING_CURVE" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_PROCESSING_CURVERATING" EntityType="LoggingModel.Store.PRO_LOG_PROCESSING_CURVERATING" store:Type="Tables" store:Schema="LOGGINGAPPUSER" store:Name="PRO_LOG_PROCESSING_CURVERATING">
+      <DefiningQuery>SELECT 
+      "PRO_LOG_PROCESSING_CURVERATING"."PROCESS_ID" AS "PROCESS_ID", 
+      "PRO_LOG_PROCESSING_CURVERATING"."PROCESSING_ITEM_ID" AS "PROCESSING_ITEM_ID", 
+      "PRO_LOG_PROCESSING_CURVERATING"."SCALE" AS "SCALE", 
+      "PRO_LOG_PROCESSING_CURVERATING"."RLEV" AS "RLEV", 
+      "PRO_LOG_PROCESSING_CURVERATING"."SCENE_RATING" AS "SCENE_RATING", 
+      "PRO_LOG_PROCESSING_CURVERATING"."INDOOR_RATING" AS "INDOOR_RATING", 
+      "PRO_LOG_PROCESSING_CURVERATING"."CURVE_ID" AS "CURVE_ID", 
+      "PRO_LOG_PROCESSING_CURVERATING"."START_DEP" AS "START_DEP", 
+      "PRO_LOG_PROCESSING_CURVERATING"."END_DEP" AS "END_DEP"
+      FROM "LOGGINGAPPUSER"."PRO_LOG_PROCESSING_CURVERATING" "PRO_LOG_PROCESSING_CURVERATING"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PRO_LOG_PROCESSING_CURVE_DATA" EntityType="LoggingModel.Store.PRO_LOG_PROCESSING_CURVE_DATA" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_PROCESSING_ITEM" EntityType="LoggingModel.Store.PRO_LOG_PROCESSING_ITEM" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_PROCESS_ARCHIV_DATA" EntityType="LoggingModel.Store.PRO_LOG_PROCESS_ARCHIV_DATA" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_PROCESS_DOCUMENT" EntityType="LoggingModel.Store.PRO_LOG_PROCESS_DOCUMENT" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_PROCESS_MAP" EntityType="LoggingModel.Store.PRO_LOG_PROCESS_MAP" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_PRODUCE" EntityType="LoggingModel.Store.PRO_LOG_PRODUCE" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_PUNISH" EntityType="LoggingModel.Store.PRO_LOG_PUNISH" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_RADIATION_INFOR" EntityType="LoggingModel.Store.PRO_LOG_RADIATION_INFOR" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_RAPID_INFO" EntityType="LoggingModel.Store.PRO_LOG_RAPID_INFO" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_RAPID_ORIGINAL_DATA" EntityType="LoggingModel.Store.PRO_LOG_RAPID_ORIGINAL_DATA" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_RAPID_RESULTS" EntityType="LoggingModel.Store.PRO_LOG_RAPID_RESULTS" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_REMOTE_DIRECT" EntityType="LoggingModel.Store.PRO_LOG_REMOTE_DIRECT" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_SLOP" EntityType="LoggingModel.Store.PRO_LOG_SLOP" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="PRO_LOG_TESTOIL" EntityType="LoggingModel.Store.PRO_LOG_TESTOIL" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="SYS_FILE_DOWNLOAD_REQUEST" EntityType="LoggingModel.Store.SYS_FILE_DOWNLOAD_REQUEST" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="SYS_FILE_DOWNLOAD_REQUEST_LOG" EntityType="LoggingModel.Store.SYS_FILE_DOWNLOAD_REQUEST_LOG" store:Type="Tables" store:Schema="LOGGINGAPPUSER" store:Name="SYS_FILE_DOWNLOAD_REQUEST_LOG">
+      <DefiningQuery>SELECT 
+      "SYS_FILE_DOWNLOAD_REQUEST_LOG"."ID" AS "ID", 
+      "SYS_FILE_DOWNLOAD_REQUEST_LOG"."FILEID" AS "FILEID", 
+      "SYS_FILE_DOWNLOAD_REQUEST_LOG"."APPLICANT" AS "APPLICANT", 
+      "SYS_FILE_DOWNLOAD_REQUEST_LOG"."REVIEWER" AS "REVIEWER", 
+      "SYS_FILE_DOWNLOAD_REQUEST_LOG"."DEADLINES" AS "DEADLINES", 
+      "SYS_FILE_DOWNLOAD_REQUEST_LOG"."SUBMIT_DATE" AS "SUBMIT_DATE", 
+      "SYS_FILE_DOWNLOAD_REQUEST_LOG"."REVIEW_DATE" AS "REVIEW_DATE", 
+      "SYS_FILE_DOWNLOAD_REQUEST_LOG"."STATE" AS "STATE", 
+      "SYS_FILE_DOWNLOAD_REQUEST_LOG"."TIMEOUT" AS "TIMEOUT", 
+      "SYS_FILE_DOWNLOAD_REQUEST_LOG"."LOGTIME" AS "LOGTIME"
+      FROM "LOGGINGAPPUSER"."SYS_FILE_DOWNLOAD_REQUEST_LOG" "SYS_FILE_DOWNLOAD_REQUEST_LOG"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SYS_FILE_PATH" EntityType="LoggingModel.Store.SYS_FILE_PATH" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="SYS_FILE_UPLOAD" EntityType="LoggingModel.Store.SYS_FILE_UPLOAD" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="SYS_PROCESSING_UPLOADFILE" EntityType="LoggingModel.Store.SYS_PROCESSING_UPLOADFILE" store:Type="Tables" store:Schema="LOGGINGAPPUSER" store:Name="SYS_PROCESSING_UPLOADFILE">
+      <DefiningQuery>SELECT 
+      "SYS_PROCESSING_UPLOADFILE"."PROCESS_ID" AS "PROCESS_ID", 
+      "SYS_PROCESSING_UPLOADFILE"."EXTENSION" AS "EXTENSION", 
+      "SYS_PROCESSING_UPLOADFILE"."FILETYPE" AS "FILETYPE", 
+      "SYS_PROCESSING_UPLOADFILE"."FILEID" AS "FILEID", 
+      "SYS_PROCESSING_UPLOADFILE"."PROCESSING_ITEM_ID" AS "PROCESSING_ITEM_ID"
+      FROM "LOGGINGAPPUSER"."SYS_PROCESSING_UPLOADFILE" "SYS_PROCESSING_UPLOADFILE"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SYS_UPLOAD" EntityType="LoggingModel.Store.SYS_UPLOAD" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="SYS_USER_VISIT_LOG" EntityType="LoggingModel.Store.SYS_USER_VISIT_LOG" store:Type="Tables" store:Schema="LOGGINGAPPUSER" store:Name="SYS_USER_VISIT_LOG">
+      <DefiningQuery>SELECT 
+      "SYS_USER_VISIT_LOG"."COL_LOGINNAME" AS "COL_LOGINNAME", 
+      "SYS_USER_VISIT_LOG"."STARTTIME" AS "STARTTIME", 
+      "SYS_USER_VISIT_LOG"."ENDTIME" AS "ENDTIME", 
+      "SYS_USER_VISIT_LOG"."IP" AS "IP"
+      FROM "LOGGINGAPPUSER"."SYS_USER_VISIT_LOG" "SYS_USER_VISIT_LOG"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SYS_WELL_CACHE" EntityType="LoggingModel.Store.SYS_WELL_CACHE" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="SYS_WORK_FLOW" EntityType="LoggingModel.Store.SYS_WORK_FLOW" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="SYS_WORK_FLOW_NOW" EntityType="LoggingModel.Store.SYS_WORK_FLOW_NOW" store:Type="Tables" Schema="LOGGINGAPPUSER" />
+    <EntitySet Name="VIEW_REQUISITION_LIST" EntityType="LoggingModel.Store.VIEW_REQUISITION_LIST" store:Type="Views" Schema="LOGGINGAPPUSER" />
+    <AssociationSet Name="COM_BASE_STRATA_LAYER2_DM_FK1" Association="LoggingModel.Store.COM_BASE_STRATA_LAYER2_DM_FK1">
+      <End Role="DM_LOG_TASK" EntitySet="DM_LOG_TASK" />
+      <End Role="COM_BASE_STRATA_LAYER2" EntitySet="COM_BASE_STRATA_LAYER2" />
+    </AssociationSet>
+    <AssociationSet Name="COM_LOG_COM_CURVEDATA_CAC_FK1" Association="LoggingModel.Store.COM_LOG_COM_CURVEDATA_CAC_FK1">
+      <End Role="SYS_UPLOAD" EntitySet="SYS_UPLOAD" />
+      <End Role="COM_LOG_COM_CURVEDATA_CACHE" EntitySet="COM_LOG_COM_CURVEDATA_CACHE" />
+    </AssociationSet>
+    <AssociationSet Name="COM_LOG_COM_CURVEDATA_CAC_FK2" Association="LoggingModel.Store.COM_LOG_COM_CURVEDATA_CAC_FK2">
+      <End Role="DM_LOG_PROCESS" EntitySet="DM_LOG_PROCESS" />
+      <End Role="COM_LOG_COM_CURVEDATA_CACHE" EntitySet="COM_LOG_COM_CURVEDATA_CACHE" />
+    </AssociationSet>
+    <AssociationSet Name="COM_LOG_COM_CURVEDATA_DM__FK1" Association="LoggingModel.Store.COM_LOG_COM_CURVEDATA_DM__FK1">
+      <End Role="DM_LOG_PROCESS" EntitySet="DM_LOG_PROCESS" />
+      <End Role="COM_LOG_COM_CURVEDATA" EntitySet="COM_LOG_COM_CURVEDATA" />
+    </AssociationSet>
+    <AssociationSet Name="COM_LOG_DEV_AZI_DM_LOG_PR_FK1" Association="LoggingModel.Store.COM_LOG_DEV_AZI_DM_LOG_PR_FK1">
+      <End Role="DM_LOG_PROCESS" EntitySet="DM_LOG_PROCESS" />
+      <End Role="COM_LOG_DEV_AZI" EntitySet="COM_LOG_DEV_AZI" />
+    </AssociationSet>
+    <AssociationSet Name="COM_LOG_LAYER_DM_LOG_PROC_FK1" Association="LoggingModel.Store.COM_LOG_LAYER_DM_LOG_PROC_FK1">
+      <End Role="DM_LOG_PROCESS" EntitySet="DM_LOG_PROCESS" />
+      <End Role="COM_LOG_LAYER" EntitySet="COM_LOG_LAYER" />
+    </AssociationSet>
+    <AssociationSet Name="COM_LOG_RESULT_DM_LOG_PRO_FK1" Association="LoggingModel.Store.COM_LOG_RESULT_DM_LOG_PRO_FK1">
+      <End Role="DM_LOG_PROCESS" EntitySet="DM_LOG_PROCESS" />
+      <End Role="COM_LOG_RESULT" EntitySet="COM_LOG_RESULT" />
+    </AssociationSet>
+    <AssociationSet Name="COM_LOG_WELL_TRAJECTORY_D_FK1" Association="LoggingModel.Store.COM_LOG_WELL_TRAJECTORY_D_FK1">
+      <End Role="DM_LOG_PROCESS" EntitySet="DM_LOG_PROCESS" />
+      <End Role="COM_LOG_WELL_TRAJECTORY" EntitySet="COM_LOG_WELL_TRAJECTORY" />
+    </AssociationSet>
+    <AssociationSet Name="DM_LOG_CLASS_MEET_DM_LOG__FK1" Association="LoggingModel.Store.DM_LOG_CLASS_MEET_DM_LOG__FK1">
+      <End Role="DM_LOG_OPS_PLAN" EntitySet="DM_LOG_OPS_PLAN" />
+      <End Role="DM_LOG_CLASS_MEET" EntitySet="DM_LOG_CLASS_MEET" />
+    </AssociationSet>
+    <AssociationSet Name="DM_LOG_DOWNHOLE_EQUIP_DM__FK1" Association="LoggingModel.Store.DM_LOG_DOWNHOLE_EQUIP_DM__FK1">
+      <End Role="DM_LOG_OPS_PLAN" EntitySet="DM_LOG_OPS_PLAN" />
+      <End Role="DM_LOG_DOWNHOLE_EQUIP" EntitySet="DM_LOG_DOWNHOLE_EQUIP" />
+    </AssociationSet>
+    <AssociationSet Name="DM_LOG_DRILL_STATE_FK1" Association="LoggingModel.Store.DM_LOG_DRILL_STATE_FK1">
+      <End Role="COM_JOB_INFO" EntitySet="COM_JOB_INFO" />
+      <End Role="DM_LOG_DRILL_STATE" EntitySet="DM_LOG_DRILL_STATE" />
+    </AssociationSet>
+    <AssociationSet Name="DM_LOG_GEO_DES_ITEM_FK1" Association="LoggingModel.Store.DM_LOG_GEO_DES_ITEM_FK1">
+      <End Role="COM_JOB_INFO" EntitySet="COM_JOB_INFO" />
+      <End Role="DM_LOG_GEO_DES_ITEM" EntitySet="DM_LOG_GEO_DES_ITEM" />
+    </AssociationSet>
+    <AssociationSet Name="DM_LOG_ITEMS_DM_LOG_OPS_P_FK1" Association="LoggingModel.Store.DM_LOG_ITEMS_DM_LOG_OPS_P_FK1">
+      <End Role="DM_LOG_OPS_PLAN" EntitySet="DM_LOG_OPS_PLAN" />
+      <End Role="DM_LOG_ITEMS" EntitySet="DM_LOG_ITEMS" />
+    </AssociationSet>
+    <AssociationSet Name="DM_LOG_JOB_SUMMAY_DM_LOG__FK1" Association="LoggingModel.Store.DM_LOG_JOB_SUMMAY_DM_LOG__FK1">
+      <End Role="DM_LOG_OPS_PLAN" EntitySet="DM_LOG_OPS_PLAN" />
+      <End Role="DM_LOG_JOB_SUMMAY" EntitySet="DM_LOG_JOB_SUMMAY" />
+    </AssociationSet>
+    <AssociationSet Name="DM_LOG_LOGGING_INTERPRETA_FK1" Association="LoggingModel.Store.DM_LOG_LOGGING_INTERPRETA_FK1">
+      <End Role="DM_LOG_TASK" EntitySet="DM_LOG_TASK" />
+      <End Role="DM_LOG_LOGGING_INTERPRETATION" EntitySet="DM_LOG_LOGGING_INTERPRETATION" />
+    </AssociationSet>
+    <AssociationSet Name="DM_LOG_OPS_PLAN_DM_LOG_TA_FK1" Association="LoggingModel.Store.DM_LOG_OPS_PLAN_DM_LOG_TA_FK1">
+      <End Role="DM_LOG_TASK" EntitySet="DM_LOG_TASK" />
+      <End Role="DM_LOG_OPS_PLAN" EntitySet="DM_LOG_OPS_PLAN" />
+    </AssociationSet>
+    <AssociationSet Name="DM_LOG_PROCESS_COM_JOB_IN_FK1" Association="LoggingModel.Store.DM_LOG_PROCESS_COM_JOB_IN_FK1">
+      <End Role="COM_JOB_INFO" EntitySet="COM_JOB_INFO" />
+      <End Role="DM_LOG_PROCESS" EntitySet="DM_LOG_PROCESS" />
+    </AssociationSet>
+    <AssociationSet Name="DM_LOG_SOURCE_DATA_DM_LOG_FK1" Association="LoggingModel.Store.DM_LOG_SOURCE_DATA_DM_LOG_FK1">
+      <End Role="DM_LOG_PROCESS" EntitySet="DM_LOG_PROCESS" />
+      <End Role="DM_LOG_SOURCE_DATA" EntitySet="DM_LOG_SOURCE_DATA" />
+    </AssociationSet>
+    <AssociationSet Name="DM_LOG_SOURCE_DATA_DM_LOG_FK2" Association="LoggingModel.Store.DM_LOG_SOURCE_DATA_DM_LOG_FK2">
+      <End Role="DM_LOG_OPS_PLAN" EntitySet="DM_LOG_OPS_PLAN" />
+      <End Role="DM_LOG_SOURCE_DATA" EntitySet="DM_LOG_SOURCE_DATA" />
+    </AssociationSet>
+    <AssociationSet Name="DM_LOG_TASK_COM_JOB_INFO_FK1" Association="LoggingModel.Store.DM_LOG_TASK_COM_JOB_INFO_FK1">
+      <End Role="COM_JOB_INFO" EntitySet="COM_JOB_INFO" />
+      <End Role="DM_LOG_TASK" EntitySet="DM_LOG_TASK" />
+    </AssociationSet>
+    <AssociationSet Name="DM_LOG_THREE_CROSS_DM_LOG_FK1" Association="LoggingModel.Store.DM_LOG_THREE_CROSS_DM_LOG_FK1">
+      <End Role="DM_LOG_OPS_PLAN" EntitySet="DM_LOG_OPS_PLAN" />
+      <End Role="DM_LOG_THREE_CROSS" EntitySet="DM_LOG_THREE_CROSS" />
+    </AssociationSet>
+    <AssociationSet Name="DM_LOG_WORK_DETAILS_DM_LO_FK1" Association="LoggingModel.Store.DM_LOG_WORK_DETAILS_DM_LO_FK1">
+      <End Role="DM_LOG_OPS_PLAN" EntitySet="DM_LOG_OPS_PLAN" />
+      <End Role="DM_LOG_WORK_DETAILS" EntitySet="DM_LOG_WORK_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="DM_LOG_WORK_HOLDUP_DETAIL_FK1" Association="LoggingModel.Store.DM_LOG_WORK_HOLDUP_DETAIL_FK1">
+      <End Role="DM_LOG_OPS_PLAN" EntitySet="DM_LOG_OPS_PLAN" />
+      <End Role="DM_LOG_WORK_HOLDUP_DETAILS" EntitySet="DM_LOG_WORK_HOLDUP_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="DM_LOG_WORK_PERSONNEL_DM__FK1" Association="LoggingModel.Store.DM_LOG_WORK_PERSONNEL_DM__FK1">
+      <End Role="DM_LOG_OPS_PLAN" EntitySet="DM_LOG_OPS_PLAN" />
+      <End Role="DM_LOG_WORK_PERSONNEL" EntitySet="DM_LOG_WORK_PERSONNEL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COM_LOG__REFERENCE_DM_LOG_P" Association="LoggingModel.Store.FK_COM_LOG__REFERENCE_DM_LOG_P">
+      <End Role="DM_LOG_PROCESS" EntitySet="DM_LOG_PROCESS" />
+      <End Role="COM_LOG_CEMENT_EVALUATION_INF" EntitySet="COM_LOG_CEMENT_EVALUATION_INF" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COM_WELL_REFERENCE_COM_WELL" Association="LoggingModel.Store.FK_COM_WELL_REFERENCE_COM_WELL">
+      <End Role="COM_WELL_BASIC" EntitySet="COM_WELL_BASIC" />
+      <End Role="COM_WELLBORE_BASIC" EntitySet="COM_WELLBORE_BASIC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DM_LOG_B_REFERENCE_DM_LOG_O" Association="LoggingModel.Store.FK_DM_LOG_B_REFERENCE_DM_LOG_O">
+      <End Role="DM_LOG_OPS_PLAN" EntitySet="DM_LOG_OPS_PLAN" />
+      <End Role="DM_LOG_BASE" EntitySet="DM_LOG_BASE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DM_LOG_C_REFERENCE_DM_LOG_O" Association="LoggingModel.Store.FK_DM_LOG_C_REFERENCE_DM_LOG_O">
+      <End Role="DM_LOG_OPS_PLAN" EntitySet="DM_LOG_OPS_PLAN" />
+      <End Role="DM_LOG_CONTACT_WILL" EntitySet="DM_LOG_CONTACT_WILL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DM_LOG_D_REFERENCE_DM_LOG_O" Association="LoggingModel.Store.FK_DM_LOG_D_REFERENCE_DM_LOG_O">
+      <End Role="DM_LOG_OPS_PLAN" EntitySet="DM_LOG_OPS_PLAN" />
+      <End Role="DM_LOG_DATA_SUBMITTED" EntitySet="DM_LOG_DATA_SUBMITTED" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DM_LOG_I_REFERENCE_DM_LOG_O" Association="LoggingModel.Store.FK_DM_LOG_I_REFERENCE_DM_LOG_O">
+      <End Role="DM_LOG_OPS_PLAN" EntitySet="DM_LOG_OPS_PLAN" />
+      <End Role="DM_LOG_ITEM" EntitySet="DM_LOG_ITEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DM_LOG_R_REFERENCE_DM_LOG_O" Association="LoggingModel.Store.FK_DM_LOG_R_REFERENCE_DM_LOG_O">
+      <End Role="DM_LOG_OPS_PLAN" EntitySet="DM_LOG_OPS_PLAN" />
+      <End Role="DM_LOG_RADIATION_STATUS" EntitySet="DM_LOG_RADIATION_STATUS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DM_LOG_U_REFERENCE_DM_LOG_O" Association="LoggingModel.Store.FK_DM_LOG_U_REFERENCE_DM_LOG_O">
+      <End Role="DM_LOG_TASK" EntitySet="DM_LOG_TASK" />
+      <End Role="DM_LOG_UP_EQUIP" EntitySet="DM_LOG_UP_EQUIP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DM_LOG_W_REFERENCE_DM_LOG_O" Association="LoggingModel.Store.FK_DM_LOG_W_REFERENCE_DM_LOG_O">
+      <End Role="DM_LOG_TASK" EntitySet="DM_LOG_TASK" />
+      <End Role="DM_LOG_WORK_ANING" EntitySet="DM_LOG_WORK_ANING" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PKL_LOG__REFERENCE_PKL_LOG_" Association="LoggingModel.Store.FK_PKL_LOG__REFERENCE_PKL_LOG_">
+      <End Role="PKL_LOG_OPS_PROJECT" EntitySet="PKL_LOG_OPS_PROJECT" />
+      <End Role="PKL_LOG_OPS_CURVE" EntitySet="PKL_LOG_OPS_CURVE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRO_LOG__REFERENCE_PRO_LOG_" Association="LoggingModel.Store.FK_PRO_LOG__REFERENCE_PRO_LOG_">
+      <End Role="PRO_LOG_RAPID_INFO" EntitySet="PRO_LOG_RAPID_INFO" />
+      <End Role="PRO_LOG_RAPID_RESULTS" EntitySet="PRO_LOG_RAPID_RESULTS" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_BIG_ORIGINAL_DATA_FK1" Association="LoggingModel.Store.PRO_LOG_BIG_ORIGINAL_DATA_FK1">
+      <End Role="DM_LOG_PROCESS" EntitySet="DM_LOG_PROCESS" />
+      <End Role="PRO_LOG_BIG_ORIGINAL_DATA" EntitySet="PRO_LOG_BIG_ORIGINAL_DATA" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_BIT_PROGRAM_DM_LO_FK1" Association="LoggingModel.Store.PRO_LOG_BIT_PROGRAM_DM_LO_FK1">
+      <End Role="DM_LOG_TASK" EntitySet="DM_LOG_TASK" />
+      <End Role="PRO_LOG_BIT_PROGRAM" EntitySet="PRO_LOG_BIT_PROGRAM" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_CASIN_DM_LOG_TASK_FK1" Association="LoggingModel.Store.PRO_LOG_CASIN_DM_LOG_TASK_FK1">
+      <End Role="DM_LOG_TASK" EntitySet="DM_LOG_TASK" />
+      <End Role="PRO_LOG_CASIN" EntitySet="PRO_LOG_CASIN" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_CEMENT_DM_LOG_TAS_FK1" Association="LoggingModel.Store.PRO_LOG_CEMENT_DM_LOG_TAS_FK1">
+      <End Role="DM_LOG_TASK" EntitySet="DM_LOG_TASK" />
+      <End Role="PRO_LOG_CEMENT" EntitySet="PRO_LOG_CEMENT" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_CORE_DM_LOG_TASK_FK1" Association="LoggingModel.Store.PRO_LOG_CORE_DM_LOG_TASK_FK1">
+      <End Role="DM_LOG_TASK" EntitySet="DM_LOG_TASK" />
+      <End Role="PRO_LOG_CORE" EntitySet="PRO_LOG_CORE" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_DATA_PUBLISH_DM_L_FK1" Association="LoggingModel.Store.PRO_LOG_DATA_PUBLISH_DM_L_FK1">
+      <End Role="DM_LOG_PROCESS" EntitySet="DM_LOG_PROCESS" />
+      <End Role="PRO_LOG_DATA_PUBLISH" EntitySet="PRO_LOG_DATA_PUBLISH" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_PROCESSING_CURVER_FK1" Association="LoggingModel.Store.PRO_LOG_PROCESSING_CURVER_FK1">
+      <End Role="DM_LOG_PROCESS" EntitySet="DM_LOG_PROCESS" />
+      <End Role="PRO_LOG_PROCESSING_CURVERATING" EntitySet="PRO_LOG_PROCESSING_CURVERATING" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_PROCESSING_CURVER_FK2" Association="LoggingModel.Store.PRO_LOG_PROCESSING_CURVER_FK2">
+      <End Role="PKL_LOG_OPS_CURVE" EntitySet="PKL_LOG_OPS_CURVE" />
+      <End Role="PRO_LOG_PROCESSING_CURVERATING" EntitySet="PRO_LOG_PROCESSING_CURVERATING" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_PROCESSING_CURVE_FK1" Association="LoggingModel.Store.PRO_LOG_PROCESSING_CURVE_FK1">
+      <End Role="PKL_LOG_OPS_PROJECT" EntitySet="PKL_LOG_OPS_PROJECT" />
+      <End Role="PRO_LOG_PROCESSING_CURVE" EntitySet="PRO_LOG_PROCESSING_CURVE" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_PROCESSING_CURVE__FK1" Association="LoggingModel.Store.PRO_LOG_PROCESSING_CURVE__FK1">
+      <End Role="DM_LOG_PROCESS" EntitySet="DM_LOG_PROCESS" />
+      <End Role="PRO_LOG_PROCESSING_CURVE" EntitySet="PRO_LOG_PROCESSING_CURVE" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_PROCESSING_ITEM_D_FK1" Association="LoggingModel.Store.PRO_LOG_PROCESSING_ITEM_D_FK1">
+      <End Role="DM_LOG_PROCESS" EntitySet="DM_LOG_PROCESS" />
+      <End Role="PRO_LOG_PROCESSING_ITEM" EntitySet="PRO_LOG_PROCESSING_ITEM" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_PROCESSING_ITEM_P_FK1" Association="LoggingModel.Store.PRO_LOG_PROCESSING_ITEM_P_FK1">
+      <End Role="PKL_LOG_OPS_PROJECT" EntitySet="PKL_LOG_OPS_PROJECT" />
+      <End Role="PRO_LOG_PROCESSING_ITEM" EntitySet="PRO_LOG_PROCESSING_ITEM" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_PROCESS_ARCHIV_DA_FK1" Association="LoggingModel.Store.PRO_LOG_PROCESS_ARCHIV_DA_FK1">
+      <End Role="DM_LOG_PROCESS" EntitySet="DM_LOG_PROCESS" />
+      <End Role="PRO_LOG_PROCESS_ARCHIV_DATA" EntitySet="PRO_LOG_PROCESS_ARCHIV_DATA" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_PROCESS_DOCUMENT__FK1" Association="LoggingModel.Store.PRO_LOG_PROCESS_DOCUMENT__FK1">
+      <End Role="DM_LOG_PROCESS" EntitySet="DM_LOG_PROCESS" />
+      <End Role="PRO_LOG_PROCESS_DOCUMENT" EntitySet="PRO_LOG_PROCESS_DOCUMENT" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_PROCESS_MAP_DM_LO_FK1" Association="LoggingModel.Store.PRO_LOG_PROCESS_MAP_DM_LO_FK1">
+      <End Role="DM_LOG_PROCESS" EntitySet="DM_LOG_PROCESS" />
+      <End Role="PRO_LOG_PROCESS_MAP" EntitySet="PRO_LOG_PROCESS_MAP" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_PRODUCE_DM_LOG_TA_FK1" Association="LoggingModel.Store.PRO_LOG_PRODUCE_DM_LOG_TA_FK1">
+      <End Role="DM_LOG_TASK" EntitySet="DM_LOG_TASK" />
+      <End Role="PRO_LOG_PRODUCE" EntitySet="PRO_LOG_PRODUCE" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_PUNISH_DM_LOG_OPS_FK1" Association="LoggingModel.Store.PRO_LOG_PUNISH_DM_LOG_OPS_FK1">
+      <End Role="DM_LOG_OPS_PLAN" EntitySet="DM_LOG_OPS_PLAN" />
+      <End Role="PRO_LOG_PUNISH" EntitySet="PRO_LOG_PUNISH" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_RADIATION_INFOR_D_FK1" Association="LoggingModel.Store.PRO_LOG_RADIATION_INFOR_D_FK1">
+      <End Role="DM_LOG_OPS_PLAN" EntitySet="DM_LOG_OPS_PLAN" />
+      <End Role="PRO_LOG_RADIATION_INFOR" EntitySet="PRO_LOG_RADIATION_INFOR" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_RAPID_INFO_DM_LOG_FK1" Association="LoggingModel.Store.PRO_LOG_RAPID_INFO_DM_LOG_FK1">
+      <End Role="DM_LOG_TASK" EntitySet="DM_LOG_TASK" />
+      <End Role="PRO_LOG_RAPID_INFO" EntitySet="PRO_LOG_RAPID_INFO" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_RAPID_ORIGINAL_DA_FK1" Association="LoggingModel.Store.PRO_LOG_RAPID_ORIGINAL_DA_FK1">
+      <End Role="DM_LOG_OPS_PLAN" EntitySet="DM_LOG_OPS_PLAN" />
+      <End Role="PRO_LOG_RAPID_ORIGINAL_DATA" EntitySet="PRO_LOG_RAPID_ORIGINAL_DATA" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_REMOTE_DIRECT_DM__FK1" Association="LoggingModel.Store.PRO_LOG_REMOTE_DIRECT_DM__FK1">
+      <End Role="DM_LOG_OPS_PLAN" EntitySet="DM_LOG_OPS_PLAN" />
+      <End Role="PRO_LOG_REMOTE_DIRECT" EntitySet="PRO_LOG_REMOTE_DIRECT" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_SLOP_DM_LOG_TASK_FK1" Association="LoggingModel.Store.PRO_LOG_SLOP_DM_LOG_TASK_FK1">
+      <End Role="DM_LOG_TASK" EntitySet="DM_LOG_TASK" />
+      <End Role="PRO_LOG_SLOP" EntitySet="PRO_LOG_SLOP" />
+    </AssociationSet>
+    <AssociationSet Name="PRO_LOG_TESTOIL_DM_LOG_TA_FK1" Association="LoggingModel.Store.PRO_LOG_TESTOIL_DM_LOG_TA_FK1">
+      <End Role="DM_LOG_TASK" EntitySet="DM_LOG_TASK" />
+      <End Role="PRO_LOG_TESTOIL" EntitySet="PRO_LOG_TESTOIL" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_FILE_UPLOAD_FK1" Association="LoggingModel.Store.SYS_FILE_UPLOAD_FK1">
+      <End Role="SYS_FILE_PATH" EntitySet="SYS_FILE_PATH" />
+      <End Role="SYS_FILE_UPLOAD" EntitySet="SYS_FILE_UPLOAD" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_FILE_UPLOAD_SYS_UPLOA_FK1" Association="LoggingModel.Store.SYS_FILE_UPLOAD_SYS_UPLOA_FK1">
+      <End Role="SYS_UPLOAD" EntitySet="SYS_UPLOAD" />
+      <End Role="SYS_FILE_UPLOAD" EntitySet="SYS_FILE_UPLOAD" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_PROCESSING_UPLOADFILE_FK1" Association="LoggingModel.Store.SYS_PROCESSING_UPLOADFILE_FK1">
+      <End Role="PKL_LOG_OPS_PROJECT" EntitySet="PKL_LOG_OPS_PROJECT" />
+      <End Role="SYS_PROCESSING_UPLOADFILE" EntitySet="SYS_PROCESSING_UPLOADFILE" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_PROCESSING_UPLOADFILE_FK2" Association="LoggingModel.Store.SYS_PROCESSING_UPLOADFILE_FK2">
+      <End Role="SYS_FILE_UPLOAD" EntitySet="SYS_FILE_UPLOAD" />
+      <End Role="SYS_PROCESSING_UPLOADFILE" EntitySet="SYS_PROCESSING_UPLOADFILE" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_WORK_FLOW_NOW_FK1" Association="LoggingModel.Store.SYS_WORK_FLOW_NOW_FK1">
+      <End Role="SYS_WORK_FLOW" EntitySet="SYS_WORK_FLOW" />
+      <End Role="SYS_WORK_FLOW_NOW" EntitySet="SYS_WORK_FLOW_NOW" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="COM_BASE_STRATA_LAYER2">
+    <Key>
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="SEQ_NO" Type="number" Nullable="false" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="REQUISITION_CD" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="STRAT_UNIT_NAME" Type="varchar2" MaxLength="60" />
+    <Property Name="STRAT_UNIT_S_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="AGE_CODE" Type="varchar2" MaxLength="32" />
+    <Property Name="STRATUM_CODE" Type="varchar2" MaxLength="32" />
+    <Property Name="STRAT_RANK" Type="varchar2" MaxLength="32" />
+    <Property Name="PARENT_STRAT_RANK" Type="varchar2" MaxLength="32" />
+    <Property Name="ROCK_DESCRIBE" Type="varchar2" MaxLength="200" />
+    <Property Name="BOTTOM_DEPTH" Type="number" Nullable="false" Precision="7" Scale="2" />
+    <Property Name="VERTICAL_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="BOTTOM_HEIGHT" Type="number" Precision="7" Scale="2" />
+    <Property Name="VERTICAL_THICKNESS" Type="number" Precision="7" Scale="2" />
+    <Property Name="SLANT_THICNESS" Type="number" Precision="7" Scale="2" />
+    <Property Name="RELATIONS" Type="varchar2" MaxLength="32" />
+    <Property Name="DATE_TYPE" Type="varchar2" MaxLength="32" />
+    <Property Name="P_SCHEME_DESC" Type="varchar2" MaxLength="100" />
+    <Property Name="ROW_STATE" Type="varchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="varchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="varchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="varchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="varchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="timestamp" />
+    <Property Name="UPDATE_DATE" Type="timestamp" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="COM_JOB_INFO">
+    <Key>
+      <PropertyRef Name="DRILL_JOB_ID" />
+    </Key>
+    <Property Name="DRILL_JOB_ID" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="WELL_ID" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="WELL_ID_A7" Type="varchar2" MaxLength="30" />
+    <Property Name="WELL_ID_A1" Type="varchar2" MaxLength="30" />
+    <Property Name="WELL_JOB_NAME" Type="varchar2" MaxLength="60" />
+    <Property Name="ACTIVITY_NAME" Type="varchar2" MaxLength="60" />
+    <Property Name="FIELD" Type="varchar2" MaxLength="60" />
+    <Property Name="WELL_THE_MARKET" Type="varchar2" MaxLength="60" />
+    <Property Name="WELL_TYPE" Type="varchar2" MaxLength="60" />
+    <Property Name="WELL_SORT" Type="varchar2" MaxLength="60" />
+    <Property Name="TRUE_COMPLETION_FORMATION" Type="varchar2" MaxLength="60" />
+    <Property Name="COMPLETE_METHOD" Type="varchar2" MaxLength="60" />
+    <Property Name="JOB_PURPOSE" Type="varchar2" MaxLength="2000" />
+    <Property Name="DRILL_UNIT" Type="varchar2" MaxLength="60" />
+    <Property Name="DESIGN_HORIZON" Type="varchar2" MaxLength="32" />
+    <Property Name="DESIGN_MD" Type="number" Precision="7" Scale="2" />
+  </EntityType>
+  <EntityType Name="COM_JOB_INTERVAL">
+    <Key>
+      <PropertyRef Name="JOB_INTERVAL_ID" />
+      <PropertyRef Name="WELL_ID" />
+      <PropertyRef Name="WELLBORE_ID" />
+      <PropertyRef Name="DRILL_JOB_ID" />
+    </Key>
+    <Property Name="JOB_INTERVAL_ID" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="WELL_ID" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="WELLBORE_ID" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="DRILL_JOB_ID" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="DESIGN_START_MD" Type="number" Precision="7" Scale="2" />
+    <Property Name="DESIGN_END_MD" Type="number" Precision="7" Scale="2" />
+    <Property Name="DESIGN_START_TVD" Type="number" Precision="7" Scale="2" />
+    <Property Name="DESIGN_END_TVD" Type="number" Precision="7" Scale="2" />
+    <Property Name="DESIGN_PURPOSE" Type="varchar2" MaxLength="40" />
+    <Property Name="START_MD" Type="number" Precision="7" Scale="2" />
+    <Property Name="END_MD" Type="number" Precision="7" Scale="2" />
+    <Property Name="START_TVD" Type="number" Precision="7" Scale="2" />
+    <Property Name="END_TVD" Type="number" Precision="7" Scale="2" />
+    <Property Name="PURPOSE" Type="varchar2" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="COM_LOG_CEMENT_EVALUATION_INF">
+    <Key>
+      <PropertyRef Name="CEMENTID" />
+    </Key>
+    <Property Name="CEMENTID" Type="number" Nullable="false" />
+    <Property Name="PROCESS_ID" Type="varchar2" MaxLength="32" />
+    <Property Name="ST_DEP" Type="number" Precision="12" Scale="2" />
+    <Property Name="EN_DEP" Type="number" Precision="12" Scale="2" />
+    <Property Name="MAX_CBL" Type="number" Precision="12" Scale="2" />
+    <Property Name="MIN_CBL" Type="number" Precision="12" Scale="2" />
+    <Property Name="MEA_CBL" Type="number" Precision="12" Scale="2" />
+    <Property Name="RESULT" Type="char" MaxLength="4" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="COM_LOG_COM_CURVEDATA">
+    <Key>
+      <PropertyRef Name="CURVEDATAID" />
+    </Key>
+    <Property Name="CURVEDATAID" Type="number" Nullable="false" />
+    <Property Name="PROCESS_ID" Type="varchar2" MaxLength="32" />
+    <Property Name="DEP" Type="number" Precision="12" Scale="2" />
+    <Property Name="SP" Type="number" Precision="12" Scale="2" />
+    <Property Name="GR" Type="number" Precision="12" Scale="2" />
+    <Property Name="CAL" Type="number" Precision="12" Scale="2" />
+    <Property Name="DEV" Type="number" Precision="12" Scale="2" />
+    <Property Name="DAZ" Type="number" Precision="12" Scale="2" />
+    <Property Name="AC" Type="number" Precision="12" Scale="2" />
+    <Property Name="CNL" Type="number" Precision="12" Scale="2" />
+    <Property Name="DEN" Type="number" Precision="12" Scale="2" />
+    <Property Name="PE" Type="number" Precision="12" Scale="2" />
+    <Property Name="RT" Type="number" Precision="12" Scale="2" />
+    <Property Name="RXO" Type="number" Precision="12" Scale="2" />
+    <Property Name="SGR" Type="number" Precision="12" Scale="2" />
+    <Property Name="CGR" Type="number" Precision="12" Scale="2" />
+    <Property Name="U" Type="number" Precision="12" Scale="2" />
+    <Property Name="TH" Type="number" Precision="12" Scale="2" />
+    <Property Name="K" Type="number" Precision="12" Scale="2" />
+  </EntityType>
+  <EntityType Name="COM_LOG_COM_CURVEDATA_CACHE">
+    <Key>
+      <PropertyRef Name="PROCESS_ID" />
+    </Key>
+    <Property Name="PROCESS_ID" Type="varchar2" Nullable="false" MaxLength="32" />
+    <Property Name="UPLOADID" Type="number" />
+    <Property Name="COMBOBOXS_SETTING" Type="blob" />
+  </EntityType>
+  <EntityType Name="COM_LOG_DEV_AZI">
+    <Key>
+      <PropertyRef Name="DEV_ID" />
+    </Key>
+    <Property Name="DEV_ID" Type="number" Nullable="false" />
+    <Property Name="PROCESS_ID" Type="varchar2" MaxLength="100" />
+    <Property Name="DEP" Type="number" Precision="12" Scale="2" />
+    <Property Name="INCLNATION" Type="number" Precision="12" Scale="2" />
+    <Property Name="AZIMUTH" Type="number" Precision="12" Scale="2" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="COM_LOG_LAYER">
+    <Key>
+      <PropertyRef Name="LAYERID" />
+    </Key>
+    <Property Name="LAYERID" Type="number" Nullable="false" />
+    <Property Name="PROCESS_ID" Type="varchar2" MaxLength="32" />
+    <Property Name="FORMATION_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="ST_DEVIATED_DEP" Type="number" Precision="12" Scale="2" />
+    <Property Name="EN_DEVIATED_DEP" Type="number" Precision="12" Scale="2" />
+    <Property Name="ST_VERTICAL_DEP" Type="number" Precision="12" Scale="2" />
+    <Property Name="EN_VERTICAL_DEP" Type="number" Precision="12" Scale="2" />
+  </EntityType>
+  <EntityType Name="COM_LOG_RESULT">
+    <Key>
+      <PropertyRef Name="RESULTID" />
+    </Key>
+    <Property Name="RESULTID" Type="number" Nullable="false" />
+    <Property Name="PROCESS_ID" Type="varchar2" MaxLength="32" />
+    <Property Name="LAY_ID" Type="varchar2" MaxLength="32" />
+    <Property Name="FORMATION_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="START_DEPTH" Type="number" Precision="12" Scale="2" />
+    <Property Name="END_DEPTH" Type="number" Precision="12" Scale="2" />
+    <Property Name="VALID_THICKNESS" Type="number" Precision="12" Scale="2" />
+    <Property Name="EXPLAIN_CONCLUSION" Type="varchar2" MaxLength="32" />
+    <Property Name="POROSITY_MIN_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="POROSITY_MAX_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="WATER_SATURATION_MIN_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="WATER_SATURATION_MAX_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="PENETRATE_RATE" Type="number" Precision="12" Scale="2" />
+    <Property Name="GR_MIN_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="GR_MAX_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="SOUNDWAVE_MIN_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="SOUNDWAVE_MAX_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="DENSITY_MIN_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="DENSITY_MAX_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="NEUTRON_MIN_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="NEUTRON_MAX_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="RESISITANCE_MIN_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="RESISITANCE_MAX_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="QRESISITANCE_MIN_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="QRESISITANCE_MAX_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="INDUCTION120_MIN_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="INDUCTION120_MAX_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="INDUCTION30_MIN_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="INDUCTION30_MAX_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="STANDBY_PARAM1" Type="number" Precision="12" Scale="2" />
+    <Property Name="STANDBY_PARAM2" Type="number" Precision="12" Scale="2" />
+    <Property Name="STANDBY_PARAM3" Type="number" Precision="12" Scale="2" />
+    <Property Name="STANDBY_PARAM4" Type="number" Precision="12" Scale="2" />
+    <Property Name="STANDBY_PARAM5" Type="number" Precision="12" Scale="2" />
+    <Property Name="STANDBY_PARAM6" Type="number" Precision="12" Scale="2" />
+    <Property Name="STANDBY_PARAM7" Type="number" Precision="12" Scale="2" />
+    <Property Name="STANDBY_PARAM8" Type="number" Precision="12" Scale="2" />
+  </EntityType>
+  <EntityType Name="COM_LOG_WELL_TRAJECTORY">
+    <Key>
+      <PropertyRef Name="TRAJECTORYID" />
+      <PropertyRef Name="PROCESS_ID" />
+    </Key>
+    <Property Name="TRAJECTORYID" Type="number" Nullable="false" />
+    <Property Name="PROCESS_ID" Type="varchar2" Nullable="false" MaxLength="32" />
+    <Property Name="MD" Type="number" Precision="12" Scale="2" />
+    <Property Name="INCLNATION" Type="number" Precision="12" Scale="2" />
+    <Property Name="AZIMUTH" Type="number" Precision="12" Scale="2" />
+    <Property Name="E_ELEMENT" Type="number" Precision="12" Scale="2" />
+    <Property Name="N_ELEMENT" Type="number" Precision="12" Scale="2" />
+    <Property Name="TVD" Type="number" Precision="12" Scale="2" />
+    <Property Name="ALL_MOV" Type="number" Precision="12" Scale="2" />
+    <Property Name="P_XN_CLOSURE_AZIMUTH" Type="number" Precision="12" Scale="2" />
+    <Property Name="P_XN_CLOSED_DISTANCE" Type="number" Precision="12" Scale="2" />
+    <Property Name="DOG_LEG" Type="number" Precision="12" Scale="2" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="100" />
+    <Property Name="TYPE" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="COM_WELLBORE_BASIC">
+    <Key>
+      <PropertyRef Name="WELL_ID" />
+      <PropertyRef Name="WELLBORE_ID" />
+    </Key>
+    <Property Name="WELL_ID" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="WELLBORE_ID" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="WELLBORE_WUI" Type="varchar2" MaxLength="60" />
+    <Property Name="P_WELLBORE_ID" Type="char" MaxLength="10" />
+    <Property Name="WELLBORE_NAME" Type="varchar2" MaxLength="20" />
+    <Property Name="PURPOSE" Type="varchar2" MaxLength="200" />
+    <Property Name="MAX_WELL_DEVIATION" Type="number" Precision="6" Scale="2" />
+    <Property Name="MAX_WELL_DEVIATION_MD" Type="number" Precision="7" Scale="2" />
+    <Property Name="DESIGN_VERTICAL_TVD" Type="number" Precision="7" Scale="2" />
+    <Property Name="WELLBORE_PRODUCTION_DATE" Type="timestamp" />
+    <Property Name="DEFLECTION_POINT_MD" Type="number" Precision="6" Scale="2" />
+    <Property Name="MD" Type="number" Precision="7" Scale="2" />
+    <Property Name="VERTICAL_WELL_TVD" Type="number" Precision="7" Scale="2" />
+    <Property Name="PLUGBACK_MD" Type="number" Precision="6" Scale="2" />
+    <Property Name="PLUGBACK_TVD" Type="number" Precision="7" Scale="2" />
+    <Property Name="TRUE_PLUGBACKTOTAL_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="DESIGN_HORIZON" Type="varchar2" MaxLength="32" />
+    <Property Name="DESIGN_MD" Type="number" Precision="7" Scale="2" />
+    <Property Name="ACTUAL_HORIZON" Type="varchar2" MaxLength="32" />
+    <Property Name="BTM_X_COORDINATE" Type="number" Precision="12" Scale="3" />
+    <Property Name="BTM_Y_COORDINATE" Type="number" Precision="12" Scale="3" />
+    <Property Name="WELLBORE_ID_A1" Type="varchar2" MaxLength="30" />
+    <Property Name="WELLBORE_ID_A7" Type="varchar2" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="COM_WELLSTRUCTURE_DATA">
+    <Key>
+      <PropertyRef Name="WELLBORE_ID" />
+    </Key>
+    <Property Name="WELLSTRUCTURE_ID" Type="varchar2" MaxLength="45" />
+    <Property Name="WELL_ID" Type="char" MaxLength="10" />
+    <Property Name="WELLBORE_ID" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="NO" Type="varchar2" MaxLength="32" />
+    <Property Name="CASING_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="MD" Type="number" Precision="7" Scale="2" />
+    <Property Name="HORIZON" Type="varchar2" MaxLength="32" />
+    <Property Name="BORE_SIZE" Type="number" Precision="6" Scale="2" />
+    <Property Name="CASING_OD" Type="number" Precision="6" Scale="2" />
+    <Property Name="BOINGTOOL_BOTTOM_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="SETTING_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="CHOKE_COIL_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="STAGE_COLLAR1_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="STAGE_COLLAR2_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="FIRST_CEMENT_TOP" Type="number" Precision="7" Scale="2" />
+    <Property Name="SECOND_CEMENT_TOP" Type="number" Precision="7" Scale="2" />
+    <Property Name="THIRD_CEMENT_TOP" Type="number" Precision="7" Scale="2" />
+    <Property Name="CEMENT_METHOD" Type="varchar2" MaxLength="32" />
+    <Property Name="ARTIFICIAL_WELL_BOTTOM_DEPTH" Type="number" Precision="7" Scale="2" />
+  </EntityType>
+  <EntityType Name="COM_WELLSTRUCTURE_DRAW">
+    <Key>
+      <PropertyRef Name="WELL_ID" />
+    </Key>
+    <Property Name="WELL_ID" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="STRUCTURE_DRAW" Type="blob" />
+    <Property Name="SERIALIZATION_FILE" Type="blob" />
+  </EntityType>
+  <EntityType Name="COM_WELL_BASIC">
+    <Key>
+      <PropertyRef Name="WELL_ID" />
+    </Key>
+    <Property Name="WELL_ID" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="SITE_ID" Type="varchar2" MaxLength="50" />
+    <Property Name="WELL_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="WELL_LEGAL_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="WELL_UWI" Type="varchar2" MaxLength="32" />
+    <Property Name="WELL_STRUCT_UNIT_DESCRIPTION" Type="varchar2" MaxLength="200" />
+    <Property Name="WELL_FIELD_UNIT_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="WELL_STRUCT_UNIT_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="BEOG_LOCATION" Type="varchar2" MaxLength="64" />
+    <Property Name="STRUCTURAL_LOCATION" Type="varchar2" MaxLength="128" />
+    <Property Name="TRAVERSE_LINE_LOCATION" Type="varchar2" MaxLength="32" />
+    <Property Name="SURVEY_X_AXIS" Type="number" Precision="12" Scale="3" />
+    <Property Name="SURVEY_Y_AXIS" Type="number" Precision="12" Scale="3" />
+    <Property Name="GROUND_ELEVATION" Type="number" Precision="7" Scale="2" />
+    <Property Name="SYSTEM_DATUM_OFFSET" Type="number" Precision="7" Scale="2" />
+    <Property Name="RANGER_X_AXIS" Type="number" Precision="12" Scale="3" />
+    <Property Name="RANGER_Y_AXIS" Type="number" Precision="12" Scale="3" />
+    <Property Name="MAGNETIC_DECLINATION" Type="number" Precision="7" Scale="2" />
+    <Property Name="CASING_TOP_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="WELL_HEAD_LONGITUDE" Type="varchar2" MaxLength="32" />
+    <Property Name="WELL_HEAD_LATITUDE" Type="varchar2" MaxLength="32" />
+    <Property Name="LOC_COUNTRY" Type="varchar2" MaxLength="50" />
+    <Property Name="LOC_STATE" Type="varchar2" MaxLength="50" />
+    <Property Name="P_LOC_CITY" Type="varchar2" MaxLength="50" />
+    <Property Name="LOC_COUNTY" Type="varchar2" MaxLength="50" />
+    <Property Name="DRILL_GEO_DES" Type="blob" />
+    <Property Name="DRILL_ENG_DES" Type="blob" />
+    <Property Name="PART_UNITS" Type="varchar2" MaxLength="33" />
+    <Property Name="WELL_HEAD_FLANGE" Type="char" MaxLength="50" />
+    <Property Name="DRILL_ENG_DES_FILEID" Type="number" />
+    <Property Name="DRILL_GEO_DES_FILEID" Type="number" />
+  </EntityType>
+  <EntityType Name="DM_LOG_BASE">
+    <Key>
+      <PropertyRef Name="BASEID" />
+    </Key>
+    <Property Name="BASEID" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="JOB_PURPOSE" Type="nvarchar2" MaxLength="40" />
+    <Property Name="COLLABORATION_DEPARTMENT" Type="nvarchar2" MaxLength="100" />
+    <Property Name="CONSTRUCTION_ORG" Type="nvarchar2" MaxLength="100" />
+    <Property Name="RECEIVED_INFORM_TIME" Type="timestamp" />
+    <Property Name="P_XN_DRILL_DEPTH" Type="number" Precision="10" Scale="2" />
+    <Property Name="P_XN_LOG_DEPTH" Type="number" Precision="10" Scale="2" />
+    <Property Name="JOB_LAYER" Type="nvarchar2" MaxLength="60" />
+    <Property Name="JOB_PROFILE_SERIES" Type="nvarchar2" MaxLength="100" />
+    <Property Name="MAXIMUM_SLOPE" Type="number" Precision="10" Scale="2" />
+    <Property Name="MAXIMUM_SLOPE_DEPTH" Type="number" Precision="10" Scale="2" />
+    <Property Name="MUD_RESITIVITY" Type="number" Precision="10" Scale="2" />
+    <Property Name="MUD_TEMERATURE" Type="number" Precision="10" Scale="2" />
+    <Property Name="BOTTOM_TEMPERATURE" Type="number" Precision="10" Scale="2" />
+    <Property Name="BOTTOM_DEP" Type="number" Precision="10" Scale="2" />
+    <Property Name="WELLBORE_FLUID" Type="varchar2" MaxLength="40" />
+    <Property Name="START_DEPTH" Type="number" Precision="10" Scale="2" />
+    <Property Name="END_DEPTH" Type="number" Precision="10" Scale="2" />
+    <Property Name="IS_COMPLETE" Type="varchar2" MaxLength="32" />
+    <Property Name="LOG_TYPE" Type="varchar2" MaxLength="32" />
+    <Property Name="LOG_MODE" Type="varchar2" MaxLength="32" />
+    <Property Name="INSTRUMENT_COUNT" Type="number" />
+    <Property Name="INSTRUMENT_SUCCESS" Type="number" />
+    <Property Name="WAVE_SELECTION" Type="varchar2" MaxLength="32" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="DM_LOG_CLASS_MEET">
+    <Key>
+      <PropertyRef Name="CLASS_MEET_ID" />
+    </Key>
+    <Property Name="CLASS_MEET_ID" Type="char" Nullable="false" MaxLength="45" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="HOST" Type="char" MaxLength="50" />
+    <Property Name="WRITER" Type="char" MaxLength="50" />
+    <Property Name="MEETING_DATE" Type="timestamp" />
+    <Property Name="MEETING_TIME" Type="number" Precision="12" Scale="2" />
+    <Property Name="PARTICIPANTS" Type="char" MaxLength="500" />
+    <Property Name="SUMMARY_ITEM1" Type="char" MaxLength="500" />
+    <Property Name="SUMMARY_ITEM2" Type="char" MaxLength="500" />
+    <Property Name="SUMMARY_ITEM3" Type="char" MaxLength="500" />
+    <Property Name="SUMMARY_ITEM6" Type="char" MaxLength="500" />
+    <Property Name="SUMMARY_ITEM4" Type="char" MaxLength="500" />
+    <Property Name="SUMMARY_ITEM5" Type="char" MaxLength="500" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="400" />
+  </EntityType>
+  <EntityType Name="DM_LOG_CONTACT_WILL">
+    <Key>
+      <PropertyRef Name="CONTACTID" />
+    </Key>
+    <Property Name="CONTACTID" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="A_PUNISH" Type="char" MaxLength="50" />
+    <Property Name="RRSIDE_SITE_PUNISH" Type="char" MaxLength="50" />
+    <Property Name="DRILL_CREW_CHIEF" Type="char" MaxLength="50" />
+    <Property Name="LOG_TEAM_LEADER" Type="char" MaxLength="50" />
+    <Property Name="LOG_OPERATOR__NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="LOG_SAFE_NAME" Type="char" MaxLength="50" />
+    <Property Name="LOG_LAND_LEADER" Type="char" MaxLength="50" />
+    <Property Name="LOG_COMPANY_PUNISH" Type="char" MaxLength="50" />
+    <Property Name="LOG_COMPANY_LEADER" Type="char" MaxLength="50" />
+    <Property Name="MEETING_SUM" Type="char" MaxLength="500" />
+    <Property Name="WRITER" Type="char" MaxLength="50" />
+    <Property Name="MEETING_DATE" Type="timestamp" />
+    <Property Name="MEETING_TIME" Type="number" Precision="12" Scale="2" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="400" />
+    <Property Name="B_PUNISH" Type="char" MaxLength="50" />
+    <Property Name="MUD_CREW_CHIEF" Type="char" MaxLength="50" />
+    <Property Name="SOLP_CREW_CHIEF" Type="char" MaxLength="50" />
+    <Property Name="LOG_INTERPRETATION" Type="char" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DM_LOG_DATA_SUBMITTED">
+    <Key>
+      <PropertyRef Name="DATA_ID" />
+    </Key>
+    <Property Name="DATA_ID" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="DATA_NAME" Type="varchar2" MaxLength="128" />
+    <Property Name="DATA_TYPE" Type="varchar2" MaxLength="32" />
+    <Property Name="DATA_MEDIUM" Type="varchar2" MaxLength="32" />
+    <Property Name="DATA_MEDIUM_NUMBER" Type="number" />
+    <Property Name="DATA_ARCHIVING_WAY" Type="varchar2" MaxLength="32" />
+    <Property Name="DATA_ARCHIVING_DATE" Type="timestamp" />
+    <Property Name="DATA_ARCHIVING_PERSON" Type="varchar2" MaxLength="32" />
+    <Property Name="DATA_RECEIVE_DEPARTMENT" Type="varchar2" MaxLength="64" />
+    <Property Name="DATA_RECIPIENT" Type="varchar2" MaxLength="32" />
+    <Property Name="DATA_FILE_NUMBER" Type="number" />
+    <Property Name="DATA_SIZE" Type="number" Precision="12" Scale="2" />
+  </EntityType>
+  <EntityType Name="DM_LOG_DOWNHOLE_EQUIP">
+    <Key>
+      <PropertyRef Name="EQUIPID" />
+    </Key>
+    <Property Name="JOB_PLAN_CD" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="EQUIPID" Type="varchar2" Nullable="false" MaxLength="32" />
+    <Property Name="DEVICEACCOUNT_NAME" Type="varchar2" MaxLength="64" />
+    <Property Name="DEVICEACCOUNT_ID" Type="varchar2" MaxLength="64" />
+    <Property Name="TEAM" Type="varchar2" MaxLength="64" />
+    <Property Name="WORKING_STATE" Type="varchar2" MaxLength="32" />
+    <Property Name="FAULT_DESCRIPTION" Type="varchar2" MaxLength="100" />
+    <Property Name="DOWN_WELL_SEQUENCE" Type="number" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DM_LOG_DRILL_STATE">
+    <Key>
+      <PropertyRef Name="DRILL_WELL_ID" />
+    </Key>
+    <Property Name="DRILL_WELL_ID" Type="varchar2" Nullable="false" MaxLength="32" />
+    <Property Name="DRILL_JOB_ID" Type="varchar2" MaxLength="45" />
+    <Property Name="LAST_WEEK_MD" Type="number" Precision="12" Scale="2" />
+    <Property Name="CURRENT_WEEK_MD" Type="number" Precision="12" Scale="2" />
+    <Property Name="CURRENT_LAYER" Type="char" MaxLength="64" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="CREATE_MAN" Type="char" MaxLength="32" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="400" />
+  </EntityType>
+  <EntityType Name="DM_LOG_GEO_DES_ITEM">
+    <Key>
+      <PropertyRef Name="DRILL_WELL_ID" />
+    </Key>
+    <Property Name="DRILL_WELL_ID" Type="varchar2" Nullable="false" MaxLength="32" />
+    <Property Name="DRILL_JOB_ID" Type="varchar2" MaxLength="45" />
+    <Property Name="LOG_MD" Type="number" Precision="12" Scale="2" />
+    <Property Name="LOG_INTERVAL" Type="char" MaxLength="64" />
+    <Property Name="LOG_LAYER" Type="char" MaxLength="64" />
+    <Property Name="LOG_ITEM" Type="varchar2" MaxLength="1024" />
+    <Property Name="LOG_SCALE" Type="char" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="CREATE_MAN" Type="char" MaxLength="32" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="400" />
+  </EntityType>
+  <EntityType Name="DM_LOG_ITEM">
+    <Key>
+      <PropertyRef Name="DOWN_WELL_SEQUENCE" />
+    </Key>
+    <Property Name="ITEMID" Type="varchar2" MaxLength="45" />
+    <Property Name="DOWN_WELL_SEQUENCE" Type="number" Nullable="false" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="MEASURE_WELL_PRO" Type="varchar2" MaxLength="32" />
+    <Property Name="SCALE" Type="number" />
+    <Property Name="RLEV" Type="number" Precision="6" Scale="2" />
+    <Property Name="SCENE_RATING" Type="varchar2" MaxLength="32" />
+    <Property Name="INDOOR_RATING" Type="varchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="DM_LOG_ITEMS">
+    <Key>
+      <PropertyRef Name="JOB_PLAN_CD" />
+      <PropertyRef Name="DOWN_WELL_SEQUENCE" />
+      <PropertyRef Name="LOG_ITEM_ID" />
+    </Key>
+    <Property Name="JOB_PLAN_CD" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="DOWN_WELL_SEQUENCE" Type="number" Nullable="false" />
+    <Property Name="LOGGING_NAME" Type="varchar2" MaxLength="100" />
+    <Property Name="ITEM_FLAG" Type="number" />
+    <Property Name="ST_DEP" Type="number" Precision="10" Scale="2" />
+    <Property Name="EN_DEP" Type="number" Precision="10" Scale="2" />
+    <Property Name="SCALE" Type="varchar2" MaxLength="20" />
+    <Property Name="RLEV" Type="number" Precision="10" Scale="5" />
+    <Property Name="NOTE" Type="nvarchar2" MaxLength="100" />
+    <Property Name="LOG_ITEM_ID" Type="number" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DM_LOG_JOB_SUMMAY">
+    <Key>
+      <PropertyRef Name="JOB_SUMMARY_ID" />
+    </Key>
+    <Property Name="JOB_SUMMARY_ID" Type="char" Nullable="false" MaxLength="45" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="MEETING_DATE" Type="timestamp" />
+    <Property Name="MEETING_TIME" Type="number" Precision="12" Scale="2" />
+    <Property Name="HOST" Type="char" MaxLength="50" />
+    <Property Name="WRITER" Type="char" MaxLength="50" />
+    <Property Name="PARTICIPANTS" Type="char" MaxLength="500" />
+    <Property Name="SUMMARY_ITEM1" Type="char" MaxLength="500" />
+    <Property Name="SUMMARY_ITEM2" Type="char" MaxLength="500" />
+    <Property Name="SUMMARY_ITEM3" Type="char" MaxLength="500" />
+    <Property Name="SUMMARY_ITEM6" Type="char" MaxLength="500" />
+    <Property Name="SUMMARY_ITEM4" Type="char" MaxLength="500" />
+    <Property Name="SUMMARY_ITEM5" Type="char" MaxLength="500" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="400" />
+  </EntityType>
+  <EntityType Name="DM_LOG_LOGGING_INTERPRETATION">
+    <Key>
+      <PropertyRef Name="INTERPRETATION_CD" />
+    </Key>
+    <Property Name="INTERPRETATION_CD" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="REQUISITION_CD" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="UPDATE_DATE" Type="timestamp" />
+    <Property Name="HORIZON" Type="char" MaxLength="10" />
+    <Property Name="WELL_TOP_DEPTH" Type="number" Nullable="false" Precision="7" Scale="2" />
+    <Property Name="WELL_BOTTOM_DEPTH" Type="number" Nullable="false" Precision="7" Scale="2" />
+    <Property Name="THICKNESS" Type="number" Precision="7" Scale="2" />
+    <Property Name="YSMC" Type="nvarchar2" MaxLength="45" />
+    <Property Name="YSMS" Type="nvarchar2" MaxLength="100" />
+    <Property Name="YGYS" Type="nvarchar2" MaxLength="15" />
+    <Property Name="YGJB" Type="number" Precision="2" />
+    <Property Name="DLYGFXZ" Type="number" Precision="6" Scale="2" />
+    <Property Name="DLYGJB" Type="char" MaxLength="10" />
+    <Property Name="DISPLAY_TYPE" Type="varchar2" MaxLength="45" />
+    <Property Name="DISPLAY_GENERAY" Type="nvarchar2" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="DM_LOG_OPS_PLAN">
+    <Key>
+      <PropertyRef Name="JOB_PLAN_CD" />
+    </Key>
+    <Property Name="REQUISITION_CD" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="RECEIVED_INFORM_TIME" Type="timestamp" />
+    <Property Name="REQUIREMENTS_TIME" Type="timestamp" />
+    <Property Name="JOB_ID" Type="number" Nullable="false" />
+    <Property Name="JOB_LAYER" Type="nvarchar2" MaxLength="60" />
+    <Property Name="LOG_TYPE" Type="varchar2" MaxLength="32" />
+    <Property Name="LOG_MODE" Type="varchar2" MaxLength="32" />
+    <Property Name="PREPARE_PERSON" Type="varchar2" MaxLength="16" />
+    <Property Name="VERIFIER" Type="varchar2" MaxLength="16" />
+    <Property Name="APPROVER" Type="varchar2" MaxLength="16" />
+    <Property Name="PREPARE_DATE" Type="timestamp" />
+    <Property Name="PLAN_CONTENT_SCANNING" Type="blob" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="400" />
+    <Property Name="LOG_TEAM_ID" Type="varchar2" MaxLength="32" />
+    <Property Name="PRELOGGING_INTERVAL" Type="varchar2" MaxLength="100" />
+    <Property Name="PLAN_CONTENT_SCANNING_FILEID" Type="number" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“LOGGINGAPPUSER.DM_LOG_PREDICTED_ITEM”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="DM_LOG_PREDICTED_ITEM">
+    <Key>
+      <PropertyRef Name="PREDICTED_LOGGING_ITEMS_ID" />
+    </Key>
+    <Property Name="PREDICTED_LOGGING_ITEMS_ID" Type="number" Nullable="false" />
+    <Property Name="PREDICTED_LOGGING_NAME" Type="nvarchar2" MaxLength="100" />
+    <Property Name="PRE_ST_DEP" Type="number" Precision="10" Scale="2" />
+    <Property Name="PRE_EN_DEP" Type="number" Precision="10" Scale="2" />
+    <Property Name="PRE_SCALE" Type="nvarchar2" MaxLength="10" />
+    <Property Name="NOTE" Type="nvarchar2" MaxLength="100" />
+    <Property Name="LOG_ITEM_ID" Type="number" />
+  </EntityType>
+  <EntityType Name="DM_LOG_PROCESS">
+    <Key>
+      <PropertyRef Name="PROCESS_ID" />
+    </Key>
+    <Property Name="PROCESS_ID" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="LOG_DATA_ID" Type="varchar2" MaxLength="100" />
+    <Property Name="WELL_ID" Type="char" MaxLength="10" />
+    <Property Name="DRILL_JOB_ID" Type="varchar2" MaxLength="45" />
+    <Property Name="PROCESS_NAME" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="PROCESS_CODE" Type="char" MaxLength="10" />
+    <Property Name="PROCESS_START_DATE" Type="timestamp" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="400" />
+  </EntityType>
+  <EntityType Name="DM_LOG_RADIATION_STATUS">
+    <Key>
+      <PropertyRef Name="JOB_PLAN_CD" />
+      <PropertyRef Name="DOWN_WELL_SEQUENCE" />
+    </Key>
+    <Property Name="JOB_PLAN_CD" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="RADIATION_NO" Type="varchar2" MaxLength="60" />
+    <Property Name="RADIATION_CD" Type="varchar2" MaxLength="60" />
+    <Property Name="ELEMENT" Type="varchar2" MaxLength="32" />
+    <Property Name="ACTIVE" Type="varchar2" MaxLength="50" />
+    <Property Name="LOAD_PERSON" Type="varchar2" MaxLength="32" />
+    <Property Name="UNLOAD_PERSON" Type="varchar2" MaxLength="32" />
+    <Property Name="UNDER_WELL_TIME" Type="number" Precision="8" Scale="2" />
+    <Property Name="MAX_WORK_PRESSURE" Type="number" Precision="12" Scale="2" />
+    <Property Name="MAX_WORK_TEMPERATURE" Type="number" Precision="12" Scale="2" />
+    <Property Name="REPLACE_SOURCEPACKING" Type="varchar2" MaxLength="6" />
+    <Property Name="REPLACE_SOURCEPACKING_NUM" Type="number" />
+    <Property Name="REPLACE_DATE" Type="timestamp" />
+    <Property Name="REPLACE_PLACE" Type="varchar2" MaxLength="64" />
+    <Property Name="REPLACE_PERSON" Type="varchar2" MaxLength="32" />
+    <Property Name="RADIATIONID" Type="varchar2" MaxLength="32" />
+    <Property Name="DOWN_WELL_SEQUENCE" Type="number" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DM_LOG_SOURCE_DATA">
+    <Key>
+      <PropertyRef Name="LOG_DATA_ID" />
+      <PropertyRef Name="JOB_PLAN_CD" />
+    </Key>
+    <Property Name="LOG_DATA_ID" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="400" />
+  </EntityType>
+  <EntityType Name="DM_LOG_STP_BASE">
+    <Key>
+      <PropertyRef Name="STP_BASE_ID" />
+    </Key>
+    <Property Name="STP_BASE_ID" Type="nchar" Nullable="false" MaxLength="45" />
+    <Property Name="STP_CODE" Type="nchar" MaxLength="45" />
+    <Property Name="STP_NAME" Type="nchar" MaxLength="512" />
+    <Property Name="STP_LEVEL" Type="nchar" MaxLength="45" />
+    <Property Name="STP_BUDGET" Type="number" />
+    <Property Name="STP_ST_DATE" Type="date" />
+    <Property Name="STP_EN_DATE" Type="date" />
+    <Property Name="STP_RESEARCH_UNITS" Type="nchar" MaxLength="512" />
+    <Property Name="STP_ASSIGNED_UNIT" Type="nchar" MaxLength="128" />
+    <Property Name="STP_NOTE" Type="nchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="DM_LOG_STRATA_LAYERED">
+    <Key>
+      <PropertyRef Name="LAYERED_ID" />
+    </Key>
+    <Property Name="LAYERED_ID" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="WELL_ID" Type="char" MaxLength="10" />
+    <Property Name="SN" Type="char" MaxLength="10" />
+    <Property Name="HORIZON_CODE" Type="char" MaxLength="10" />
+    <Property Name="LIMIT_LAY" Type="char" MaxLength="10" />
+    <Property Name="SERIES" Type="char" MaxLength="10" />
+    <Property Name="TOGETHER" Type="char" MaxLength="10" />
+    <Property Name="GROUP_LAY" Type="char" MaxLength="10" />
+    <Property Name="PASSAGE" Type="char" MaxLength="10" />
+    <Property Name="SUB_PASSAGE" Type="char" MaxLength="10" />
+    <Property Name="CONTACT_RELATION" Type="char" MaxLength="10" />
+    <Property Name="MD_DEPTH_DESIGN_BOTTOM" Type="number" Precision="7" Scale="2" />
+    <Property Name="HORIZON_THICKNESS_DESIGN" Type="number" Precision="7" Scale="2" />
+    <Property Name="CUTTINGS_BOTTOM_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="CUTTINGS_HORIZON_THICKNESS" Type="number" Precision="7" Scale="2" />
+    <Property Name="ELECTRONIC_BOTTOM_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="ELECTRONIC_HORIZON_THICKNESS" Type="number" Precision="7" Scale="2" />
+    <Property Name="ELECTRONIC_HORIZON_ELEVATION" Type="number" Precision="7" Scale="2" />
+    <Property Name="FORM_PERSON" Type="nvarchar2" MaxLength="60" />
+    <Property Name="REVIEW0R" Type="nvarchar2" MaxLength="60" />
+  </EntityType>
+  <EntityType Name="DM_LOG_TASK">
+    <Key>
+      <PropertyRef Name="REQUISITION_CD" />
+    </Key>
+    <Property Name="REQUISITION_CD" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="REQUISITION_TYPE" Type="number" />
+    <Property Name="PREDICTED_LOGGING_DATE" Type="timestamp" />
+    <Property Name="PREDICTED_LOGGING_INTERVAL" Type="nvarchar2" MaxLength="100" />
+    <Property Name="PREDICTED_LOGGING_ITEMS_ID" Type="number" />
+    <Property Name="DEPARTMENT_REQUISITION" Type="number" />
+    <Property Name="PERSON_EQUISITION" Type="varchar2" MaxLength="32" />
+    <Property Name="REC_NOTICE_TIME" Type="timestamp" />
+    <Property Name="RECIPIENT_REQUISITION" Type="varchar2" MaxLength="32" />
+    <Property Name="COMPLETE_MAN" Type="varchar2" MaxLength="100" />
+    <Property Name="TREATMENT_DATE_REQUISITION" Type="timestamp" />
+    <Property Name="MARKET_IDENTIFICATION" Type="varchar2" MaxLength="16" />
+    <Property Name="MARKET_CLASSIFY" Type="number" />
+    <Property Name="VERIFIER" Type="varchar2" MaxLength="33" />
+    <Property Name="BRIEF_DESCRIPTION_CONTENT" Type="varchar2" MaxLength="200" />
+    <Property Name="REQUISITION_SCANNING" Type="blob" />
+    <Property Name="NOTE" Type="nvarchar2" MaxLength="400" />
+    <Property Name="DRILL_STATUSE" Type="varchar2" MaxLength="16" />
+    <Property Name="WELL_ID" Type="char" MaxLength="10" />
+    <Property Name="DRILL_JOB_ID" Type="varchar2" MaxLength="45" />
+    <Property Name="WELL_JOB_NAME" Type="varchar2" MaxLength="60" />
+    <Property Name="REQUISITION_SCANNING_FILEID" Type="number" />
+  </EntityType>
+  <EntityType Name="DM_LOG_THREE_CROSS">
+    <Key>
+      <PropertyRef Name="THREE_CROSS_ID" />
+    </Key>
+    <Property Name="THREE_CROSS_ID" Type="char" Nullable="false" MaxLength="45" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="MEETING_DATE" Type="timestamp" />
+    <Property Name="MEETING_TIME" Type="number" Precision="12" Scale="2" />
+    <Property Name="HOST" Type="char" MaxLength="50" />
+    <Property Name="WRITER" Type="char" MaxLength="50" />
+    <Property Name="PARTICIPANTS" Type="char" MaxLength="500" />
+    <Property Name="SUMMARY_ITEM1" Type="char" MaxLength="500" />
+    <Property Name="SUMMARY_ITEM2" Type="char" MaxLength="500" />
+    <Property Name="SUMMARY_ITEM3" Type="char" MaxLength="500" />
+    <Property Name="SUMMARY_ITEM6" Type="char" MaxLength="500" />
+    <Property Name="SUMMARY_ITEM4" Type="char" MaxLength="500" />
+    <Property Name="SUMMARY_ITEM5" Type="char" MaxLength="500" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="400" />
+  </EntityType>
+  <EntityType Name="DM_LOG_TRANSACTION">
+    <Key>
+      <PropertyRef Name="TRANSACTION_ID" />
+    </Key>
+    <Property Name="TRANSACTION_ID" Type="varchar2" Nullable="false" MaxLength="32" />
+    <Property Name="TRANSACTION_HEAD" Type="varchar2" MaxLength="100" />
+    <Property Name="STATIC_FLOW_ID" Type="char" MaxLength="32" />
+    <Property Name="TRANSACTION_TYPE" Type="char" MaxLength="32" />
+    <Property Name="TRANSACTION_DESCRIPTION" Type="varchar2" MaxLength="2560" />
+    <Property Name="DRILL_STATUSE" Type="char" MaxLength="10" />
+    <Property Name="TRANSACTION_ANNEX" Type="blob" />
+    <Property Name="CREATE_USER" Type="varchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="varchar2" MaxLength="32" />
+    <Property Name="CREATE__DATE" Type="date" />
+    <Property Name="NOTE" Type="nvarchar2" MaxLength="400" />
+  </EntityType>
+  <EntityType Name="DM_LOG_TRANSACTION_STATIC_FLOW">
+    <Key>
+      <PropertyRef Name="STATIC_FLOW_ID" />
+    </Key>
+    <Property Name="STATIC_FLOW_ID" Type="char" Nullable="false" MaxLength="32" />
+    <Property Name="PROCESS_MAN_NUM" Type="number" />
+    <Property Name="PROCESS_MAN" Type="varchar2" MaxLength="2056" />
+    <Property Name="PROCESS_ORG" Type="varchar2" MaxLength="32" />
+    <Property Name="FLOW_CREATE_DATE" Type="date" />
+    <Property Name="FLOW_CREATE_MAN" Type="char" MaxLength="32" />
+    <Property Name="FLOW_CHANGE_MAN" Type="char" MaxLength="32" />
+    <Property Name="FLOW_CHANGE_DATE" Type="date" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="DM_LOG_TRANSACTION_STATUSE">
+    <Key>
+      <PropertyRef Name="TRANSACTION_STATUSE_ID" />
+    </Key>
+    <Property Name="TRANSACTION_STATUSE_ID" Type="char" Nullable="false" MaxLength="32" />
+    <Property Name="TRANSACTION_ID" Type="varchar2" MaxLength="32" />
+    <Property Name="PROCESS_MAN" Type="varchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="varchar2" MaxLength="32" />
+    <Property Name="PROCESS_DATE" Type="date" />
+    <Property Name="PROCESS_TYPE" Type="varchar2" MaxLength="32" />
+    <Property Name="PROCESS_INFO" Type="varchar2" MaxLength="2000" />
+    <Property Name="TRANSACTION_ANNEX" Type="blob" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="DM_LOG_UP_EQUIP">
+    <Key>
+      <PropertyRef Name="JOB_PLAN_CD" />
+    </Key>
+    <Property Name="REQUISITION_CD" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="TEAM_ORG_ID" Type="varchar2" MaxLength="32" />
+    <Property Name="LOG_SERIES_ID" Type="varchar2" MaxLength="32" />
+    <Property Name="WINCH_LICENCEPLATE" Type="varchar2" MaxLength="32" />
+    <Property Name="WINCHC_ABLE_LENGTH" Type="number" />
+    <Property Name="LOGGINGTRUCK_LICENSEPLATE" Type="varchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="DM_LOG_WORK_ANING">
+    <Key>
+      <PropertyRef Name="ANINGID" />
+      <PropertyRef Name="JOB_PLAN_CD" />
+    </Key>
+    <Property Name="ANINGID" Type="number" Nullable="false" />
+    <Property Name="REQUISITION_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="RECEIVED_INFORM_TIME" Type="timestamp" />
+    <Property Name="REQUIREMENTS_TIME" Type="timestamp" />
+    <Property Name="ARRIVE_TIME" Type="timestamp" />
+    <Property Name="RECEIVING_TIME" Type="timestamp" />
+    <Property Name="HAND_TIME" Type="timestamp" />
+    <Property Name="LEAVE_TIME" Type="timestamp" />
+    <Property Name="WAIT_TIME" Type="number" Precision="6" Scale="2" />
+    <Property Name="LOG_START_TIME" Type="timestamp" />
+    <Property Name="LOG_END_TIME" Type="timestamp" />
+    <Property Name="LOG_TOTAL_TIME" Type="number" Precision="5" Scale="2" />
+    <Property Name="LOST_TIME" Type="number" Precision="5" Scale="2" />
+    <Property Name="WINCH_RUNNING_TIME" Type="number" />
+    <Property Name="DEPARTURE_POINT_" Type="varchar2" MaxLength="256" />
+    <Property Name="UNILATERAL_DISTANCE" Type="number" Precision="12" Scale="2" />
+  </EntityType>
+  <EntityType Name="DM_LOG_WORK_DETAILS">
+    <Key>
+      <PropertyRef Name="DETAILSID" />
+    </Key>
+    <Property Name="DETAILSID" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="BLOCK_NUNBER" Type="number" />
+    <Property Name="LOG_ORIGIANL_DATA_ID" Type="varchar2" MaxLength="100" />
+    <Property Name="DOWN_WELL_SEQUENCE" Type="number" Nullable="false" />
+    <Property Name="IS_ADD" Type="char" MaxLength="1" />
+    <Property Name="COMBINATION_NAME" Type="varchar2" MaxLength="256" />
+    <Property Name="START_TIME" Type="timestamp" />
+    <Property Name="END_TIME" Type="timestamp" />
+    <Property Name="WORK_HOURS" Type="number" Precision="12" Scale="2" />
+    <Property Name="IF_SUCCESS" Type="char" MaxLength="1" />
+    <Property Name="MEASURE_WELL_TO" Type="number" Precision="12" Scale="2" />
+    <Property Name="MEASURE_WELL_FROM" Type="number" Precision="12" Scale="2" />
+    <Property Name="WELL_SECTION" Type="varchar2" MaxLength="32" />
+    <Property Name="POWERSUPPLY_VOLTAGE" Type="number" Precision="12" Scale="2" />
+    <Property Name="CABLEHEAD_VOLTAGE" Type="number" Precision="12" Scale="2" />
+    <Property Name="CURRENT" Type="number" Precision="12" Scale="2" />
+    <Property Name="LARGEST_CABLE_TENSION" Type="number" Precision="12" Scale="2" />
+    <Property Name="LARGEST_CABLEHEAD_TENSION" Type="number" Precision="12" Scale="2" />
+    <Property Name="DATA_NAME" Type="varchar2" MaxLength="128" />
+    <Property Name="DATA_SIZE" Type="number" />
+    <Property Name="DATA_BLOCK_NUM" Type="number" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="256" />
+    <Property Name="FILENAME" Type="nvarchar2" />
+  </EntityType>
+  <EntityType Name="DM_LOG_WORK_HOLDUP_DETAILS">
+    <Key>
+      <PropertyRef Name="HOLDUPID" />
+    </Key>
+    <Property Name="HOLDUPID" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="DOWN_WELL_SEQUENCE" Type="number" Nullable="false" />
+    <Property Name="HOLDUP_DATE" Type="timestamp" />
+    <Property Name="HOLDUP_MD" Type="varchar2" MaxLength="32" />
+    <Property Name="HOLDUP_TYPE" Type="varchar2" MaxLength="32" />
+    <Property Name="WB_OBSTRUCTION_ID" Type="varchar2" MaxLength="32" />
+    <Property Name="OBSTRUCTION_DESC" Type="varchar2" MaxLength="32" />
+    <Property Name="TOOL_DIAMETER" Type="number" Precision="12" Scale="2" />
+  </EntityType>
+  <EntityType Name="DM_LOG_WORK_PERSONNEL">
+    <Key>
+      <PropertyRef Name="PERSONNEL_ID" />
+    </Key>
+    <Property Name="PERSONNEL_ID" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="LOG_TEAM_LEADER" Type="varchar2" MaxLength="32" />
+    <Property Name="CONTACT_TELEPHONE" Type="varchar2" MaxLength="32" />
+    <Property Name="LOG_OPERATOR__NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="SOURCE_OPERATOR_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="LOG_SUPERVISION_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="OTHER_CONSTRUCTION_PERSONS" Type="varchar2" MaxLength="1024" />
+    <Property Name="FIELD_INSPECTOR" Type="varchar2" MaxLength="32" />
+    <Property Name="INDOOR_INSPECTOR" Type="varchar2" MaxLength="32" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="HS_GROUP">
+    <Key>
+      <PropertyRef Name="COL_ID" />
+    </Key>
+    <Property Name="COL_ID" Type="number" Nullable="false" />
+    <Property Name="COL_NAME" Type="varchar2" MaxLength="64" />
+    <Property Name="COL_DISABLED" Type="number" Nullable="false" Precision="1" />
+    <Property Name="COL_ITEMINDEX" Type="number" />
+  </EntityType>
+  <EntityType Name="HS_RELATION">
+    <Key>
+      <PropertyRef Name="COL_ID" />
+    </Key>
+    <Property Name="COL_ID" Type="number" Nullable="false" />
+    <Property Name="COL_HSITEMTYPE" Type="number" Nullable="false" />
+    <Property Name="COL_HSITEMID" Type="number" Nullable="false" />
+    <Property Name="COL_DHSITEMID" Type="number" Nullable="false" />
+    <Property Name="COL_DHSITEMTYPE" Type="number" Nullable="false" />
+    <Property Name="COL_DISABLED" Type="number" Nullable="false" Precision="1" />
+  </EntityType>
+  <EntityType Name="HS_ROLE">
+    <Key>
+      <PropertyRef Name="COL_LOGINNAME" />
+      <PropertyRef Name="COL_ROLETYPE" />
+    </Key>
+    <Property Name="COL_LOGINNAME" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="COL_ROLETYPE" Type="number" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HS_USER">
+    <Key>
+      <PropertyRef Name="COL_ID" />
+    </Key>
+    <Property Name="COL_ID" Type="number" Nullable="false" />
+    <Property Name="COL_LOGINNAME" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="COL_NAME" Type="varchar2" MaxLength="50" />
+    <Property Name="COL_PWORD" Type="varchar2" MaxLength="64" />
+    <Property Name="COL_DISABLED" Type="number" Nullable="false" Precision="1" />
+    <Property Name="COL_ITEMINDEX" Type="number" />
+  </EntityType>
+  <EntityType Name="HS_VIEW">
+    <Key>
+      <PropertyRef Name="COL_ID" />
+    </Key>
+    <Property Name="COL_ID" Type="number" Nullable="false" />
+    <Property Name="COL_NAME" Type="varchar2" MaxLength="50" />
+    <Property Name="COL_DISABLED" Type="number" Nullable="false" Precision="1" />
+    <Property Name="COL_ITEMINDEX" Type="number" />
+  </EntityType>
+  <EntityType Name="MD_APPLICATIONFILES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Nullable="false" />
+    <Property Name="APPLICATIONS_ID_FK" Type="number" Nullable="false" />
+    <Property Name="NAME" Type="varchar2" Nullable="false" MaxLength="200" />
+    <Property Name="URI" Type="varchar2" Nullable="false" />
+    <Property Name="TYPE" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="STATE" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="LANGUAGE" Type="varchar2" MaxLength="100" />
+    <Property Name="LOC" Type="number" />
+    <Property Name="SECURITY_GROUP_ID" Type="number" Nullable="false" />
+    <Property Name="CREATED_ON" Type="date" Nullable="false" />
+    <Property Name="CREATED_BY" Type="varchar2" />
+    <Property Name="UPDATED_ON" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" />
+  </EntityType>
+  <EntityType Name="MD_APPLICATIONS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Nullable="false" />
+    <Property Name="NAME" Type="varchar2" />
+    <Property Name="DESCRIPTION" Type="varchar2" />
+    <Property Name="BASE_DIR" Type="varchar2" />
+    <Property Name="OUTPUT_DIR" Type="varchar2" />
+    <Property Name="BACKUP_DIR" Type="varchar2" />
+    <Property Name="INPLACE" Type="number" />
+    <Property Name="PROJECT_ID_FK" Type="number" Nullable="false" />
+    <Property Name="SECURITY_GROUP_ID" Type="number" Nullable="false" />
+    <Property Name="CREATED_ON" Type="date" Nullable="false" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="255" />
+    <Property Name="LAST_UPDATED_ON" Type="date" />
+    <Property Name="LAST_UPDATED_BY" Type="varchar2" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="MD_FILE_ARTIFACTS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Nullable="false" />
+    <Property Name="APPLICATIONFILES_ID" Type="number" Nullable="false" />
+    <Property Name="PATTERN" Type="varchar2" />
+    <Property Name="STRING_FOUND" Type="varchar2" />
+    <Property Name="STRING_REPLACED" Type="varchar2" />
+    <Property Name="TYPE" Type="varchar2" MaxLength="200" />
+    <Property Name="STATUS" Type="varchar2" />
+    <Property Name="LINE" Type="number" />
+    <Property Name="PATTERN_START" Type="number" />
+    <Property Name="PATTERN_END" Type="number" />
+    <Property Name="DUE_DATE" Type="date" />
+    <Property Name="DB_TYPE" Type="varchar2" MaxLength="100" />
+    <Property Name="CODE_TYPE" Type="varchar2" MaxLength="1000" />
+    <Property Name="DESCRIPTION" Type="varchar2" />
+    <Property Name="PRIORITY" Type="number" />
+    <Property Name="SECURITY_GROUP_ID" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="CREATED_ON" Type="date" Nullable="false" />
+    <Property Name="CREATED_BY" Type="varchar2" />
+    <Property Name="LAST_UPDATED" Type="date" />
+    <Property Name="LAST_UPDATED_BY" Type="varchar2" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“LOGGINGAPPUSER.MD_REPOVERSIONS”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="MD_REPOVERSIONS">
+    <Key>
+      <PropertyRef Name="REVISION" />
+    </Key>
+    <Property Name="REVISION" Type="number" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MD_TABLESPACES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Nullable="false" />
+    <Property Name="SCHEMA_ID_FK" Type="number" Nullable="false" />
+    <Property Name="TABLESPACE_NAME" Type="varchar2" />
+    <Property Name="NATIVE_SQL" Type="clob" />
+    <Property Name="NATIVE_KEY" Type="varchar2" />
+    <Property Name="COMMENTS" Type="varchar2" />
+    <Property Name="SECURITY_GROUP_ID" Type="number" Nullable="false" />
+    <Property Name="CREATED_ON" Type="date" Nullable="false" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="255" />
+    <Property Name="LAST_UPDATED_ON" Type="date" />
+    <Property Name="LAST_UPDATED_BY" Type="varchar2" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="MD_USER_PRIVILEGES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Nullable="false" />
+    <Property Name="USER_ID_FK" Type="number" Nullable="false" />
+    <Property Name="PRIVILEGE_ID_FK" Type="number" />
+    <Property Name="SECURITY_GROUP_ID" Type="number" Nullable="false" />
+    <Property Name="CREATED_ON" Type="date" Nullable="false" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="255" />
+    <Property Name="LAST_UPDATED_ON" Type="date" />
+    <Property Name="LAST_UDPATED_BY" Type="varchar2" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="PC_PROJECT_ASSOC">
+    <Key>
+      <PropertyRef Name="PROJECT_ID" />
+    </Key>
+    <Property Name="PROJECT_ID" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="PARENT_PROJECT_ID" Type="varchar2" MaxLength="50" />
+    <Property Name="GEOL_TYPE" Type="varchar2" MaxLength="50" />
+    <Property Name="GEOL_LEVEL" Type="varchar2" MaxLength="50" />
+    <Property Name="ORG_ID" Type="varchar2" MaxLength="50" />
+    <Property Name="X_VALUES" Type="number" Precision="10" />
+    <Property Name="Y_VALUES" Type="number" Precision="10" />
+    <Property Name="Z_VALUES" Type="number" Precision="10" />
+    <Property Name="POINTS" Type="number" />
+    <Property Name="REPL_FLAG" Type="varchar2" MaxLength="1" />
+    <Property Name="P_XN_DIVISION_UNIT" Type="varchar2" MaxLength="20" />
+    <Property Name="GEOL_CREATE_DATE" Type="timestamp" />
+    <Property Name="P_XN_BUILDINGBLOCK_TYPE" Type="varchar2" MaxLength="12" />
+    <Property Name="P_XN_STRUCTURAL_REGIME" Type="varchar2" MaxLength="10" />
+    <Property Name="P_XN_BUILDINGBLOCK_AREA" Type="number" Precision="8" Scale="1" />
+    <Property Name="P_XN_ADMINISTRATIVEAREA_NAME" Type="varchar2" MaxLength="40" />
+    <Property Name="P_XN_REMARK" Type="varchar2" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PKL_LOG_DEPARTMENT_REQUISITION">
+    <Key>
+      <PropertyRef Name="DEPARTMENT_REQUISITION_ID" />
+    </Key>
+    <Property Name="DEPARTMENT_REQUISITION_ID" Type="number" Nullable="false" />
+    <Property Name="DEPARTMENT_REQUISITION_NAME" Type="varchar2" MaxLength="64" />
+    <Property Name="WRITER" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITING_DATE" Type="timestamp" />
+    <Property Name="VERIFIER" Type="varchar2" MaxLength="32" />
+    <Property Name="VERIFICATION_DATE" Type="timestamp" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="PKL_LOG_DOWNHOLE_INSTRUMENT">
+    <Key>
+      <PropertyRef Name="INSTRUMENT_ID" />
+    </Key>
+    <Property Name="INSTRUMENT_ID" Type="varchar2" Nullable="false" MaxLength="32" />
+    <Property Name="INSTRUMENT_NAME" Type="varchar2" MaxLength="64" />
+    <Property Name="INSTRUMENT_TYPE" Type="varchar2" MaxLength="64" />
+    <Property Name="INSTRUMENT_COST" Type="number" Precision="16" Scale="2" />
+    <Property Name="INSTRUMENT_MODEL" Type="varchar2" MaxLength="64" />
+    <Property Name="NSTRUMENT_SERIES" Type="varchar2" MaxLength="64" />
+    <Property Name="INSTRUMENT_SCCJ" Type="varchar2" MaxLength="64" />
+    <Property Name="INSTRUMENT_ZBH" Type="varchar2" MaxLength="64" />
+    <Property Name="INSTRUMENT_CCBH" Type="varchar2" MaxLength="64" />
+    <Property Name="USE_ORG_ID" Type="varchar2" MaxLength="64" />
+    <Property Name="USE_TEAM" Type="varchar2" MaxLength="64" />
+    <Property Name="MAX_OUT_DIAMETER" Type="number" />
+    <Property Name="INSTRUMENT_WEIGHT" Type="number" Precision="12" Scale="2" />
+    <Property Name="INSTRUMENT_LENGTH" Type="number" />
+    <Property Name="INSTRUMENT_TEMPERATURE" Type="number" />
+    <Property Name="INSTRUMENT_PRESSURE" Type="number" />
+    <Property Name="INSTRUMENT_SPEED" Type="number" Precision="12" Scale="2" />
+    <Property Name="APPLY_WELL_DIAMETER" Type="number" Precision="12" Scale="2" />
+    <Property Name="WRITER" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITING_DATE" Type="timestamp" />
+    <Property Name="VERIFIER" Type="varchar2" MaxLength="32" />
+    <Property Name="VERIFICATION_DATE" Type="timestamp" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="PKL_LOG_DRILL_STATUS">
+    <Key>
+      <PropertyRef Name="DRILL_STATUS_ID" />
+    </Key>
+    <Property Name="DRILL_STATUS_ID" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="STATUS_NAME" Type="varchar2" MaxLength="64" />
+    <Property Name="WRITER" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITING_DATE" Type="timestamp" />
+    <Property Name="VERIFIER" Type="varchar2" MaxLength="32" />
+    <Property Name="VERIFICATION_DATE" Type="timestamp" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="PKL_LOG_EXEC_UNIT">
+    <Key>
+      <PropertyRef Name="EXEC_TASK_UNIT_ID" />
+    </Key>
+    <Property Name="EXEC_TASK_UNIT_ID" Type="number" Nullable="false" />
+    <Property Name="EXEC_TASK_UNIT_NAME" Type="varchar2" MaxLength="64" />
+    <Property Name="EXEC_TASK_UNIT_NAME1" Type="varchar2" MaxLength="64" />
+    <Property Name="WRITER" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITING_DATE" Type="timestamp" />
+    <Property Name="VERIFIER" Type="varchar2" MaxLength="32" />
+    <Property Name="VERIFICATION_DATE" Type="timestamp" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="PKL_LOG_ITEM">
+    <Key>
+      <PropertyRef Name="LOG_ITEM_ID" />
+    </Key>
+    <Property Name="LOG_ITEM_ID" Type="number" Nullable="false" />
+    <Property Name="LOG_ITEM_TYPE" Type="varchar2" MaxLength="100" />
+    <Property Name="PARENT_ID" Type="number" />
+    <Property Name="WRITER" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITING_DATE" Type="timestamp" />
+    <Property Name="VERIFIER" Type="varchar2" MaxLength="32" />
+    <Property Name="VERIFICATION_DATE" Type="timestamp" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="PKL_LOG_ITEM_ARCHIVE">
+    <Key>
+      <PropertyRef Name="ITEM_ARCHIVE_ID" />
+    </Key>
+    <Property Name="ITEM_ARCHIVE_ID" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="ITEM_CODE" Type="varchar2" MaxLength="64" />
+    <Property Name="ITEM_NAME" Type="varchar2" MaxLength="64" />
+    <Property Name="ARCHIVE_CODE" Type="varchar2" MaxLength="64" />
+    <Property Name="ARCHIVE_NAME" Type="varchar2" MaxLength="64" />
+    <Property Name="WRITER" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITING_DATE" Type="date" />
+    <Property Name="VERIFIER" Type="varchar2" MaxLength="32" />
+    <Property Name="VERIFICATION_DATE" Type="date" />
+    <Property Name="STATUS" Type="number" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="128" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“LOGGINGAPPUSER.PKL_LOG_ITEM_BAK”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="PKL_LOG_ITEM_BAK">
+    <Key>
+      <PropertyRef Name="LOG_ITEM_ID" />
+    </Key>
+    <Property Name="LOG_ITEM_ID" Type="number" Nullable="false" />
+    <Property Name="LOG_ITEM_TYPE1" Type="varchar2" MaxLength="100" />
+    <Property Name="LOG_ITEM_TYPE2" Type="varchar2" MaxLength="100" />
+    <Property Name="LOG_ITEM_TYPE3" Type="varchar2" MaxLength="100" />
+    <Property Name="LOG_ITEM_TYPE4" Type="varchar2" MaxLength="100" />
+    <Property Name="WRITER" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITING_DATE" Type="timestamp" />
+    <Property Name="VERIFIER" Type="varchar2" MaxLength="32" />
+    <Property Name="VERIFICATION_DATE" Type="timestamp" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="PKL_LOG_MARKET_TYPE">
+    <Key>
+      <PropertyRef Name="MARKET_TYPE_ID" />
+    </Key>
+    <Property Name="MARKET_TYPE_ID" Type="number" Nullable="false" />
+    <Property Name="MARKET_TYPE" Type="varchar2" MaxLength="32" />
+    <Property Name="MARKET_TYPE_CD" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITER" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITING_DATE" Type="timestamp" />
+    <Property Name="VERIFIER" Type="varchar2" MaxLength="32" />
+    <Property Name="VERIFICATION_DATE" Type="timestamp" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="PKL_LOG_OPS_CURVE">
+    <Key>
+      <PropertyRef Name="CURVE_ID" />
+    </Key>
+    <Property Name="CURVE_ID" Type="number" Nullable="false" />
+    <Property Name="PROCESSING_ITEM_ID" Type="number" />
+    <Property Name="CURVE_NAME" Type="varchar2" MaxLength="100" />
+    <Property Name="CURVE_CD" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITER" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITING_DATE" Type="timestamp" />
+    <Property Name="VERIFIER" Type="varchar2" MaxLength="32" />
+    <Property Name="VERIFICATION_DATE" Type="timestamp" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="PKL_LOG_OPS_PERPOSE">
+    <Key>
+      <PropertyRef Name="JOB_ID" />
+    </Key>
+    <Property Name="JOB_ID" Type="number" Nullable="false" />
+    <Property Name="JOB_CHINESE_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITER" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITING_DATE" Type="timestamp" />
+    <Property Name="VERIFIER" Type="varchar2" MaxLength="32" />
+    <Property Name="VERIFICATION_DATE" Type="timestamp" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="PKL_LOG_OPS_PROJECT">
+    <Key>
+      <PropertyRef Name="PROCESSING_ITEM_ID" />
+    </Key>
+    <Property Name="PROCESSING_ITEM_ID" Type="number" Nullable="false" />
+    <Property Name="PROCESSING_ITEM_NAME" Type="varchar2" Nullable="false" MaxLength="256" />
+    <Property Name="PROCESSING_ITEM_CODE" Type="varchar2" MaxLength="64" />
+    <Property Name="WRITER" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITING_DATE" Type="timestamp" />
+    <Property Name="VERIFIER" Type="varchar2" MaxLength="32" />
+    <Property Name="VERIFICATION_DATE" Type="timestamp" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="PKL_LOG_OPS_TECHNOLOGY">
+    <Key>
+      <PropertyRef Name="CONSTRUCTION_TECHNOLOGY_ID" />
+    </Key>
+    <Property Name="CONSTRUCTION_TECHNOLOGY_ID" Type="number" Nullable="false" />
+    <Property Name="CONSTRUCTION_TECHNOLOGY_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITER" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITING_DATE" Type="varchar2" MaxLength="32" />
+    <Property Name="VERIFIER" Type="varchar2" MaxLength="32" />
+    <Property Name="VERIFICATION_DATE" Type="timestamp" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="PKL_LOG_RADIATION">
+    <Key>
+      <PropertyRef Name="RADIATION_CD" />
+    </Key>
+    <Property Name="RADIATION_CD" Type="varchar2" Nullable="false" MaxLength="60" />
+    <Property Name="CONTRY_CODE" Type="varchar2" MaxLength="60" />
+    <Property Name="RADIATION_ID" Type="varchar2" Nullable="false" MaxLength="32" />
+    <Property Name="RADIATION_NO" Type="varchar2" MaxLength="60" />
+    <Property Name="RADIATION_NAME" Type="varchar2" MaxLength="50" />
+    <Property Name="RADIATION_TYPE" Type="varchar2" MaxLength="32" />
+    <Property Name="INTENSION" Type="number" Precision="12" Scale="2" />
+    <Property Name="ACTIVE" Type="varchar2" MaxLength="50" />
+    <Property Name="UNIT" Type="varchar2" MaxLength="32" />
+    <Property Name="WORKING_DATE" Type="timestamp" />
+    <Property Name="MANUFACTURE" Type="varchar2" MaxLength="32" />
+    <Property Name="INITIALIZE_CD" Type="varchar2" MaxLength="50" />
+    <Property Name="HALF_LIFE" Type="number" Precision="12" Scale="2" />
+    <Property Name="USE_TEAM" Type="varchar2" MaxLength="32" />
+    <Property Name="TECH_STATUS" Type="varchar2" MaxLength="32" />
+    <Property Name="USE_STATUS" Type="varchar2" MaxLength="32" />
+    <Property Name="PLACE" Type="varchar2" MaxLength="60" />
+    <Property Name="ELEMENT" Type="varchar2" MaxLength="32" />
+    <Property Name="RADIATION_NUM" Type="number" />
+    <Property Name="MODIFY_DATE" Type="timestamp" />
+    <Property Name="CREATOR" Type="varchar2" MaxLength="32" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="400" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“LOGGINGAPPUSER.PKL_LOG_REQUISITION_TYPE”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="PKL_LOG_REQUISITION_TYPE">
+    <Key>
+      <PropertyRef Name="REQUISITION_TYPE_ID" />
+    </Key>
+    <Property Name="REQUISITION_TYPE_ID" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="REQUISITION_TYPE_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="LOG_TYPE_CD" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITER" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITING_DATE" Type="timestamp" />
+    <Property Name="VERIFIER" Type="varchar2" MaxLength="32" />
+    <Property Name="VERIFICATION_DATE" Type="timestamp" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="PKL_LOG_TEAM">
+    <Key>
+      <PropertyRef Name="TEAM_ORG_ID" />
+    </Key>
+    <Property Name="TEAM_ORG_ID" Type="varchar2" Nullable="false" MaxLength="32" />
+    <Property Name="LOG_SERIES_ID" Type="varchar2" MaxLength="32" />
+    <Property Name="LOG_TEAM_LEADER" Type="char" MaxLength="50" />
+    <Property Name="LOG_OPERATOR__NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="LOG_SAFE_NAME" Type="char" MaxLength="50" />
+    <Property Name="LOG_LAND_LEADER" Type="char" MaxLength="50" />
+    <Property Name="WINCH_LICENCEPLATE" Type="varchar2" MaxLength="32" />
+    <Property Name="WINCHC_ABLE_LENGTH" Type="number" />
+    <Property Name="LOGGINGTRUCK_LICENSEPLATE" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITER" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITING_DATE" Type="timestamp" />
+    <Property Name="VERIFIER" Type="varchar2" MaxLength="32" />
+    <Property Name="VERIFICATION_DATE" Type="timestamp" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="PKL_LOG_TYPE">
+    <Key>
+      <PropertyRef Name="LOG_TYPE_ID" />
+    </Key>
+    <Property Name="LOG_TYPE_ID" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="LOG_TYPE_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="LOG_TYPE_CD" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITER" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITING_DATE" Type="timestamp" />
+    <Property Name="VERIFIER" Type="varchar2" MaxLength="32" />
+    <Property Name="VERIFICATION_DATE" Type="timestamp" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="128" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“LOGGINGAPPUSER.PKL_LOG_WELL_SORT”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="PKL_LOG_WELL_SORT">
+    <Key>
+      <PropertyRef Name="WELL_SORT_ID" />
+    </Key>
+    <Property Name="WELL_SORT_ID" Type="number" Nullable="false" />
+    <Property Name="WELL_SORT" Type="varchar2" MaxLength="100" />
+    <Property Name="WRITER" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITING_DATE" Type="timestamp" />
+    <Property Name="VERIFIER" Type="varchar2" MaxLength="32" />
+    <Property Name="VERIFICATION_DATE" Type="timestamp" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="128" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“LOGGINGAPPUSER.PKL_LOG_WELL_TYPE”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="PKL_LOG_WELL_TYPE">
+    <Key>
+      <PropertyRef Name="WELL_TYPE_ID" />
+    </Key>
+    <Property Name="WELL_TYPE_ID" Type="number" Nullable="false" />
+    <Property Name="WELL_TYPE" Type="varchar2" MaxLength="100" />
+    <Property Name="WRITER" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITING_DATE" Type="timestamp" />
+    <Property Name="VERIFIER" Type="varchar2" MaxLength="32" />
+    <Property Name="VERIFICATION_DATE" Type="timestamp" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="128" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“LOGGINGAPPUSER.PKL_LOG_WORK_TYPE”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="PKL_LOG_WORK_TYPE">
+    <Key>
+      <PropertyRef Name="COMBINATION_NAME_ID" />
+    </Key>
+    <Property Name="COMBINATION_NAME_ID" Type="number" Nullable="false" />
+    <Property Name="COMBINATION_NAME_NAME" Type="varchar2" MaxLength="256" />
+    <Property Name="WRITER" Type="varchar2" MaxLength="32" />
+    <Property Name="WRITING_DATE" Type="timestamp" />
+    <Property Name="VERIFIER" Type="varchar2" MaxLength="32" />
+    <Property Name="VERIFICATION_DATE" Type="timestamp" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_BIG_ORIGINAL_DATA">
+    <Key>
+      <PropertyRef Name="ORIGINALID" />
+    </Key>
+    <Property Name="ORIGINALID" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="PROCESS_ID" Type="varchar2" MaxLength="32" />
+    <Property Name="DOWN_WELL_SEQUENCE" Type="number" />
+    <Property Name="MEASUREMENT_DIRECTION" Type="varchar2" MaxLength="32" />
+    <Property Name="ORIGINAL_DATA_NAME" Type="nvarchar2" MaxLength="128" />
+    <Property Name="ORIGINAL_DATA_SIZE" Type="number" Precision="12" />
+    <Property Name="ORIGINAL_DATA_TYPE_" Type="varchar2" MaxLength="32" />
+    <Property Name="ORIGINAL_DATA_FORMAT_" Type="varchar2" MaxLength="32" />
+    <Property Name="ORIGINAL_DATA_STORAGE" Type="nvarchar2" MaxLength="128" />
+    <Property Name="ARCHIVED_DATE" Type="timestamp" />
+    <Property Name="ARCHIVED_PERSON" Type="varchar2" MaxLength="32" />
+    <Property Name="ARCHIVED_VERIFIER" Type="varchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_BIT_PROGRAM">
+    <Key>
+      <PropertyRef Name="BITID" />
+    </Key>
+    <Property Name="BITID" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="REQUISITION_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATE_DATE" Type="timestamp" />
+    <Property Name="BIT_SIZE" Type="number" Precision="12" Scale="2" />
+    <Property Name="BIT_DEP" Type="number" Precision="12" Scale="2" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_CABLE">
+    <Key>
+      <PropertyRef Name="CABLE_ID" />
+      <PropertyRef Name="TEAM_ORG_ID" />
+    </Key>
+    <Property Name="CABLE_ID" Type="number" Nullable="false" />
+    <Property Name="START_TIME" Type="timestamp" />
+    <Property Name="TEAM_ORG_ID" Type="varchar2" Nullable="false" MaxLength="32" />
+    <Property Name="WINCH_LICENCEPLATE" Type="varchar2" MaxLength="32" />
+    <Property Name="PRODUCTOR" Type="varchar2" MaxLength="50" />
+    <Property Name="CABLE_SORT" Type="varchar2" MaxLength="32" />
+    <Property Name="INITIATE_SIGN" Type="varchar2" MaxLength="32" />
+    <Property Name="INITIATE_LENGTH" Type="number" Precision="12" Scale="2" />
+    <Property Name="ACTUAL_LENGTH" Type="number" Precision="12" Scale="2" />
+    <Property Name="DEPTH_SIGN_DATE" Type="timestamp" />
+    <Property Name="FORCE_CHECK_DATE" Type="timestamp" />
+    <Property Name="TEST_PULL" Type="number" Precision="12" Scale="2" />
+    <Property Name="FINAL_SIGN_DATE" Type="timestamp" />
+    <Property Name="USING_STATUS" Type="varchar2" MaxLength="12" />
+    <Property Name="CREATOR" Type="varchar2" MaxLength="32" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_CASIN">
+    <Key>
+      <PropertyRef Name="CASINID" />
+    </Key>
+    <Property Name="CASINID" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="REQUISITION_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="CASING_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="CASING_TYPE" Type="varchar2" MaxLength="32" />
+    <Property Name="CASING_OUTSIZE" Type="number" Precision="12" Scale="2" />
+    <Property Name="CASING_QUANTITY" Type="number" Precision="12" />
+    <Property Name="CASING_THREAD_TYPE" Type="varchar2" MaxLength="32" />
+    <Property Name="CASING_GRADE" Type="varchar2" MaxLength="32" />
+    <Property Name="PIPE_THICKNESS" Type="number" Precision="12" Scale="2" />
+    <Property Name="P_XN_CASING_LENGTH" Type="number" Precision="12" Scale="2" />
+    <Property Name="ACCUMULATIVE_LENGTH" Type="number" Precision="8" Scale="2" />
+    <Property Name="RUNNING_BOTTOM_DEPTH" Type="number" Precision="8" Scale="2" />
+    <Property Name="SCREW_ON_TORQUE" Type="number" Precision="6" Scale="2" />
+    <Property Name="CENTERING_DEVICE_POSITION" Type="number" Precision="8" Scale="2" />
+    <Property Name="CENTERING_DEVICE_NO" Type="number" />
+    <Property Name="CENTERING_DEVICE_TYPE" Type="varchar2" MaxLength="32" />
+    <Property Name="CENTERING_DEVICE_SIZE" Type="number" Precision="6" Scale="2" />
+    <Property Name="BASETUBE_BORESIZE" Type="number" Precision="6" Scale="2" />
+    <Property Name="BASETUBE_OUTSIZE" Type="number" Precision="6" Scale="2" />
+    <Property Name="BASETUBE_UNITNUMBER" Type="number" Precision="8" />
+    <Property Name="BASETUBE_TYPE" Type="varchar2" MaxLength="60" />
+    <Property Name="BASETUBE_SLOTWIDTH" Type="number" Precision="7" Scale="3" />
+    <Property Name="BASETUBE_POREDIAMETER" Type="number" Precision="7" Scale="3" />
+    <Property Name="SIEVETUBE_SLOTWIDTH" Type="number" Precision="7" Scale="3" />
+    <Property Name="SIEVETUBE_SLOTLENGTH" Type="number" Precision="7" Scale="3" />
+    <Property Name="PIPE_HEIGHT" Type="number" Precision="12" Scale="2" />
+    <Property Name="CURRENT_LOG_FILL" Type="number" Precision="7" Scale="2" />
+    <Property Name="CURRENT_LOG_PLUGBACK" Type="number" Precision="7" Scale="2" />
+    <Property Name="NOTE" Type="nvarchar2" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_CEMENT">
+    <Key>
+      <PropertyRef Name="CEMENTID" />
+    </Key>
+    <Property Name="CEMENTID" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="REQUISITION_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATE_DATE" Type="timestamp" />
+    <Property Name="CEMENT_PROPERTIES" Type="varchar2" MaxLength="100" />
+    <Property Name="CEMENT_DENSITY_MAX_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="CEMENTED_QUANTITY" Type="varchar2" MaxLength="100" />
+    <Property Name="CASING_SHOE_DEPTH" Type="number" Precision="12" Scale="2" />
+    <Property Name="CEMENT_PRE_TOP" Type="number" Precision="12" Scale="2" />
+    <Property Name="CEMENT_HEIGHT" Type="number" Precision="12" Scale="2" />
+    <Property Name="CEMENT_WELL_DATE" Type="timestamp" />
+    <Property Name="OPEN_WELL_DATE" Type="timestamp" />
+    <Property Name="DISTANCE_TUBING_AND_BUSHING" Type="number" Precision="10" Scale="2" />
+    <Property Name="CASING_TOP_SPACING" Type="number" Precision="10" Scale="2" />
+    <Property Name="CEMENT_TYPE" Type="varchar2" MaxLength="20" />
+    <Property Name="CEMENT_DENSITY_MIN_VALUE" Type="number" Precision="12" Scale="2" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_CORE">
+    <Key>
+      <PropertyRef Name="COREID" />
+    </Key>
+    <Property Name="COREID" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="REQUISITION_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATE_DATE" Type="timestamp" />
+    <Property Name="FORMATION_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="START_DEPTH" Type="number" Precision="12" Scale="2" />
+    <Property Name="END_DEPTH" Type="number" Precision="12" Scale="2" />
+    <Property Name="CORE_WORD_DESCRIPTION" Type="nvarchar2" MaxLength="1000" />
+    <Property Name="CORE_GR_DATA" Type="blob" />
+    <Property Name="CORE_PICTURE_DESCRIPTION" Type="nvarchar2" MaxLength="1000" />
+    <Property Name="CORE_RECOVERY" Type="varchar2" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_DATA_PUBLISH">
+    <Key>
+      <PropertyRef Name="DATA_PUBLISH_ID" />
+    </Key>
+    <Property Name="DATA_PUBLISH_ID" Type="number" Nullable="false" />
+    <Property Name="PROCESS_ID" Type="varchar2" MaxLength="100" />
+    <Property Name="INTERPRET_CENTER" Type="char" MaxLength="50" />
+    <Property Name="LOG_START_TIME" Type="timestamp" />
+    <Property Name="LOG_TOTAL_TIME" Type="number" Precision="5" Scale="2" />
+    <Property Name="LOST_TIME" Type="number" Precision="5" Scale="2" />
+    <Property Name="TEAM_ORG_ID" Type="varchar2" MaxLength="32" />
+    <Property Name="LOG_SERIES_ID" Type="varchar2" MaxLength="32" />
+    <Property Name="PRO_START_TIME" Type="timestamp" />
+    <Property Name="P_TOTAL_TIME" Type="number" Precision="5" Scale="2" />
+    <Property Name="P_PROCESS_SOFTWARE" Type="varchar2" MaxLength="255" />
+    <Property Name="PROCESSOR" Type="varchar2" MaxLength="32" />
+    <Property Name="INTERPRETER" Type="varchar2" MaxLength="32" />
+    <Property Name="P_SUPERVISOR" Type="varchar2" MaxLength="32" />
+    <Property Name="RESULT_MAP_TYPE" Type="number" />
+    <Property Name="LOG_ORIGINALITY_DATA" Type="number" Precision="12" Scale="2" />
+    <Property Name="LOG_INTERPRET_REPORT" Type="number" Precision="12" Scale="2" />
+    <Property Name="LOG_INTERPRET_RESULT" Type="number" Precision="12" Scale="2" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="100" />
+    <Property Name="FILE_NUMBER" Type="number" />
+    <Property Name="P_SCENE_RATING" Type="varchar2" MaxLength="32" />
+    <Property Name="P_INDOOR_RATING" Type="varchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_INSTRUMENT">
+    <Key>
+      <PropertyRef Name="INSTRUMENT_ID" />
+      <PropertyRef Name="INSTRUMENT_ZBH" />
+    </Key>
+    <Property Name="INSTRUMENT_ID" Type="number" Nullable="false" Precision="4" />
+    <Property Name="INSTRUMENT_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="INSTRUMENT_TYPE" Type="varchar2" MaxLength="32" />
+    <Property Name="NSTRUMENT_SERVER" Type="varchar2" MaxLength="32" />
+    <Property Name="INSTRUMENT_MODEL" Type="varchar2" MaxLength="32" />
+    <Property Name="INSTRUMENT_SCCJ" Type="varchar2" MaxLength="128" />
+    <Property Name="INSTRUMENT_ZBH" Type="varchar2" Nullable="false" MaxLength="32" />
+    <Property Name="INSTRUMENT_CCBH" Type="varchar2" MaxLength="32" />
+    <Property Name="USE_STATUS" Type="varchar2" MaxLength="32" />
+    <Property Name="TECHNIC_STATUS" Type="varchar2" MaxLength="32" />
+    <Property Name="USE_ORG_ID" Type="varchar2" MaxLength="32" />
+    <Property Name="USE_TEAM" Type="varchar2" MaxLength="32" />
+    <Property Name="WORKING_DATE" Type="timestamp" />
+    <Property Name="DEMARCATE_DATE" Type="timestamp" />
+    <Property Name="MODIFY_DATE" Type="timestamp" />
+    <Property Name="CREATOR" Type="varchar2" MaxLength="32" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_ORIGINAL_DATA">
+    <Key>
+      <PropertyRef Name="LOG_ORIGIANL_DATA_ID" />
+      <PropertyRef Name="BLOCK_NUNBER" />
+    </Key>
+    <Property Name="LOG_ORIGIANL_DATA_ID" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="BLOCK_NUNBER" Type="number" Nullable="false" />
+    <Property Name="BLOCK_SIZE" Type="number" />
+    <Property Name="ORIGIANL_DATA" Type="blob" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_PROCESSING_CURVE">
+    <Key>
+      <PropertyRef Name="CURVEID" />
+    </Key>
+    <Property Name="CURVEID" Type="number" Nullable="false" />
+    <Property Name="PROCESS_ID" Type="varchar2" MaxLength="100" />
+    <Property Name="PROCESSING_ITEM_ID" Type="number" />
+    <Property Name="CURVE_NAME" Type="varchar2" MaxLength="100" />
+    <Property Name="CURVE_START_DEP" Type="number" Precision="12" Scale="2" />
+    <Property Name="CURVE_END_DEP" Type="number" Precision="12" Scale="2" />
+    <Property Name="CURVE_RLEV" Type="number" Precision="12" Scale="3" />
+    <Property Name="CURVE_UNIT" Type="varchar2" MaxLength="8" />
+    <Property Name="CURVE_T_SAMPLE" Type="number" />
+    <Property Name="CURVE_T_UNIT" Type="varchar2" MaxLength="32" />
+    <Property Name="CURVE_T_MAX_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="CURVE_T_MIN_VALUE" Type="number" Precision="12" Scale="2" />
+    <Property Name="CURVE_T_RELV" Type="number" Precision="12" Scale="2" />
+    <Property Name="CURVE_DATA_TYPE" Type="varchar2" MaxLength="32" />
+    <Property Name="CURVE_DATA_LENGTH" Type="number" />
+    <Property Name="DATA_PROPERTY" Type="varchar2" MaxLength="32" />
+    <Property Name="DATA_INFO" Type="number" />
+    <Property Name="P_CURVESOFTWARE_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="DATA_STORAGE_WAY" Type="number" />
+    <Property Name="DATA_SIZE" Type="number" Precision="12" />
+    <Property Name="FILE_STORAGE_PATH" Type="varchar2" MaxLength="32" />
+    <Property Name="FILE_DATA" Type="blob" />
+    <Property Name="CURVE_NOTE" Type="varchar2" MaxLength="256" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="100" />
+    <Property Name="FILEID" Type="number" />
+    <Property Name="CURVE_CD" Type="varchar2" MaxLength="32" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“LOGGINGAPPUSER.PRO_LOG_PROCESSING_CURVERATING”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="PRO_LOG_PROCESSING_CURVERATING">
+    <Key>
+      <PropertyRef Name="PROCESS_ID" />
+      <PropertyRef Name="CURVE_ID" />
+    </Key>
+    <Property Name="PROCESS_ID" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="PROCESSING_ITEM_ID" Type="number" />
+    <Property Name="SCALE" Type="varchar2" MaxLength="20" />
+    <Property Name="RLEV" Type="number" />
+    <Property Name="SCENE_RATING" Type="varchar2" MaxLength="20" />
+    <Property Name="INDOOR_RATING" Type="varchar2" MaxLength="20" />
+    <Property Name="CURVE_ID" Type="number" Nullable="false" />
+    <Property Name="START_DEP" Type="number" Precision="12" Scale="2" />
+    <Property Name="END_DEP" Type="number" Precision="12" Scale="2" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_PROCESSING_CURVE_DATA">
+    <Key>
+      <PropertyRef Name="CURVEID" />
+      <PropertyRef Name="BLOCK_NUNBER" />
+    </Key>
+    <Property Name="CURVEID" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="BLOCK_NUNBER" Type="number" Nullable="false" />
+    <Property Name="BLOCK_SIZE" Type="number" />
+    <Property Name="CURVE_DATA" Type="blob" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_PROCESSING_ITEM">
+    <Key>
+      <PropertyRef Name="ITEMID" />
+    </Key>
+    <Property Name="ITEMID" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="PROCESS_ID" Type="varchar2" MaxLength="100" />
+    <Property Name="PROCESSING_ITEM_ID" Type="number" />
+    <Property Name="P_CURVE_NUMBER" Type="number" />
+    <Property Name="P_PROCESS_SOFTWARE" Type="varchar2" MaxLength="255" />
+    <Property Name="P_WELL_INTERVAL" Type="varchar2" MaxLength="128" />
+    <Property Name="DATA_NAME" Type="varchar2" MaxLength="64" />
+    <Property Name="PROCESSOR" Type="varchar2" MaxLength="32" />
+    <Property Name="P_START_DATE" Type="timestamp" />
+    <Property Name="SCALE" Type="varchar2" MaxLength="32" />
+    <Property Name="INTERPRETER" Type="varchar2" MaxLength="32" />
+    <Property Name="P_SUPERVISOR" Type="varchar2" MaxLength="32" />
+    <Property Name="NOTE" Type="nvarchar2" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_PROCESS_ARCHIV_DATA">
+    <Key>
+      <PropertyRef Name="ARCHIVID" />
+    </Key>
+    <Property Name="ARCHIVID" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="PROCESS_ID" Type="varchar2" MaxLength="32" />
+    <Property Name="PROCESSING_ITEM_ID" Type="varchar2" MaxLength="32" />
+    <Property Name="ARCHIV_DATA_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="ARCHIV_DATA_SIZE" Type="number" Precision="12" Scale="2" />
+    <Property Name="ARCHIV_DATA_FORMAT" Type="varchar2" MaxLength="32" />
+    <Property Name="ARCHIV_DATA_STORAGE" Type="nvarchar2" MaxLength="128" />
+    <Property Name="ARCHIV_DATE" Type="timestamp" />
+    <Property Name="ARCHIV_PERSON" Type="varchar2" MaxLength="32" />
+    <Property Name="ARCHIV_VERIFIER" Type="varchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_PROCESS_DOCUMENT">
+    <Key>
+      <PropertyRef Name="DOCUMENTID" />
+    </Key>
+    <Property Name="DOCUMENTID" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="PROCESS_ID" Type="varchar2" MaxLength="32" />
+    <Property Name="DOCUMENT_NAME" Type="varchar2" MaxLength="128" />
+    <Property Name="DOCUMENT_TYPE" Type="varchar2" MaxLength="32" />
+    <Property Name="DOCUMENT_FORMAT" Type="varchar2" MaxLength="3" />
+    <Property Name="DOCUMEN_TITLE" Type="varchar2" MaxLength="256" />
+    <Property Name="KEY_WORD" Type="varchar2" MaxLength="256" />
+    <Property Name="ABSTRACT" Type="varchar2" MaxLength="1024" />
+    <Property Name="DOCUMENT_WRITER" Type="varchar2" MaxLength="32" />
+    <Property Name="DOCUMENT_VERIFIER" Type="varchar2" MaxLength="32" />
+    <Property Name="DOCUMENT_COMPLETION_DATE" Type="timestamp" />
+    <Property Name="DOCUMENT_DATA_SIZE" Type="number" />
+    <Property Name="DOCUMENT_DATA" Type="blob" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_PROCESS_MAP">
+    <Key>
+      <PropertyRef Name="MAPID" />
+    </Key>
+    <Property Name="MAPID" Type="char" Nullable="false" MaxLength="32" />
+    <Property Name="PROCESS_ID" Type="varchar2" MaxLength="100" />
+    <Property Name="MAPS_CODING" Type="varchar2" MaxLength="32" />
+    <Property Name="MAP_START_DEP" Type="number" Precision="12" Scale="2" />
+    <Property Name="MAP_END_DEP" Type="number" Precision="12" Scale="2" />
+    <Property Name="MAP_SCALE" Type="varchar2" MaxLength="32" />
+    <Property Name="MAP_DATA_NAME" Type="nvarchar2" MaxLength="255" />
+    <Property Name="MAP_PDF_SIZE" Type="number" />
+    <Property Name="MAP_PDF_DATA" Type="blob" />
+    <Property Name="P_PROCESS_SOFTWARE" Type="varchar2" MaxLength="32" />
+    <Property Name="MAP_OUT_DATE" Type="timestamp" />
+    <Property Name="MAP_PERSON" Type="varchar2" MaxLength="32" />
+    <Property Name="MAP_NUMBER" Type="number" />
+    <Property Name="MAP_TEMPLATE_SIZE" Type="number" />
+    <Property Name="MAP_TEMPLATE_DATA" Type="blob" />
+    <Property Name="MAP_VERIFIER" Type="varchar2" MaxLength="32" />
+    <Property Name="PROCESSING_ITEM_ID" Type="number" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_PRODUCE">
+    <Key>
+      <PropertyRef Name="WORKID" />
+    </Key>
+    <Property Name="WORKID" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="REQUISITION_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATE_DATE" Type="timestamp" />
+    <Property Name="OIL_SHOE_DEPTH" Type="number" Precision="12" Scale="2" />
+    <Property Name="WELL_FLUID_TYPE" Type="varchar2" MaxLength="32" />
+    <Property Name="OIL_LINE_INNER_DIAMETER" Type="number" Precision="12" Scale="2" />
+    <Property Name="BELLMOUTH_DEPTH" Type="number" Precision="12" Scale="2" />
+    <Property Name="CHOKE" Type="number" Precision="12" Scale="2" />
+    <Property Name="SUL_HYD" Type="number" Precision="12" Scale="2" />
+    <Property Name="WELLHEAD_PRESS" Type="number" Precision="12" Scale="2" />
+    <Property Name="WELLBOTTOM_PRESS" Type="number" Precision="12" Scale="2" />
+    <Property Name="WELLHEAD_FLANGE_TYPE" Type="varchar2" MaxLength="32" />
+    <Property Name="WATER_PRO_PER_DAY" Type="number" Precision="12" Scale="2" />
+    <Property Name="AIR_DAY_PRODUCTION" Type="number" Precision="12" Scale="2" />
+    <Property Name="OIL_PRO_PER_DAY" Type="number" Precision="12" Scale="2" />
+    <Property Name="CASING_PRESSURE" Type="number" Precision="12" Scale="2" />
+    <Property Name="OIL_PRESSURE" Type="number" Precision="12" Scale="2" />
+    <Property Name="NOTE" Type="nvarchar2" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_PUNISH">
+    <Key>
+      <PropertyRef Name="PUNISHID" />
+    </Key>
+    <Property Name="PUNISHID" Type="number" Nullable="false" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="REASON" Type="nvarchar2" MaxLength="100" />
+    <Property Name="PUNISH_DATE" Type="timestamp" />
+    <Property Name="PUNISH_SUGGESTION" Type="nvarchar2" MaxLength="100" />
+    <Property Name="IS_RECTIFY" Type="nvarchar2" MaxLength="10" />
+    <Property Name="REVISE_DATE" Type="timestamp" />
+    <Property Name="LOG_SUPERVISION_ID" Type="char" MaxLength="50" />
+    <Property Name="NOTE" Type="nvarchar2" MaxLength="100" />
+    <Property Name="DOWN_WELL_SEQUENCE" Type="number" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_RADIATION_INFOR">
+    <Key>
+      <PropertyRef Name="RADIATIONID" />
+    </Key>
+    <Property Name="RADIATIONID" Type="number" Nullable="false" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="DOWN_WELL_SEQUENCE" Type="number" />
+    <Property Name="RADIATION_NO" Type="varchar2" MaxLength="60" />
+    <Property Name="RADIATION_NAME" Type="varchar2" MaxLength="50" />
+    <Property Name="ELEMENT" Type="varchar2" MaxLength="32" />
+    <Property Name="ACTIVE" Type="varchar2" MaxLength="50" />
+    <Property Name="LOAD_PERSON" Type="varchar2" MaxLength="50" />
+    <Property Name="UNLOAD_PERSON" Type="varchar2" MaxLength="50" />
+    <Property Name="UNDER_WELL_TIME" Type="number" Precision="5" Scale="2" />
+    <Property Name="NOTE" Type="nvarchar2" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_RAPID_INFO">
+    <Key>
+      <PropertyRef Name="REQUISITION_CD" />
+      <PropertyRef Name="JOB_PLAN_CD" />
+    </Key>
+    <Property Name="REQUISITION_CD" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="DRILL_JOB_ID" Type="varchar2" MaxLength="45" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="LOG_TEAM" Type="varchar2" MaxLength="32" />
+    <Property Name="LOG_MODE" Type="varchar2" MaxLength="32" />
+    <Property Name="LOG_SERVER_ID" Type="varchar2" MaxLength="32" />
+    <Property Name="BOTTOM_DEP" Type="number" Precision="10" Scale="2" />
+    <Property Name="BOTTOM_TEMPERATURE" Type="number" Precision="10" Scale="2" />
+    <Property Name="MUD_RESITIVITY" Type="number" Precision="10" Scale="2" />
+    <Property Name="MUD_TEMERATURE" Type="number" Precision="10" Scale="2" />
+    <Property Name="SUBMIT_MAN" Type="varchar2" MaxLength="32" />
+    <Property Name="SUBMIT_DATE" Type="timestamp" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_RAPID_ORIGINAL_DATA">
+    <Key>
+      <PropertyRef Name="DATA_ID" />
+    </Key>
+    <Property Name="DATA_ID" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="DATA_NAME" Type="nvarchar2" MaxLength="300" />
+    <Property Name="ORIGINAL_TYPE" Type="varchar2" MaxLength="32" />
+    <Property Name="START_DEP" Type="number" Precision="10" Scale="2" />
+    <Property Name="END_DEP" Type="number" Precision="10" Scale="2" />
+    <Property Name="LOG_ITEM" Type="varchar2" MaxLength="100" />
+    <Property Name="DATA_SIZE" Type="number" Precision="10" />
+    <Property Name="SUBMIT_DATE" Type="timestamp" />
+    <Property Name="SUBMIT_MAN" Type="varchar2" MaxLength="32" />
+    <Property Name="DATA_RECIPIENT" Type="varchar2" MaxLength="32" />
+    <Property Name="DATA" Type="blob" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="100" />
+    <Property Name="FILEID" Type="number" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_RAPID_RESULTS">
+    <Key>
+      <PropertyRef Name="DATA_ID" />
+    </Key>
+    <Property Name="DATA_ID" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="REQUISITION_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="RAPID_RESULTS_TYPE" Type="varchar2" MaxLength="32" />
+    <Property Name="START_DEP" Type="number" Precision="10" Scale="2" />
+    <Property Name="END_DEP" Type="number" Precision="10" Scale="2" />
+    <Property Name="DATA" Type="blob" />
+    <Property Name="DATA_SIZE" Type="number" Precision="10" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="100" />
+    <Property Name="FILENAME" Type="nvarchar2" MaxLength="300" />
+    <Property Name="FILEID" Type="number" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_REMOTE_DIRECT">
+    <Key>
+      <PropertyRef Name="DIRECTID" />
+    </Key>
+    <Property Name="DIRECTID" Type="number" Nullable="false" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="DOWN_WELL_SEQUENCE" Type="number" />
+    <Property Name="EXPERTISE" Type="nvarchar2" MaxLength="1000" />
+    <Property Name="EXPERT_LEADER" Type="nvarchar2" MaxLength="50" />
+    <Property Name="DIRECT_DATE" Type="timestamp" />
+    <Property Name="DIRECT_MEANS" Type="varchar2" MaxLength="32" />
+    <Property Name="EXPERTISE_RECEIVE_MAN" Type="nvarchar2" MaxLength="50" />
+    <Property Name="EXPERTISE_EFFECT" Type="nvarchar2" MaxLength="500" />
+    <Property Name="NOTE" Type="nvarchar2" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_SLOP">
+    <Key>
+      <PropertyRef Name="MUDID" />
+    </Key>
+    <Property Name="MUDID" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="REQUISITION_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="UPDATE_DATE" Type="timestamp" />
+    <Property Name="JTLT" Type="varchar2" MaxLength="32" />
+    <Property Name="SLOP_PROPERTIES" Type="varchar2" MaxLength="32" />
+    <Property Name="P_XN_MUD_DENSITY" Type="number" Precision="10" Scale="3" />
+    <Property Name="SLOP_PERSENT" Type="number" Precision="10" Scale="3" />
+    <Property Name="SLOP_PH" Type="number" Precision="10" Scale="3" />
+    <Property Name="DRILL_FLU_VISC" Type="number" Precision="10" Scale="3" />
+    <Property Name="SLOP_TEMPERATURE" Type="number" Precision="10" Scale="3" />
+    <Property Name="SLOP_RESISTIVITY" Type="number" Precision="10" Scale="3" />
+    <Property Name="DRILLING_FLUID_SALINITY" Type="number" Precision="10" Scale="3" />
+    <Property Name="MUD_FILTRATE_SALINITY" Type="number" Precision="10" Scale="3" />
+    <Property Name="CAKE_DENSITY" Type="number" Precision="10" Scale="3" />
+    <Property Name="API_FILTER_LOSS" Type="number" Precision="10" Scale="3" />
+  </EntityType>
+  <EntityType Name="PRO_LOG_TESTOIL">
+    <Key>
+      <PropertyRef Name="TESTOILID" />
+    </Key>
+    <Property Name="TESTOILID" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="JOB_PLAN_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="REQUISITION_CD" Type="varchar2" MaxLength="100" />
+    <Property Name="TEST_DATE" Type="timestamp" />
+    <Property Name="LAYER_NAME" Type="nvarchar2" MaxLength="40" />
+    <Property Name="START_DEPTH" Type="number" Precision="10" Scale="2" />
+    <Property Name="END_DEPTH" Type="number" Precision="10" Scale="2" />
+    <Property Name="OUTPUT_OIL_EVERY_DAY" Type="number" Precision="10" Scale="2" />
+    <Property Name="OUTPUT_WATER_EVERY_DAY" Type="number" Precision="10" Scale="2" />
+    <Property Name="OUTPUT_GAS_EVERY_DAY" Type="number" Precision="10" Scale="2" />
+    <Property Name="HYDROSULFIDE" Type="number" Precision="10" Scale="2" />
+    <Property Name="FORMATION_PRESSURE" Type="number" Precision="10" Scale="2" />
+    <Property Name="CHOKE" Type="number" Precision="10" Scale="2" />
+    <Property Name="OIL_PRESSURE" Type="number" Precision="10" Scale="2" />
+    <Property Name="CASING_PRESSURE" Type="number" Precision="10" Scale="2" />
+    <Property Name="TEST_CONCLUSION" Type="nvarchar2" MaxLength="50" />
+    <Property Name="DETAILED_DESCRIPTION_TEST" Type="nvarchar2" MaxLength="400" />
+    <Property Name="NOTE" Type="nvarchar2" MaxLength="400" />
+  </EntityType>
+  <EntityType Name="SYS_FILE_DOWNLOAD_REQUEST">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Nullable="false" />
+    <Property Name="FILEID" Type="number" Nullable="false" />
+    <Property Name="APPLICANT" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="REVIEWER" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="DEADLINES" Type="interval day to second" Nullable="false" Precision="3" Scale="0" />
+    <Property Name="SUBMIT_DATE" Type="timestamp" Nullable="false" />
+    <Property Name="REVIEW_DATE" Type="timestamp" />
+    <Property Name="STATE" Type="number" Nullable="false" Precision="1" />
+    <Property Name="TIMEOUT" Type="number" Nullable="false" Precision="1" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“LOGGINGAPPUSER.SYS_FILE_DOWNLOAD_REQUEST_LOG”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="SYS_FILE_DOWNLOAD_REQUEST_LOG">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="FILEID" />
+      <PropertyRef Name="APPLICANT" />
+      <PropertyRef Name="REVIEWER" />
+      <PropertyRef Name="DEADLINES" />
+      <PropertyRef Name="SUBMIT_DATE" />
+      <PropertyRef Name="STATE" />
+      <PropertyRef Name="TIMEOUT" />
+      <PropertyRef Name="LOGTIME" />
+    </Key>
+    <Property Name="ID" Type="number" Nullable="false" />
+    <Property Name="FILEID" Type="number" Nullable="false" />
+    <Property Name="APPLICANT" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="REVIEWER" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="DEADLINES" Type="interval day to second" Nullable="false" Precision="3" Scale="0" />
+    <Property Name="SUBMIT_DATE" Type="timestamp" Nullable="false" />
+    <Property Name="REVIEW_DATE" Type="timestamp" />
+    <Property Name="STATE" Type="number" Nullable="false" Precision="1" />
+    <Property Name="TIMEOUT" Type="number" Nullable="false" Precision="1" />
+    <Property Name="LOGTIME" Type="timestamp" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SYS_FILE_PATH">
+    <Key>
+      <PropertyRef Name="PATHID" />
+    </Key>
+    <Property Name="PATHID" Type="number" Nullable="false" />
+    <Property Name="FILEPATH" Type="nvarchar2" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="SYS_FILE_UPLOAD">
+    <Key>
+      <PropertyRef Name="FILEID" />
+    </Key>
+    <Property Name="FILEID" Type="number" Nullable="false" />
+    <Property Name="UPLOADID" Type="number" Nullable="false" />
+    <Property Name="FILENAME" Type="nvarchar2" Nullable="false" MaxLength="300" />
+    <Property Name="PATHID" Type="number" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“LOGGINGAPPUSER.SYS_PROCESSING_UPLOADFILE”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="SYS_PROCESSING_UPLOADFILE">
+    <Key>
+      <PropertyRef Name="PROCESS_ID" />
+      <PropertyRef Name="FILETYPE" />
+      <PropertyRef Name="FILEID" />
+    </Key>
+    <Property Name="PROCESS_ID" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="EXTENSION" Type="varchar2" MaxLength="100" />
+    <Property Name="FILETYPE" Type="number" Nullable="false" />
+    <Property Name="FILEID" Type="number" Nullable="false" />
+    <Property Name="PROCESSING_ITEM_ID" Type="number" />
+  </EntityType>
+  <EntityType Name="SYS_UPLOAD">
+    <Key>
+      <PropertyRef Name="UPLOADID" />
+    </Key>
+    <Property Name="UPLOADID" Type="number" Nullable="false" />
+    <Property Name="SHA1" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="MD5" Type="varchar2" Nullable="false" MaxLength="32" />
+    <Property Name="LENGTH" Type="number" Nullable="false" />
+    <Property Name="PATHID" Type="number" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“LOGGINGAPPUSER.SYS_USER_VISIT_LOG”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="SYS_USER_VISIT_LOG">
+    <Key>
+      <PropertyRef Name="COL_LOGINNAME" />
+      <PropertyRef Name="STARTTIME" />
+    </Key>
+    <Property Name="COL_LOGINNAME" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="STARTTIME" Type="timestamp" Nullable="false" />
+    <Property Name="ENDTIME" Type="timestamp" />
+    <Property Name="IP" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="SYS_WELL_CACHE">
+    <Key>
+      <PropertyRef Name="DRILL_JOB_ID" />
+    </Key>
+    <Property Name="DRILL_JOB_ID" Type="varchar2" Nullable="false" MaxLength="45" />
+    <Property Name="WELL_ID" Type="varchar2" MaxLength="32" />
+    <Property Name="WELL_JOB_NAME" Type="varchar2" MaxLength="60" />
+    <Property Name="WELL_TYPE" Type="varchar2" MaxLength="60" />
+    <Property Name="WELL_SORT" Type="varchar2" MaxLength="60" />
+    <Property Name="WELL_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="WELL_LEGAL_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="STRUCTURAL_LOCATION" Type="varchar2" MaxLength="32" />
+    <Property Name="PART_UNITS" Type="varchar2" MaxLength="33" />
+    <Property Name="WELL_HEAD_FLANGE" Type="char" MaxLength="50" />
+    <Property Name="MAX_WELL_DEVIATION" Type="number" Precision="6" Scale="2" />
+    <Property Name="MAX_WELL_DEVIATION_MD" Type="number" Precision="7" Scale="2" />
+    <Property Name="SITE_ID" Type="varchar2" MaxLength="100" />
+    <Property Name="BIT_SIZE" Type="number" Precision="6" Scale="2" />
+    <Property Name="CASING_SETTING_DEPTH" Type="number" Precision="6" Scale="2" />
+    <Property Name="P_XN_MUD_DENSITY" Type="number" Precision="6" Scale="2" />
+    <Property Name="DRILL_FLU_VISC" Type="number" Precision="6" Scale="2" />
+    <Property Name="API_FILTER_LOSS" Type="number" Precision="6" Scale="2" />
+    <Property Name="MD" Type="number" Precision="7" Scale="2" />
+    <Property Name="CASING_INNERER_DIAMETER" Type="number" Precision="6" Scale="2" />
+  </EntityType>
+  <EntityType Name="SYS_WORK_FLOW">
+    <Key>
+      <PropertyRef Name="FLOW_ID" />
+    </Key>
+    <Property Name="OBJ_ID" Type="varchar2" Nullable="false" MaxLength="200" />
+    <Property Name="SOURCE_LOGINNAME" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="TARGET_LOGINNAME" Type="varchar2" MaxLength="50" />
+    <Property Name="FLOW_TYPE" Type="number" Nullable="false" />
+    <Property Name="FLOW_STATE" Type="number" Nullable="false" />
+    <Property Name="FLOW_TIME" Type="timestamp" />
+    <Property Name="FLOW_ID" Type="number" Nullable="false" />
+    <Property Name="MESSAGE" Type="nvarchar2" />
+  </EntityType>
+  <EntityType Name="SYS_WORK_FLOW_NOW">
+    <Key>
+      <PropertyRef Name="FLOW_ID" />
+    </Key>
+    <Property Name="OBJ_ID" Type="varchar2" Nullable="false" MaxLength="200" />
+    <Property Name="SOURCE_LOGINNAME" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="TARGET_LOGINNAME" Type="varchar2" MaxLength="50" />
+    <Property Name="FLOW_TYPE" Type="number" Nullable="false" />
+    <Property Name="FLOW_STATE" Type="number" Nullable="false" />
+    <Property Name="FLOW_TIME" Type="timestamp" />
+    <Property Name="FLOW_ID" Type="number" Nullable="false" />
+    <Property Name="MESSAGE" Type="nvarchar2" />
+  </EntityType>
+  <EntityType Name="VIEW_REQUISITION_LIST">
+    <Key>
+      <PropertyRef Name="REQUISITION_CD" />
+    </Key>
+    <Property Name="REQUISITION_CD" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="ROW_NUMBER" Type="number" />
+    <Property Name="WELL_JOB_NAME" Type="varchar2" MaxLength="60" />
+    <Property Name="REQUISITION_TYPE" Type="number" />
+    <Property Name="PREDICTED_LOGGING_ITEMS_ID" Type="number" />
+    <Property Name="PREDICTED_LOGGING_DATE" Type="timestamp" />
+    <Property Name="PREDICTED_LOGGING_INTERVAL" Type="nvarchar2" MaxLength="100" />
+    <Property Name="LOG_TEAM_ID" Type="varchar2" />
+    <Property Name="JOB_CHINESE_NAME" Type="varchar2" />
+    <Property Name="REQUISITION_TYPE_NAME" Type="varchar2" MaxLength="32" />
+    <Property Name="STATE" Type="varchar2" MaxLength="12" />
+  </EntityType>
+  <Association Name="COM_BASE_STRATA_LAYER2_DM_FK1">
+    <End Role="DM_LOG_TASK" Type="LoggingModel.Store.DM_LOG_TASK" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COM_BASE_STRATA_LAYER2" Type="LoggingModel.Store.COM_BASE_STRATA_LAYER2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_TASK">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Principal>
+      <Dependent Role="COM_BASE_STRATA_LAYER2">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="COM_LOG_COM_CURVEDATA_CAC_FK1">
+    <End Role="SYS_UPLOAD" Type="LoggingModel.Store.SYS_UPLOAD" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COM_LOG_COM_CURVEDATA_CACHE" Type="LoggingModel.Store.COM_LOG_COM_CURVEDATA_CACHE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SYS_UPLOAD">
+        <PropertyRef Name="UPLOADID" />
+      </Principal>
+      <Dependent Role="COM_LOG_COM_CURVEDATA_CACHE">
+        <PropertyRef Name="UPLOADID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="COM_LOG_COM_CURVEDATA_CAC_FK2">
+    <End Role="DM_LOG_PROCESS" Type="LoggingModel.Store.DM_LOG_PROCESS" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COM_LOG_COM_CURVEDATA_CACHE" Type="LoggingModel.Store.COM_LOG_COM_CURVEDATA_CACHE" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_PROCESS">
+        <PropertyRef Name="PROCESS_ID" />
+      </Principal>
+      <Dependent Role="COM_LOG_COM_CURVEDATA_CACHE">
+        <PropertyRef Name="PROCESS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="COM_LOG_COM_CURVEDATA_DM__FK1">
+    <End Role="DM_LOG_PROCESS" Type="LoggingModel.Store.DM_LOG_PROCESS" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COM_LOG_COM_CURVEDATA" Type="LoggingModel.Store.COM_LOG_COM_CURVEDATA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_PROCESS">
+        <PropertyRef Name="PROCESS_ID" />
+      </Principal>
+      <Dependent Role="COM_LOG_COM_CURVEDATA">
+        <PropertyRef Name="PROCESS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="COM_LOG_DEV_AZI_DM_LOG_PR_FK1">
+    <End Role="DM_LOG_PROCESS" Type="LoggingModel.Store.DM_LOG_PROCESS" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COM_LOG_DEV_AZI" Type="LoggingModel.Store.COM_LOG_DEV_AZI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_PROCESS">
+        <PropertyRef Name="PROCESS_ID" />
+      </Principal>
+      <Dependent Role="COM_LOG_DEV_AZI">
+        <PropertyRef Name="PROCESS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="COM_LOG_LAYER_DM_LOG_PROC_FK1">
+    <End Role="DM_LOG_PROCESS" Type="LoggingModel.Store.DM_LOG_PROCESS" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COM_LOG_LAYER" Type="LoggingModel.Store.COM_LOG_LAYER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_PROCESS">
+        <PropertyRef Name="PROCESS_ID" />
+      </Principal>
+      <Dependent Role="COM_LOG_LAYER">
+        <PropertyRef Name="PROCESS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="COM_LOG_RESULT_DM_LOG_PRO_FK1">
+    <End Role="DM_LOG_PROCESS" Type="LoggingModel.Store.DM_LOG_PROCESS" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COM_LOG_RESULT" Type="LoggingModel.Store.COM_LOG_RESULT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_PROCESS">
+        <PropertyRef Name="PROCESS_ID" />
+      </Principal>
+      <Dependent Role="COM_LOG_RESULT">
+        <PropertyRef Name="PROCESS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="COM_LOG_WELL_TRAJECTORY_D_FK1">
+    <End Role="DM_LOG_PROCESS" Type="LoggingModel.Store.DM_LOG_PROCESS" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COM_LOG_WELL_TRAJECTORY" Type="LoggingModel.Store.COM_LOG_WELL_TRAJECTORY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_PROCESS">
+        <PropertyRef Name="PROCESS_ID" />
+      </Principal>
+      <Dependent Role="COM_LOG_WELL_TRAJECTORY">
+        <PropertyRef Name="PROCESS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DM_LOG_CLASS_MEET_DM_LOG__FK1">
+    <End Role="DM_LOG_OPS_PLAN" Type="LoggingModel.Store.DM_LOG_OPS_PLAN" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DM_LOG_CLASS_MEET" Type="LoggingModel.Store.DM_LOG_CLASS_MEET" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_OPS_PLAN">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Principal>
+      <Dependent Role="DM_LOG_CLASS_MEET">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DM_LOG_DOWNHOLE_EQUIP_DM__FK1">
+    <End Role="DM_LOG_OPS_PLAN" Type="LoggingModel.Store.DM_LOG_OPS_PLAN" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DM_LOG_DOWNHOLE_EQUIP" Type="LoggingModel.Store.DM_LOG_DOWNHOLE_EQUIP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_OPS_PLAN">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Principal>
+      <Dependent Role="DM_LOG_DOWNHOLE_EQUIP">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DM_LOG_DRILL_STATE_FK1">
+    <End Role="COM_JOB_INFO" Type="LoggingModel.Store.COM_JOB_INFO" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DM_LOG_DRILL_STATE" Type="LoggingModel.Store.DM_LOG_DRILL_STATE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COM_JOB_INFO">
+        <PropertyRef Name="DRILL_JOB_ID" />
+      </Principal>
+      <Dependent Role="DM_LOG_DRILL_STATE">
+        <PropertyRef Name="DRILL_JOB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DM_LOG_GEO_DES_ITEM_FK1">
+    <End Role="COM_JOB_INFO" Type="LoggingModel.Store.COM_JOB_INFO" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DM_LOG_GEO_DES_ITEM" Type="LoggingModel.Store.DM_LOG_GEO_DES_ITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COM_JOB_INFO">
+        <PropertyRef Name="DRILL_JOB_ID" />
+      </Principal>
+      <Dependent Role="DM_LOG_GEO_DES_ITEM">
+        <PropertyRef Name="DRILL_JOB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DM_LOG_ITEMS_DM_LOG_OPS_P_FK1">
+    <End Role="DM_LOG_OPS_PLAN" Type="LoggingModel.Store.DM_LOG_OPS_PLAN" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DM_LOG_ITEMS" Type="LoggingModel.Store.DM_LOG_ITEMS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_OPS_PLAN">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Principal>
+      <Dependent Role="DM_LOG_ITEMS">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DM_LOG_JOB_SUMMAY_DM_LOG__FK1">
+    <End Role="DM_LOG_OPS_PLAN" Type="LoggingModel.Store.DM_LOG_OPS_PLAN" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DM_LOG_JOB_SUMMAY" Type="LoggingModel.Store.DM_LOG_JOB_SUMMAY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_OPS_PLAN">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Principal>
+      <Dependent Role="DM_LOG_JOB_SUMMAY">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DM_LOG_LOGGING_INTERPRETA_FK1">
+    <End Role="DM_LOG_TASK" Type="LoggingModel.Store.DM_LOG_TASK" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DM_LOG_LOGGING_INTERPRETATION" Type="LoggingModel.Store.DM_LOG_LOGGING_INTERPRETATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_TASK">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Principal>
+      <Dependent Role="DM_LOG_LOGGING_INTERPRETATION">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DM_LOG_OPS_PLAN_DM_LOG_TA_FK1">
+    <End Role="DM_LOG_TASK" Type="LoggingModel.Store.DM_LOG_TASK" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DM_LOG_OPS_PLAN" Type="LoggingModel.Store.DM_LOG_OPS_PLAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_TASK">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Principal>
+      <Dependent Role="DM_LOG_OPS_PLAN">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DM_LOG_PROCESS_COM_JOB_IN_FK1">
+    <End Role="COM_JOB_INFO" Type="LoggingModel.Store.COM_JOB_INFO" Multiplicity="0..1" />
+    <End Role="DM_LOG_PROCESS" Type="LoggingModel.Store.DM_LOG_PROCESS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COM_JOB_INFO">
+        <PropertyRef Name="DRILL_JOB_ID" />
+      </Principal>
+      <Dependent Role="DM_LOG_PROCESS">
+        <PropertyRef Name="DRILL_JOB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DM_LOG_SOURCE_DATA_DM_LOG_FK1">
+    <End Role="DM_LOG_PROCESS" Type="LoggingModel.Store.DM_LOG_PROCESS" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DM_LOG_SOURCE_DATA" Type="LoggingModel.Store.DM_LOG_SOURCE_DATA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_PROCESS">
+        <PropertyRef Name="PROCESS_ID" />
+      </Principal>
+      <Dependent Role="DM_LOG_SOURCE_DATA">
+        <PropertyRef Name="LOG_DATA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DM_LOG_SOURCE_DATA_DM_LOG_FK2">
+    <End Role="DM_LOG_OPS_PLAN" Type="LoggingModel.Store.DM_LOG_OPS_PLAN" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DM_LOG_SOURCE_DATA" Type="LoggingModel.Store.DM_LOG_SOURCE_DATA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_OPS_PLAN">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Principal>
+      <Dependent Role="DM_LOG_SOURCE_DATA">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DM_LOG_TASK_COM_JOB_INFO_FK1">
+    <End Role="COM_JOB_INFO" Type="LoggingModel.Store.COM_JOB_INFO" Multiplicity="0..1" />
+    <End Role="DM_LOG_TASK" Type="LoggingModel.Store.DM_LOG_TASK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COM_JOB_INFO">
+        <PropertyRef Name="DRILL_JOB_ID" />
+      </Principal>
+      <Dependent Role="DM_LOG_TASK">
+        <PropertyRef Name="DRILL_JOB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DM_LOG_THREE_CROSS_DM_LOG_FK1">
+    <End Role="DM_LOG_OPS_PLAN" Type="LoggingModel.Store.DM_LOG_OPS_PLAN" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DM_LOG_THREE_CROSS" Type="LoggingModel.Store.DM_LOG_THREE_CROSS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_OPS_PLAN">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Principal>
+      <Dependent Role="DM_LOG_THREE_CROSS">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DM_LOG_WORK_DETAILS_DM_LO_FK1">
+    <End Role="DM_LOG_OPS_PLAN" Type="LoggingModel.Store.DM_LOG_OPS_PLAN" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DM_LOG_WORK_DETAILS" Type="LoggingModel.Store.DM_LOG_WORK_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_OPS_PLAN">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Principal>
+      <Dependent Role="DM_LOG_WORK_DETAILS">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DM_LOG_WORK_HOLDUP_DETAIL_FK1">
+    <End Role="DM_LOG_OPS_PLAN" Type="LoggingModel.Store.DM_LOG_OPS_PLAN" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DM_LOG_WORK_HOLDUP_DETAILS" Type="LoggingModel.Store.DM_LOG_WORK_HOLDUP_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_OPS_PLAN">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Principal>
+      <Dependent Role="DM_LOG_WORK_HOLDUP_DETAILS">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DM_LOG_WORK_PERSONNEL_DM__FK1">
+    <End Role="DM_LOG_OPS_PLAN" Type="LoggingModel.Store.DM_LOG_OPS_PLAN" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DM_LOG_WORK_PERSONNEL" Type="LoggingModel.Store.DM_LOG_WORK_PERSONNEL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_OPS_PLAN">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Principal>
+      <Dependent Role="DM_LOG_WORK_PERSONNEL">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COM_LOG__REFERENCE_DM_LOG_P">
+    <End Role="DM_LOG_PROCESS" Type="LoggingModel.Store.DM_LOG_PROCESS" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COM_LOG_CEMENT_EVALUATION_INF" Type="LoggingModel.Store.COM_LOG_CEMENT_EVALUATION_INF" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_PROCESS">
+        <PropertyRef Name="PROCESS_ID" />
+      </Principal>
+      <Dependent Role="COM_LOG_CEMENT_EVALUATION_INF">
+        <PropertyRef Name="PROCESS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COM_WELL_REFERENCE_COM_WELL">
+    <End Role="COM_WELL_BASIC" Type="LoggingModel.Store.COM_WELL_BASIC" Multiplicity="1" />
+    <End Role="COM_WELLBORE_BASIC" Type="LoggingModel.Store.COM_WELLBORE_BASIC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COM_WELL_BASIC">
+        <PropertyRef Name="WELL_ID" />
+      </Principal>
+      <Dependent Role="COM_WELLBORE_BASIC">
+        <PropertyRef Name="WELL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DM_LOG_B_REFERENCE_DM_LOG_O">
+    <End Role="DM_LOG_OPS_PLAN" Type="LoggingModel.Store.DM_LOG_OPS_PLAN" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DM_LOG_BASE" Type="LoggingModel.Store.DM_LOG_BASE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_OPS_PLAN">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Principal>
+      <Dependent Role="DM_LOG_BASE">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DM_LOG_C_REFERENCE_DM_LOG_O">
+    <End Role="DM_LOG_OPS_PLAN" Type="LoggingModel.Store.DM_LOG_OPS_PLAN" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DM_LOG_CONTACT_WILL" Type="LoggingModel.Store.DM_LOG_CONTACT_WILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_OPS_PLAN">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Principal>
+      <Dependent Role="DM_LOG_CONTACT_WILL">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DM_LOG_D_REFERENCE_DM_LOG_O">
+    <End Role="DM_LOG_OPS_PLAN" Type="LoggingModel.Store.DM_LOG_OPS_PLAN" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DM_LOG_DATA_SUBMITTED" Type="LoggingModel.Store.DM_LOG_DATA_SUBMITTED" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_OPS_PLAN">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Principal>
+      <Dependent Role="DM_LOG_DATA_SUBMITTED">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DM_LOG_I_REFERENCE_DM_LOG_O">
+    <End Role="DM_LOG_OPS_PLAN" Type="LoggingModel.Store.DM_LOG_OPS_PLAN" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DM_LOG_ITEM" Type="LoggingModel.Store.DM_LOG_ITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_OPS_PLAN">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Principal>
+      <Dependent Role="DM_LOG_ITEM">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DM_LOG_R_REFERENCE_DM_LOG_O">
+    <End Role="DM_LOG_OPS_PLAN" Type="LoggingModel.Store.DM_LOG_OPS_PLAN" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DM_LOG_RADIATION_STATUS" Type="LoggingModel.Store.DM_LOG_RADIATION_STATUS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_OPS_PLAN">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Principal>
+      <Dependent Role="DM_LOG_RADIATION_STATUS">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DM_LOG_U_REFERENCE_DM_LOG_O">
+    <End Role="DM_LOG_TASK" Type="LoggingModel.Store.DM_LOG_TASK" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DM_LOG_UP_EQUIP" Type="LoggingModel.Store.DM_LOG_UP_EQUIP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_TASK">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Principal>
+      <Dependent Role="DM_LOG_UP_EQUIP">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DM_LOG_W_REFERENCE_DM_LOG_O">
+    <End Role="DM_LOG_TASK" Type="LoggingModel.Store.DM_LOG_TASK" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DM_LOG_WORK_ANING" Type="LoggingModel.Store.DM_LOG_WORK_ANING" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_TASK">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Principal>
+      <Dependent Role="DM_LOG_WORK_ANING">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PKL_LOG__REFERENCE_PKL_LOG_">
+    <End Role="PKL_LOG_OPS_PROJECT" Type="LoggingModel.Store.PKL_LOG_OPS_PROJECT" Multiplicity="0..1" />
+    <End Role="PKL_LOG_OPS_CURVE" Type="LoggingModel.Store.PKL_LOG_OPS_CURVE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PKL_LOG_OPS_PROJECT">
+        <PropertyRef Name="PROCESSING_ITEM_ID" />
+      </Principal>
+      <Dependent Role="PKL_LOG_OPS_CURVE">
+        <PropertyRef Name="PROCESSING_ITEM_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRO_LOG__REFERENCE_PRO_LOG_">
+    <End Role="PRO_LOG_RAPID_INFO" Type="LoggingModel.Store.PRO_LOG_RAPID_INFO" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_RAPID_RESULTS" Type="LoggingModel.Store.PRO_LOG_RAPID_RESULTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRO_LOG_RAPID_INFO">
+        <PropertyRef Name="REQUISITION_CD" />
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Principal>
+      <Dependent Role="PRO_LOG_RAPID_RESULTS">
+        <PropertyRef Name="REQUISITION_CD" />
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_BIG_ORIGINAL_DATA_FK1">
+    <End Role="DM_LOG_PROCESS" Type="LoggingModel.Store.DM_LOG_PROCESS" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_BIG_ORIGINAL_DATA" Type="LoggingModel.Store.PRO_LOG_BIG_ORIGINAL_DATA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_PROCESS">
+        <PropertyRef Name="PROCESS_ID" />
+      </Principal>
+      <Dependent Role="PRO_LOG_BIG_ORIGINAL_DATA">
+        <PropertyRef Name="PROCESS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_BIT_PROGRAM_DM_LO_FK1">
+    <End Role="DM_LOG_TASK" Type="LoggingModel.Store.DM_LOG_TASK" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_BIT_PROGRAM" Type="LoggingModel.Store.PRO_LOG_BIT_PROGRAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_TASK">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Principal>
+      <Dependent Role="PRO_LOG_BIT_PROGRAM">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_CASIN_DM_LOG_TASK_FK1">
+    <End Role="DM_LOG_TASK" Type="LoggingModel.Store.DM_LOG_TASK" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_CASIN" Type="LoggingModel.Store.PRO_LOG_CASIN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_TASK">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Principal>
+      <Dependent Role="PRO_LOG_CASIN">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_CEMENT_DM_LOG_TAS_FK1">
+    <End Role="DM_LOG_TASK" Type="LoggingModel.Store.DM_LOG_TASK" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_CEMENT" Type="LoggingModel.Store.PRO_LOG_CEMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_TASK">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Principal>
+      <Dependent Role="PRO_LOG_CEMENT">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_CORE_DM_LOG_TASK_FK1">
+    <End Role="DM_LOG_TASK" Type="LoggingModel.Store.DM_LOG_TASK" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_CORE" Type="LoggingModel.Store.PRO_LOG_CORE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_TASK">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Principal>
+      <Dependent Role="PRO_LOG_CORE">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_DATA_PUBLISH_DM_L_FK1">
+    <End Role="DM_LOG_PROCESS" Type="LoggingModel.Store.DM_LOG_PROCESS" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_DATA_PUBLISH" Type="LoggingModel.Store.PRO_LOG_DATA_PUBLISH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_PROCESS">
+        <PropertyRef Name="PROCESS_ID" />
+      </Principal>
+      <Dependent Role="PRO_LOG_DATA_PUBLISH">
+        <PropertyRef Name="PROCESS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_PROCESSING_CURVER_FK1">
+    <End Role="DM_LOG_PROCESS" Type="LoggingModel.Store.DM_LOG_PROCESS" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_PROCESSING_CURVERATING" Type="LoggingModel.Store.PRO_LOG_PROCESSING_CURVERATING" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_PROCESS">
+        <PropertyRef Name="PROCESS_ID" />
+      </Principal>
+      <Dependent Role="PRO_LOG_PROCESSING_CURVERATING">
+        <PropertyRef Name="PROCESS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_PROCESSING_CURVER_FK2">
+    <End Role="PKL_LOG_OPS_CURVE" Type="LoggingModel.Store.PKL_LOG_OPS_CURVE" Multiplicity="1" />
+    <End Role="PRO_LOG_PROCESSING_CURVERATING" Type="LoggingModel.Store.PRO_LOG_PROCESSING_CURVERATING" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PKL_LOG_OPS_CURVE">
+        <PropertyRef Name="CURVE_ID" />
+      </Principal>
+      <Dependent Role="PRO_LOG_PROCESSING_CURVERATING">
+        <PropertyRef Name="CURVE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_PROCESSING_CURVE_FK1">
+    <End Role="PKL_LOG_OPS_PROJECT" Type="LoggingModel.Store.PKL_LOG_OPS_PROJECT" Multiplicity="0..1" />
+    <End Role="PRO_LOG_PROCESSING_CURVE" Type="LoggingModel.Store.PRO_LOG_PROCESSING_CURVE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PKL_LOG_OPS_PROJECT">
+        <PropertyRef Name="PROCESSING_ITEM_ID" />
+      </Principal>
+      <Dependent Role="PRO_LOG_PROCESSING_CURVE">
+        <PropertyRef Name="PROCESSING_ITEM_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_PROCESSING_CURVE__FK1">
+    <End Role="DM_LOG_PROCESS" Type="LoggingModel.Store.DM_LOG_PROCESS" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_PROCESSING_CURVE" Type="LoggingModel.Store.PRO_LOG_PROCESSING_CURVE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_PROCESS">
+        <PropertyRef Name="PROCESS_ID" />
+      </Principal>
+      <Dependent Role="PRO_LOG_PROCESSING_CURVE">
+        <PropertyRef Name="PROCESS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_PROCESSING_ITEM_D_FK1">
+    <End Role="DM_LOG_PROCESS" Type="LoggingModel.Store.DM_LOG_PROCESS" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_PROCESSING_ITEM" Type="LoggingModel.Store.PRO_LOG_PROCESSING_ITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_PROCESS">
+        <PropertyRef Name="PROCESS_ID" />
+      </Principal>
+      <Dependent Role="PRO_LOG_PROCESSING_ITEM">
+        <PropertyRef Name="PROCESS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_PROCESSING_ITEM_P_FK1">
+    <End Role="PKL_LOG_OPS_PROJECT" Type="LoggingModel.Store.PKL_LOG_OPS_PROJECT" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_PROCESSING_ITEM" Type="LoggingModel.Store.PRO_LOG_PROCESSING_ITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PKL_LOG_OPS_PROJECT">
+        <PropertyRef Name="PROCESSING_ITEM_ID" />
+      </Principal>
+      <Dependent Role="PRO_LOG_PROCESSING_ITEM">
+        <PropertyRef Name="PROCESSING_ITEM_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_PROCESS_ARCHIV_DA_FK1">
+    <End Role="DM_LOG_PROCESS" Type="LoggingModel.Store.DM_LOG_PROCESS" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_PROCESS_ARCHIV_DATA" Type="LoggingModel.Store.PRO_LOG_PROCESS_ARCHIV_DATA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_PROCESS">
+        <PropertyRef Name="PROCESS_ID" />
+      </Principal>
+      <Dependent Role="PRO_LOG_PROCESS_ARCHIV_DATA">
+        <PropertyRef Name="PROCESS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_PROCESS_DOCUMENT__FK1">
+    <End Role="DM_LOG_PROCESS" Type="LoggingModel.Store.DM_LOG_PROCESS" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_PROCESS_DOCUMENT" Type="LoggingModel.Store.PRO_LOG_PROCESS_DOCUMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_PROCESS">
+        <PropertyRef Name="PROCESS_ID" />
+      </Principal>
+      <Dependent Role="PRO_LOG_PROCESS_DOCUMENT">
+        <PropertyRef Name="PROCESS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_PROCESS_MAP_DM_LO_FK1">
+    <End Role="DM_LOG_PROCESS" Type="LoggingModel.Store.DM_LOG_PROCESS" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_PROCESS_MAP" Type="LoggingModel.Store.PRO_LOG_PROCESS_MAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_PROCESS">
+        <PropertyRef Name="PROCESS_ID" />
+      </Principal>
+      <Dependent Role="PRO_LOG_PROCESS_MAP">
+        <PropertyRef Name="PROCESS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_PRODUCE_DM_LOG_TA_FK1">
+    <End Role="DM_LOG_TASK" Type="LoggingModel.Store.DM_LOG_TASK" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_PRODUCE" Type="LoggingModel.Store.PRO_LOG_PRODUCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_TASK">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Principal>
+      <Dependent Role="PRO_LOG_PRODUCE">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_PUNISH_DM_LOG_OPS_FK1">
+    <End Role="DM_LOG_OPS_PLAN" Type="LoggingModel.Store.DM_LOG_OPS_PLAN" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_PUNISH" Type="LoggingModel.Store.PRO_LOG_PUNISH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_OPS_PLAN">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Principal>
+      <Dependent Role="PRO_LOG_PUNISH">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_RADIATION_INFOR_D_FK1">
+    <End Role="DM_LOG_OPS_PLAN" Type="LoggingModel.Store.DM_LOG_OPS_PLAN" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_RADIATION_INFOR" Type="LoggingModel.Store.PRO_LOG_RADIATION_INFOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_OPS_PLAN">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Principal>
+      <Dependent Role="PRO_LOG_RADIATION_INFOR">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_RAPID_INFO_DM_LOG_FK1">
+    <End Role="DM_LOG_TASK" Type="LoggingModel.Store.DM_LOG_TASK" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_RAPID_INFO" Type="LoggingModel.Store.PRO_LOG_RAPID_INFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_TASK">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Principal>
+      <Dependent Role="PRO_LOG_RAPID_INFO">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_RAPID_ORIGINAL_DA_FK1">
+    <End Role="DM_LOG_OPS_PLAN" Type="LoggingModel.Store.DM_LOG_OPS_PLAN" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_RAPID_ORIGINAL_DATA" Type="LoggingModel.Store.PRO_LOG_RAPID_ORIGINAL_DATA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_OPS_PLAN">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Principal>
+      <Dependent Role="PRO_LOG_RAPID_ORIGINAL_DATA">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_REMOTE_DIRECT_DM__FK1">
+    <End Role="DM_LOG_OPS_PLAN" Type="LoggingModel.Store.DM_LOG_OPS_PLAN" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_REMOTE_DIRECT" Type="LoggingModel.Store.PRO_LOG_REMOTE_DIRECT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_OPS_PLAN">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Principal>
+      <Dependent Role="PRO_LOG_REMOTE_DIRECT">
+        <PropertyRef Name="JOB_PLAN_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_SLOP_DM_LOG_TASK_FK1">
+    <End Role="DM_LOG_TASK" Type="LoggingModel.Store.DM_LOG_TASK" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_SLOP" Type="LoggingModel.Store.PRO_LOG_SLOP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_TASK">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Principal>
+      <Dependent Role="PRO_LOG_SLOP">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO_LOG_TESTOIL_DM_LOG_TA_FK1">
+    <End Role="DM_LOG_TASK" Type="LoggingModel.Store.DM_LOG_TASK" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRO_LOG_TESTOIL" Type="LoggingModel.Store.PRO_LOG_TESTOIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DM_LOG_TASK">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Principal>
+      <Dependent Role="PRO_LOG_TESTOIL">
+        <PropertyRef Name="REQUISITION_CD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_FILE_UPLOAD_FK1">
+    <End Role="SYS_FILE_PATH" Type="LoggingModel.Store.SYS_FILE_PATH" Multiplicity="0..1" />
+    <End Role="SYS_FILE_UPLOAD" Type="LoggingModel.Store.SYS_FILE_UPLOAD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SYS_FILE_PATH">
+        <PropertyRef Name="PATHID" />
+      </Principal>
+      <Dependent Role="SYS_FILE_UPLOAD">
+        <PropertyRef Name="PATHID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_FILE_UPLOAD_SYS_UPLOA_FK1">
+    <End Role="SYS_UPLOAD" Type="LoggingModel.Store.SYS_UPLOAD" Multiplicity="1" />
+    <End Role="SYS_FILE_UPLOAD" Type="LoggingModel.Store.SYS_FILE_UPLOAD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SYS_UPLOAD">
+        <PropertyRef Name="UPLOADID" />
+      </Principal>
+      <Dependent Role="SYS_FILE_UPLOAD">
+        <PropertyRef Name="UPLOADID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_PROCESSING_UPLOADFILE_FK1">
+    <End Role="PKL_LOG_OPS_PROJECT" Type="LoggingModel.Store.PKL_LOG_OPS_PROJECT" Multiplicity="0..1" />
+    <End Role="SYS_PROCESSING_UPLOADFILE" Type="LoggingModel.Store.SYS_PROCESSING_UPLOADFILE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PKL_LOG_OPS_PROJECT">
+        <PropertyRef Name="PROCESSING_ITEM_ID" />
+      </Principal>
+      <Dependent Role="SYS_PROCESSING_UPLOADFILE">
+        <PropertyRef Name="PROCESSING_ITEM_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_PROCESSING_UPLOADFILE_FK2">
+    <End Role="SYS_FILE_UPLOAD" Type="LoggingModel.Store.SYS_FILE_UPLOAD" Multiplicity="1" />
+    <End Role="SYS_PROCESSING_UPLOADFILE" Type="LoggingModel.Store.SYS_PROCESSING_UPLOADFILE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SYS_FILE_UPLOAD">
+        <PropertyRef Name="FILEID" />
+      </Principal>
+      <Dependent Role="SYS_PROCESSING_UPLOADFILE">
+        <PropertyRef Name="FILEID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_WORK_FLOW_NOW_FK1">
+    <End Role="SYS_WORK_FLOW" Type="LoggingModel.Store.SYS_WORK_FLOW" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SYS_WORK_FLOW_NOW" Type="LoggingModel.Store.SYS_WORK_FLOW_NOW" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="SYS_WORK_FLOW">
+        <PropertyRef Name="FLOW_ID" />
+      </Principal>
+      <Dependent Role="SYS_WORK_FLOW_NOW">
+        <PropertyRef Name="FLOW_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--生成过程中发现错误:
+      警告 6013: 表/视图“LOGGINGAPPUSER.PKL_LOG_OPS_MAP”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="PKL_LOG_OPS_MAP">
+        <Property Name="MAPS_CHINESE_NAME" Type="varchar2" MaxLength="256" />
+        <Property Name="MAPS_CODING" Type="varchar2" MaxLength="32" />
+        <Property Name="WRITER" Type="varchar2" MaxLength="32" />
+        <Property Name="WRITING_DATE" Type="timestamp" />
+        <Property Name="VERIFIER" Type="varchar2" MaxLength="32" />
+        <Property Name="VERIFICATION_DATE" Type="timestamp" />
+        <Property Name="REMARK" Type="varchar2" MaxLength="128" />
+        <Property Name="PROCESSING_ITEM_ID" Type="number" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“LOGGINGAPPUSER.PKL_LOG_SERIES”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="PKL_LOG_SERIES">
+        <Property Name="LOG_SERIES_ID" Type="number" />
+        <Property Name="LOG_SERIES_NAME" Type="varchar2" MaxLength="32" />
+        <Property Name="WRITER" Type="varchar2" MaxLength="32" />
+        <Property Name="WRITING_DATE" Type="timestamp" />
+        <Property Name="VERIFIER" Type="varchar2" MaxLength="32" />
+        <Property Name="VERIFICATION_DATE" Type="timestamp" />
+        <Property Name="REMARK" Type="varchar2" MaxLength="128" />
+      </EntityType>-->
+</Schema>

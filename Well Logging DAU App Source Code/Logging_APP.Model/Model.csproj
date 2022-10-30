@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6A176135-D6F8-4538-99E2-C02E49DCEB05}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Logging_App.Model</RootNamespace>
+    <AssemblyName>Logging_App.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RemoteDebug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\RemoteDebug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Logging_App.Model.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'GuestRelease|AnyCPU'">
+    <OutputPath>bin\GuestRelease\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Logging_App.Model.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveUser.cs" />
+    <Compile Include="COM_LOG_COM_CURVE_DATA.cs" />
+    <Compile Include="COM_LOG_COM_CURVE_INDEX.cs" />
+    <Compile Include="DM_LOG_DRILL_STATE.cs" />
+    <Compile Include="DM_LOG_DVD_INFO.cs" />
+    <Compile Include="DM_LOG_GEO_DES_ITEM.cs" />
+    <Compile Include="JobInfoSearch.cs" />
+    <Compile Include="PRO_LOG_ORIGINAL_MAP.cs" />
+    <Compile Include="PRO_LOG_PROCESSING_CURVERATING.cs" />
+    <Compile Include="COM_BASE_WELL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="COM_LOG_CEMENT_EVALUATION_INF.cs" />
+    <Compile Include="COM_LOG_COM_CURVEDATA.cs" />
+    <Compile Include="COM_LOG_DEV_AZI.cs" />
+    <Compile Include="COM_LOG_LAYER.cs" />
+    <Compile Include="COM_LOG_RESULT.cs" />
+    <Compile Include="COM_LOG_WELL_TRAJECTORY.cs" />
+    <Compile Include="PRO_LOG_BIG_ORIGINAL_DATA.cs" />
+    <Compile Include="PRO_LOG_PROCESSING_CURVE_DATA.cs" />
+    <Compile Include="PRO_LOG_PROCESSING_CURVE_INDEX.cs" />
+    <Compile Include="PRO_LOG_PROCESS_ARCHIV_DATA.cs" />
+    <Compile Include="PRO_LOG_PROCESS_DOCUMENT.cs" />
+    <Compile Include="PRO_LOG_PROCESS_MAP.cs" />
+    <Compile Include="PRO_LOG_PROCESSING_CURVE.cs" />
+    <Compile Include="PRO_LOG_PROCESSING_ITEM.cs" />
+    <Compile Include="COM_BASE_JOB.cs" />
+    <Compile Include="COM_BASE_STRATA_LAYER2.cs" />
+    <Compile Include="COM_BASE_WELLBORE.cs" />
+    <Compile Include="COM_BASE_WELLSTRUCTURE.cs" />
+    <Compile Include="DM_LOG_CLASS_MEET.cs" />
+    <Compile Include="DM_LOG_JOB_SUMMAY.cs" />
+    <Compile Include="DM_LOG_LOGGING_INTERPRETATION.cs" />
+    <Compile Include="DM_LOG_THREE_CROSS.cs" />
+    <Compile Include="PRO_LOG_BIT_PROGRAM.cs" />
+    <Compile Include="PRO_LOG_CASIN.cs" />
+    <Compile Include="PRO_LOG_CEMENT.cs" />
+    <Compile Include="PRO_LOG_CORE.cs" />
+    <Compile Include="PRO_LOG_DATA_PUBLISH.cs" />
+    <Compile Include="DM_LOG_PROCESS.cs" />
+    <Compile Include="DM_LOG_SOURCE_DATA.cs" />
+    <Compile Include="PRO_LOG_PRODUCE.cs" />
+    <Compile Include="PRO_LOG_SLOP.cs" />
+    <Compile Include="PRO_LOG_TESTOIL.cs" />
+    <Compile Include="PRO_LOG_RAPID_ORIGINAL_DATA.cs" />
+    <Compile Include="PRO_LOG_RAPID_RESULTS.cs" />
+    <Compile Include="PRO_LOG_RAPID_INFO.cs" />
+    <Compile Include="COM_WELLSTRUCTURE_DATA.cs" />
+    <Compile Include="COM_JOB_INFO.cs" />
+    <Compile Include="HS_USER.cs" />
+    <Compile Include="LogPlanSearch.cs" />
+    <Compile Include="SYS_DATA_RIGHTS.cs" />
+    <Compile Include="COM_WELLBORE_BASIC.cs" />
+    <Compile Include="COM_WELL_BASIC.cs" />
+    <Compile Include="PRO_LOG_PUNISH.cs" />
+    <Compile Include="PRO_LOG_REMOTE_DIRECT.cs" />
+    <Compile Include="DM_LOG_ITEMS.cs" />
+    <Compile Include="DM_LOG_DOWNHOLE_EQUIP.cs" />
+    <Compile Include="DM_LOG_RADIATION_STATUS.cs" />
+    <Compile Include="DM_LOG_WORK_HOLDUP_DETAILS.cs" />
+    <Compile Include="DM_LOG_WORK_DETAILS.cs" />
+    <Compile Include="ConvertString.cs" />
+    <Compile Include="DM_LOG_CONTACT_WILL.cs" />
+    <Compile Include="DM_LOG_UP_EQUIP.cs" />
+    <Compile Include="DM_LOG_WORK_PERSONNEL.cs" />
+    <Compile Include="DM_LOG_WORK_ANING.cs" />
+    <Compile Include="DM_LOG_BASE.cs" />
+    <Compile Include="DM_LOG_OPS_PLAN.cs" />
+    <Compile Include="DM_LOG_PREDICTED_ITEM.cs" />
+    <Compile Include="DM_LOG_TASK.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HS_ROLE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SYS_STATIC_WORK_FLOW.cs" />
+    <Compile Include="TreeModel.cs" />
+    <Compile Include="ModelBase.cs" />
+    <Compile Include="PRO_LOG_PROCESSING_CURVE_NEW.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,502 @@
+﻿<Page x:Class="Logging_App.解释处理作业_Page"
+      xmlns:xctk="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:gui="clr-namespace:Logging_App.GUI" xmlns:controls="clr-namespace:Logging_App.Controls"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" d:DesignWidth="800"
+	  Title="Page1" Loaded="Page_Loaded" Initialized="Page_Initialized">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <StackPanel>
+            <StackPanel Margin="2" Orientation="Horizontal" Name="SearchPanel">
+                <Label Content="作业井名" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                <TextBox Height="25" Text="{Binding Path=PROCESS_ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"/>
+                <Label Content="归档状态" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+                <ComboBox Height="25" IsEditable="True" HorizontalAlignment="Left" Margin="0" SelectedValuePath="Content" SelectedValue="{Binding Path=INTERPRET_CENTER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120">
+                    <ComboBoxItem>等待审核</ComboBoxItem>
+                    <ComboBoxItem>归档完成</ComboBoxItem>
+                    <ComboBoxItem>审核未通过</ComboBoxItem>
+                    <ComboBoxItem>未归档</ComboBoxItem>
+                </ComboBox>
+                <Label Content="解释处理人" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                <TextBox Height="25" Text="{Binding Path=PROCESSOR, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"/>
+                <Label Content="处理开始日期" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+                <ComboBox Height="25" IsEditable="True" Name="QUERY_DATE" HorizontalAlignment="Left" Margin="0" SelectedValue="{Binding Path=NOTE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+                <Button Margin="15,0,0,0" Click="Search_Click" Height="25" Width="50"  HorizontalAlignment="Left" VerticalAlignment="Center">查询</Button>
+            </StackPanel>
+            <DataGrid IsReadOnly="True" SelectionMode="Single" CanUserAddRows="False" CanUserDeleteRows="False" AutoGenerateColumns="False" MinHeight="100" MaxHeight="300" Name="dataGrid1" Margin="2" SelectionChanged="dataGrid1_SelectionChanged">
+                <DataGrid.Resources>
+                    <ContextMenu x:Name="rowMenu" Visibility="Collapsed" x:Key="rowContextMenu">
+                        <MenuItem Header="删除" Click="MenuDelete_Click"/>
+                    </ContextMenu>
+                </DataGrid.Resources>
+                <DataGrid.RowStyle>
+                    <Style TargetType="{x:Type DataGridRow}">
+                        <Setter Property="ContextMenu" Value="{StaticResource rowContextMenu}"/>
+                    </Style>
+                </DataGrid.RowStyle>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="作业井名" Binding="{Binding Path=WELL_JOB_NAME}"/>
+                    <DataGridTextColumn Header="标准井名" MaxWidth="150" Binding="{Binding Path=WELL_LEGAL_NAME}"/>
+                    <DataGridTextColumn Header="解释处理作业名" Binding="{Binding Path=PROCESS_NAME}"/>
+                    <DataGridTextColumn Header="归档状态" Binding="{Binding Path=STATE}"/>
+                    <DataGridTextColumn Header="处理开始日期" Binding="{Binding Path=LOG_START_TIME, StringFormat=\{0:yyyy-MM-dd\}}"/>
+                    <DataGridTextColumn Header="资料提交日期" Binding="{Binding Path=SUBMIT_TIME, StringFormat=\{0:yyyy-MM-dd \}}"/>
+                    <DataGridTextColumn Header="审核通过日期" Binding="{Binding Path=APPROVED_TIME, StringFormat=\{0:yyyy-MM-dd\}}"/>
+                    <DataGridTextColumn Header="解释处理人" Binding="{Binding Path=PROCESSOR}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <controls:DataPager x:Name="dataPager1" PageSize="50" TotalCount="101" PageChanged="dataPager1_PageChanged"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="90" />
+                    <ColumnDefinition Width="90" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <RadioButton  Content="新建模式" GroupName="RadioButton1" Name="addButton"  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="True" Checked="addButton_Checked" />
+                <RadioButton Content="编辑模式" GroupName="RadioButton1" Name="editButton" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="False" />
+            </Grid>
+            <Menu>
+                <MenuItem Header="保存" Name="Save1" Click="save_Click" IsEnabled="{Binding ElementName=workFlowControl1, Path=CanSave}">
+                    <MenuItem.Icon>
+                        <Image Source="/Logging_APP;component/Images/filesave.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="生成上井解释登记卡" Name="Menu1" Click="menu1_Click" IsEnabled="False">
+                </MenuItem>
+                <!--<MenuItem Header="提交审核">
+                <MenuItem Header="提交到解释管理员审核" Name="menu1"  Click="MenuItem1_Click" IsEnabled="False"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="审核">
+                <MenuItem Header="解释管理员审核" Name="menu2"  Click="MenuItem2_Click" IsEnabled="False"></MenuItem>
+            </MenuItem>-->
+            </Menu>
+            <controls:WorkFlowControl x:Name="workFlowControl1" WorkflowType="解释处理作业" />
+            <StackPanel Name="DM_LOG_PROCESS">
+                <StackPanel Orientation="Horizontal" Margin="2">
+                    <TextBox Height="28" HorizontalAlignment="Left" Name="textBox1" VerticalAlignment="Top" Width="444" />
+                    <Button Content="选择归档文件目录" Height="23" HorizontalAlignment="Left" Name="button1" VerticalAlignment="Center" Width="118" Click="button1_Click" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="2">
+                    <Label Height="20" Style="{StaticResource JsCardStyle}" Content=" 解释处理作业名" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+                    <TextBox Height="23" HorizontalAlignment="Left"  Name="PROCESS_NAME" Text="{Binding Path=PROCESS_NAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" VerticalAlignment="Top" Width="260" IsReadOnly="True"/>
+
+                    <Label Content=" 作业井名" Name="label1" VerticalAlignment="Center" />
+                    <Grid>
+                        <TextBox Height="23" HorizontalAlignment="Left" Name="well_job_name"  VerticalAlignment="Top" Width="260" IsReadOnly="True" Visibility="Collapsed"/>
+                        <ComboBox Height="23" HorizontalAlignment="Left" Name="WELL_JOB_NAME" SelectedValue="{Binding Path=DRILL_JOB_ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" VerticalAlignment="Top" Width="120" SelectionChanged="WELL_JOB_NAME_SelectionChanged"/>
+                    </Grid>
+                    <Button Margin="5,0,0,0" Name="button3" Content="重新选择作业井名" Click="Button_Click_3" IsEnabled="{Binding ElementName=workFlowControl1, Path=CanSave}"></Button>
+                </StackPanel>
+            </StackPanel>
+            <GroupBox MinHeight="100" MaxHeight="300" Header="数据源选择" Name="groupBox1" >
+                <xctk:CheckListBox Margin="1" Name="sourceList" ItemSelectionChanged="sourceList_ItemSelectionChanged" />
+            </GroupBox>
+            <GroupBox Header="解释作业基础信息" Name="groupBox2">
+                <Grid Margin="5" Name="PRO_LOG_DATA_PUBLISH">
+                    <Label Content="解释中心" Height="25" HorizontalAlignment="Left" Margin="48,6,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                    <!--<TextBox Height="25" HorizontalAlignment="Left" Margin="102,7,0,0" Name="interpret_center" Text="{Binding Path=INTERPRET_CENTER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120" />-->
+                    <ComboBox Height="25" DisplayMemberPath="LOG_INTERPRETCENTER_NAME" SelectedValuePath="LOG_INTERPRETCENTER_NAME" HorizontalAlignment="Left" Margin="102,7,0,0" Name="interpret_center" Text="{Binding Path=INTERPRET_CENTER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120" IsEditable="True" />
+                    <Label Content="损失时间" Height="25" HorizontalAlignment="Left" Margin="47,48,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                    <controls:NumberBox DecValue="{Binding Path=LOST_TIME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Height="25" HorizontalAlignment="Left" Margin="102,48,0,0" x:Name="lost_time" VerticalAlignment="Top" Width="120" />
+                    <Label Style="{StaticResource JsCardStyle}" Content="处理软件" Height="25" HorizontalAlignment="Left" Margin="48,97,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                    <ComboBox IsEditable="True" DisplayMemberPath="LOG_PROCESSSOFTWARE_NAME" SelectedValuePath="LOG_PROCESSSOFTWARE_NAME" Height="25" HorizontalAlignment="Left" Margin="102,96,0,0" Name="p_process_software" Text="{Binding Path=P_PROCESS_SOFTWARE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120" />
+                    <Label Style="{StaticResource JsCardStyle}" Content="解释校对人" Height="25" HorizontalAlignment="Left" Margin="36,140,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="102,139,0,0" Name="interpreter" Text="{Binding Path=INTERPRETER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120" />
+                    <Label Style="{StaticResource JsCardStyle}" Content="处理开始日期" Height="25" HorizontalAlignment="Left" Margin="275,8,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                    <xctk:DateTimePicker Format="Custom" ShowButtonSpinner="False" FormatString="yyyy-MM-dd HH:mm" Height="25" HorizontalAlignment="Left" Margin="353,8,0,0" Name="log_start_time" Value="{Binding Path=LOG_START_TIME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120" />
+                    <Label Style="{StaticResource JsCardStyle}" Content="测井队号" Height="25" HorizontalAlignment="Left" Margin="299,51,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="353,51,0,0" Name="team_org_id" Text="{Binding Path=TEAM_ORG_ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120" />
+                    <Label Content="处理总时间" Height="25" HorizontalAlignment="Left" Margin="287,94,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                    <controls:NumberBox DecValue="{Binding Path=P_TOTAL_TIME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Height="25" HorizontalAlignment="Left" Margin="353,94,0,0" x:Name="p_total_time" VerticalAlignment="Top" Width="120" />
+                    <Label Style="{StaticResource JsCardStyle}" Content="成果审核人" Height="25" HorizontalAlignment="Left" Margin="287,137,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="353,137,0,0" Name="p_supervisor" Text="{Binding Path=P_SUPERVISOR, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120" />
+                    <Label Content="测井总时间" Height="25" HorizontalAlignment="Left" Margin="535,8,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                    <controls:NumberBox DecValue="{Binding Path=LOG_TOTAL_TIME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Height="25" HorizontalAlignment="Left" Margin="601,8,0,0" x:Name="log_total_time" VerticalAlignment="Top" Width="120" />
+                    <Label Style="{StaticResource JsCardStyle}" Content="测井系列" Height="25" HorizontalAlignment="Left" Margin="549,51,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                    <ComboBox IsEditable="True" DisplayMemberPath="LOG_SERIES_NAME" SelectedValuePath="LOG_SERIES_NAME" Height="25" HorizontalAlignment="Left" Margin="601,51,0,0" Name="log_series_id" Text="{Binding Path=LOG_SERIES_ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120" />
+                    <Label Style="{StaticResource JsCardStyle}" Content="成果归档人" Height="25" HorizontalAlignment="Left" Margin="534,94,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="61" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="601,94,0,0" Name="processor" Text="{Binding Path=PROCESSOR, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120" />
+                    <Label Content="成果图件种类数" Height="25" HorizontalAlignment="Left" Margin="515,137,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                    <controls:NumberBox DecValue="{Binding Path=RESULT_MAP_TYPE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Height="25" HorizontalAlignment="Left" Margin="601,137,0,0" x:Name="result_map_type" VerticalAlignment="Top" Width="120" />
+                    <Label Style="{StaticResource JsCardStyle}" Content="原始数据文件大小" Height="25" HorizontalAlignment="Left" Margin="5,171,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                    <controls:NumberBox DecValue="{Binding Path=LOG_ORIGINALITY_DATA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Height="25" HorizontalAlignment="Left" Margin="102,171,0,0" x:Name="log_originality_data" VerticalAlignment="Top" Width="120" />
+                    <Label Style="{StaticResource JsCardStyle}" Content="测井解释分析报告大小" Height="25" HorizontalAlignment="Left" Margin="231,171,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                    <controls:NumberBox DecValue="{Binding Path=LOG_INTERPRET_REPORT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Height="25" HorizontalAlignment="Left" Margin="353,171,0,0" x:Name="log_interpret_report" VerticalAlignment="Top" Width="120" />
+                    <Label Style="{StaticResource JsCardStyle}" Content="解释成果数据文件大小" Height="25" Margin="482,173,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalAlignment="Left"  />
+                    <controls:NumberBox DecValue="{Binding Path=LOG_INTERPRET_RESULT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Height="25" HorizontalAlignment="Left" Margin="601,173,0,0" x:Name="log_interpret_result" VerticalAlignment="Top" Width="120" />
+                    <Label Style="{StaticResource JsCardStyle}" Content="原始数据文件大小" Height="25" HorizontalAlignment="Left" Margin="5,171,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                    <Label Style="{StaticResource JsCardStyle}" Content="归档目录文件个数" Height="25" HorizontalAlignment="Left" Margin="5,208,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                    <controls:NumberBox OnlyPositiveInteger="True" DecValue="{Binding Path=FILE_NUMBER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Height="25" HorizontalAlignment="Left" Margin="102,208,0,0" x:Name="file_number" VerticalAlignment="Top" Width="120" />
+                    <Label Content="现场评级人" Height="25" HorizontalAlignment="Left" Margin="287,208,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="353,208,0,0" Name="p_scene_rating" Text="{Binding Path=P_SCENE_RATING, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120" />
+                    <Label Content="室内评级人" Height="25" HorizontalAlignment="Left" Margin="535,208,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="61" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="601,208,0,0" Name="p_indoor_rating" Text="{Binding Path=P_INDOOR_RATING, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120" />
+                    <Label Content="试油建议" Height="25" HorizontalAlignment="Left" Margin="5,245,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="61" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="102,245,0,0" Text="" VerticalAlignment="Top" Width="120" />
+                    <Label Content="井底闭合距" Height="25" HorizontalAlignment="Left" Margin="287,245,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="61" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="353,245,0,0" Text="" VerticalAlignment="Top" Width="120" />
+                    <Label Content="井底闭合方位" Height="25" HorizontalAlignment="Left" Margin="525,245,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="75" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="601,245,0,0" Text="" VerticalAlignment="Top" Width="120" />
+                    <Label Content="资料验收方式" Height="25" HorizontalAlignment="left" Margin="5,277,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="75" />
+                    <ComboBox IsEditable="True" DisplayMemberPath="ACCEPTANCE_WAY_NAME" SelectedValuePath="ACCEPTANCE_WAY_NAME" Height="25" HorizontalAlignment="Left" Margin="102,277,0,0" Name="acceptance_way_name" Text="{Binding Path=ACCEPTANCE_WAY_NAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120" />
+
+                    <Label Style="{StaticResource JsCardStyle}" Content="备注" Height="25" HorizontalAlignment="Left" Margin="59,309,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="102,309,0,0" Name="note" Text="{Binding Path=NOTE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="560" />
+                </Grid>
+            </GroupBox>
+            <TabControl Margin="2,2,0,0" Name="tabControl2">
+                <TabItem Header="解释处理项目" Name="tabItem5">
+                    <StackPanel>
+                        <Button Margin="10,5"  Height="25" Width="200" Content="选择解释处理项目编码" VerticalAlignment="Center" HorizontalAlignment="Left" Click="Button_Click" />
+                        <DataGrid Name="PRO_LOG_PROCESSING_ITEM" AutoGenerateColumns="False" CanUserAddRows="False" CanUserSortColumns="True" MinHeight="200">
+                            <DataGrid.Columns>
+                                <DataGridComboBoxColumn IsReadOnly="True" x:Name="comBox1" SelectedValuePath="PROCESSING_ITEM_ID" DisplayMemberPath="PROCESSING_ITEM_NAME" SelectedValueBinding="{Binding Path=PROCESSING_ITEM_ID}" Header="解释处理项目编码">
+                                </DataGridComboBoxColumn>
+                                <DataGridTemplateColumn Header="对应曲线条数">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <controls:NumberBox DecValue="{Binding Path=P_CURVE_NUMBER,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay,ValidatesOnDataErrors=true}" MinHeight="25" MinWidth="120"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="处理软件">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Text="{Binding Path=P_PROCESS_SOFTWARE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Style="{Binding Source={StaticResource TextBoxDargDropEvent}}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="处理井段">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox AllowDrop="True" Text="{Binding Path=P_WELL_INTERVAL, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Style="{Binding Source={StaticResource TextBoxDargDropEvent}}" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridComboBoxColumn x:Name="log_series_name" SelectedValuePath="LOG_SERIES_NAME" DisplayMemberPath="LOG_SERIES_NAME" SelectedValueBinding="{Binding Path=LOG_SERIES_NAME}" Header="测井系列"/>
+                                <DataGridTemplateColumn Header="数据文件名">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Text="{Binding Path=DATA_NAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridComboBoxColumn x:Name="log_data_format" SelectedValuePath="LOG_DATA_FORMA_CODE" DisplayMemberPath="LOG_DATA_FORMA_CODE" SelectedValueBinding="{Binding Path=LOG_DATA_FORMAT}" Header="原始数据文件格式"/>
+                                <DataGridTemplateColumn Header="解释处理人">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Text="{Binding Path=PROCESSOR, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Style="{Binding Source={StaticResource TextBoxDargDropEvent}}"/>
+
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="处理开始日期">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <DatePicker SelectedDate="{Binding Path=P_START_DATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Focusable="False" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="比例">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Text="{Binding Path=SCALE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Style="{Binding Source={StaticResource TextBoxDargDropEvent}}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="解释员">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Text="{Binding Path=INTERPRETER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Style="{Binding Source={StaticResource TextBoxDargDropEvent}}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="成果审核人">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Text="{Binding Path=P_SUPERVISOR, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Style="{Binding Source={StaticResource TextBoxDargDropEvent}}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Width="auto" Header="备注">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Text="{Binding Path=NOTE,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay,ValidatesOnDataErrors=true}" MinHeight="25" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="报送图件" Name="tabItem6">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Margin="10,5"  Height="20" Width="50" Content="添加行" VerticalAlignment="Center" HorizontalAlignment="Left" Click="Button_Click_1" />
+                            <Button Margin="0,5" Name="mapDel"  Height="20" Width="50" Content="删除行" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="False" Click="mapDel_Click" />
+                        </StackPanel>
+                        <DataGrid Name="PRO_LOG_PROCESS_MAP" SelectionMode="Single" AutoGenerateColumns="False" CanUserAddRows="False" CanUserSortColumns="True" MinHeight="200" SelectionChanged="PRO_LOG_PROCESS_MAP_SelectionChanged" DataContext="{Binding}">
+                            <DataGrid.Columns>
+                                <DataGridTemplateColumn Header="解释处理项目编码">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <ComboBox SelectedValuePath="PROCESSING_ITEM_ID" DisplayMemberPath="PROCESSING_ITEM_NAME" SelectedValue="{Binding Path=PROCESSING_ITEM_ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Loaded="ProcessingItemComboBox_Loaded" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="图件编码">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <ComboBox SelectedValuePath="MAPS_CODING" DisplayMemberPath="MAPS_CHINESE_NAME" SelectedValue="{Binding Path=MAPS_CODING, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Loaded="ComboBox_Loaded" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="起始深度">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <controls:NumberBox DecValue="{Binding Path=MAP_START_DEP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Style="{Binding Source={StaticResource TextBoxDargDropEvent}}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="结束深度">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <controls:NumberBox DecValue="{Binding Path=MAP_END_DEP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Style="{Binding Source={StaticResource TextBoxDargDropEvent}}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="出图深度比例">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Text="{Binding Path=MAP_SCALE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Style="{Binding Source={StaticResource TextBoxDargDropEvent}}" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="出图数据文件名">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Text="{Binding Path=MAP_DATA_NAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="PDF文件大小">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <controls:NumberBox DecValue="{Binding Path=MAP_PDF_SIZE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <!--<DataGridTemplateColumn Header="PDF文件数据">
+                                            <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <TextBox Text="{Binding Path=MAP_PDF_DATA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MinHeight="25" MinWidth="120" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                                </DataTemplate>
+                                            </DataGridTemplateColumn.CellTemplate>
+                                        </DataGridTemplateColumn>
+                                <DataGridTextColumn Binding="{Binding Path=MAP_DATA}" Header="出图数据" />-->
+                                <DataGridTemplateColumn Header="解释处理软件">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Text="{Binding Path=P_PROCESS_SOFTWARE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Style="{Binding Source={StaticResource TextBoxDargDropEvent}}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <!--<DataGridTemplateColumn Header="操作">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Click="Button_Click_4">下载</Button>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>-->
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </TabItem>
+                <!--<TabItem Header="解释处理项目曲线" Name="tabItem7" Visibility="Collapsed">
+                <GroupBox Header="处理项目曲线" Margin="5">
+                    <DataGrid Name="PRO_LOG_PROCESSING_CURVE" AutoGenerateColumns="False" CanUserAddRows="False" MinHeight="200">
+                        <DataGrid.Columns>
+                            <DataGridComboBoxColumn x:Name="comBox2" SelectedValuePath="PROCESSING_ITEM_ID" DisplayMemberPath="PROCESSING_ITEM_NAME" SelectedValueBinding="{Binding Path=PROCESSING_ITEM_ID}" Header="解释处理项目编码"></DataGridComboBoxColumn>
+                            <DataGridTextColumn Binding="{Binding Path=CURVE_NAME}" Header="曲线名" />
+                            <DataGridTextColumn Binding="{Binding Path=CURVE_START_DEP}" Header="曲线始深度" />
+                            <DataGridTextColumn Binding="{Binding Path=CURVE_END_DEP}" Header="曲线止深度" />
+                            <DataGridTextColumn Binding="{Binding Path=CURVE_RLEV}" Header="曲线深度采样" />
+                            <DataGridTextColumn Binding="{Binding Path=CURVE_UNIT}" Header="曲线单位" />
+                            <DataGridTextColumn Binding="{Binding Path=CURVE_T_SAMPLE}" Header="T轴采样点数" />
+                            <DataGridTextColumn Binding="{Binding Path=CURVE_T_UNIT}" Header="T轴单位" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </GroupBox>
+            </TabItem>-->
+                <TabItem Header="曲线评级" Name="tabItem8">
+                    <StackPanel>
+                        <!--<StackPanel Orientation="Horizontal">
+                            <Button Margin="10,5"  Height="20" Width="95" Content="选择评级项目曲线" VerticalAlignment="Center" HorizontalAlignment="Left" Click="ratingAdd_Click" />
+                            <Button Margin="0,5" Name="ratingDel"  Height="20" Width="50" Content="删除行" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="False" Click="ratingDel_Click" />
+                        </StackPanel>-->
+                        <Button Margin="10,5"  Height="25" Width="200" Content="选择评级项目曲线" VerticalAlignment="Center" HorizontalAlignment="Left" Click="Button_Click_2" />
+                        <DataGrid AutoGenerateColumns="False" SelectionMode="Single" CanUserAddRows="False" Name="PRO_LOG_PROCESSING_CURVERATING" MinHeight="200" SelectionChanged="PRO_LOG_PROCESSING_CURVERATING_SelectionChanged">
+                            <DataGrid.Columns>
+                                <!--<DataGridTemplateColumn Header="解释处理项目编码">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <ComboBox SelectedValuePath="PROCESSING_ITEM_ID" DisplayMemberPath="PROCESSING_ITEM_NAME" SelectedValue="{Binding Path=PROCESSING_ITEM_ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Loaded="ProcessingItemComboBox_Loaded" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>-->
+                                <DataGridComboBoxColumn IsReadOnly="True" x:Name="comBox2" SelectedValuePath="PROCESSING_ITEM_ID" DisplayMemberPath="PROCESSING_ITEM_NAME" SelectedValueBinding="{Binding Path=PROCESSING_ITEM_ID}" Header="解释处理项目编码" />
+                                <DataGridComboBoxColumn IsReadOnly="True" x:Name="curveName" SelectedValuePath="CURVE_ID" DisplayMemberPath="CURVE_NAME" SelectedValueBinding="{Binding Path=CURVE_ID}" Header="曲线名称"/>
+                                <DataGridTemplateColumn Header="起始深度">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <controls:NumberBox DecValue="{Binding Path=START_DEP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Style="{Binding Source={StaticResource TextBoxDargDropEvent}}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="结束深度">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <controls:NumberBox DecValue="{Binding Path=END_DEP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Style="{Binding Source={StaticResource TextBoxDargDropEvent}}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <!--<DataGridTemplateColumn Header="测井项目名称">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Label Content="{Binding Path=LOGGING_NAME,UpdateSourceTrigger=PropertyChanged}" MinHeight="25" MinWidth="120" VerticalContentAlignment="Center" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>-->
+                                <DataGridTemplateColumn Header="比例尺">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Text="{Binding Path=SCALE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Style="{Binding Source={StaticResource TextBoxDargDropEvent}}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="采用间距">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <controls:NumberBox DecValue="{Binding Path=RLEV, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Style="{Binding Source={StaticResource TextBoxDargDropEvent}}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="现场评级">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <ComboBox SelectedValuePath="CURVE_QUALITY_TYPE" DisplayMemberPath="CURVE_QUALITY_TYPE" SelectedValue="{Binding Path=SCENE_RATING, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Loaded="QualityTypesComboBox_Loaded">
+                                            </ComboBox>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="室内评级">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <ComboBox SelectedValuePath="CURVE_QUALITY_TYPE" DisplayMemberPath="CURVE_QUALITY_TYPE" SelectedValue="{Binding Path=INDOOR_RATING, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Loaded="QualityTypesComboBox_Loaded">
+                                            </ComboBox>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="不合格原因">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Text="{Binding Path=WHY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="150" Style="{Binding Source={StaticResource TextBoxDargDropEvent}}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="原始图件">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Margin="10,5"  Height="20" Width="50" Content="添加行" VerticalAlignment="Center" HorizontalAlignment="Left" Click="omapAdd_Click" />
+                            <Button Margin="0,5" Name="omapDel"  Height="20" Width="50" Content="删除行" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="False" Click="omapDel_Click" />
+                        </StackPanel>
+                        <DataGrid Name="PRO_LOG_ORIGINAL_MAP" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserSortColumns="True"  SelectionMode="Single" MinHeight="200" SelectionChanged="PRO_LOG_ORIGINAL_MAP_SelectionChanged">
+                            <DataGrid.Columns>
+                                <DataGridTemplateColumn Header="图件名称">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Text="{Binding Path=MAPS_NAME,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="起始深度">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <controls:NumberBox DecValue="{Binding Path=MAP_START_DEP,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Style="{Binding Source={StaticResource TextBoxDargDropEvent}}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="结束深度">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <controls:NumberBox DecValue="{Binding Path=MAP_END_DEP,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Style="{Binding Source={StaticResource TextBoxDargDropEvent}}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="绘图比例">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Text="{Binding Path=MAP_SCALE,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="图件数据名">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Text="{Binding Path=MAP_DATA_NAME,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="返工次数">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <controls:NumberBox DecValue="{Binding Path=REWORK_NUM,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Style="{Binding Source={StaticResource TextBoxDargDropEvent}}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="返工原因">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Text="{Binding Path=REWORK_WHY,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="审核人">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Text="{Binding Path=REVIEWER,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="提交日期">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <DatePicker SelectedDate="{Binding Path=MAP_DATE,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Focusable="False"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="备注">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Text="{Binding Path=NOTE,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </TabItem>
+            </TabControl>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

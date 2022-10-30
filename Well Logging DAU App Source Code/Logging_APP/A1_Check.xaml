@@ -1,0 +1,345 @@
+﻿<Page x:Class="Logging_App.A1_Check"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+     Title="A1_Check" Loaded="BaseWindow_Loaded">
+        <Grid>
+            <TreeView Name="mainMenu" HorizontalAlignment="Left" Margin="5,5,0,5" Width="150" SelectedItemChanged="mainMenu_SelectedItemChanged">
+            <TreeViewItem Header="测井" IsExpanded="True">
+                <TreeViewItem Header="测井任务" />
+                <TreeViewItem Header="测井项目" />
+                <TreeViewItem Header="测井遇阻遇卡" />
+                <TreeViewItem Header="井斜测量数据"  />
+                <TreeViewItem Header="页岩气解释成果"  />
+                <TreeViewItem Header="井筒力学" />
+                <TreeViewItem Header="测井曲线" />
+                <TreeViewItem Header="成果图件" />
+                <TreeViewItem Header="固井质量总评价" />
+                <TreeViewItem Header="固井质量分段评价" />
+                <TreeViewItem Header="测井文档" />
+            </TreeViewItem>
+        </TreeView>
+            <GridSplitter Margin="160,0,0,0" Background="AliceBlue" HorizontalAlignment="Left" Width="2"></GridSplitter>
+            <TabControl Margin="165,5,0,0" Name="tabControl1" VerticalAlignment="Top" Width="835" HorizontalAlignment="Left">
+                <TabItem Header="项目状态" Name="tabItem0">
+                <Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20*" />
+                            <ColumnDefinition Width="180" />
+                            <ColumnDefinition Width="30*" />
+                            <ColumnDefinition Width="180" />
+                            <ColumnDefinition Width="30*" />
+                            <ColumnDefinition Width="180" />
+                            <ColumnDefinition Width="30*" />
+                            <ColumnDefinition Width="180" />
+                            <ColumnDefinition Width="10" />
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Content="提交年度" Height="23" HorizontalAlignment="Left" Margin="12,6,0,0" Name="label1" VerticalAlignment="Top" Width="63" Grid.Column="1" />
+                        <ComboBox Height="23" HorizontalAlignment="Left" Margin="70,6,0,0" Tag="LAY_ID|序号|" VerticalAlignment="Top" Width="100" Grid.Column="1" />
+                        <Label Content="承担单位" Height="23" HorizontalAlignment="Left" Margin="12,6,0,0" Name="label2" VerticalAlignment="Top" Width="63" Grid.Column="3" />
+                        <TextBox Height="23" HorizontalAlignment="Left" Margin="70,6,0,0" Tag="LAY_ID|序号|" VerticalAlignment="Top" Width="100" Grid.Column="3" />
+                        <Label Content="项目名称" Height="23" HorizontalAlignment="Left" Margin="12,6,0,0" Name="label3" VerticalAlignment="Top" Width="63" Grid.Column="5" />
+                        <TextBox Height="23" HorizontalAlignment="Left" Margin="70,6,0,0" Tag="LAY_ID|序号|" VerticalAlignment="Top" Width="100" Grid.Column="5" />
+                        <Label Content="项目状态" Height="23" HorizontalAlignment="Left" Margin="12,6,0,0" Name="label4" VerticalAlignment="Top" Width="63" Grid.Column="7" />
+                        <ComboBox Height="23" HorizontalAlignment="Left" Margin="70,6,0,0" Tag="LAY_ID|序号|" VerticalAlignment="Top" Width="100" Grid.Column="7" />
+                        <Button Content="查询" Height="23" HorizontalAlignment="Left" Margin="12,6,0,0" Name="button2" VerticalAlignment="Top" Width="63" Grid.Column="9" />
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="10" Margin="-5,36,0,0">
+                            <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" Height="580" IsReadOnly="True" Name="项目信息" SelectionMode="Single" VerticalAlignment="Top" SelectionChanged="项目信息_SelectionChanged">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Binding="{Binding Path=Project01}" Header="项目年度" />
+                                    <DataGridTextColumn Binding="{Binding Path=Project02}" Header="承担单位" />
+                                    <DataGridTextColumn Binding="{Binding Path=Project03}" Header="项目名称" />
+                                    <DataGridTextColumn Binding="{Binding Path=Project04}" Header="项目状态" />
+                                    <DataGridTextColumn Binding="{Binding Path=Project05}" Header="提交日期" />
+                                    <DataGridTextColumn Binding="{Binding Path=Project06}" Header="提交人" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </ScrollViewer>
+                    </Grid>
+                </Grid>
+            </TabItem>
+                <TabItem Header="测井任务" Name="tabItem1" Visibility="Collapsed">
+                    <Grid>
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="-5,0,0,0">
+                            <DataGrid Height="605" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" Name="测井任务" SelectionMode="Single">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="井号" Binding="{Binding Path=A1}"/>
+                                    <DataGridTextColumn Header="开始日期" Binding="{Binding Path=A2}"/>
+                                    <DataGridTextColumn Header="结束日期" Binding="{Binding Path=A3}"/>
+                                    <DataGridTextColumn Header="当前尾管顶深度" Binding="{Binding Path=A4}"/>
+                                    <DataGridTextColumn Header="填充深度" Binding="{Binding Path=A5}"/>
+                                    <DataGridTextColumn Header="回填深度" Binding="{Binding Path=A6}"/>
+                                    <DataGridTextColumn Header="油管底部深度" Binding="{Binding Path=A7}"/>
+                                    <DataGridTextColumn Header="总深度" Binding="{Binding Path=A8}"/>
+
+                                    <DataGridTextColumn Header="钻头起出时间" Binding="{Binding Path=A9}"/>
+                                    <DataGridTextColumn Header="循环完成时间" Binding="{Binding Path=A10}"/>
+                                    <DataGridTextColumn Header="迟到损失时间" Binding="{Binding Path=A11}"/>
+                                    <DataGridTextColumn Header="等待工具损失时间" Binding="{Binding Path=A12}"/>
+                                    <DataGridTextColumn Header="总测井时间" Binding="{Binding Path=A13}"/>
+                                    <DataGridTextColumn Header="压力测试次数" Binding="{Binding Path=A14}"/>
+                                    <DataGridTextColumn Header="压力测试成功次数" Binding="{Binding Path=A15}"/>
+                                    <DataGridTextColumn Header="测井井段总长" Binding="{Binding Path=A16}"/>
+                                    <DataGridTextColumn Header="井筒流体" Binding="{Binding Path=A17}"/>
+                                    <DataGridTextColumn Header="泥浆密度" Binding="{Binding Path=A18}"/>
+                                    <DataGridTextColumn Header="泥浆粘度" Binding="{Binding Path=A19}"/>
+
+                                    <DataGridTextColumn Header="泥浆电阻率" Binding="{Binding Path=A20}"/>
+                                    <DataGridTextColumn Header="泥浆温度" Binding="{Binding Path=A21}"/>
+                                    <DataGridTextColumn Header="井底温度" Binding="{Binding Path=A22}"/>
+                                    <DataGridTextColumn Header="施工单位" Binding="{Binding Path=A23}"/>
+                                    <DataGridTextColumn Header="测井工程师" Binding="{Binding Path=A24}"/>
+                                    <DataGridTextColumn Header="施工负责人" Binding="{Binding Path=A25}"/>
+                                    <DataGridTextColumn Header="测井类型" Binding="{Binding Path=A26}"/>
+                                    <DataGridTextColumn Header="钻头直径" Binding="{Binding Path=A27}"/>
+                                    <DataGridTextColumn Header="钻达井深" Binding="{Binding Path=A28}"/>
+                                    <DataGridTextColumn Header="测时井深" Binding="{Binding Path=A29}"/>
+                                    <DataGridTextColumn Header="备注" Binding="{Binding Path=A30}"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </ScrollViewer>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="测井项目" Name="tabItem2" Visibility="Collapsed" >
+                    <Grid>
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="-5,0,0,0">
+                            <DataGrid Height="605" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" Name="测井项目" SelectionMode="Single">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="井号" Binding="{Binding Path=B1}"/>
+                                    <DataGridTextColumn Header="测井任务开始时间" Binding="{Binding Path=B2}"/>
+                                    <DataGridTextColumn Header="项目名称" Binding="{Binding Path=B3}"/>
+                                    <DataGridTextColumn Header="顶界井深" Binding="{Binding Path=B4}"/>
+                                    <DataGridTextColumn Header="底界井深" Binding="{Binding Path=B5}"/>
+                                    <DataGridTextColumn Header="验收员" Binding="{Binding Path=B6}"/>
+                                    <DataGridTextColumn Header="测井系列" Binding="{Binding Path=B7}"/>
+                                    <DataGridTextColumn Header="比例尺" Binding="{Binding Path=B8}"/>
+                                    <DataGridTextColumn Header="放射源号码" Binding="{Binding Path=B9}"/>
+                                    <DataGridTextColumn Header="放射源描述" Binding="{Binding Path=B10}"/>
+                                    <DataGridTextColumn Header="原始文件类型" Binding="{Binding Path=B11}"/>
+                                    <DataGridTextColumn Header="采样间距" Binding="{Binding Path=B12}"/>
+                                    <DataGridTextColumn Header="存放位置或路径" Binding="{Binding Path=B13}"/>
+                                    <DataGridTextColumn Header="成果号" Binding="{Binding Path=B14}"/>
+                                    <DataGridTextColumn Header="备注" Binding="{Binding Path=B15}"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </ScrollViewer>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="测井遇阻遇卡" Name="tabItem3" Visibility="Collapsed" />
+                <TabItem Header="井斜测量数据" Name="tabItem4" Visibility="Collapsed">
+                    <Grid>
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="-5,0,0,0">
+                        <DataGrid Height="605" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" Name="井斜测量数据" SelectionMode="Single">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="井号" Binding="{Binding Path=C1}"/>
+                                    <DataGridTextColumn Header="测量深度" Binding="{Binding Path=C2}"/>
+                                    <DataGridTextColumn Header="方位角" Binding="{Binding Path=C3}"/>
+                                    <DataGridTextColumn Header="井斜角" Binding="{Binding Path=C4}"/>
+                                    <DataGridTextColumn Header="垂深" Binding="{Binding Path=C5}"/>
+                                    <DataGridTextColumn Header="位移" Binding="{Binding Path=C6}"/>
+                                    <DataGridTextColumn Header="闭合方位角" Binding="{Binding Path=C7}"/>
+                                    <DataGridTextColumn Header="闭合距" Binding="{Binding Path=C8}"/>
+                                    <DataGridTextColumn Header="备注" Binding="{Binding Path=C9}"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </ScrollViewer>
+                    </Grid>
+                    </TabItem >
+                <TabItem Header="综合解释成果" Visibility="Collapsed" >
+                    <Grid>
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="-5,0,0,0" >
+                        <DataGrid Height="605" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" Name="综合解释成果" SelectionMode="Single">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="井号" Binding="{Binding Path=D1}"/>
+                                    <DataGridTextColumn Header="测井任务开始时间" Binding="{Binding Path=D2}"/>
+                                    <DataGridTextColumn Header="测井解释日期" Binding="{Binding Path=D3}"/>
+                                    <DataGridTextColumn Header="层号" Binding="{Binding Path=D4}"/>
+                                    <DataGridTextColumn Header="井段顶深" Binding="{Binding Path=D5}"/>
+                                    <DataGridTextColumn Header="井段底深" Binding="{Binding Path=D6}"/>
+                                    <DataGridTextColumn Header="解释序次" Binding="{Binding Path=D7}"/>
+                                    <DataGridTextColumn Header="解释人" Binding="{Binding Path=D8}"/>
+
+                                    <DataGridTextColumn Header="解释单位" Binding="{Binding Path=D9}"/>
+                                    <DataGridTextColumn Header="处理软件" Binding="{Binding Path=D10}"/>
+                                    <DataGridTextColumn Header="解释结果" Binding="{Binding Path=D11}"/>
+                                    <DataGridTextColumn Header="审核人" Binding="{Binding Path=D12}"/>
+                                    <DataGridTextColumn Header="审核标志" Binding="{Binding Path=D13}"/>
+                                    <DataGridTextColumn Header="审核日期" Binding="{Binding Path=D14}"/>
+                                    <DataGridTextColumn Header="总孔隙度低值" Binding="{Binding Path=D15}"/>
+                                    <DataGridTextColumn Header="总孔隙度高值" Binding="{Binding Path=D16}"/>
+                                    <DataGridTextColumn Header="冲洗带电阻率" Binding="{Binding Path=D17}"/>
+                                    <DataGridTextColumn Header="浅电阻率低值" Binding="{Binding Path=D18}"/>
+                                    <DataGridTextColumn Header="浅电阻率高值" Binding="{Binding Path=D19}"/>
+
+                                    <DataGridTextColumn Header="地层真电阻率低值" Binding="{Binding Path=D20}"/>
+                                    <DataGridTextColumn Header="地层真电阻率高值" Binding="{Binding Path=D21}"/>
+                                    <DataGridTextColumn Header="钻井液电阻率" Binding="{Binding Path=D22}"/>
+                                    <DataGridTextColumn Header="自然电位" Binding="{Binding Path=D23}"/>
+                                    <DataGridTextColumn Header="自然伽玛辐射强度低值" Binding="{Binding Path=D24}"/>
+                                    <DataGridTextColumn Header="自然伽玛辐射强度高值" Binding="{Binding Path=D25}"/>
+                                    <DataGridTextColumn Header="补偿中子低值" Binding="{Binding Path=D26}"/>
+                                    <DataGridTextColumn Header="补偿中子高值" Binding="{Binding Path=D27}"/>
+                                    <DataGridTextColumn Header="井径" Binding="{Binding Path=D28}"/>
+                                    <DataGridTextColumn Header="油有效渗透率" Binding="{Binding Path=D29}"/>
+                                    <DataGridTextColumn Header="气有效渗透率" Binding="{Binding Path=D30}"/>
+
+                                    <DataGridTextColumn Header="水有效渗透率" Binding="{Binding Path=D31}"/>
+                                    <DataGridTextColumn Header="绝对渗透率" Binding="{Binding Path=D32}"/>
+                                    <DataGridTextColumn Header="地层有效渗透率" Binding="{Binding Path=D33}"/>
+                                    <DataGridTextColumn Header="渗透率" Binding="{Binding Path=D34}"/>
+                                    <DataGridTextColumn Header="光电吸收截面指数" Binding="{Binding Path=D35}"/>
+                                    <DataGridTextColumn Header="铀" Binding="{Binding Path=D36}"/>
+                                    <DataGridTextColumn Header="钍" Binding="{Binding Path=D37}"/>
+                                    <DataGridTextColumn Header="钾" Binding="{Binding Path=D38}"/>
+                                    <DataGridTextColumn Header="泥质含量" Binding="{Binding Path=D39}"/>
+                                    <DataGridTextColumn Header="砂质含量" Binding="{Binding Path=D40}"/>
+                                    <DataGridTextColumn Header="粉砂质含量" Binding="{Binding Path=D41}"/>
+                                    <DataGridTextColumn Header="灰质含量" Binding="{Binding Path=D42}"/>
+                                    <DataGridTextColumn Header="白云岩含量" Binding="{Binding Path=D43}"/>
+                                    <DataGridTextColumn Header="砾石含量" Binding="{Binding Path=D44}"/>
+                                    <DataGridTextColumn Header="特殊矿物1" Binding="{Binding Path=D45}"/>
+
+                                    <DataGridTextColumn Header="特殊矿物2" Binding="{Binding Path=D46}"/>
+                                    <DataGridTextColumn Header="特殊矿物3" Binding="{Binding Path=D47}"/>
+                                    <DataGridTextColumn Header="含油气饱和度" Binding="{Binding Path=D48}"/>
+                                    <DataGridTextColumn Header="有效自由水饱和度" Binding="{Binding Path=D49}"/>
+                                    <DataGridTextColumn Header="含水饱和度低值" Binding="{Binding Path=D50}"/>
+                                    <DataGridTextColumn Header="含水饱和度高值" Binding="{Binding Path=D51}"/>
+                                    <DataGridTextColumn Header="束缚水饱和度 " Binding="{Binding Path=D52}"/>
+                                    <DataGridTextColumn Header="总水饱和度" Binding="{Binding Path=D53}"/>
+                                    <DataGridTextColumn Header="蒙脱石含量" Binding="{Binding Path=D54}"/>
+                                    <DataGridTextColumn Header="伊利石含量" Binding="{Binding Path=D55}"/>
+                                    <DataGridTextColumn Header="高岭石绿泥石含量" Binding="{Binding Path=D56}"/>
+                                    <DataGridTextColumn Header="岩石密度低值" Binding="{Binding Path=D57}"/>
+                                    <DataGridTextColumn Header="岩石密度高值" Binding="{Binding Path=D58}"/>
+                                    <DataGridTextColumn Header="地层体积密度" Binding="{Binding Path=D59}"/>
+                                    <DataGridTextColumn Header="岩石声波速度" Binding="{Binding Path=D60}"/>
+
+                                    <DataGridTextColumn Header="声波时差低值" Binding="{Binding Path=D61}"/>
+                                    <DataGridTextColumn Header="声波时差高值" Binding="{Binding Path=D62}"/>
+                                    <DataGridTextColumn Header="井底温度" Binding="{Binding Path=D63}"/>
+                                    <DataGridTextColumn Header="地温梯度" Binding="{Binding Path=D64}"/>
+                                    <DataGridTextColumn Header="深侧向" Binding="{Binding Path=D65}"/>
+                                    <DataGridTextColumn Header="灰分含量" Binding="{Binding Path=D66}"/>
+                                    <DataGridTextColumn Header="水分含量" Binding="{Binding Path=D67}"/>
+                                    <DataGridTextColumn Header="固定碳含量" Binding="{Binding Path=D68}"/>
+                                    <DataGridTextColumn Header="挥发分含量" Binding="{Binding Path=D69}"/>
+                                    <DataGridTextColumn Header="吨煤含气量" Binding="{Binding Path=D70}"/>
+
+                                    <DataGridTextColumn Header="有效厚度" Binding="{Binding Path=D71}"/>
+                                    <DataGridTextColumn Header="初始剪切模量" Binding="{Binding Path=D72}"/>
+                                    <DataGridTextColumn Header="储层分级" Binding="{Binding Path=D73}"/>
+                                    <DataGridTextColumn Header="裂缝孔隙度" Binding="{Binding Path=D74}"/>
+                                    <DataGridTextColumn Header="裂缝张开度" Binding="{Binding Path=D75}"/>
+                                    <DataGridTextColumn Header="切变模量" Binding="{Binding Path=D76}"/>
+                                    <DataGridTextColumn Header="体积模量" Binding="{Binding Path=D77}"/>
+                                    <DataGridTextColumn Header="无铀自然伽玛" Binding="{Binding Path=D78}"/>
+                                    <DataGridTextColumn Header="杨氏模量" Binding="{Binding Path=D79}"/>
+                                    <DataGridTextColumn Header="备注" Binding="{Binding Path=D80}"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </ScrollViewer>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="页岩气解释成果" Name="tabItem5" Visibility="Collapsed" />
+                <TabItem Header="井筒力学" Name="tabItem6" Visibility="Collapsed" />
+                <TabItem Header="测井曲线"  Name="tabItem7" Visibility="Collapsed" >
+                    <Grid>
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="-5,0,0,0">
+                        <DataGrid Height="605" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" Name="测井曲线" SelectionMode="Single">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="井号" Binding="{Binding Path=E1}"/>
+                                    <DataGridTextColumn Header="测井任务开始时间" Binding="{Binding Path=E2}"/>
+                                    <DataGridTextColumn Header="项目名称" Binding="{Binding Path=E3}"/>
+                                    <DataGridTextColumn Header="测井曲线名称" Binding="{Binding Path=E4}"/>
+                                    <DataGridTextColumn Header="剖面系列" Binding="{Binding Path=E5}"/>
+                                    <DataGridTextColumn Header="使用日期" Binding="{Binding Path=E6}"/>
+                                    <DataGridTextColumn Header="测井曲线条数" Binding="{Binding Path=E7}"/>
+                                    <DataGridTextColumn Header="单位名称" Binding="{Binding Path=E8}"/>
+                                    <DataGridTextColumn Header="备注" Binding="{Binding Path=E9}"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </ScrollViewer>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="成果图件" Name="tabItem8" Visibility="Collapsed">
+                    <Grid>
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="-5,0,0,0">
+                        <DataGrid Height="605" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" Name="成果图件" SelectionMode="Single">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="文件序号" Binding="{Binding Path=F1}"/>
+                                    <DataGridTextColumn Header="图件名称" Binding="{Binding Path=F2}"/>
+                                    <DataGridTextColumn Header="测井日期" Binding="{Binding Path=F3}"/>
+                                    <DataGridTextColumn Header="顶界井深" Binding="{Binding Path=F4}"/>
+                                    <DataGridTextColumn Header="底界井深" Binding="{Binding Path=F5}"/>
+                                    <DataGridTextColumn Header="文件类型" Binding="{Binding Path=F6}"/>
+                                    <DataGridTextColumn Header="成果图存放位置或路径" Binding="{Binding Path=F7}"/>
+                                    <DataGridTextColumn Header="用户名称" Binding="{Binding Path=F8}"/>
+                                    <DataGridTextColumn Header="技术说明" Binding="{Binding Path=F9}"/>
+                                    <DataGridTextColumn Header="钻井液电阻率" Binding="{Binding Path=F10}"/>
+                                    <DataGridTextColumn Header="地面温度" Binding="{Binding Path=F11}"/>
+                                    <DataGridTextColumn Header="井底温度" Binding="{Binding Path=F12}"/>
+                                    <DataGridTextColumn Header="备注" Binding="{Binding Path=F13}"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </ScrollViewer>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="固井质量总评价" Name="tabItem9" Visibility="Collapsed" >
+                    <Grid>
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="-5,0,0,0">
+                        <DataGrid Height="605" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" Name="固井质量总评价" SelectionMode="Single">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="井号" Binding="{Binding Path=G1}"/>
+                                    <DataGridTextColumn Header="测井解释日期" Binding="{Binding Path=G2}"/>
+                                    <DataGridTextColumn Header="固井评价日期" Binding="{Binding Path=G3}"/>
+                                    <DataGridTextColumn Header="套管名称" Binding="{Binding Path=G4}"/>
+                                    <DataGridTextColumn Header="仪器型号" Binding="{Binding Path=G5}"/>
+                                    <DataGridTextColumn Header="套管外径" Binding="{Binding Path=G6}"/>
+                                    <DataGridTextColumn Header="套管壁厚" Binding="{Binding Path=G7}"/>
+                                    <DataGridTextColumn Header="下入井深" Binding="{Binding Path=G8}"/>
+                                    <DataGridTextColumn Header="水泥预计返高" Binding="{Binding Path=G9}"/>
+                                    <DataGridTextColumn Header="水泥实返高度" Binding="{Binding Path=G10}"/>
+                                    <DataGridTextColumn Header="遇阻深度" Binding="{Binding Path=G11}"/>
+                                    <DataGridTextColumn Header="固井质量" Binding="{Binding Path=G12}"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </ScrollViewer>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="固井质量分段评价" Name="tabItem10" Visibility="Collapsed" >
+                    <Grid>
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="-5,0,0,0">
+                        <DataGrid Height="605" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" Name="固井质量分段评价" SelectionMode="Single">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="井号" Binding="{Binding Path=H1}"/>
+                                    <DataGridTextColumn Header="测井解释日期" Binding="{Binding Path=H2}"/>
+                                    <DataGridTextColumn Header="固井评价日期" Binding="{Binding Path=H3}"/>
+                                    <DataGridTextColumn Header="套管名称" Binding="{Binding Path=H4}"/>
+                                    <DataGridTextColumn Header="解释序号" Binding="{Binding Path=H5}"/>
+                                    <DataGridTextColumn Header="层段顶界井深" Binding="{Binding Path=H6}"/>
+                                    <DataGridTextColumn Header="层段底界井深" Binding="{Binding Path=H7}"/>
+                                    <DataGridTextColumn Header="声波幅度" Binding="{Binding Path=H8}"/>
+                                    <DataGridTextColumn Header="最小声波幅度" Binding="{Binding Path=H9}"/>
+                                    <DataGridTextColumn Header="最大声波幅度" Binding="{Binding Path=H10}"/>
+                                    <DataGridTextColumn Header="固井质量综合评价" Binding="{Binding Path=H11}"/>
+                                    <DataGridTextColumn Header="第一界面胶结评价" Binding="{Binding Path=H12}"/>
+                                    <DataGridTextColumn Header="水泥周向缺失角度" Binding="{Binding Path=H13}"/>
+                                    <DataGridTextColumn Header="第二界面胶结评价" Binding="{Binding Path=H14}"/>
+                                    <DataGridTextColumn Header="套管外介质密度" Binding="{Binding Path=H15}"/>
+                                    <DataGridTextColumn Header="抗压强度" Binding="{Binding Path=H16}"/>
+                                    <DataGridTextColumn Header="胶结程度评价" Binding="{Binding Path=H17}"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </ScrollViewer>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="测井文档" Name="tabItem11" Visibility="Collapsed"/>
+            </TabControl>
+        </Grid>
+</Page>

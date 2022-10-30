@@ -1,0 +1,94 @@
+[记录时间：18:17:31.490]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-02292: integrity constraint (LOGGINGAPPUSER.SYS_FILE_UPLOAD_FK1) violated - child record found
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.DataService.UpdateProcessFileInfo(Byte[] data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3212
+
+消息：
+[记录时间：18:25:11.642]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.DataService.UpdateProcessFileInfo(Byte[] data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3213
+
+消息：
+[记录时间：18:30:56.132]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-06550: line 1, column 90:
+PLS-00103: Encountered the symbol "," when expecting one of the following:
+
+   := . ( @ % ; not null range default character
+ORA-06550: line 1, column 123:
+PLS-00103: Encountered the symbol "FROM" when expecting one of the following:
+
+   . ( , % ;
+ORA-06550: line 1, column 165:
+PLS-00103: Encountered the symbol "DELETE" 
+ORA-06550: line 1, column 209:
+PLS-00103: Encountered the symbol "SELECT" 
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.DataService.UpdateProcessFileInfo(Byte[] data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3214
+
+消息：
+[记录时间：18:33:49.693]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-06550: line 1, column 90:
+PLS-00103: Encountered the symbol "," when expecting one of the following:
+
+   := . ( @ % ; not null range default character
+ORA-06550: line 1, column 123:
+PLS-00103: Encountered the symbol "FROM" when expecting one of the following:
+
+   . ( , % ;
+ORA-06550: line 1, column 165:
+PLS-00103: Encountered the symbol "DELETE" 
+ORA-06550: line 1, column 214:
+PLS-00103: Encountered the symbol "SELECT" 
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.DataService.UpdateProcessFileInfo(Byte[] data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3214
+
+消息：
+[记录时间：19:03:28.463]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-06550: line 1, column 90:
+PLS-00103: Encountered the symbol "," when expecting one of the following:
+
+   := . ( @ % ; not null range default character
+ORA-06550: line 1, column 123:
+PLS-00103: Encountered the symbol "FROM" when expecting one of the following:
+
+   . ( , % ;
+ORA-06550: line 1, column 165:
+PLS-00103: Encountered the symbol "DELETE" 
+ORA-06550: line 1, column 214:
+PLS-00103: Encountered the symbol "SELECT" 
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.DataService.UpdateProcessFileInfo(Byte[] data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3214
+
+消息：
+[记录时间：19:16:15.680]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-06550: line 1, column 90:
+PLS-00103: Encountered the symbol "," when expecting one of the following:
+
+   := . ( @ % ; not null range default character
+ORA-06550: line 1, column 123:
+PLS-00103: Encountered the symbol "FROM" when expecting one of the following:
+
+   . ( , % ;
+ORA-06550: line 1, column 164:
+PLS-00103: Encountered the symbol "DELETE" 
+ORA-06550: line 1, column 212:
+PLS-00103: Encountered the symbol "SELECT" 
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.DataService.UpdateProcessFileInfo(Byte[] data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3214
+
+消息：

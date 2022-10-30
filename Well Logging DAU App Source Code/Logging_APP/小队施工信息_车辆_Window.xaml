@@ -1,0 +1,36 @@
+﻿<gui:BaseWindow x:Class="Logging_App.小队施工信息_车辆_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+        xmlns:gui="clr-namespace:Logging_App.GUI" xmlns:controls="clr-namespace:Logging_App.Controls" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" 
+        Title="小队施工信息_车辆" Height="619" Width="723" Loaded="BaseWindow_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="274*" />
+            <RowDefinition Height="35" />
+        </Grid.RowDefinitions>
+        <DataGrid AutoGenerateColumns="False" Name="dataGrid1" Grid.Row="1" Margin="2" IsReadOnly="True" SelectionMode="Single" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=VEHICLE_TYPE}" Header="车辆类型" />
+                <DataGridTextColumn Binding="{Binding Path=VEHICLE_PLATE}" Header="车辆牌照" />
+                <DataGridTextColumn Binding="{Binding Path=ENGINE_POWER}" Header="发动机功率" />
+                <DataGridTextColumn Binding="{Binding Path=NUCLEAR_LOAD_MAN1}" Header="核载人数" />
+                <DataGridTextColumn Binding="{Binding Path=TEAM_ORG}" Header="所在班组" />
+                <DataGridTextColumn Binding="{Binding Path=INITIAL_DATE,StringFormat=\{0:yyyy-MM-dd\}}" Header="使用开始日期" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Name="stackPanel" Orientation="Horizontal">
+                <Label Content="车辆类型" Height="28" Margin="5,0,2,0" Name="label1" VerticalContentAlignment="Center"/>
+                <ComboBox Height="23" Margin="0,0,0,0" Name="comboBox1" Width="120" />
+                <Label Content="所在班组" Height="28" Margin="5,0,2,0" VerticalContentAlignment="Center"/>
+                <ComboBox Height="23" Margin="0,0,0,0" Name="comboBox3" Width="120" />
+            </StackPanel>
+        </StackPanel>
+        <Button Content="确定" Height="23" HorizontalAlignment="Left" Margin="186,5,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" Grid.Row="2" />
+        <Button Content="取消" Height="23" HorizontalAlignment="Left" Margin="392,5,0,0" Name="button2" VerticalAlignment="Top" Width="75" Click="button2_Click" Grid.Row="2"/>
+    </Grid>
+</gui:BaseWindow>

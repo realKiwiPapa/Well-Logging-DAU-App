@@ -1,0 +1,40 @@
+[记录时间：16:03:03.092]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01791: not a SELECTed expression
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 285
+   在 Logging_App.WebService.DataService.GetData_图件类型() 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 2527
+
+消息：
+[记录时间：16:08:55.019]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00924: missing BY keyword
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 285
+   在 Logging_App.WebService.DataService.GetMapCurveInfo(String map_name) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 2863
+
+消息：
+[记录时间：16:10:53.763]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00904: "阵列感应测井曲线图": invalid identifier
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 285
+   在 Logging_App.WebService.DataService.GetMapCurveInfo(String map_name) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 2863
+
+消息：
+[记录时间：16:17:39.346]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00904: "阵列感应测井曲线图": invalid identifier
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 285
+   在 Logging_App.WebService.DataService.GetMapCurveInfo(String map_name) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 2863
+
+消息：
+[记录时间：16:50:38.298]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00904: "MAPS_CHINESE_NAME": invalid identifier
+   在 Maticsoft.DBUtility.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 422
+   在 Logging_App.WebService.DataService.SaveProcessingCurveInfo(String PROCESS_ID, String MAPS_CHINESE_NAME, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3551
+
+消息：

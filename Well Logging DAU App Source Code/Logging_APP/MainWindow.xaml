@@ -1,0 +1,12 @@
+﻿<gui:BaseWindow
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   xmlns:gui="clr-namespace:Logging_App.GUI" xmlns:controls="clr-namespace:Logging_App.Controls"
+  xmlns:xctk="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+   xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" 
+    x:Class="Logging_App.MainWindow"
+        Title="井场一体化数据采集器-测井专业填报系统" WindowStartupLocation="CenterScreen" Loaded="BaseWindow_Loaded" WindowState="Maximized" MinWidth="800" MinHeight="600" Initialized="BaseWindow_Initialized"><!-- ContentRendered="BaseWindow_ContentRendered"--> 
+    <Grid>
+        <Frame Name="MainFrame" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</gui:BaseWindow>

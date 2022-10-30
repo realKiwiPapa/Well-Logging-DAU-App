@@ -1,0 +1,11 @@
+[记录时间：09:35:48.017]
+用户帐号:(null)
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-12541: TNS:no listener    在 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck)
+   在 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+   在 Oracle.DataAccess.Client.OracleConnection.Open()
+   在 Maticsoft.DBUtility.DbHelperOra.PrepareCommand(OracleCommand cmd, OracleConnection conn, OracleTransaction trans, String cmdText, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 483
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 461
+   在 Logging_App.WebService.UserService.Login(String loginName, String password) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UserService.asmx.cs:行号 200
+
+消息：

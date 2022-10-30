@@ -1,0 +1,3 @@
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\bin\x86\GuestRelease\Logging_App.exe.config
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\bin\x86\GuestRelease\Logging_App.exe.config
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\GuestRelease\Client.csproj.ResolveComReference.cache

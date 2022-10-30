@@ -1,0 +1,36 @@
+[记录时间：14:43:13.119]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-12514: TNS:listener does not currently know of service requested in connect descriptor    在 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck)
+   在 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+   在 Oracle.DataAccess.Client.OracleConnection.Open()
+   在 Maticsoft.DBUtility.DbHelperOraA12.PrepareCommand(OracleCommand cmd, OracleConnection conn, OracleTransaction trans, String cmdText, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOraA12.cs:行号 482
+   在 Maticsoft.DBUtility.DbHelperOraA12.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOraA12.cs:行号 460
+   在 Logging_App.WebService.DataService.GetData_A12取心数据(String WELL_JOB_NAME) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 5162
+   在 Logging_App.WebService.DataService.Save_A12取芯数据(String REQUISITION_CD, String JOB_PLAN_CD, String WELL_JOB_NAME) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 5493
+
+消息：
+[记录时间：14:58:03.499]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-12514: TNS:listener does not currently know of service requested in connect descriptor    在 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck)
+   在 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+   在 Oracle.DataAccess.Client.OracleConnection.Open()
+   在 Maticsoft.DBUtility.DbHelperOraA12.PrepareCommand(OracleCommand cmd, OracleConnection conn, OracleTransaction trans, String cmdText, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOraA12.cs:行号 482
+   在 Maticsoft.DBUtility.DbHelperOraA12.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOraA12.cs:行号 460
+   在 Logging_App.WebService.DataService.GetData_A12下套管记录(String WELL_JOB_NAME) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 5186
+   在 Logging_App.WebService.DataService.Save_A12套管参数(String REQUISITION_CD, String JOB_PLAN_CD, String WELL_JOB_NAME) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 5587
+
+消息：
+[记录时间：15:00:24.085]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-12514: TNS:listener does not currently know of service requested in connect descriptor    在 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck)
+   在 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+   在 Oracle.DataAccess.Client.OracleConnection.Open()
+   在 Maticsoft.DBUtility.DbHelperOraA12.PrepareCommand(OracleCommand cmd, OracleConnection conn, OracleTransaction trans, String cmdText, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOraA12.cs:行号 482
+   在 Maticsoft.DBUtility.DbHelperOraA12.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOraA12.cs:行号 460
+   在 Logging_App.WebService.DataService.GetData_A12取心数据(String WELL_JOB_NAME) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 5162
+   在 Logging_App.WebService.DataService.Save_A12取芯数据(String REQUISITION_CD, String JOB_PLAN_CD, String WELL_JOB_NAME) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 5493
+
+消息：

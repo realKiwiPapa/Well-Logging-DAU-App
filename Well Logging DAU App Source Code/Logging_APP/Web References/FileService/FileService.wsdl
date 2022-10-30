@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CreateUploadTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sha1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="md5" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="length" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="tasktype" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateUploadTaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateUploadTaskResult" type="tns:UploadState" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UploadState">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TaskID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="State" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Position" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Progress" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUploadState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="taskID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUploadStateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUploadStateResult" type="tns:UploadState" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadWrite">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="taskID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="position" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="bData" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadWriteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UploadWriteResult" type="tns:UploadState" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateDownloadTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fileid" nillable="true" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="filename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tasktype" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateDownloadTaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateDownloadTaskResult" type="tns:DownloadState" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DownloadState">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TaskID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="State" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="Length" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DownloadRead">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="taskID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="position" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadReadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DownloadReadResult" type="tns:DownloadState" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVersion">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPluginsInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPluginsInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPluginsInfoResult" type="tns:ArrayOfPluginInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPluginInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PluginInfo" nillable="true" type="tns:PluginInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PluginInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Index" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemsInfo" type="tns:ArrayOfPluginItemInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPluginItemInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PluginItemInfo" nillable="true" type="tns:PluginItemInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PluginItemInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastWriteTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUpdateData">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUpdateDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUpdateDataResult" type="tns:ArrayOfUpdateData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUpdateData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UpdateData" type="tns:UpdateData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UpdateData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FilePath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHA1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MD5" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Length" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveUploadInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sha1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="md5" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="length" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="pathid" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveUploadInfoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUploadID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sha1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="md5" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="length" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUploadIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUploadIDResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fileid" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFileNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveFileUploadInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sha1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="md5" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="length" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="filepath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveFileUploadInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveFileUploadInfoResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Export_上井解释登记卡">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="process_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Export_上井解释登记卡Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Export_上井解释登记卡Result" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateUploadTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateUploadTask" />
+  </wsdl:message>
+  <wsdl:message name="CreateUploadTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateUploadTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUploadStateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUploadState" />
+  </wsdl:message>
+  <wsdl:message name="GetUploadStateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUploadStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadWriteSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadWrite" />
+  </wsdl:message>
+  <wsdl:message name="UploadWriteSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadWriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateDownloadTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateDownloadTask" />
+  </wsdl:message>
+  <wsdl:message name="CreateDownloadTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateDownloadTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadReadSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadRead" />
+  </wsdl:message>
+  <wsdl:message name="DownloadReadSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPluginsInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPluginsInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPluginsInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPluginsInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdateDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUpdateData" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdateDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUpdateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveUploadInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveUploadInfo" />
+  </wsdl:message>
+  <wsdl:message name="SaveUploadInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveUploadInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUploadIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUploadID" />
+  </wsdl:message>
+  <wsdl:message name="GetUploadIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUploadIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFileNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFileName" />
+  </wsdl:message>
+  <wsdl:message name="GetFileNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFileNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveFileUploadInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveFileUploadInfo" />
+  </wsdl:message>
+  <wsdl:message name="SaveFileUploadInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveFileUploadInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Export_上井解释登记卡SoapIn">
+    <wsdl:part name="parameters" element="tns:Export_上井解释登记卡" />
+  </wsdl:message>
+  <wsdl:message name="Export_上井解释登记卡SoapOut">
+    <wsdl:part name="parameters" element="tns:Export_上井解释登记卡Response" />
+  </wsdl:message>
+  <wsdl:portType name="FileServiceSoap">
+    <wsdl:operation name="CreateUploadTask">
+      <wsdl:input message="tns:CreateUploadTaskSoapIn" />
+      <wsdl:output message="tns:CreateUploadTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUploadState">
+      <wsdl:input message="tns:GetUploadStateSoapIn" />
+      <wsdl:output message="tns:GetUploadStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadWrite">
+      <wsdl:input message="tns:UploadWriteSoapIn" />
+      <wsdl:output message="tns:UploadWriteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDownloadTask">
+      <wsdl:input message="tns:CreateDownloadTaskSoapIn" />
+      <wsdl:output message="tns:CreateDownloadTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadRead">
+      <wsdl:input message="tns:DownloadReadSoapIn" />
+      <wsdl:output message="tns:DownloadReadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <wsdl:input message="tns:GetVersionSoapIn" />
+      <wsdl:output message="tns:GetVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPluginsInfo">
+      <wsdl:input message="tns:GetPluginsInfoSoapIn" />
+      <wsdl:output message="tns:GetPluginsInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateData">
+      <wsdl:input message="tns:GetUpdateDataSoapIn" />
+      <wsdl:output message="tns:GetUpdateDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUploadInfo">
+      <wsdl:input message="tns:SaveUploadInfoSoapIn" />
+      <wsdl:output message="tns:SaveUploadInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUploadID">
+      <wsdl:input message="tns:GetUploadIDSoapIn" />
+      <wsdl:output message="tns:GetUploadIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileName">
+      <wsdl:input message="tns:GetFileNameSoapIn" />
+      <wsdl:output message="tns:GetFileNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveFileUploadInfo">
+      <wsdl:input message="tns:SaveFileUploadInfoSoapIn" />
+      <wsdl:output message="tns:SaveFileUploadInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Export_上井解释登记卡">
+      <wsdl:input message="tns:Export_上井解释登记卡SoapIn" />
+      <wsdl:output message="tns:Export_上井解释登记卡SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FileServiceSoap" type="tns:FileServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateUploadTask">
+      <soap:operation soapAction="http://tempuri.org/CreateUploadTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUploadState">
+      <soap:operation soapAction="http://tempuri.org/GetUploadState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadWrite">
+      <soap:operation soapAction="http://tempuri.org/UploadWrite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDownloadTask">
+      <soap:operation soapAction="http://tempuri.org/CreateDownloadTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadRead">
+      <soap:operation soapAction="http://tempuri.org/DownloadRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <soap:operation soapAction="http://tempuri.org/GetVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPluginsInfo">
+      <soap:operation soapAction="http://tempuri.org/GetPluginsInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateData">
+      <soap:operation soapAction="http://tempuri.org/GetUpdateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUploadInfo">
+      <soap:operation soapAction="http://tempuri.org/SaveUploadInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUploadID">
+      <soap:operation soapAction="http://tempuri.org/GetUploadID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileName">
+      <soap:operation soapAction="http://tempuri.org/GetFileName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveFileUploadInfo">
+      <soap:operation soapAction="http://tempuri.org/SaveFileUploadInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Export_上井解释登记卡">
+      <soap:operation soapAction="http://tempuri.org/Export_上井解释登记卡" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FileServiceSoap12" type="tns:FileServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateUploadTask">
+      <soap12:operation soapAction="http://tempuri.org/CreateUploadTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUploadState">
+      <soap12:operation soapAction="http://tempuri.org/GetUploadState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadWrite">
+      <soap12:operation soapAction="http://tempuri.org/UploadWrite" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDownloadTask">
+      <soap12:operation soapAction="http://tempuri.org/CreateDownloadTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadRead">
+      <soap12:operation soapAction="http://tempuri.org/DownloadRead" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <soap12:operation soapAction="http://tempuri.org/GetVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPluginsInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetPluginsInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateData">
+      <soap12:operation soapAction="http://tempuri.org/GetUpdateData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUploadInfo">
+      <soap12:operation soapAction="http://tempuri.org/SaveUploadInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUploadID">
+      <soap12:operation soapAction="http://tempuri.org/GetUploadID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileName">
+      <soap12:operation soapAction="http://tempuri.org/GetFileName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveFileUploadInfo">
+      <soap12:operation soapAction="http://tempuri.org/SaveFileUploadInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Export_上井解释登记卡">
+      <soap12:operation soapAction="http://tempuri.org/Export_上井解释登记卡" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FileService">
+    <wsdl:port name="FileServiceSoap" binding="tns:FileServiceSoap">
+      <soap:address location="http://localhost:9366/FileService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FileServiceSoap12" binding="tns:FileServiceSoap12">
+      <soap12:address location="http://localhost:9366/FileService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,97 @@
+[记录时间：11:13:07.137]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01007: variable not in select list
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetA1DataByView(String view_name, Byte[] data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 694
+
+消息：
+[记录时间：11:15:21.498]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01007: variable not in select list
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetA1DataByView(String view_name, Byte[] data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 694
+
+消息：
+[记录时间：11:16:11.079]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01007: variable not in select list
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetA1DataByView(String view_name, Byte[] data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 694
+
+消息：
+[记录时间：11:16:34.604]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01007: variable not in select list
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetA1DataByView(String view_name, Byte[] data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 694
+
+消息：
+[记录时间：14:58:28.266]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01007: variable not in select list
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetA1DataByView(String view_name, Byte[] data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 694
+
+消息：
+[记录时间：15:03:58.710]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01007: variable not in select list
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetA1DataByView(String view_name, Byte[] data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 694
+
+消息：
+[记录时间：15:13:25.822]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01007: variable not in select list
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetA1DataByView(String view_name, Byte[] data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 694
+
+消息：
+[记录时间：15:18:08.769]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-03113: end-of-file on communication channel
+Process ID: 9120
+Session ID: 34 Serial number: 44357
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetA1DataByView(String view_name, Byte[] data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 694
+
+消息：
+[记录时间：15:39:22.040]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01007: variable not in select list
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 473
+   在 Logging_App.WebService.DataService.GetA1DataByView(String view_name, Byte[] data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 694
+
+消息：
+[记录时间：15:53:53.262]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01007: variable not in select list
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 473
+   在 Logging_App.WebService.DataService.GetA1DataByView(String view_name, Byte[] data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 694
+
+消息：
+[记录时间：16:15:10.060]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Logging_App.WebService.DataService.GetA1DataByView(String view_name, Byte[] data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 696
+
+消息：
+[记录时间：16:21:40.560]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.IndexOutOfRangeException: 无法找到表 0。
+   在 System.Data.DataTableCollection.get_Item(Int32 index)
+   在 Logging_App.WebService.DataService.GetA1DataByView(String view_name, Byte[] data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 699
+
+消息：

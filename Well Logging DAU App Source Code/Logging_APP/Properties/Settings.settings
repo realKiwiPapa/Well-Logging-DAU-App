@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Logging_App.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Logging_App_FileService_FileService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:9366/FileService.asmx</Value>
+    </Setting>
+    <Setting Name="Logging_App_WorkflowService_WorkflowService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:9366/Workflow/WorkflowService.asmx</Value>
+    </Setting>
+    <Setting Name="Logging_App_DataService_DataService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:9366/DataService.asmx</Value>
+    </Setting>
+    <Setting Name="Logging_App_UserService_UserService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:9366/UserService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

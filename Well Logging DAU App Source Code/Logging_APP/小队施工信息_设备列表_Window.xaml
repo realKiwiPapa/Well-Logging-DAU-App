@@ -1,0 +1,48 @@
+﻿<gui:BaseWindow x:Class="Logging_App.小队施工信息_设备列表_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+        xmlns:gui="clr-namespace:Logging_App.GUI" xmlns:controls="clr-namespace:Logging_App.Controls" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" 
+        Title="小队施工信息_设备列表" Height="619" Width="723" Loaded="BaseWindow_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="274*" />
+            <RowDefinition Height="35" />
+        </Grid.RowDefinitions>
+        <DataGrid AutoGenerateColumns="False" Name="dataGrid1" Grid.Row="1" Margin="2" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="选择" CanUserResize="False">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding CHOISE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <!--<DataGridTextColumn Binding="{Binding Path=EQUIPID}" Checked="ckbSelectedAll_Checked"  Name="ckbSelectedAll" Unchecked="ckbSelectedAll_Unchecked"  Header="设备ID" />-->
+                <DataGridTextColumn Binding="{Binding Path=INSTRUMENT_NAME}" Header="设备名称" />
+                <DataGridTextColumn Binding="{Binding Path=INSTRUMENT_TYPE}" Header="仪器类别" />
+                <DataGridTextColumn Binding="{Binding Path=INSTRUMENT_MODEL}" Header="规格型号" />
+                <DataGridTextColumn Binding="{Binding Path=INSTRUMENT_ZBH}" Header="自编号" />
+                <DataGridTextColumn Binding="{Binding Path=USE_TEAM}" Header="所在班组" />
+                <!--<DataGridTextColumn Binding="{Binding Path=WORKING_STATE}" Header="工作状态" />
+                <DataGridTextColumn Binding="{Binding Path=FAULT_DESCRIPTION}" Header="故障描述" />-->
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Orientation="Horizontal">
+            <CheckBox Name="checkBox1" Margin="2" Content="显示所有已选择项" VerticalAlignment="Center" Checked="checkBox1_Checked" Unchecked="checkBox1_Unchecked" />
+            <StackPanel Name="stackPanel" Orientation="Horizontal">
+                <Label Content="仪器名称" Height="28" Margin="5,0,2,0" Name="label1" VerticalContentAlignment="Center"/>
+                <ComboBox Height="23" Margin="0,0,0,0" Name="comboBox1" Width="120" />
+                <Label Content="仪器类别" Height="28" Margin="5,0,2,0" VerticalContentAlignment="Center"/>
+                <ComboBox Height="23" Margin="0,0,0,0" Name="comboBox2" Width="120" />
+                <Label Content="所在班组" Height="28" Margin="5,0,2,0" VerticalContentAlignment="Center"/>
+                <ComboBox Height="23" Margin="0,0,0,0" Name="comboBox3" Width="120" />
+            </StackPanel>
+        </StackPanel>
+        <Button Content="确定" Height="23" HorizontalAlignment="Left" Margin="186,5,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" Grid.Row="2" />
+        <Button Content="取消" Height="23" HorizontalAlignment="Left" Margin="392,5,0,0" Name="button2" VerticalAlignment="Top" Width="75" Click="button2_Click" Grid.Row="2"/>
+    </Grid>
+</gui:BaseWindow>

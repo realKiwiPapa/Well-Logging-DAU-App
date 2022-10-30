@@ -1,0 +1,593 @@
+[记录时间：08:58:24.807]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.ValidationFile() 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 226
+   在 Logging_App.WebService.UploadController.get_State() 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 57
+   在 Logging_App.WebService.UploadController.setUploadSate(UploadController task) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 214
+   在 Logging_App.WebService.UploadController.GetUploadSate(Int32 taskID) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 106
+   在 Logging_App.WebService.FileService.GetUploadState(Int32 taskID) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 42
+
+消息：
+[记录时间：08:58:56.590]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：08:59:27.198]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：08:59:57.805]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:00:28.428]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:01:00.080]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:01:30.703]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:02:01.295]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:02:31.980]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:03:03.664]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:03:34.302]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:04:04.909]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:04:35.563]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:05:07.187]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:05:37.779]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:06:08.371]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:06:38.978]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:07:10.615]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:07:41.222]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:08:11.845]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:08:42.437]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:09:14.058]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:09:44.649]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:10:15.241]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:10:45.848]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:11:17.485]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:11:48.092]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:12:18.700]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:12:49.307]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "LOGGINGAPPUSER.SYNCID_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNCID_TRIGGER'
+ORA-06512: at line 1
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.FileUpload.UploadCompleted(String filename) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 68
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 156
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:17:08.833]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.IO.DirectoryNotFoundException: 未能找到路径“e:\cejing\loggingapp\fileupload\201712\8DC26B4820335C76ED57DB1C4C88A1303FA5F166-63AC20719CE8934ACFACC533416F910C-126464.temp”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 161
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:17:42.582]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.IO.DirectoryNotFoundException: 未能找到路径“e:\cejing\loggingapp\fileupload\201712\270C05AE55E61683C941F64AABFEDF343959C5E1-6F83037B01393568BFC3A8203FC6D93D-3271254.temp”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 161
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:17:58.887]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.IO.DirectoryNotFoundException: 未能找到路径“e:\cejing\loggingapp\fileupload\201712\6E073949A758198BFB68B3BFFB355E83D4C46E1F-66E15F06135020CB7EE16F33B24BDD7B-2007822.temp”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 161
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:18:35.610]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.IO.DirectoryNotFoundException: 未能找到路径“e:\cejing\loggingapp\fileupload\201712\08F2E9D32D84AF7E609AA0126EDDBAD093F3FA7B-368BF7F40C0DCE01F6850569A355C4C2-3243718.temp”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 161
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:19:06.147]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.IO.DirectoryNotFoundException: 未能找到路径“e:\cejing\loggingapp\fileupload\201712\08F2E9D32D84AF7E609AA0126EDDBAD093F3FA7B-368BF7F40C0DCE01F6850569A355C4C2-3243718.temp”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 161
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:20:56.094]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.IO.DirectoryNotFoundException: 未能找到路径“e:\cejing\loggingapp\fileupload\201712\A1C74EEA4EE4D0B01FFE45E779A7D1BFF960D938-D951A14C1373F5031CD9F93F06432987-425896.temp”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 161
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:24:13.919]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.IO.DirectoryNotFoundException: 未能找到路径“e:\cejing\loggingapp\fileupload\201712\A1C74EEA4EE4D0B01FFE45E779A7D1BFF960D938-D951A14C1373F5031CD9F93F06432987-425896.temp”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 161
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:26:30.014]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.IO.DirectoryNotFoundException: 未能找到路径“e:\cejing\loggingapp\fileupload\201712\A1C74EEA4EE4D0B01FFE45E779A7D1BFF960D938-D951A14C1373F5031CD9F93F06432987-425896.temp”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 161
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:30:03.788]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.IO.DirectoryNotFoundException: 未能找到路径“e:\cejing\loggingapp\fileupload\201712\A1C74EEA4EE4D0B01FFE45E779A7D1BFF960D938-D951A14C1373F5031CD9F93F06432987-425896.temp”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 Logging_App.WebService.UploadController.Initialize(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 161
+   在 Logging_App.WebService.UploadController.CreateTask[T](String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\UploadController.cs:行号 96
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 46
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：
+[记录时间：09:40:27.005]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.TypeInitializationException: “Logging_App.WebService.FileUpload”的类型初始值设定项引发异常。 ---> System.ArgumentNullException: 值不能为 null。
+参数名: 上传路径不能为空
+   在 Logging_App.WebService.FileUpload..cctor() 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\Upload.cs:行号 35
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Logging_App.WebService.FileUpload.Create(String sha1, String md5, Int64 length)
+   在 Logging_App.WebService.FileService.CreateUploadTask(String sha1, String md5, Int64 length, String tasktype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileService.asmx.cs:行号 31
+
+消息：

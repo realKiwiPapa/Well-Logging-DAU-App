@@ -1,0 +1,29 @@
+[记录时间：17:24:40.634]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00942: table or view does not exist
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetData_解释处理作业(String process_id) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 2627
+
+消息：
+[记录时间：18:25:56.969]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-01438: value larger than specified precision allowed for this column    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.Save_解释处理作业(Byte[] byte_DM_LOG_PROCESS, Byte[] byte_DM_LOG_SOURCE_DATA, Byte[] byte_PRO_LOG_DATA_PUBLISH, DataTable processItems, DataTable processMaps, DataTable processCurveRating, DataTable originalMaps) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 2467
+
+消息：
+[记录时间：18:26:20.819]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-01438: value larger than specified precision allowed for this column    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.Save_解释处理作业(Byte[] byte_DM_LOG_PROCESS, Byte[] byte_DM_LOG_SOURCE_DATA, Byte[] byte_PRO_LOG_DATA_PUBLISH, DataTable processItems, DataTable processMaps, DataTable processCurveRating, DataTable originalMaps) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 2467
+
+消息：
+[记录时间：18:50:47.614]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-01438: value larger than specified precision allowed for this column    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.Save_解释处理作业(Byte[] byte_DM_LOG_PROCESS, Byte[] byte_DM_LOG_SOURCE_DATA, Byte[] byte_PRO_LOG_DATA_PUBLISH, DataTable processItems, DataTable processMaps, DataTable processCurveRating, DataTable originalMaps) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 2467
+
+消息：

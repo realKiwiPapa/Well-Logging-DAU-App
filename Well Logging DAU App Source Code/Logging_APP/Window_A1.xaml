@@ -1,0 +1,6 @@
+﻿<gui:BaseWindow x:Class="Logging_App.Window_A1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:gui="clr-namespace:Logging_App.GUI"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window_A1" Height="435" Width="587" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+</gui:BaseWindow>

@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetActiveUserWorkflowTypes">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetActiveUserWorkflowTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetActiveUserWorkflowTypesResult" type="tns:ArrayOfWorkflowType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWorkflowType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WorkflowType" type="tns:WorkflowType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="WorkflowType">
+        <s:restriction base="s:string">
+          <s:enumeration value="测井任务通知单" />
+          <s:enumeration value="计划任务书" />
+          <s:enumeration value="测井作业收集信息" />
+          <s:enumeration value="小队施工信息" />
+          <s:enumeration value="测井现场提交信息" />
+          <s:enumeration value="解释处理作业" />
+          <s:enumeration value="归档入库" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetWorkflowData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="tns:WorkflowType" />
+            <s:element minOccurs="0" maxOccurs="1" name="obj_id1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="obj_id2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkflowDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWorkflowDataResult" type="tns:Controller" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Controller" abstract="true">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DataList" type="tns:ArrayOfWorkflowData" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanSave" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanAppointData" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanSubmitReview" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanReview" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanDelete" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanCancelSubmitReview" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanCancelReview" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfWorkflowData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WorkflowData" nillable="true" type="tns:WorkflowData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WorkflowData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ModelBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="SOURCE_LOGINNAME" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SOURCE_NAME" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TARGET_LOGINNAME" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TARGET_NAME" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="FLOW_STATE" type="tns:WorkflowState" />
+              <s:element minOccurs="1" maxOccurs="1" name="FLOW_TIME" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="MESSAGE" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ModelBase" />
+      <s:simpleType name="WorkflowState">
+        <s:restriction base="s:string">
+          <s:enumeration value="数据指派" />
+          <s:enumeration value="提交审核" />
+          <s:enumeration value="审核通过" />
+          <s:enumeration value="审核未通过" />
+          <s:enumeration value="新建" />
+          <s:enumeration value="取消提交审核" />
+          <s:enumeration value="退回审核" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="C计划任务书">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Controller" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="C测井现场提交信息">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Controller" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="C解释处理作业">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Controller" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="C测井作业收集信息">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Controller" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="C测井任务通知单">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Controller" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="SubmitReview">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="tns:WorkflowType" />
+            <s:element minOccurs="0" maxOccurs="1" name="target_loginname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="obj_id1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="obj_id2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitReviewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SubmitReviewResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Review">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="tns:WorkflowType" />
+            <s:element minOccurs="1" maxOccurs="1" name="state" type="tns:WorkflowState" />
+            <s:element minOccurs="0" maxOccurs="1" name="obj_id1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="obj_id2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReviewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReviewResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AppointData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="tns:WorkflowType" />
+            <s:element minOccurs="0" maxOccurs="1" name="target_loginname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="obj_id1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="obj_id2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AppointDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AppointDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelSubmitReview">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="tns:WorkflowType" />
+            <s:element minOccurs="0" maxOccurs="1" name="obj_id1" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelSubmitReviewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CancelSubmitReviewResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelReview">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="tns:WorkflowType" />
+            <s:element minOccurs="0" maxOccurs="1" name="obj_id1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelReviewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CancelReviewResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetActiveUserWorkflowTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetActiveUserWorkflowTypes" />
+  </wsdl:message>
+  <wsdl:message name="GetActiveUserWorkflowTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetActiveUserWorkflowTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkflowDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWorkflowData" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkflowDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWorkflowDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitReviewSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitReview" />
+  </wsdl:message>
+  <wsdl:message name="SubmitReviewSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReviewSoapIn">
+    <wsdl:part name="parameters" element="tns:Review" />
+  </wsdl:message>
+  <wsdl:message name="ReviewSoapOut">
+    <wsdl:part name="parameters" element="tns:ReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="AppointDataSoapIn">
+    <wsdl:part name="parameters" element="tns:AppointData" />
+  </wsdl:message>
+  <wsdl:message name="AppointDataSoapOut">
+    <wsdl:part name="parameters" element="tns:AppointDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelSubmitReviewSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelSubmitReview" />
+  </wsdl:message>
+  <wsdl:message name="CancelSubmitReviewSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelSubmitReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelReviewSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelReview" />
+  </wsdl:message>
+  <wsdl:message name="CancelReviewSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelReviewResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WorkflowServiceSoap">
+    <wsdl:operation name="GetActiveUserWorkflowTypes">
+      <wsdl:input message="tns:GetActiveUserWorkflowTypesSoapIn" />
+      <wsdl:output message="tns:GetActiveUserWorkflowTypesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowData">
+      <wsdl:input message="tns:GetWorkflowDataSoapIn" />
+      <wsdl:output message="tns:GetWorkflowDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitReview">
+      <wsdl:input message="tns:SubmitReviewSoapIn" />
+      <wsdl:output message="tns:SubmitReviewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Review">
+      <wsdl:input message="tns:ReviewSoapIn" />
+      <wsdl:output message="tns:ReviewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AppointData">
+      <wsdl:input message="tns:AppointDataSoapIn" />
+      <wsdl:output message="tns:AppointDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelSubmitReview">
+      <wsdl:input message="tns:CancelSubmitReviewSoapIn" />
+      <wsdl:output message="tns:CancelSubmitReviewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelReview">
+      <wsdl:input message="tns:CancelReviewSoapIn" />
+      <wsdl:output message="tns:CancelReviewSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WorkflowServiceSoap" type="tns:WorkflowServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetActiveUserWorkflowTypes">
+      <soap:operation soapAction="http://tempuri.org/GetActiveUserWorkflowTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowData">
+      <soap:operation soapAction="http://tempuri.org/GetWorkflowData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitReview">
+      <soap:operation soapAction="http://tempuri.org/SubmitReview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Review">
+      <soap:operation soapAction="http://tempuri.org/Review" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppointData">
+      <soap:operation soapAction="http://tempuri.org/AppointData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelSubmitReview">
+      <soap:operation soapAction="http://tempuri.org/CancelSubmitReview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelReview">
+      <soap:operation soapAction="http://tempuri.org/CancelReview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WorkflowServiceSoap12" type="tns:WorkflowServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetActiveUserWorkflowTypes">
+      <soap12:operation soapAction="http://tempuri.org/GetActiveUserWorkflowTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowData">
+      <soap12:operation soapAction="http://tempuri.org/GetWorkflowData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitReview">
+      <soap12:operation soapAction="http://tempuri.org/SubmitReview" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Review">
+      <soap12:operation soapAction="http://tempuri.org/Review" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppointData">
+      <soap12:operation soapAction="http://tempuri.org/AppointData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelSubmitReview">
+      <soap12:operation soapAction="http://tempuri.org/CancelSubmitReview" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelReview">
+      <soap12:operation soapAction="http://tempuri.org/CancelReview" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WorkflowService">
+    <wsdl:port name="WorkflowServiceSoap" binding="tns:WorkflowServiceSoap">
+      <soap:address location="http://localhost:9366/Workflow/WorkflowService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WorkflowServiceSoap12" binding="tns:WorkflowServiceSoap12">
+      <soap12:address location="http://localhost:9366/Workflow/WorkflowService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

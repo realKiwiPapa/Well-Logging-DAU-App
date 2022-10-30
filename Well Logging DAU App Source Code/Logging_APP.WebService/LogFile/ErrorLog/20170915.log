@@ -1,0 +1,16 @@
+[记录时间：10:37:08.357]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00936: missing expression
+   在 Maticsoft.DBUtility.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 422
+   在 Logging_App.WebService.DataService.GetDataList_解释处理作业(Byte[] searchModel, Int32 page, Int32& total) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 2637
+
+消息：
+[记录时间：10:44:04.365]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00936: missing expression
+   在 Maticsoft.DBUtility.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 422
+   在 Logging_App.WebService.DataService.GetDataList_解释处理作业(Byte[] searchModel, Int32 page, Int32& total) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 2637
+
+消息：

@@ -1,0 +1,337 @@
+﻿<Page x:Class="Logging_App.Log_Task_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:xctk="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+      xmlns:gui="clr-namespace:Logging_App.GUI" xmlns:controls="clr-namespace:Logging_App.Controls"
+      Title="Log_Task_Page" Loaded="Page_Loaded" mc:Ignorable="d" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Initialized="Page_Initialized" >
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <StackPanel>
+            <StackPanel Margin="2" Orientation="Horizontal" Name="SearchLogTask">
+                <!--连标准井名在井基本数据COM_WELL_BASIC-->
+                <Label Content="作业井名" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                <TextBox Height="25" Text="{Binding Path=WELL_JOB_NAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"/>
+                <!--测井任务通知单DM_LOG_TASK-->
+                <Label Content="通知单类型" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+                <ComboBox Height="25" IsEditable="True" HorizontalAlignment="Left" Margin="0" Name="REQUISITION_TYPE1" SelectedValue="{Binding Path=REQUISITION_TYPE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+                <Label Content="要求到井时间" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+                <ComboBox Height="25" IsEditable="True" Name="QUERY_DATE" HorizontalAlignment="Left" Margin="0" SelectedValue="{Binding Path=NOTE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+                <!--任务计划书DM_LOG_OPS_PLAN连作业项目COM_JOB_INFO-->
+                <!--<Label Content="作业目的" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+                <TextBox Height="25" HorizontalAlignment="Left" Margin="0" Name="JOB_PURPOSE" Text="{Binding Path=JOB_PURPOSE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120" />-->
+                <!--通知单来电单位，测井任务通知单DM_LOG_TASK-->
+                <!--<Label Content="业主单位" Height="25" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+                <ComboBox Height="25" IsEditable="True" HorizontalAlignment="Left" Margin="0" Name="DEPARTMENT_REQUISITION" SelectedValue="{Binding Path=DEPARTMENT_REQUISITION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>-->
+                <!--通知单来电时间,测井任务通知单DM_LOG_TASK-->
+                <!--<Label Content="通知单来电电话时间" Height="25" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" Grid.Row="1"/>
+                <DatePicker Focusable="False" Height="25" HorizontalAlignment="Left" Margin="0" Name="REC_NOTICE_TIME1" SelectedDate="{Binding Path=REC_NOTICE_TIME1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120" Grid.Column="3" Grid.Row="1"/>
+                <Label Content="到" Height="25" Margin="0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="4" Grid.Row="1"/>
+                <DatePicker Focusable="False" Height="25" HorizontalAlignment="Left" Margin="0" Name="REC_NOTICE_TIME2" SelectedDate="{Binding Path=REC_NOTICE_TIME2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120" Grid.Column="5" Grid.Row="1"/>-->
+                <Button Margin="15,0,0,0" Click="SearchLogTask_Click" Height="25" Width="50"  HorizontalAlignment="Left" VerticalAlignment="Center">查询</Button>
+            </StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="894*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <DataGrid MinHeight="100" MaxHeight="200" AutoGenerateColumns="False" x:Name="dataGrid1" CanUserDeleteRows="True" CanUserAddRows="True" SelectionMode="Single" IsReadOnly="True" Margin="5,0,5,0" VerticalAlignment="Top" SelectionChanged="dataGrid1_SelectionChanged">
+                    <DataGrid.Resources>
+                        <ContextMenu x:Name="rowMenu" Visibility="Collapsed" x:Key="rowContextMenu">
+                            <MenuItem Header="删除" Click="MenuDelete_Click"/>
+                        </ContextMenu>
+                    </DataGrid.Resources>
+                    <DataGrid.RowStyle>
+                        <Style TargetType="{x:Type DataGridRow}">
+                            <Setter Property="ContextMenu" Value="{StaticResource rowContextMenu}"/>
+                        </Style>
+                    </DataGrid.RowStyle>
+                    <DataGrid.Columns>
+                        <!--测井任务通知单DM_LOG_TASK-->
+                        <DataGridTextColumn Header="作业井名" MaxWidth="150" Binding="{Binding Path=WELL_JOB_NAME}"/>
+                        <DataGridTextColumn Header="标准井名" MaxWidth="150" Binding="{Binding Path=WELL_LEGAL_NAME}"/>
+                        <!--测井任务通知单DM_LOG_TASK-->
+                        <DataGridTextColumn Header="通知单编码" MaxWidth="200" Binding="{Binding Path=REQUISITION_CD}" />
+                        <!--测井任务通知单DM_LOG_TASK-->
+                        <DataGridComboBoxColumn x:Name="REQUISITION_TYPE2" Header="通知单类型" MaxWidth="150" SelectedValueBinding="{Binding Path=REQUISITION_TYPE}"></DataGridComboBoxColumn>
+                        <DataGridTextColumn Header="作业小队" MaxWidth="150" Binding="{Binding Path=LOG_TEAM_ID}"/>
+                        <DataGridTextColumn Header="作业目的" MaxWidth="150" Binding="{Binding Path=JOB_CHINESE_NAME}"/>
+                        <DataGridTextColumn Header="预测井段" MaxWidth="150" Binding="{Binding Path=PREDICTED_LOGGING_INTERVAL}"/>
+                        <DataGridTextColumn Header="要求到井时间" MaxWidth="120" Binding="{Binding Path=PREDICTED_LOGGING_DATE, StringFormat=\{0:yyyy-MM-dd\}}"/>
+                        <DataGridTextColumn Header="通知单状态" MaxWidth="120" Binding="{Binding Path=STATE}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+            <controls:DataPager x:Name="dataPager1" PageSize="20" TotalCount="101" PageChanged="dataPager1_PageChanged"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="90" />
+                    <ColumnDefinition Width="90" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <RadioButton  Content="新建模式" GroupName="RadioButton1" Name="addButton"  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="True" Checked="addButton_Checked" />
+                <RadioButton Content="编辑模式" GroupName="RadioButton1" Name="editButton" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="False" />
+            </Grid>
+            <Menu>
+                <MenuItem Header="保存" Name="menuSave" IsEnabled="{Binding ElementName=workFlowControl1, Path=CanSave}" Click="save_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Logging_APP;component/Images/filesave.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="通知单指派" Name="menu1"  Click="MenuItem_Click" Visibility="{Binding ElementName=workFlowControl1, Path=CanAppointData, Converter={StaticResource bool2VisibilityConverter}}"></MenuItem>
+            </Menu>
+            <controls:WorkFlowControl x:Name="workFlowControl1" WorkflowType="测井任务通知单" />
+            <ScrollViewer VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto">
+                <Grid>
+                    <Grid Name="DM_LOG_TASK">
+                        <!--测井任务通知单DM_LOG_TASK-->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="233*" />
+                            <ColumnDefinition Width="240*" />
+                            <ColumnDefinition Width="233*" />
+                            <ColumnDefinition Width="215*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <!--作业井名,在测井任务通知单DM_LOG_TASK-->
+                        <Label Margin="30,4,0,0" Content="测井作业井名" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                        <!--读取前面已有井名-->
+                        <!--<ComboBox Margin="108,6,0,0" Name="WELL_JOB_NAME" SelectedValue="{Binding Path=DRILL_JOB_ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" SelectionChanged="WELL_JOB_NAME_SelectionChanged" Visibility="Hidden">
+                        </ComboBox>-->
+                        <TextBox Margin="108,6,0,0" Name="DRILL_JOB_ID" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{Binding Path=DRILL_JOB_ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Visibility="Hidden"></TextBox>
+                        <TextBox Margin="108,6,0,0" Name="WELL_JOB_NAME" Text="{Binding Path=WELL_JOB_NAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" MouseDoubleClick="WELL_JOB_NAME_MouseDoubleClick" IsReadOnly="True"/>
+                        <!--在测井任务通知单DM_LOG_TASK-->
+                        <Label Margin="42,262,0,0" Content="通知单类型" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                        <ComboBox Margin="108,260,0,0" Name="requisition_type" SelectedValue="{Binding Path=REQUISITION_TYPE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        </ComboBox>
+                        <!--在测井任务通知单DM_LOG_TASK-->
+                        <Label Margin="36,348,0,0" Content="要求到井时间" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="1" />
+                        <xctk:DateTimePicker Format="Custom" ShowButtonSpinner="False" FormatString="yyyy-MM-dd HH:mm" Margin="117,350,0,0" Name="predicted_logging_date" Value="{Binding Path=PREDICTED_LOGGING_DATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="25" VerticalAlignment="Top" Text="2.12" HorizontalAlignment="Left" Width="120" Grid.Column="1" />
+                        <!--在测井任务通知单DM_LOG_TASK-->
+                        <Label Margin="54,344,0,0" Content="预测井段" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                        <TextBox Margin="108,348,0,0" Name="predicted_logging_interval" Text="{Binding Path=PREDICTED_LOGGING_INTERVAL, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        <!--在测井任务通知单DM_LOG_TASK-->
+                        <Label Margin="2,264,0,0" Content="通知单来电单位" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="3" />
+                        <ComboBox Margin="92,264,0,0" Name="department_requisition" SelectedValue="{Binding Path=DEPARTMENT_REQUISITION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="3">
+                        </ComboBox>
+                        <!--在测井任务通知单DM_LOG_TASK-->
+                        <Label Margin="37,262,0,0" Content="通知单来电人" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="1" />
+                        <TextBox Margin="117,264,0,0" Name="person_equisition" Text="{Binding Path=PERSON_EQUISITION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" />
+                        <!--在测井任务通知单DM_LOG_TASK-->
+                        <Label Margin="16,264,0,0" Content="通知单来电时间" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                        <!--<xctk:DateTimePicker Format="Custom" ShowButtonSpinner="False" FormatString="yyyy-MM-dd HH:mm" Margin="108,264,0,0" Name="rec_notice_time" Value="{Binding Path=REC_NOTICE_TIME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"  Grid.Column="2" />-->
+                        <xctk:DateTimePicker Format="Custom" ShowButtonSpinner="False" FormatString="yyyy-MM-dd HH:mm" Value="{Binding Path=REC_NOTICE_TIME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Margin="108,264,0,0" Name="rec_notice_time" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" ValueChanged="rec_notice_time_ValueChanged" />
+                        <!--在测井任务通知单DM_LOG_TASK-->
+                        <Label Margin="6,303,0,0" Content="通知单来电接收人" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                        <TextBox Margin="108,305,0,0" Name="recipient_requisition" Text="{Binding Path=RECIPIENT_REQUISITION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        <!--在测井任务通知单DM_LOG_TASK-->
+                        <Label Margin="15,348,0,0" Content="任务完成单位" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="3" />
+                        <ComboBox Margin="92,350,0,0" Name="complete_man" SelectedValue="{Binding Path=COMPLETE_MAN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="3">
+                        </ComboBox>
+                        <!--在测井任务通知单DM_LOG_TASK-->
+                        <Label Margin="1,305,0,0" Content="通知单来电处理日期" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="1" />
+                        <xctk:DateTimePicker Format="Custom" ShowButtonSpinner="False" FormatString="yyyy-MM-dd HH:mm" Margin="117,307,0,0" Name="treatment_date_requisition" Value="{Binding Path=TREATMENT_DATE_REQUISITION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" />
+                        <!--在测井任务通知单DM_LOG_TASK-->
+                        <Label Margin="38,307,0,0" Content="市场类型" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="3" />
+                        <ComboBox Height="25" HorizontalAlignment="Left" Margin="92,307,0,0" Name="market_classify" SelectedValue="{Binding Path=MARKET_CLASSIFY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" VerticalAlignment="Top" Width="118" Grid.Column="3">
+                        </ComboBox>
+                        <!--在测井任务通知单DM_LOG_TASK-->
+                        <Label Margin="64,348,0,0" Content="审核人" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                        <TextBox Margin="108,346,0,0" Name="verifier" Text="{Binding Path=VERIFIER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" />
+                        <!--在测井任务通知单DM_LOG_TASK-->
+                        <Label Margin="4,305,0,0" Content="来电内容简要描述" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                        <TextBox Margin="108,307,0,0" Name="brief_description_content" Text="{Binding Path=BRIEF_DESCRIPTION_CONTENT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" />
+                        <!--在测井任务通知单DM_LOG_TASK-->
+                        <Label Margin="78,387,0,0" Content="备注" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                        <TextBox Margin="112,389,0,0" Name="note" Text="{Binding Path=NOTE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="25" Width="116" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    </Grid>
+                    <!--下面为引用参数-->
+                    <Grid Grid.ColumnSpan="4" Name="COM_WELL_BASIC">
+                        <!--井基本信息COM_WELL_BASIC-->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="233*" />
+                            <ColumnDefinition Width="240*" />
+                            <ColumnDefinition Width="233*" />
+                            <ColumnDefinition Width="215*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <!--标准井名，井基本信息COM_WELL_BASIC-->
+                        <Label Content="井名" Height="25" HorizontalAlignment="Left" Margin="85,4,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="1" Foreground="Green" />
+                        <TextBox Height="25" Name="WELL_LEGAL_NAME" HorizontalAlignment="Left" Text="{Binding Path=WELL_LEGAL_NAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="115,6,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" IsReadOnly="True" />
+                        <!--业主单位,井基本信息COM_WELL_BASIC-->
+                        <Label Content="甲方单位" Foreground="Green" Height="25" HorizontalAlignment="Left" Margin="54,45,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                        <TextBox Height="25" HorizontalAlignment="Left" Name="PART_UNITS" Text="{Binding Path=PART_UNITS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="106,45,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True" />
+                        <!--井构造单元名称，井基本信息COM_WELL_BASIC-->
+                        <Label Content="区块" Foreground="Green" Height="25" HorizontalAlignment="Left" Margin="85,47,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="1" />
+                        <TextBox Name="SITE_ID" Height="27" HorizontalAlignment="Left" Text="{Binding Path=SITE_ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="115,45,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" IsReadOnly="True" />
+                        <!--构造位置-->
+                        <Label Content="构造" Foreground="Green" Height="25" HorizontalAlignment="Left" Margin="78,127,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                        <TextBox Name="STRUCTURAL_LOCATION" Height="25" HorizontalAlignment="Left" Text="{Binding Path=STRUCTURAL_LOCATION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="108,129,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True" />
+                        <Label Content="井口法兰" Foreground="Green" Height="25" HorizontalAlignment="Left" Margin="61,172,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="1" />
+                        <TextBox Height="25" HorizontalAlignment="Left" Text="{Binding Path=WELL_HEAD_FLANGE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="115,172,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" IsReadOnly="True" />
+                    </Grid>
+                    <Grid Grid.ColumnSpan="4" Name="COM_JOB_INFO">
+                        <!--作业项目COM_JOB_INFO-->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="233*" />
+                            <ColumnDefinition Width="240*" />
+                            <ColumnDefinition Width="233*" />
+                            <ColumnDefinition Width="215*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <!--作业项目COM_JOB_INFO-->
+                        <Label Content="井型" Foreground="Green" Height="25" HorizontalAlignment="Left" Margin="76,4,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                        <TextBox Height="25" HorizontalAlignment="Left" Name="WELL_TYPE" Text="{Binding Path=WELL_TYPE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="108,6,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" IsReadOnly="True" />
+                        <!--作业项目COM_JOB_INFO-->
+                        <Label Content="井别" Foreground="Green" Height="25" HorizontalAlignment="Left" Margin="62,4,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="3" />
+                        <TextBox Height="25" HorizontalAlignment="Left" Name="WELL_SORT" Text="{Binding Path=WELL_SORT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="92,4,0,0" VerticalAlignment="Top" Width="120" Grid.Column="3" IsReadOnly="True" />
+                    </Grid>
+                    <Grid Grid.ColumnSpan="4" Name="COM_WELLBORE_BASIC">
+                        <!--井筒基本数据COM_WELLBORE_BASIC-->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="233*" />
+                            <ColumnDefinition Width="240*" />
+                            <ColumnDefinition Width="233*" />
+                            <ColumnDefinition Width="215*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <!--实际井深，井筒基本数据COM_WELLBORE_BASIC-->
+                        <Label Content="钻达井深(m)" Foreground="Green" Height="25" HorizontalAlignment="Left" Margin="58,47,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                        <TextBox Height="25" HorizontalAlignment="Left" Name="MD" Text="{Binding Path=MD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="108,47,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" IsReadOnly="True" />
+                        <!--井筒基本数据COM_WELLBORE_BASIC-->
+                        <Label Content="最大斜度(°)" Foreground="Green" Height="25" HorizontalAlignment="Left" Margin="30,88,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                        <TextBox Height="25" HorizontalAlignment="Left" Name="MAX_WELL_DEVIATION" Text="{Binding Path=MAX_WELL_DEVIATION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="108,90,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True" />
+                        <Label Content="对应井深(m)" Foreground="Green" Height="25" HorizontalAlignment="Left" Margin="43,90,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="1" />
+                        <TextBox Height="25" HorizontalAlignment="Left" Text="{Binding Path=MAX_WELL_DEVIATION_MD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="115,90,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" IsReadOnly="True" />
+                    </Grid>
+                    <Grid Grid.ColumnSpan="4" Name="PRO_LOG_TESTOIL">
+                        <!--小队施工_井试油参数-->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="233*" />
+                            <ColumnDefinition Width="240*" />
+                            <ColumnDefinition Width="233*" />
+                            <ColumnDefinition Width="215*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Content="日产水" Foreground="Green" Height="25" HorizontalAlignment="Left" Margin="64,176,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                        <TextBox Height="25" HorizontalAlignment="Left" Text="{Binding Path=OUTPUT_WATER_EVERY_DAY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="108,176,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" IsReadOnly="True" />
+                        <Label Content="日产气" Foreground="Green" Height="25" HorizontalAlignment="Left" Margin="50,172,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="3" />
+                        <TextBox Height="25" HorizontalAlignment="Left" Text="{Binding Path=OUTPUT_GAS_EVERY_DAY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="92,174,0,0" VerticalAlignment="Top" Width="120" Grid.Column="3" IsReadOnly="True" />
+                        <!--套压-->
+                        <Label Content="套管压力(pa)" Foreground="Green" Height="25" HorizontalAlignment="Left" Margin="30,215,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                        <TextBox Height="25" HorizontalAlignment="Left" Text="{Binding Path=CASING_PRESSURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="108,217,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True" />
+                        <!--油压-->
+                        <Label Content="油管压力(pa)" Foreground="Green" Height="25" HorizontalAlignment="Left" Margin="37,219,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="1" />
+                        <TextBox Height="25" HorizontalAlignment="Left" Text="{Binding Path=OIL_PRESSURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="115,219,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" IsReadOnly="True" />
+                    </Grid>
+                    <Grid Grid.ColumnSpan="4" Name="PRO_LOG_SLOP">
+                        <!--小队施工_钻井液参数-->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="233*" />
+                            <ColumnDefinition Width="240*" />
+                            <ColumnDefinition Width="233*" />
+                            <ColumnDefinition Width="215*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Content="钻井液密度(g/cm³)" Foreground="Green" Height="25" HorizontalAlignment="Left" Margin="7,129,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="1" />
+                        <TextBox Height="25" HorizontalAlignment="Left" Text="{Binding Path=P_XN_MUD_DENSITY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="115,131,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" IsReadOnly="True" />
+                        <Label Content="钻井液粘度(s)" Foreground="Green" Height="25" HorizontalAlignment="Left" Margin="8,129,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="3" />
+                        <TextBox Height="25" HorizontalAlignment="Left" Text="{Binding Path=DRILL_FLU_VISC, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="92,129,0,0" VerticalAlignment="Top" Width="120" Grid.Column="3" IsReadOnly="True" />
+                    </Grid>
+
+                    <Grid Name="PRO_LOG_BIT_PROGRAM" Grid.ColumnSpan="4">
+                        <!--小队施工_钻头程序-->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="233*" />
+                            <ColumnDefinition Width="240*" />
+                            <ColumnDefinition Width="233*" />
+                            <ColumnDefinition Width="215*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Content="钻头尺寸(mm)" Foreground="Green" Height="25" HorizontalAlignment="Left" Margin="14,45,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="3" />
+                        <TextBox Height="25" HorizontalAlignment="Left" Text="{Binding Path=BIT_SIZE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="92,47,0,0" VerticalAlignment="Top" Width="120" Grid.Column="3" IsReadOnly="True" />
+                    </Grid>
+                    <Grid Name="PRO_LOG_CASIN" Grid.ColumnSpan="4">
+                        <!--小队施工_套管参数-->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="233*" />
+                            <ColumnDefinition Width="240*" />
+                            <ColumnDefinition Width="233*" />
+                            <ColumnDefinition Width="215*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Content="最小套管内径(mm)" Foreground="Green" Height="25" HorizontalAlignment="Left" Margin="4,88,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                        <TextBox Height="25" HorizontalAlignment="Left" Text="{Binding Path=CASING_INNERER_DIAMETER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="108,88,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" IsReadOnly="True" />
+                        <Label Content="套管深度(m)" Foreground="Green" Height="25" HorizontalAlignment="Left" Margin="20,88,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="3" />
+                        <TextBox Height="25" Text="{Binding Path=CASING_SETTING_DEPTH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="92,88,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" Grid.Column="3" IsReadOnly="True" />
+                    </Grid>
+                    <Grid Name="PRO_LOG_PRODUCE" Grid.ColumnSpan="4">
+                        <!--小队施工_生产参数-->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="228*" />
+                            <ColumnDefinition Width="241" />
+                            <ColumnDefinition Width="244" />
+                            <ColumnDefinition Width="192*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Content="井底压力(pa)" Foreground="Green" Height="25" HorizontalAlignment="Left" Margin="25,131,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                        <TextBox Height="25" HorizontalAlignment="Left" Margin="102,129,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" IsReadOnly="True" />
+                        <Label Content="失水(m³)" Foreground="Green" Height="25" HorizontalAlignment="Left" Margin="54,170,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                        <TextBox Height="25" HorizontalAlignment="Left" Text="{Binding Path=API_FILTER_LOSS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="108,172,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True" />
+                        <Button Content="预测项目" Height="25" Margin="118,387,0,0" Name="but_预测项目" VerticalAlignment="Top" HorizontalAlignment="Left" Width="74" Click="but_预测项目_Click" Grid.Column="3" />
+                        <StackPanel Height="30" VerticalAlignment="Top" Margin="38,387,0,0" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal">
+                            <Label Content="通知单扫描件" Height="25" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Center" VerticalContentAlignment="Center" />
+                            <TextBox Height="25" HorizontalAlignment="Left" Margin="5,0,0,0" Name="REQUISITION_SCANNING_FILENAME" IsReadOnly="True" VerticalAlignment="Center" Width="200" />
+                            <Button HorizontalAlignment="Left"  Height="25" Margin="5,0,0,0" VerticalAlignment="Center" Width="60" Content="选择文件" Grid.Column="2" Click="Button_Click" />
+                            <Button HorizontalAlignment="Left" Height="25" Margin="5,0,0,0" VerticalAlignment="Center" Width="40" Content="查看" Grid.Column="2" Click="Button_Click_1" />
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </ScrollViewer>
+            <DataGrid MinHeight="100" MaxHeight="200" AutoGenerateColumns="False" CanUserAddRows="False" Name="dataGrid2" VerticalAlignment="Top" SelectionMode="Single" Margin="2">
+                <DataGrid.Columns>
+                    <!--<DataGridTextColumn Binding="{Binding Path=LOG_ITEM_ID}" Header="预测项目ID" Width="150" Visibility="Collapsed" />
+                    <DataGridTextColumn Binding="{Binding Path=PREDICTED_LOGGING_ITEMS_ID}" Header="ITEMS_ID" Width="150" Visibility="Collapsed" />-->
+                    <DataGridTemplateColumn Header="预测项目">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Label Content="{Binding Path=PREDICTED_LOGGING_NAME,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" VerticalContentAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="起始深度">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <controls:NumberBox DecValue="{Binding Path=PRE_ST_DEP,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay,ValidatesOnDataErrors=true}" MinHeight="25" MinWidth="120"  VerticalContentAlignment="Center" Style="{Binding Source={StaticResource TextBoxDargDropEvent}}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="结束深度">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <controls:NumberBox DecValue="{Binding Path=PRE_EN_DEP,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay,ValidatesOnDataErrors=true}" MinHeight="25" MinWidth="120" VerticalContentAlignment="Center"  Style="{Binding Source={StaticResource TextBoxDargDropEvent}}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="比例尺">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox Text="{Binding Path=PRE_SCALE,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay,ValidatesOnDataErrors=true}" MinHeight="25" MinWidth="120" VerticalContentAlignment="Center"  Style="{Binding Source={StaticResource TextBoxDargDropEvent}}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <!--<DataGridTextColumn Binding="{Binding Path=PRE_RLEV}" Header="采用间距" Width="150" />-->
+                    <DataGridTemplateColumn MinWidth="200" Header="备注">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox Text="{Binding Path=NOTE,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay,ValidatesOnDataErrors=true}" MinHeight="25" MinWidth="120" VerticalContentAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

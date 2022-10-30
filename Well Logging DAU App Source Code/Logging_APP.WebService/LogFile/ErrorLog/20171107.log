@@ -1,0 +1,40 @@
+[记录时间：15:54:43.994]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00904: "E"."STORAGE_TANK_NO": invalid identifier
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetFileDownloadList(String Well_Job_Name, String Well_Struct_Unit_Name, String Part_Units, String Process_Name) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 4587
+
+消息：
+[记录时间：15:57:06.718]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00904: "E"."STORAGE_TANK_NO": invalid identifier
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetFileDownloadList(String Well_Job_Name, String Well_Struct_Unit_Name, String Part_Units, String Process_Name) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 4587
+
+消息：
+[记录时间：16:02:08.953]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00904: "A"."STORAGE_TANK_NO": invalid identifier
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetFileDownloadList(String Well_Job_Name, String Well_Struct_Unit_Name, String Part_Units, String Process_Name) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 4587
+
+消息：
+[记录时间：16:03:53.794]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00904: "A"."STORAGE_TANK_NO": invalid identifier
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetFileDownloadList(String Well_Job_Name, String Well_Struct_Unit_Name, String Part_Units, String Process_Name) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 4587
+
+消息：
+[记录时间：16:07:33.687]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00904: "E"."PROCESS_ID": invalid identifier
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetFileDownloadList(String Well_Job_Name, String Well_Struct_Unit_Name, String Part_Units, String Process_Name) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 4588
+
+消息：

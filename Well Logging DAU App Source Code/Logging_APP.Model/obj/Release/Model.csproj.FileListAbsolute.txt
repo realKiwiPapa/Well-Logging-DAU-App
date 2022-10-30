@@ -1,0 +1,19 @@
+E:\Logging_App\Logging_APP.Model\bin\Release\Logging_App.Model.dll
+E:\Logging_App\Logging_APP.Model\obj\Release\Logging_App.Model.dll
+D:\Logging_App\Logging_APP.Model\bin\Release\Logging_App.Model.dll
+D:\Logging_App\Logging_APP.Model\obj\Release\Logging_App.Model.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP.Model\bin\Release\Logging_App.Model.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP.Model\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP.Model\obj\Release\Logging_App.Model.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP.Model\bin\Release\Logging_App.Model.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP.Model\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP.Model\obj\Release\Logging_App.Model.dll
+G:\测井源码\数据采集器\Logging_APP.Model\bin\Release\Logging_App.Model.dll
+G:\测井源码\数据采集器\Logging_APP.Model\obj\Release\ResolveAssemblyReference.cache
+G:\测井源码\数据采集器\Logging_APP.Model\obj\Release\Logging_App.Model.dll
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP.Model\bin\Release\Logging_App.Model.dll
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP.Model\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP.Model\obj\Release\Logging_App.Model.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.Model\bin\Release\Logging_App.Model.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.Model\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.Model\obj\Release\Logging_App.Model.dll

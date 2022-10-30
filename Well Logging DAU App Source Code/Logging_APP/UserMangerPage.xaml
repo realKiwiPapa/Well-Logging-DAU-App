@@ -1,0 +1,135 @@
+﻿<Page
+    xmlns:xctk="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Logging_App.Model;assembly=Logging_App.Model"
+        xmlns:controls="clr-namespace:Logging_App.Controls" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" 
+    x:Class="Logging_App.UserMangerPage" d:DesignHeight="800" d:DesignWidth="800"      
+        Title="用户管理" Loaded="Page_Loaded">
+    <Grid>
+        <DockPanel>
+            <TreeView Width="200" Margin="1" x:Name="deptTree" SelectedItemChanged="deptTree_SelectedItemChanged" DockPanel.Dock="Left">
+                <TreeView.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="刷新组织架构" Click="menuReloadTree_Click">
+                            <MenuItem.Icon>
+                                <Image Source="Images/reload.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="同步组织架构和用户" Click="menuSync_Click">
+                            <MenuItem.Icon>
+                                <Image Source="Images/reload.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </ContextMenu>
+                </TreeView.ContextMenu>
+                <TreeView.ItemContainerStyle>
+                    <Style TargetType="{x:Type TreeViewItem}">
+                        <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}"/>
+                        <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}"/>
+                        <!--<Setter Property="AllowDrop" Value="true"></Setter>
+                        <EventSetter Event="MouseRightButtonDown" Handler="TreeViewItem_MouseRightButtonDown"/>
+                        <EventSetter Event="Drop" Handler="TreeViewItem_Drop"/>
+                        <EventSetter Event="DragEnter" Handler="TreeViewItem_DragEnter"/>
+                        <EventSetter Event="DragLeave" Handler="TreeViewItem_DragLeave"/>-->
+                    </Style>
+                </TreeView.ItemContainerStyle>
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate DataType="{x:Type local:TreeModel}"  ItemsSource="{Binding Children}">
+                        <StackPanel Orientation="Horizontal">
+                            <!--<StackPanel.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem Header="添加用户" Click="menuAddUser_Click">
+                                        <MenuItem.Icon>
+                                            <Image Source="Images/edit_add.png"/>
+                                        </MenuItem.Icon>
+                                    </MenuItem>
+                                    <Separator/>
+                                    <MenuItem x:Name="menuAddDept" Header="添加单位" Click="menuAddDept_Click">
+                                        <MenuItem.Icon>
+                                            <Image Source="Images/edit_add.png"/>
+                                        </MenuItem.Icon>
+                                    </MenuItem>
+                                    <MenuItem x:Name="menuUnExpandAll" Header="编辑单位" Click="menuEditDept_Click">
+                                        <MenuItem.Icon>
+                                            <Image Source="Images/pencil.png" />
+                                        </MenuItem.Icon>
+                                    </MenuItem>
+                                </ContextMenu>
+                            </StackPanel.ContextMenu>-->
+                            <Image VerticalAlignment="Center" Source="{Binding Icon}" />
+                            <TextBlock Text="{Binding Name}"/>
+                        </StackPanel>
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+            </TreeView>
+            <Grid DockPanel.Dock="Right">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="200"/>
+                </Grid.RowDefinitions>
+                <DataGrid x:Name="userDataGrid" Grid.Row="0" AutoGenerateColumns="False" IsReadOnly="True" Margin="2,5,2,2"  SelectionChanged="userDataGrid_SelectionChanged">
+                    <DataGrid.ItemContainerStyle>
+                        <Style TargetType="{x:Type DataGridRow}">
+                            <!--<Setter Property="AllowDrop" Value="true"></Setter>
+                            <EventSetter Event="PreviewMouseLeftButtonDown" Handler="DataGridRow_MouseLeftButtonDown"/>-->
+                        </Style>
+                    </DataGrid.ItemContainerStyle>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="用户帐号" Binding="{Binding COL_LOGINNAME}"/>
+                        <DataGridTextColumn Header="用户姓名" Binding="{Binding COL_NAME}" />
+                        <!--<DataGridTextColumn Header="创建时间" Binding="{Binding CREATE_TIME, StringFormat=\{0:yyyy-MM-dd HH\:mm\:ss\}}" />-->
+                    </DataGrid.Columns>
+                </DataGrid>
+                <TabControl Name="userTab" IsEnabled="False" Margin="2" Height="200" Grid.Row="1">
+                    <TabItem Name="userInfo" Header="用户信息">
+                        <Canvas>
+                            <Label Canvas.Left="31" Canvas.Top="25" Content="用户帐号"/>
+                            <TextBox IsReadOnly="True" Text="{Binding COL_LOGINNAME}" Height="26" Width="150" Canvas.Left="88" Canvas.Top="18"/>
+                            <Label Canvas.Left="31" Canvas.Top="70.5" Content="用户姓名"/>
+                            <TextBox IsReadOnly="True" Text="{Binding COL_NAME}" Height="26" Width="150" Canvas.Left="88" Canvas.Top="64"/>
+                            <Label Canvas.Left="31" Canvas.Top="119" Content="用户密码"/>
+                            <TextBox Text="{Binding COL_PWORD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="26" Width="150" Canvas.Left="88" Canvas.Top="113"/>
+                            <!--<Button Click="buttonChangeUserName_Click" Canvas.Left="274" Canvas.Top="64" Height="25" Width="60"  Content="修改姓名"/>-->
+                            <Button Content="修改密码" Click="buttonChangePassword_Click" Width="60" Canvas.Left="274" Canvas.Top="114" Height="25"/>
+                            <controls:NumberBox Visibility="Collapsed" DecValue="{Binding Path=COL_ID}" Canvas.Left="266" Canvas.Top="18" Height="23" Width="120" />
+                        </Canvas>
+                    </TabItem>
+                    <TabItem Header="用户角色" >
+                        <StackPanel Orientation="Horizontal">
+                            <xctk:CheckListBox Name="userRoleList" Width="300" Margin="1"/>
+                            <Button Margin="10" Content="修改角色" Click="buttonChangeUserRole_Click" Width="60"  Height="25" Grid.Column="1"/>
+                        </StackPanel>
+                    </TabItem>
+                </TabControl>
+            </Grid>
+        </DockPanel>
+        <!--<Grid Width="0" Height="0">
+            <xctk:ChildWindow WindowBackground="#FF559AE9" Caption="编辑单位" x:Name="deptWindow" IsModal="True"  WindowStartupLocation="Center" d:IsHidden="True">
+                <Canvas Height="180" Width="280">
+                    <Label Canvas.Left="31" Canvas.Top="25" Content="单位名称"/>
+                    <TextBox Text="{Binding NAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="26" Width="150" Canvas.Left="88" Canvas.Top="18"/>
+                    <Label Canvas.Left="31" Canvas.Top="60" Content="单位类型"/>
+                    <ComboBox x:Name="deptTypeCombox" SelectedValue="{Binding DEPT_TYPE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="26" Width="150" Canvas.Left="88" Canvas.Top="53"/>
+                    <Label Canvas.Left="43" Canvas.Top="94">父单位</Label>
+                    <controls:NumberBox Visibility="Collapsed" DecValue="{Binding PARENT_ID}"/>
+                    <Button Click="buttonSaveDept_Click" Canvas.Left="58" Canvas.Top="105" Height="25" Width="49" Content="保存"/>
+                    <Button Click="buttonCancel_Click" Canvas.Left="151" Canvas.Top="105" Height="25" Width="49" Content="取消"/>
+                </Canvas>
+            </xctk:ChildWindow>
+            <xctk:ChildWindow WindowBackground="#FF559AE9" Caption="添加用户" x:Name="addUserWindow" IsModal="True" WindowStartupLocation="Center" d:IsHidden="True">
+                <Canvas Height="200" Width="280">
+                    <Label Canvas.Left="31" Canvas.Top="25" Content="用户帐号"/>
+                    <TextBox Text="{Binding USERNAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="26" Width="150" Canvas.Left="88" Canvas.Top="18"/>
+                    <Label Canvas.Left="31" Canvas.Top="60" Content="用户姓名"/>
+                    <TextBox Text="{Binding FULLNAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="26" Width="150" Canvas.Left="88" Canvas.Top="53"/>
+                    <controls:NumberBox Visibility="Collapsed" DecValue="{Binding DEPT_ID}"/>
+                    <Label Canvas.Left="31" Canvas.Top="95" Content="用户密码"/>
+                    <TextBox Text="{Binding PASSWORD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="26" Width="150" Canvas.Left="88" Canvas.Top="90"/>
+                    <Button Click="buttonSaveUser_Click" Canvas.Left="58" Canvas.Top="135" Height="25" Width="49" Content="保存"/>
+                    <Button Click="buttonCancel_Click" Canvas.Left="151" Canvas.Top="135" Height="25" Width="49" Content="取消"/>
+                </Canvas>
+            </xctk:ChildWindow>
+        </Grid>-->
+    </Grid>
+</Page>

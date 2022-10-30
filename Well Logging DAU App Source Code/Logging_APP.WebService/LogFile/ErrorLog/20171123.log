@@ -1,0 +1,24 @@
+[记录时间：21:05:33.455]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01036: illegal variable name/number
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 D:\1126\一体化采集器\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetDvdInfo(String process_id) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 4612
+
+消息：
+[记录时间：22:37:54.849]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-12899: value too large for column "LOGGINGAPPUSER"."DM_LOG_DVD_INFO"."DVD_NUMBER" (actual: 70, maximum: 64)
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 D:\1126\一体化采集器\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.DataService.SaveDvdInfo(Byte[] _model, String process_id) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 4653
+
+消息：
+[记录时间：22:48:05.124]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-12899: value too large for column "LOGGINGAPPUSER"."DM_LOG_DVD_INFO"."DVD_NUMBER" (actual: 70, maximum: 64)
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 D:\1126\一体化采集器\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.DataService.SaveDvdInfo(Byte[] _model, String process_id) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 4653
+
+消息：

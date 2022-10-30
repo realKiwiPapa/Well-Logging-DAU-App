@@ -1,0 +1,833 @@
+﻿<Page x:Class="Logging_App.归档入库_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" d:DesignWidth="1000"
+	Title="归档入库_Page" xmlns:my="clr-namespace:Logging_App.Controls" Loaded="Page_Loaded" Initialized="Page_Initialized">
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+        <StackPanel>
+            <StackPanel Margin="2" Orientation="Horizontal" Name="SearchPanel">
+                <Label Content="作业井名" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                <TextBox Height="25" Text="{Binding Path=PROCESS_ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"/>
+                <Label Content="归档状态" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+                <ComboBox Height="25" IsEditable="True" HorizontalAlignment="Left" Margin="0" SelectedValuePath="Content" SelectedValue="{Binding Path=INTERPRET_CENTER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120">
+                    <ComboBoxItem>等待审核</ComboBoxItem>
+                    <ComboBoxItem>归档完成</ComboBoxItem>
+                    <ComboBoxItem>审核未通过</ComboBoxItem>
+                    <ComboBoxItem>未归档</ComboBoxItem>
+                </ComboBox>
+                <Label Content="解释处理人" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                <TextBox Height="25" Text="{Binding Path=PROCESSOR, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"/>
+                <Label Content="处理开始日期" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+                <ComboBox Height="25" IsEditable="True" Name="QUERY_DATE" HorizontalAlignment="Left" Margin="0" SelectedValue="{Binding Path=NOTE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+                <Button Margin="15,0,0,0" Click="Search_Click" Height="25" Width="50"  HorizontalAlignment="Left" VerticalAlignment="Center">查询</Button>
+                <!--<Button Content="图件数据转化" Height="23" Name="button14" Width="90" Click="button14_Click" />
+                <Button Content="成果数据转化" Height="23" Name="button15" Width="90" Click="button15_Click" />-->
+            </StackPanel>
+            <DataGrid IsReadOnly="True" SelectionMode="Single" CanUserAddRows="False" CanUserDeleteRows="False" AutoGenerateColumns="False" MinHeight="100" MaxHeight="300" Name="dataGrid1" Margin="2" SelectionChanged="dataGrid1_SelectionChanged">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="作业井名" Binding="{Binding Path=WELL_JOB_NAME}"/>
+                    <DataGridTextColumn Header="标准井名" MaxWidth="150" Binding="{Binding Path=WELL_LEGAL_NAME}"/>
+                    <DataGridTextColumn Header="解释处理作业名" Binding="{Binding Path=PROCESS_NAME}"/>
+                    <DataGridTextColumn Header="归档状态" Binding="{Binding Path=STATE}"/>
+                    <DataGridTextColumn Header="处理开始日期" Binding="{Binding Path=LOG_START_TIME, StringFormat=\{0:yyyy-MM-dd\}}"/>
+                    <DataGridTextColumn Header="资料提交日期" Binding="{Binding Path=SUBMIT_TIME, StringFormat=\{0:yyyy-MM-dd \}}"/>
+                    <DataGridTextColumn Header="审核通过日期" Binding="{Binding Path=APPROVED_TIME, StringFormat=\{0:yyyy-MM-dd\}}"/>
+                    <DataGridTextColumn Header="解释处理人" Binding="{Binding Path=PROCESSOR}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <my:DataPager x:Name="dataPager2" PageSize="50" TotalCount="101" PageChanged="dataPager2_PageChanged"/>
+            <StackPanel Name="stackPanel" Visibility="Collapsed">
+                <Menu>
+                    <MenuItem Header="提交审核" Name="menu1" Click="MenuItem1_Click" Visibility="{Binding ElementName=workFlowControl1, Path=CanSubmitReview, Converter={StaticResource bool2VisibilityConverter}}"/>
+                    <MenuItem Header="审核" Name="menu2" Click="MenuItem2_Click" Visibility="{Binding ElementName=workFlowControl1, Path=CanReview, Converter={StaticResource bool2VisibilityConverter}}"/>
+                    <MenuItem Header="取消提交审核" Visibility="{Binding ElementName=workFlowControl1, Path=CanCancelSubmitReview, Converter={StaticResource bool2VisibilityConverter}}" Name="menu3" Click="Menu3Item_Click"/>
+                    <MenuItem Header="退回审核" Visibility="{Binding ElementName=workFlowControl1, Path=CanCancelReview, Converter={StaticResource bool2VisibilityConverter}}" Name="menu4" Click="Menu4Item_Click"/>
+                </Menu>
+                <my:WorkFlowControl x:Name="workFlowControl1" WorkflowType="解释处理作业" />
+                <StackPanel Orientation="Horizontal" Visibility="{Binding ElementName=save1, Path=IsEnabled, Converter={StaticResource bool2VisibilityConverter}}">
+                    <StackPanel.ScrollOwner>
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" />
+                    </StackPanel.ScrollOwner>
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="10,5" Name="textBox2" VerticalAlignment="Center" Width="360"/>
+                    <Button Content="归档存储目录" Height="25" HorizontalAlignment="Left" Margin="0,5" Name="button2" VerticalAlignment="Center" Width="115" Click="button2_Click" />
+                    <TextBox Height="23" Margin="10,0" Name="textBox3" Width="120"  VerticalAlignment="Center"/>
+                    <Button Content="服务器导入" Height="25" Margin="10,0" Name="button3" Width="104"  VerticalAlignment="Center"/>
+                </StackPanel>
+                <DockPanel>
+                    <Menu DockPanel.Dock="Top" Height="25">
+                        <MenuItem Header="保存" Name="save1" Click="save1_Click" IsEnabled="{Binding ElementName=workFlowControl1, Path=CanSave}">
+                            <MenuItem.Icon>
+                                <Image Source="/Logging_APP;component/Images/filesave.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </Menu>
+                    <StackPanel Margin="1" DockPanel.Dock="Left">
+                        <ComboBox Margin="1" Name="comboBox" SelectionChanged="ComboBox_SelectionChanged">
+                            <ComboBoxItem Content="全部" IsSelected="True" />
+                            <!--<ComboBoxItem Content="综合" />
+                            <ComboBoxItem Content="固井" />
+                            <ComboBoxItem Content="页岩气" />
+                            <ComboBoxItem Content="生产" />-->
+                        </ComboBox>
+                        <ListBox Name="listBox2" Margin="1" SelectionChanged="listBox2_SelectionChanged">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Path=Name}" Foreground="{Binding Path=Foreground}" />
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
+                    <TabControl Margin="1" Name="tabControl1" DockPanel.Dock="Right">
+                        <!--<TabControl.Resources>
+                        <Style TargetType="{x:Type TabControl}"></Style>
+                        <Style TargetType="{x:Type TabItem}">
+                            <Setter Property="Padding" Value="8" />
+                            <Setter Property="HeaderTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock MaxWidth="76" TextWrapping="Wrap" Text="{TemplateBinding Property=ContentControl.Content}"/>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </TabControl.Resources>-->
+                        <TabItem Header="综合解释成果数据" Name="tabItem1">
+                            <StackPanel>
+                                <StackPanel Visibility="{Binding ElementName=save1, Path=IsEnabled, Converter={StaticResource bool2VisibilityConverter}}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True"  Margin="10,2,0,0" Name="textBox1" VerticalAlignment="Center" Width="392" />
+                                        <Button Content="选择文件" Height="25" HorizontalAlignment="Left" Margin="10,5" Name="button1" VerticalAlignment="Center" Width="90" Click="button1_Click" />
+                                        <Button Content="读取" Height="25" HorizontalAlignment="Left" Margin="10,5"  VerticalAlignment="Center" Width="60" Click="Button_Click" />
+                                        <TextBox Height="23" HorizontalAlignment="Left" Margin="10,0,0,0" Name="textBox4" VerticalAlignment="Center" Width="120" />
+                                        <Button Content="服务器导入" Height="25" HorizontalAlignment="Left" Margin="10,0,0,0" Name="button4" VerticalAlignment="Center" Width="104" />
+                                    </StackPanel>
+                                    <StackPanel Name="sp1">
+                                        <DataGrid AutoGenerateColumns="False" Height="265" Margin="2" Name="dataGrid2" LoadingRow="DataGrid_LoadingRow" />
+                                        <GroupBox Header="选择对应行号" Margin="2" Name="groupBox1" >
+                                            <StackPanel>
+                                                <Grid Name="rowGrid">
+                                                    <Label Content="数据标题行" Height="28" HorizontalAlignment="Left" Margin="10,20,0,0" Name="label1" VerticalAlignment="Top" />
+                                                    <Label Content="数据开始行" Height="28" HorizontalAlignment="Left" Margin="400,20,0,0" Name="label2" VerticalAlignment="Top" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,17,0,0" Name="comboBox1" VerticalAlignment="Top" Width="250" SelectionChanged="comboBox1_SelectionChanged" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="470,17,0,0" Name="comboBox2" VerticalAlignment="Top" Width="250" />
+                                                </Grid>
+                                                <Grid Name="colGrid">
+                                                    <Label Content="序 号" Height="28" HorizontalAlignment="Left" Margin="10,13,0,0" Name="label3" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="层 位" Height="28" HorizontalAlignment="Left" Margin="10,43,0,0" Name="label4" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="渗透率" Height="28" HorizontalAlignment="Left" Margin="10,73,0,0" Name="label5" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="有效厚度" Height="28" HorizontalAlignment="Left" Margin="10,103,0,0" Name="label6" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="自然伽马" Height="28" HorizontalAlignment="Left" Margin="10,133,0,0" Name="label7" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="井段" Height="28" HorizontalAlignment="Left" Margin="300,13,0,0" Name="label8" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="补偿声波" Height="28" HorizontalAlignment="Left" Margin="300,43,0,0" Name="label9" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="补偿中子" Height="28" HorizontalAlignment="Left" Margin="300,73,0,0" Name="label10" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="补偿密度" Height="28" HorizontalAlignment="Left" Margin="300,103,0,0" Name="label11" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="深侧向" Height="28" HorizontalAlignment="Left" Margin="300,133,0,0" Name="label12" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="浅侧向" Height="28" HorizontalAlignment="Left" Margin="600,13,0,0" Name="label13" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="含水饱和度" Height="28" HorizontalAlignment="Left" Margin="600,73,0,0" Name="label15" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="解释结论" Height="28" HorizontalAlignment="Left" Margin="600,103,0,0" Name="label16" VerticalAlignment="Top" />
+                                                    <Label Content="孔隙度" Height="28" HorizontalAlignment="Left" Margin="600,43,0,0" Name="label14" VerticalAlignment="Top" Width="60" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,13,0,0" Tag="LAY_ID|序号|" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,43,0,0" Tag="FORMATION_NAME|层位|" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox HorizontalAlignment="Left" Margin="76,73,0,65" Tag="PENETRATE_RATE|渗透率|Type:System.Decimal" Width="100" VerticalAlignment="Top" />
+                                                    <ComboBox HorizontalAlignment="Left" Margin="76,103,0,35" Tag="VALID_THICKNESS|厚度|Type:System.Decimal" Width="100" VerticalAlignment="Top" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,133,0,0" Tag="GR_MIN_VALUE-GR_MAX_VALUE|自然伽玛|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="390,13,0,0" Tag="START_DEPTH-END_DEPTH|井段|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="390,43,0,0" Tag="SOUNDWAVE_MIN_VALUE-SOUNDWAVE_MAX_VALUE|补偿声波|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="390,73,0,0" Tag="NEUTRON_MIN_VALUE-NEUTRON_MAX_VALUE|补偿中子|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="390,103,0,0" Tag="DENSITY_MIN_VALUE-DENSITY_MAX_VALUE|补偿密度|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="390,133,0,0" Tag="RESISITANCE_MIN_VALUE-RESISITANCE_MAX_VALUE|深侧向|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="680,13,0,0" Tag="QRESISITANCE_MIN_VALUE-QRESISITANCE_MAX_VALUE|浅侧向|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="680,43,0,0" Tag="POROSITY_MIN_VALUE-POROSITY_MAX_VALUE|孔隙度|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="680,73,0,0" Tag="WATER_SATURATION_MIN_VALUE-WATER_SATURATION_MAX_VALUE|含水饱和度|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="680,103,0,0" Tag="EXPLAIN_CONCLUSION|解释结论|" VerticalAlignment="Top" Width="100" />
+
+                                                    <Label Content="自然电位" Height="28" HorizontalAlignment="Left" Margin="600,133,0,0" Name="label18" VerticalAlignment="Top" Width="90" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="680,133,0,0" Tag="SP_MIN_VALUE-SP_MAX_VALUE|自然电位|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <Label Content="微球" Height="28" HorizontalAlignment="Left" Margin="10,163,0,0" Name="label19" VerticalAlignment="Top" Width="60" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,163,0,0" Tag="RT1_MIN_VALUE-RT1_MAX_VALUE|微球|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <Label Content="泥沙含量" Height="28" HorizontalAlignment="Left" Margin="300,163,0,0" Name="label20" VerticalAlignment="Top" Width="90" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="390,163,0,0" Tag="SH_MIN_VALUE-SH_MAX_VALUE|泥沙含量|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                </Grid>
+                                            </StackPanel>
+                                        </GroupBox>
+                                    </StackPanel>
+                                </StackPanel>
+                                <DataGrid MinHeight="100" MaxHeight="300" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" Name="COM_LOG_RESULT" SelectionMode="Single">
+                                    <DataGrid.Columns>
+                                        <!--<DataGridTextColumn Header="成果ID" Binding="{Binding Path=RESULTID}"/>
+                            <DataGridTextColumn Header="解释处理ID" Binding="{Binding Path=PROCESS_ID}"/>-->
+                                        <DataGridTextColumn Header="序号" Binding="{Binding Path=LAY_ID}"/>
+                                        <DataGridTextColumn Header="层位名" Binding="{Binding Path=FORMATION_NAME}"/>
+                                        <DataGridTextColumn Header="起始深度" Binding="{Binding Path=START_DEPTH}"/>
+                                        <DataGridTextColumn Header="结束深度" Binding="{Binding Path=END_DEPTH}"/>
+                                        <DataGridTextColumn Header="有效厚度" Binding="{Binding Path=VALID_THICKNESS}"/>
+                                        <DataGridTextColumn Header="解释结论" Binding="{Binding Path=EXPLAIN_CONCLUSION}"/>
+                                        <DataGridTextColumn Header="孔隙度最小值" Binding="{Binding Path=POROSITY_MIN_VALUE}"/>
+                                        <DataGridTextColumn Header="孔隙度最大值" Binding="{Binding Path=POROSITY_MAX_VALUE}"/>
+                                        <DataGridTextColumn Header="含水饱和度最小值" Binding="{Binding Path=WATER_SATURATION_MIN_VALUE}"/>
+                                        <DataGridTextColumn Header="含水饱和度最大值" Binding="{Binding Path=WATER_SATURATION_MAX_VALUE}"/>
+                                        <DataGridTextColumn Header="渗透率" Binding="{Binding Path=PENETRATE_RATE}"/>
+                                        <DataGridTextColumn Header="自然伽马最小值" Binding="{Binding Path=GR_MIN_VALUE}"/>
+                                        <DataGridTextColumn Header="自然伽马最大值" Binding="{Binding Path=GR_MAX_VALUE}"/>
+                                        <DataGridTextColumn Header="补偿声波最小值" Binding="{Binding Path=SOUNDWAVE_MIN_VALUE}"/>
+                                        <DataGridTextColumn Header="补偿声波最大值" Binding="{Binding Path=SOUNDWAVE_MAX_VALUE}"/>
+                                        <DataGridTextColumn Header="补偿密度最小值" Binding="{Binding Path=DENSITY_MIN_VALUE}"/>
+                                        <DataGridTextColumn Header="补偿密度最大值" Binding="{Binding Path=DENSITY_MAX_VALUE}"/>
+                                        <DataGridTextColumn Header="补偿中子最小值" Binding="{Binding Path=NEUTRON_MIN_VALUE}"/>
+                                        <DataGridTextColumn Header="补偿中子最小值" Binding="{Binding Path=NEUTRON_MAX_VALUE}"/>
+                                        <DataGridTextColumn Header="深侧向最小值" Binding="{Binding Path=RESISITANCE_MIN_VALUE}"/>
+                                        <DataGridTextColumn Header="深侧向最大值" Binding="{Binding Path=RESISITANCE_MAX_VALUE}"/>
+                                        <DataGridTextColumn Header="浅侧向最小值" Binding="{Binding Path=QRESISITANCE_MIN_VALUE}"/>
+                                        <DataGridTextColumn Header="浅侧向最大值" Binding="{Binding Path=QRESISITANCE_MAX_VALUE}"/>
+                                        <DataGridTextColumn Header="自然电位最小值" Binding="{Binding Path=SP_MIN_VALUE}"/>
+                                        <DataGridTextColumn Header="自然电位最大值" Binding="{Binding Path=SP_MAX_VALUE}"/>
+                                        <DataGridTextColumn Header="微球最小值" Binding="{Binding Path=RT1_MIN_VALUE}"/>
+                                        <DataGridTextColumn Header="微球最大值" Binding="{Binding Path=RT1_MAX_VALUE}"/>
+                                        <DataGridTextColumn Header="泥沙含量最小值" Binding="{Binding Path=SH_MIN_VALUE}"/>
+                                        <DataGridTextColumn Header="泥沙含量最大值" Binding="{Binding Path=SH_MAX_VALUE}"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </StackPanel>
+                        </TabItem>
+                        <TabItem Header="页岩气解释成果数据" Name="tabItem13">
+                            <StackPanel>
+                                <StackPanel Visibility="{Binding ElementName=save1, Path=IsEnabled, Converter={StaticResource bool2VisibilityConverter}}">
+                                    <!---->
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True"  Margin="10,2,0,0" Name="textBox12" VerticalAlignment="Center" Width="392" />
+                                        <Button Content="选择文件" Height="25" HorizontalAlignment="Left" Margin="10,5" Name="button12" VerticalAlignment="Center" Width="90" Click="button12_Click" />
+                                        <Button Content="读取" Height="25" HorizontalAlignment="Left" Margin="10,5"  VerticalAlignment="Center" Width="60" Click="Button_Click1" />
+                                        <TextBox Height="23" HorizontalAlignment="Left" Margin="10,0,0,0" Name="textBox13" VerticalAlignment="Center" Width="120" />
+                                        <Button Content="服务器导入" Height="25" HorizontalAlignment="Left" Margin="10,0,0,0" Name="button13" VerticalAlignment="Center" Width="104" />
+                                    </StackPanel>
+                                    <StackPanel Name="sp7">
+                                        <DataGrid AutoGenerateColumns="False" Height="265" Margin="2" Name="dataGrid13" LoadingRow="DataGrid_LoadingRow" />
+                                        <GroupBox Header="选择对应行号" Margin="2" Name="groupBox7" >
+                                            <StackPanel>
+                                                <Grid Name="rowGrid6">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="333" />
+                                                        <ColumnDefinition Width="587" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label Content="数据标题行" Height="28" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" />
+                                                    <Label Content="数据开始行" Height="28" HorizontalAlignment="Left" Margin="67,20,0,0" VerticalAlignment="Top" Grid.Column="1" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,17,0,0" Name="comboBox4" VerticalAlignment="Top" Width="250" SelectionChanged="comboBox4_SelectionChanged" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="137,17,0,0" Name="comboBox5" VerticalAlignment="Top" Width="250" Grid.Column="1" />
+                                                </Grid>
+                                                <Grid Name="colGrid6">
+                                                    <Label Content="序 号" Height="28" HorizontalAlignment="Left" Margin="10,13,0,0" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="层 位" Height="28" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="渗透率" Height="28" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="有效厚度" Height="28" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="深感应" Height="28" HorizontalAlignment="Left" Margin="10,133,0,0" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="井段" Height="28" HorizontalAlignment="Left" Margin="300,13,0,0" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="补偿声波" Height="28" HorizontalAlignment="Left" Margin="300,43,0,0" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="补偿中子" Height="28" HorizontalAlignment="Left" Margin="300,73,0,0" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="补偿密度" Height="28" HorizontalAlignment="Left" Margin="300,103,0,0" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="游离气" Height="28" HorizontalAlignment="Left" Margin="300,133,0,0" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="自然伽马" Height="28" HorizontalAlignment="Left" Margin="600,13,0,0"  VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="含水饱和度" Height="28" HorizontalAlignment="Left" Margin="600,73,0,0" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="解释结论" Height="28" HorizontalAlignment="Left" Margin="600,103,0,0" VerticalAlignment="Top" />
+                                                    <Label Content="孔隙度" Height="28" HorizontalAlignment="Left" Margin="600,43,0,0" VerticalAlignment="Top" Width="60" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,13,0,0" Tag="LAY_ID|序号|" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,43,0,0" Tag="FORMATION_NAME|层位|" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,73,0,65" Tag="PENETRATE_RATE|渗透率|Type:System.Decimal"  VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,103,0,35" Tag="VALID_THICKNESS|厚度|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,133,0,0" Tag="INDUCTION_DEEP_MIN-INDUCTION_DEEP_MAX|深感应|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="366,13,0,0" Tag="START_DEPTH-END_DEPTH|井段|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="366,43,0,0" Tag="SOUNDWAVE_MIN_VALUE-SOUNDWAVE_MAX_VALUE|补偿声波|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="366,73,0,0" Tag="NEUTRON_MIN_VALUE-NEUTRON_MAX_VALUE|补偿中子|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="366,103,0,0" Tag="DENSITY_MIN_VALUE-DENSITY_MAX_VALUE|补偿密度|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="366,133,0,0" Tag="FREE_GAS_CONTENT_MIN-FREE_GAS_CONTENT_MAX|游离气|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="666,13,0,0" Tag="GR_MIN_VALUE-GR_MAX_VALUE|自然伽玛|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="666,43,0,0" Tag="POROSITY_MIN_VALUE-POROSITY_MAX_VALUE|孔隙度|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="666,73,0,0" Tag="WATER_SATURATION_MIN_VALUE-WATER_SATURATION_MAX_VALUE|含水饱和度|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="666,103,0,0" Tag="EXPLAIN_CONCLUSION|解释结论|" VerticalAlignment="Top" Width="100" />
+                                                    <Label Content="干酪根" Height="28" HorizontalAlignment="Left" Margin="600,133,0,0" VerticalAlignment="Top" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="666,133,0,0" Tag="KEROGEN_MIN-KEROGEN_MAX|干酪根|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <Label Content="中感应" Height="28" HorizontalAlignment="Left" Margin="10,167,0,0" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="浅感应" Height="28" HorizontalAlignment="Left" Margin="10,197,0,0" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="吸附气" Height="28" HorizontalAlignment="Left" Margin="300,167,0,0" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="总含气量" Height="28" HorizontalAlignment="Left" Margin="300,197,0,0" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="脆性指数" Height="28" HorizontalAlignment="Left" Margin="600,167,0,0" VerticalAlignment="Top" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,167,0,0" Tag="INDUCTION_MEDIUM_MIN-INDUCTION_MEDIUM_MAX|中感应|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,197,0,0" Tag="INDUCTION_SHALLOW_MIN-INDUCTION_SHALLOW_MAX|浅感应|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="366,167,0,0" Tag="ADSORBED_GAS_CONTENT_MIN-ADSORBED_GAS_CONTENT_MAX|吸附气|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="366,197,0,0" Tag="ALL_GAS_CONTENT_MIN-ALL_GAS_CONTENT_MAX|总含气量|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="666,167,0,0" Tag="BRITTLENESS_INDEX_MIN-BRITTLENESS_INDEX_MAX|脆性指数|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <Label Content="总有机碳" Height="28" HorizontalAlignment="Left" Margin="600,197,0,0" VerticalAlignment="Top" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="666,197,0,0" Tag="ORGANIC_CARBON_CONTEN_MIN-ORGANIC_CARBON_CONTEN_MAX|总有机碳|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                </Grid>
+                                            </StackPanel>
+                                        </GroupBox>
+                                    </StackPanel>
+                                </StackPanel>
+                                <DataGrid MinHeight="100" MaxHeight="300" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" Name="COM_LOG_RESULT1" SelectionMode="Single">
+                                    <DataGrid.Columns>
+                                        <!--<DataGridTextColumn Header="成果ID" Binding="{Binding Path=RESULTID}"/>
+                            <DataGridTextColumn Header="解释处理ID" Binding="{Binding Path=PROCESS_ID}"/>-->
+                                    <DataGridTextColumn Header="序号" Binding="{Binding Path=LAY_ID}"/>
+                                    <DataGridTextColumn Header="层位名" Binding="{Binding Path=FORMATION_NAME}"/>
+                                    <DataGridTextColumn Header="起始深度" Binding="{Binding Path=START_DEPTH}"/>
+                                    <DataGridTextColumn Header="结束深度" Binding="{Binding Path=END_DEPTH}"/>
+                                    <DataGridTextColumn Header="有效厚度" Binding="{Binding Path=VALID_THICKNESS}"/>
+                                    <DataGridTextColumn Header="解释结论" Binding="{Binding Path=EXPLAIN_CONCLUSION}"/>
+                                    <DataGridTextColumn Header="孔隙度最小值" Binding="{Binding Path=POROSITY_MIN_VALUE}"/>
+                                    <DataGridTextColumn Header="孔隙度最大值" Binding="{Binding Path=POROSITY_MAX_VALUE}"/>
+                                    <DataGridTextColumn Header="含水饱和度最小值" Binding="{Binding Path=WATER_SATURATION_MIN_VALUE}"/>
+                                    <DataGridTextColumn Header="含水饱和度最大值" Binding="{Binding Path=WATER_SATURATION_MAX_VALUE}"/>
+                                    <DataGridTextColumn Header="渗透率" Binding="{Binding Path=PENETRATE_RATE}"/>
+                                    <DataGridTextColumn Header="自然伽马最小值" Binding="{Binding Path=GR_MIN_VALUE}"/>
+                                    <DataGridTextColumn Header="自然伽马最大值" Binding="{Binding Path=GR_MAX_VALUE}"/>
+                                    <DataGridTextColumn Header="补偿声波最小值" Binding="{Binding Path=SOUNDWAVE_MIN_VALUE}"/>
+                                    <DataGridTextColumn Header="补偿声波最大值" Binding="{Binding Path=SOUNDWAVE_MAX_VALUE}"/>
+                                    <DataGridTextColumn Header="补偿密度最小值" Binding="{Binding Path=DENSITY_MIN_VALUE}"/>
+                                    <DataGridTextColumn Header="补偿密度最大值" Binding="{Binding Path=DENSITY_MAX_VALUE}"/>
+                                    <DataGridTextColumn Header="补偿中子最小值" Binding="{Binding Path=NEUTRON_MIN_VALUE}"/>
+                                    <DataGridTextColumn Header="补偿中子最大值" Binding="{Binding Path=NEUTRON_MAX_VALUE}"/>
+                                    <DataGridTextColumn Header="深感应最小值" Binding="{Binding Path=INDUCTION_DEEP_MIN}"/>
+                                    <DataGridTextColumn Header="深感应最大值" Binding="{Binding Path=INDUCTION_DEEP_MAX}"/>
+                                    <DataGridTextColumn Header="中感应最小值" Binding="{Binding Path=INDUCTION_MEDIUM_MIN}"/>
+                                    <DataGridTextColumn Header="中感应最大值" Binding="{Binding Path=INDUCTION_MEDIUM_MAX}"/>
+                                    <DataGridTextColumn Header="浅感应最小值" Binding="{Binding Path=INDUCTION_SHALLOW_MIN}"/>
+                                    <DataGridTextColumn Header="浅感应最大值" Binding="{Binding Path=INDUCTION_SHALLOW_MAX}"/>
+                                    <DataGridTextColumn Header="游离气最小值" Binding="{Binding Path=FREE_GAS_CONTENT_MIN}"/>
+                                    <DataGridTextColumn Header="游离气最大值" Binding="{Binding Path=FREE_GAS_CONTENT_MAX}"/>
+                                    <DataGridTextColumn Header="吸附气最小值" Binding="{Binding Path=ADSORBED_GAS_CONTENT_MIN}"/>
+                                    <DataGridTextColumn Header="吸附气最大值" Binding="{Binding Path=ADSORBED_GAS_CONTENT_MAX}"/>
+                                    <DataGridTextColumn Header="总含气量最小值" Binding="{Binding Path=ALL_GAS_CONTENT_MIN}"/>
+                                    <DataGridTextColumn Header="总含气量最大值" Binding="{Binding Path=ALL_GAS_CONTENT_MAX}"/>
+                                    <DataGridTextColumn Header="干酪根最小值" Binding="{Binding Path=KEROGEN_MIN}"/>
+                                    <DataGridTextColumn Header="干酪根最大值" Binding="{Binding Path=KEROGEN_MAX}"/>
+                                    <DataGridTextColumn Header="脆性指数最小值" Binding="{Binding Path=BRITTLENESS_INDEX_MIN}"/>
+                                    <DataGridTextColumn Header="脆性指数最大值" Binding="{Binding Path=BRITTLENESS_INDEX_MAX}"/>
+                                    <DataGridTextColumn Header="总有机碳最小值" Binding="{Binding Path=ORGANIC_CARBON_CONTEN_MIN}"/>
+                                    <DataGridTextColumn Header="总有机碳最大值" Binding="{Binding Path=ORGANIC_CARBON_CONTEN_MAX}"/>
+                                    </DataGrid.Columns>
+                                    </DataGrid>
+                                </StackPanel>
+                        </TabItem>
+                        <TabItem Header="固井质量评价数据" Name="tabItem2">
+                            <StackPanel>
+                                <StackPanel Visibility="{Binding ElementName=save1, Path=IsEnabled, Converter={StaticResource bool2VisibilityConverter}}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True"  Margin="10,2,0,0" Name="textBox5" VerticalAlignment="Center" Width="392" />
+                                        <Button Content="选择文件" Height="25" HorizontalAlignment="Left" Margin="10,5" Name="button5" VerticalAlignment="Center" Width="90" Click="button5_Click" />
+                                        <Button Content="读取" Height="25" HorizontalAlignment="Left" Margin="10,5"  VerticalAlignment="Center" Width="60" Click="Button_Click_1"/>
+                                        <TextBox Height="23" HorizontalAlignment="Left" Margin="10,0,0,0" Name="textBox6" VerticalAlignment="Center" Width="120" />
+                                        <Button Content="服务器导入" Height="25" HorizontalAlignment="Left" Margin="10,0,0,0" Name="button6" VerticalAlignment="Center" Width="104" />
+                                    </StackPanel>
+                                    <StackPanel Name="sp2">
+                                        <DataGrid AutoGenerateColumns="False" Height="250" Margin="2" Name="dataGrid3" LoadingRow="DataGrid_LoadingRow" />
+                                        <GroupBox Header="选择对应行号" Margin="2" Name="groupBox2" >
+                                            <StackPanel>
+                                                <Grid Name="rowGrid1">
+                                                    <Label Content="数据标题行" Height="28" HorizontalAlignment="Left" Margin="10,20,0,0" Name="label1_1" VerticalAlignment="Top" />
+                                                    <Label Content="数据开始行" Height="28" HorizontalAlignment="Left" Margin="400,20,0,0" Name="label1_2" VerticalAlignment="Top" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,16,0,0" Name="comboBox1_1" VerticalAlignment="Top" Width="250" SelectionChanged="comboBox1_1_SelectionChanged" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="470,16,0,0" Name="comboBox1_2" VerticalAlignment="Top" Width="250" />
+                                                </Grid>
+                                                <Grid Name="colGrid1">
+                                                    <Label Content="井 段" Height="28" HorizontalAlignment="Left" Margin="10,9,0,0" Name="label1_3" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="结 论" Height="28" HorizontalAlignment="Left" Margin="10,39,0,0" Name="label1_4" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="平均声幅" Height="28" HorizontalAlignment="Left" Margin="300,9,0,0" Name="label1_6" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="最小声幅" Height="28" HorizontalAlignment="Left" Margin="300,39,0,0" Name="label1_7" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="最大声幅" Height="28" HorizontalAlignment="Left" Margin="300,69,0,0" Name="label1_8" VerticalAlignment="Top" Width="60" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,9,0,0" Tag="ST_DEP-EN_DEP|井段|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,39,0,0" Tag="RESULT|结论|" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="390,9,0,0" Tag="MEA_CBL|平均声幅|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="390,39,0,0" Tag="MIN_CBL|最小声幅|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="390,69,0,0" Tag="MAX_CBL|最大声幅|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                </Grid>
+                                            </StackPanel>
+                                        </GroupBox>
+                                    </StackPanel>
+                                </StackPanel>
+                                <DataGrid MinHeight="100" MaxHeight="300" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" Name="COM_LOG_CEMENT_EVALUATION_INF" SelectionMode="Single">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="起始深度" Binding="{Binding Path=ST_DEP}"/>
+                                        <DataGridTextColumn Header="结束深度" Binding="{Binding Path=EN_DEP}"/>
+                                        <DataGridTextColumn Header="最大声幅" Binding="{Binding Path=MAX_CBL}"/>
+                                        <DataGridTextColumn Header="最小声幅" Binding="{Binding Path=MIN_CBL}"/>
+                                        <DataGridTextColumn Header="平均声幅" Binding="{Binding Path=MEA_CBL}"/>
+                                        <DataGridTextColumn Header="结论" Binding="{Binding Path=RESULT}"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </StackPanel>
+                        </TabItem>
+                        <TabItem Header="测量井斜数据" Name="tabItem3">
+                            <StackPanel>
+                                <StackPanel Visibility="{Binding ElementName=save1, Path=IsEnabled, Converter={StaticResource bool2VisibilityConverter}}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True"  Margin="10,2,0,0" Name="textBox7" VerticalAlignment="Center" Width="392" />
+                                        <Button Content="选择文件" Height="25" HorizontalAlignment="Left" Margin="10,5" Name="button7" VerticalAlignment="Center" Width="90" Click="button7_Click" />
+                                        <Button Content="读取" Height="25" HorizontalAlignment="Left" Margin="10,5"  VerticalAlignment="Center" Width="60" Click="Button_Click_2"/>
+                                        <TextBox Height="23" HorizontalAlignment="Left" Margin="10,0,0,0" Name="textBox8" VerticalAlignment="Center" Width="120" />
+                                        <Button Content="服务器导入" Height="25" HorizontalAlignment="Left" Margin="10,0,0,0" Name="button8" VerticalAlignment="Center" Width="104" />
+                                    </StackPanel>
+                                    <StackPanel Name="sp3">
+                                        <DataGrid AutoGenerateColumns="False" Height="250" Margin="2" Name="dataGrid4" LoadingRow="DataGrid_LoadingRow" />
+                                        <GroupBox Header="选择对应行号" Margin="2" Name="groupBox3" >
+                                            <StackPanel>
+                                                <Grid Name="rowGrid2">
+                                                    <Label Content="数据标题行" Height="28" HorizontalAlignment="Left" Margin="10,20,0,0" Name="label2_1" VerticalAlignment="Top" />
+                                                    <Label Content="数据开始行" Height="28" HorizontalAlignment="Left" Margin="400,20,0,0" Name="label2_2" VerticalAlignment="Top" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,20,0,0" Name="comboBox2_1" VerticalAlignment="Top" Width="250" SelectionChanged="comboBox2_1_SelectionChanged" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="470,20,0,0" Name="comboBox2_2" VerticalAlignment="Top" Width="250" />
+                                                </Grid>
+                                                <Grid Name="colGrid2">
+                                                    <Label Content="深 度" Height="28" HorizontalAlignment="Left" Margin="10,9,0,0" Name="label2_3" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="井 斜" Height="28" HorizontalAlignment="Left" Margin="300,9,0,0" Name="label2_5" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="方 位" Height="28" HorizontalAlignment="Left" Margin="576,9,0,0" Name="label2_6" VerticalAlignment="Top" Width="60" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,9,0,0" Tag="DEP|深度|DEPTH|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="350,9,0,0" Tag="INCLNATION|井斜|DEV|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="626,9,0,0" Tag="AZIMUTH|方位|DAZ|Type:System.Decimal" VerticalAlignment="Top" Width="100" />
+                                                </Grid>
+                                            </StackPanel>
+                                        </GroupBox>
+                                    </StackPanel>
+                                </StackPanel>
+                                <DataGrid MinHeight="100" MaxHeight="300" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" Name="COM_LOG_DEV_AZI" SelectionMode="Single">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="井深度" Binding="{Binding Path=DEP}"/>
+                                        <DataGridTextColumn Header="井斜" Binding="{Binding Path=INCLNATION}"/>
+                                        <DataGridTextColumn Header="方位" Binding="{Binding Path=AZIMUTH}"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </StackPanel>
+                        </TabItem>
+                        <TabItem Header="综合解释成果曲线数据" Name="tabItem4">
+                            <StackPanel>
+                                <StackPanel Visibility="{Binding ElementName=save1, Path=IsEnabled, Converter={StaticResource bool2VisibilityConverter}}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True"  Margin="10,2,0,0" Name="textBox9" VerticalAlignment="Center" Width="392" />
+                                        <Button Content="选择文件" Height="25" HorizontalAlignment="Left" Margin="10,5" Name="button9" VerticalAlignment="Center" Width="90" Click="button9_Click" />
+                                        <Button Content="读取" Height="25" HorizontalAlignment="Left" Margin="10,5"  VerticalAlignment="Center" Width="60" Click="Button_Click_3" />
+                                        <TextBox Height="23" HorizontalAlignment="Left" Margin="10,0,0,0" Name="textBox10" VerticalAlignment="Center" Width="120" />
+                                        <Button Content="服务器导入" Height="25" HorizontalAlignment="Left" Margin="10,0,0,0" Name="button10" VerticalAlignment="Center" Width="104" />
+                                    </StackPanel>
+                                    <StackPanel Name="sp4">
+                                        <DataGrid AutoGenerateColumns="False" Height="250" Margin="2" Name="dataGrid5"  LoadingRow="DataGrid_LoadingRow" />
+                                        <GroupBox Header="选择对应行号" Margin="2" Name="groupBox4">
+                                            <StackPanel>
+                                                <Grid Name="rowGrid3">
+                                                    <Label Content="数据标题行" Height="28" HorizontalAlignment="Left" Margin="10,20,0,0" Name="label3_1" VerticalAlignment="Top" />
+                                                    <Label Content="数据开始行" Height="28" HorizontalAlignment="Left" Margin="400,20,0,0" Name="label3_2" VerticalAlignment="Top" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,20,0,0" Name="comboBox3_1" VerticalAlignment="Top" Width="250" SelectionChanged="comboBox3_1_SelectionChanged"/>
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="470,20,0,0" Name="comboBox3_2" VerticalAlignment="Top" Width="250" />
+                                                </Grid>
+                                                <Grid Name="colGrid3">
+                                                    <Label Content="深 度" Height="28" HorizontalAlignment="Left" Margin="10,7,0,0" Name="label3_3" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="井 径" Height="28" HorizontalAlignment="Left" Margin="250,7,0,0" Name="label3_4" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="井 斜" Height="28" HorizontalAlignment="Left" Margin="450,7,0,0" Name="label3_5" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="方 位" Height="28" HorizontalAlignment="Left" Margin="650,7,0,0" Name="label3_6" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="补偿声波" Height="28" HorizontalAlignment="Left" Margin="10,37,0,0" Name="label3_7" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="补偿密度" Height="28" HorizontalAlignment="Left" Margin="250,37,0,0" Name="label3_8" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="补偿中子" Height="28" HorizontalAlignment="Left" Margin="450,37,0,0" Name="label3_9" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="伽 马" Height="28" HorizontalAlignment="Left" Margin="650,37,0,0" Name="label3_10" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="深侧向" Height="28" HorizontalAlignment="Left" Margin="10,67,0,0" Name="label3_11" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="浅侧向" Height="28" HorizontalAlignment="Left" Margin="250,67,0,0" Name="label3_12" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="铀" Height="28" HorizontalAlignment="Left" Margin="450,67,0,0" Name="label3_13" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="钍" Height="28" HorizontalAlignment="Left" Margin="450,96,0,0" Name="label3_14" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="钾" Height="28" HorizontalAlignment="Left" Margin="10,97,0,0" Name="label3_15" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="光电指数" Height="28" HorizontalAlignment="Left" Margin="250,97,0,0" Name="label3_16" VerticalAlignment="Top" Width="60" />
+                                                    <ComboBox Height="23" Tag="DEP|DEPTH|Type:System.Decimal" HorizontalAlignment="Left" Margin="76,7,0,0" Name="comboBox3_3" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" Tag="AC|AC|Type:System.Decimal" HorizontalAlignment="Left" Margin="76,37,0,0" Name="comboBox3_4" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" Tag="RT|RT|Type:System.Decimal" HorizontalAlignment="Left" Margin="76,67,0,0" Name="comboBox3_5" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" Tag="K|K|Type:System.Decimal" HorizontalAlignment="Left" Margin="76,97,0,0" Name="comboBox3_6" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" Tag="CAL|CAL|Type:System.Decimal" HorizontalAlignment="Left" Margin="300,7,0,0" Name="comboBox3_7" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" Tag="DEN|DEN|Type:System.Decimal" HorizontalAlignment="Left" Margin="300,37,0,0" Name="comboBox3_8" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" Tag="RXO|RXO|Type:System.Decimal" HorizontalAlignment="Left" Margin="300,67,0,0" Name="comboBox3_9" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" Tag="PE|PE|Type:System.Decimal" HorizontalAlignment="Left" Margin="300,97,0,0" Name="comboBox3_10" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" Tag="DEV|DEV|Type:System.Decimal" HorizontalAlignment="Left" Margin="500,7,0,0" Name="comboBox3_11" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" Tag="CNL|CNL|Type:System.Decimal" HorizontalAlignment="Left" Margin="500,37,0,0" Name="comboBox3_12" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" Tag="U|U|Type:System.Decimal" HorizontalAlignment="Left" Margin="500,67,0,0" Name="comboBox3_13" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" Tag="DAZ|DAZ|Type:System.Decimal" HorizontalAlignment="Left" Margin="700,7,0,0" Name="comboBox3_14" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" Tag="GR|GR|Type:System.Decimal" HorizontalAlignment="Left" Margin="700,37,0,0" Name="comboBox3_15" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" Tag="TH|TH|Type:System.Decimal" HorizontalAlignment="Left" Margin="500,96,0,0" Name="comboBox3_16" VerticalAlignment="Top" Width="100" />
+                                                </Grid>
+                                            </StackPanel>
+                                        </GroupBox>
+                                    </StackPanel>
+                                </StackPanel>
+                                <my:DataPager x:Name="dataPager1" PageSize="50" TotalCount="101" PageChanged="dataPager1_PageChanged" />
+                                <DataGrid MinHeight="100" MaxHeight="300" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" Name="COM_LOG_COM_CURVEDATA" SelectionMode="Single">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="深度" Binding="{Binding Path=DEP}"/>
+                                        <DataGridTextColumn Header="自然电位" Binding="{Binding Path=SP}"/>
+                                        <DataGridTextColumn Header="自然伽玛" Binding="{Binding Path=GR}"/>
+                                        <DataGridTextColumn Header="井径" Binding="{Binding Path=CAL}"/>
+                                        <DataGridTextColumn Header="井斜" Binding="{Binding Path=DEV}"/>
+                                        <DataGridTextColumn Header="方位" Binding="{Binding Path=DAZ}"/>
+                                        <DataGridTextColumn Header="补偿声波" Binding="{Binding Path=AC}"/>
+                                        <DataGridTextColumn Header="补偿中子" Binding="{Binding Path=CNL}"/>
+                                        <DataGridTextColumn Header="补偿密度" Binding="{Binding Path=DEN}"/>
+                                        <DataGridTextColumn Header="光电指数" Binding="{Binding Path=PE}"/>
+                                        <DataGridTextColumn Header="深侧向" Binding="{Binding Path=RT}"/>
+                                        <DataGridTextColumn Header="浅侧向" Binding="{Binding Path=RXO}"/>
+                                        <DataGridTextColumn Header="自然伽玛总量" Binding="{Binding Path=SGR}"/>
+                                        <DataGridTextColumn Header="无铀伽玛" Binding="{Binding Path=CGR}"/>
+                                        <DataGridTextColumn Header="铀" Binding="{Binding Path=U}"/>
+                                        <DataGridTextColumn Header="钍" Binding="{Binding Path=TH}"/>
+                                        <DataGridTextColumn Header="钾" Binding="{Binding Path=K}"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </StackPanel>
+                        </TabItem>
+                        <TabItem Header="三压力测井曲线" Name="tabItem14">
+                            <StackPanel>
+                                <StackPanel Visibility="{Binding ElementName=save1, Path=IsEnabled, Converter={StaticResource bool2VisibilityConverter}}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True"  Margin="10,2,0,0" Name="textBox14" VerticalAlignment="Center" Width="392" />
+                                        <Button Content="选择文件" Height="25" HorizontalAlignment="Left" Margin="10,5" Name="button14_1" VerticalAlignment="Center" Width="90" Click="button14_1_Click" />
+                                        <Button Content="读取" Height="25" HorizontalAlignment="Left" Margin="10,5"  VerticalAlignment="Center" Width="60" Click="Button_Click_14" />
+                                        <TextBox Height="23" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="120" />
+                                        <Button Content="服务器导入" Height="25" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="104" />
+                                    </StackPanel>
+                                    <StackPanel Name="sp14">
+                                        <DataGrid AutoGenerateColumns="False" Height="250" Margin="2" Name="dataGrid14"  LoadingRow="DataGrid_LoadingRow" />
+                                        <GroupBox Header="选择对应行号" Margin="2" Name="groupBox14">
+                                            <StackPanel>
+                                                <Grid Name="rowGrid14">
+                                                    <Label Content="数据标题行" Height="28" HorizontalAlignment="Left" Margin="10,20,0,0" Name="label14_1" VerticalAlignment="Top" />
+                                                    <Label Content="数据开始行" Height="28" HorizontalAlignment="Left" Margin="400,20,0,0" Name="labe14_2" VerticalAlignment="Top" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,20,0,0" Name="comboBox14_1" VerticalAlignment="Top" Width="250" SelectionChanged="comboBox14_1_SelectionChanged"/>
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="470,20,0,0" Name="comboBox14_2" VerticalAlignment="Top" Width="250" />
+                                                </Grid>
+                                                <Grid Name="colGrid14">
+                                                    <Label Content="深 度" Height="28" HorizontalAlignment="Left" Margin="10,7,0,0" Name="label14_3" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="补偿声波" Height="28" HorizontalAlignment="Left" Margin="250,7,0,0" Name="label14_4" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="补偿密度" Height="28" HorizontalAlignment="Left" Margin="10,37,0,0" Name="label14_5" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="补偿中子" Height="28" HorizontalAlignment="Left" Margin="250,37,0,0" Name="label14_6" VerticalAlignment="Top" Width="60" />
+                                                    <ComboBox Height="23" Tag="DEP|DEPTH|Type:System.Decimal" HorizontalAlignment="Left" Margin="76,7,0,0" Name="comboBox14_3" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" Tag="AC|AC|Type:System.Decimal" HorizontalAlignment="Left" Margin="350,7,0,0" Name="comboBox14_4" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" Tag="DEN|DEN|Type:System.Decimal" HorizontalAlignment="Left" Margin="76,37,0,0" Name="comboBox14_5" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Height="23" Tag="CNL|CNL|Type:System.Decimal" HorizontalAlignment="Left" Margin="350,37,0,0" Name="comboBox14_6" VerticalAlignment="Top" Width="100" />
+                                                </Grid>
+                                            </StackPanel>
+                                        </GroupBox>
+                                    </StackPanel>
+                                </StackPanel>
+                                <my:DataPager x:Name="dataPager3" PageSize="50" TotalCount="101" PageChanged="dataPager3_PageChanged" />
+                                <DataGrid MinHeight="100" MaxHeight="300" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" Name="PRO_LOG_THRESS_PRESSURE" SelectionMode="Single">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="深度" Binding="{Binding Path=DEP}"/>
+                                        <DataGridTextColumn Header="补偿声波" Binding="{Binding Path=AC}"/>
+                                        <DataGridTextColumn Header="补偿中子" Binding="{Binding Path=CNL}"/>
+                                        <DataGridTextColumn Header="补偿密度" Binding="{Binding Path=DEN}"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </StackPanel>
+                        </TabItem>
+                        <TabItem Header="测井分层数据" Name="tabItem5">
+                            <StackPanel>
+                                <StackPanel Visibility="{Binding ElementName=save1, Path=IsEnabled, Converter={StaticResource bool2VisibilityConverter}}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True"  Margin="10,2,0,0" Name="textBox7_1" VerticalAlignment="Center" Width="392" />
+                                        <Button Content="选择文件" Height="25" HorizontalAlignment="Left" Margin="10,5" Name="button7_1" VerticalAlignment="Center" Width="90" Click="button7_1_Click" />
+                                        <Button Content="读取" Height="25" HorizontalAlignment="Left" Margin="10,5"  VerticalAlignment="Center" Width="60" Click="Button_Click_4" />
+                                        <TextBox Height="23" HorizontalAlignment="Left" Margin="10,0,0,0" Name="textBox8_1" VerticalAlignment="Center" Width="120" />
+                                        <Button Content="服务器导入" Height="25" HorizontalAlignment="Left" Margin="10,0,0,0" Name="button8_1" VerticalAlignment="Center" Width="104" />
+                                    </StackPanel>
+                                    <StackPanel Name="sp5">
+                                        <DataGrid AutoGenerateColumns="False" Height="250" Margin="2" Name="dataGrid4_1" LoadingRow="DataGrid_LoadingRow" />
+                                        <GroupBox Header="选择对应行号" Name="groupBox3_1" >
+                                            <StackPanel>
+                                                <Grid Name="rowGrid4">
+                                                    <Label Content="数据标题行" Height="28" HorizontalAlignment="Left" Margin="10,20,0,0" Name="label4_1" VerticalAlignment="Top" />
+                                                    <Label Content="数据开始行" Height="28" HorizontalAlignment="Left" Margin="400,20,0,0" Name="label4_2" VerticalAlignment="Top" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,20,0,0" Name="comboBox4_1" VerticalAlignment="Top" Width="250" SelectionChanged="comboBox4_1_SelectionChanged" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="470,20,0,0" Name="comboBox4_2" VerticalAlignment="Top" Width="250" />
+                                                </Grid>
+                                                <Grid Name="colGrid4">
+                                                    <Label Content="深 度" Height="28" HorizontalAlignment="Left" Margin="10,6,0,0" Name="label4_4" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="标 注" Height="28" HorizontalAlignment="Left" Margin="300,5,0,0" Name="label4_5" VerticalAlignment="Top" Width="60" />
+                                                    <ComboBox Tag="ST_DEVIATED_DEP-EN_DEVIATED_DEP|深度|Type:System.Decimal"  Height="23" HorizontalAlignment="Left" Margin="76,6,0,0" Name="comboBox4_4" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Tag="FORMATION_NAME|标注|" Height="23" HorizontalAlignment="Left" Margin="350,5,0,0" Name="comboBox4_5" VerticalAlignment="Top" Width="100" />
+                                                </Grid>
+                                            </StackPanel>
+                                        </GroupBox>
+                                    </StackPanel>
+                                </StackPanel>
+                                <DataGrid MinHeight="100" MaxHeight="300" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" Name="COM_LOG_LAYER" SelectionMode="Single">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="层位名" Binding="{Binding Path=FORMATION_NAME}"/>
+                                        <DataGridTextColumn Header="电测起始深度（斜深）" Binding="{Binding Path=ST_DEVIATED_DEP}"/>
+                                        <DataGridTextColumn Header="电测终止深度（斜深）" Binding="{Binding Path=EN_DEVIATED_DEP}"/>
+                                        <!--<DataGridTextColumn Header="电测起始深度（垂深）" Binding="{Binding Path=ST_VERTICAL_DEP}"/>
+                                <DataGridTextColumn Header="电测终止深度（垂深）" Binding="{Binding Path=EN_VERTICAL_DEP}"/>-->
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </StackPanel>
+                        </TabItem>
+                        <TabItem Header="井眼轨迹数据" Name="tabItem6" >
+                            <StackPanel>
+                                <StackPanel Visibility="{Binding ElementName=save1, Path=IsEnabled, Converter={StaticResource bool2VisibilityConverter}}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True"  Margin="10,2,0,0" Name="textBox6_1" VerticalAlignment="Center" Width="392" />
+                                        <Button Content="选择文件" Height="25" HorizontalAlignment="Left" Margin="10,5" Name="button6_1" VerticalAlignment="Center" Width="90" Click="button6_1_Click" />
+                                        <Button Content="读取" Height="25" HorizontalAlignment="Left" Margin="10,5"  VerticalAlignment="Center" Width="60" Click="Button_Click_5" />
+                                        <TextBox Height="23" HorizontalAlignment="Left" Margin="10,0,0,0" Name="textBox6_11" VerticalAlignment="Center" Width="120" />
+                                        <Button Content="服务器导入" Height="25" HorizontalAlignment="Left" Margin="10,0,0,0" Name="button6_11" VerticalAlignment="Center" Width="104" />
+                                    </StackPanel>
+                                    <StackPanel Name="sp6">
+                                        <DataGrid AutoGenerateColumns="False" Name="dataGrid6" Height="250" Margin="2" LoadingRow="DataGrid_LoadingRow" ></DataGrid>
+                                        <GroupBox Header="选择对应行号" Margin="2" Name="groupBox6">
+                                            <StackPanel>
+                                                <Grid Name="rowGrid5">
+                                                    <Label Content="数据标题行" Height="28" HorizontalAlignment="Left" Margin="10,20,0,0" Name="label6_1" VerticalAlignment="Top" />
+                                                    <Label Content="数据开始行" Height="28" HorizontalAlignment="Left" Margin="400,20,0,0" Name="label6_2" VerticalAlignment="Top" />
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="76,20,0,0" Name="comboBox6_1" VerticalAlignment="Top" Width="250" SelectionChanged="comboBox6_1_SelectionChanged"/>
+                                                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="470,20,0,0" Name="comboBox6_2" VerticalAlignment="Top" Width="250" />
+                                                </Grid>
+                                                <Grid Name="colGrid5">
+                                                    <Label Content="测量井深" Height="28" HorizontalAlignment="Left" Margin="10,5,0,0" Name="label6_3" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="井 斜" Height="28" HorizontalAlignment="Left" Margin="234,5,0,0" Name="label6_4" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="水平方位" Height="28" HorizontalAlignment="Left" Margin="445,5,0,0" Name="label6_5" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="水平位移" Height="28" HorizontalAlignment="Left" Margin="634,5,0,0" Name="label6_6" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="闭合距" Height="28" HorizontalAlignment="Left" Margin="10,35,0,0" Name="label6_7" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="闭合方位角" Height="28" HorizontalAlignment="Left" Margin="234,35,0,0" Name="label6_8" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="垂深" Height="28" HorizontalAlignment="Left" Margin="445,35,0,0" Name="label6_9" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="位移（北）" Height="28" HorizontalAlignment="Left" Margin="634,35,0,0" Name="label6_10" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="位移（东）" Height="28" HorizontalAlignment="Left" Margin="10,65,0,0" Name="label6_11" VerticalAlignment="Top" Width="60" />
+                                                    <Label Content="狗腿度" Height="28" HorizontalAlignment="Left" Margin="234,0,0,0" Name="label6_12" VerticalAlignment="Bottom" Width="60" />
+                                                    <ComboBox Tag="MD|DEP|深度|Type:System.Decimal" HorizontalAlignment="Left" Margin="76,5,0,65" Name="comboBox6_3" Width="100" />
+                                                    <ComboBox Tag="P_XN_CLOSED_DISTANCE|clos|闭合距|Type:System.Decimal" Height="23" HorizontalAlignment="Left" Margin="76,35,0,0" Name="comboBox6_4" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Tag="E_ELEMENT|x|位移（东）|Type:System.Decimal" Height="23" HorizontalAlignment="Left" Margin="76,65,0,0" Name="comboBox6_5" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Tag="INCLNATION|dev|井斜|Type:System.Decimal" Height="23" HorizontalAlignment="Left" Margin="300,5,0,0" Name="comboBox6_7" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Tag="P_XN_CLOSURE_AZIMUTH|drct|闭合方位|Type:System.Decimal" Height="23" HorizontalAlignment="Left" Margin="300,35,0,0" Name="comboBox6_8" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Tag="DOG_LEG|dogl|狗腿度|Type:System.Decimal" Height="23" HorizontalAlignment="Left" Margin="300,65,0,0" Name="comboBox6_9" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Tag="AZIMUTH|azi|方位|Type:System.Decimal" Height="23" HorizontalAlignment="Left" Margin="500,5,0,0" Name="comboBox6_11" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Tag="TVD|z|垂深|Type:System.Decimal" Height="23" HorizontalAlignment="Left" Margin="500,35,0,0" Name="comboBox6_12" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Tag="ALL_MOV|sft1|水平位移|Type:System.Decimal" Height="23" HorizontalAlignment="Left" Margin="700,5,0,0" Name="comboBox6_14" VerticalAlignment="Top" Width="100" />
+                                                    <ComboBox Tag="N_ELEMENT|y|位移（北）|Type:System.Decimal" Height="23" HorizontalAlignment="Left" Margin="700,35,0,0" Name="comboBox6_15" VerticalAlignment="Top" Width="100" />
+                                                </Grid>
+                                            </StackPanel>
+                                        </GroupBox>
+                                    </StackPanel>
+                                </StackPanel>
+                                <DataGrid MinHeight="100" MaxHeight="300" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" Name="COM_LOG_WELL_TRAJECTORY" SelectionMode="Single">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="井深度" Binding="{Binding Path=MD}"/>
+                                        <DataGridTextColumn Header="井斜" Binding="{Binding Path=INCLNATION}"/>
+                                        <DataGridTextColumn Header="方位" Binding="{Binding Path=AZIMUTH}"/>
+                                        <DataGridTextColumn Header="位移（东）" Binding="{Binding Path=E_ELEMENT}"/>
+                                        <DataGridTextColumn Header="位移（北）" Binding="{Binding Path=N_ELEMENT}"/>
+                                        <DataGridTextColumn Header="垂深" Binding="{Binding Path=TVD}"/>
+                                        <DataGridTextColumn Header="水平位移" Binding="{Binding Path=ALL_MOV}"/>
+                                        <DataGridTextColumn Header="闭合方位" Binding="{Binding Path=P_XN_CLOSURE_AZIMUTH}"/>
+                                        <DataGridTextColumn Header="闭合距" Binding="{Binding Path=P_XN_CLOSED_DISTANCE}"/>
+                                        <DataGridTextColumn Header="狗腿度" Binding="{Binding Path=DOG_LEG}"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </StackPanel>
+                        </TabItem>
+                        <TabItem Header="测井图件数据" Name="tabItem7" >
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <StackPanel Orientation="Horizontal" Visibility="{Binding ElementName=save1, Path=IsEnabled, Converter={StaticResource bool2VisibilityConverter}}">
+                                        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True"  Margin="10,2,0,0" Name="textBox11" VerticalAlignment="Center" Width="392" />
+                                        <Button Content="数据库导入" Height="25" HorizontalAlignment="Left" Margin="10,5" Name="button11" VerticalAlignment="Center" Width="104" />
+                                    </StackPanel>
+                                    <Label Content="图件名称" Height="28" HorizontalAlignment="Left" Margin="10,0,0,0" Name="label17"  VerticalContentAlignment="Center" />
+                                    <ComboBox Tag="skip" Height="25" SelectedValuePath="MAPS_CHINESE_NAME" DisplayMemberPath="MAPS_CHINESE_NAME" HorizontalAlignment="Left" Margin="10,0,0,0" Name="comboBox17" SelectionChanged="comboBox17_SelectionChanged"  VerticalAlignment="Center" Width="156">
+                                    </ComboBox>
+                                </StackPanel>
+                                <DockPanel>
+                                    <GroupBox Header="入库成果文件选择框" MinHeight="440" MinWidth="225" Margin="0" Name="groupBox5" Visibility="{Binding ElementName=save1, Path=IsEnabled, Converter={StaticResource bool2VisibilityConverter}}">
+                                        <ListBox DockPanel.Dock="Left" Margin="1" Name="listBox1">
+                                            <ListBox.ItemContainerStyle>
+                                                <Style TargetType="{x:Type ListBoxItem}">
+                                                    <EventSetter Event="MouseDoubleClick" Handler="ListBoxItem_MouseDoubleClick"></EventSetter>
+                                                </Style>
+                                            </ListBox.ItemContainerStyle>
+                                        </ListBox>
+                                    </GroupBox>
+                                    <DataGrid DockPanel.Dock="Right" AutoGenerateColumns="False" IsReadOnly="True"  CanUserAddRows="False" CanUserDeleteRows="False" Name="dataGrid7">
+                                        <DataGrid.Resources>
+                                            <ContextMenu x:Key="rowContextMenu">
+                                                <MenuItem Header="显示数据" Click="Show_Data"></MenuItem>
+                                            </ContextMenu>
+                                        </DataGrid.Resources>
+                                        <DataGrid.RowStyle>
+                                            <Style TargetType="{x:Type DataGridRow}">
+                                                <Setter Property="ContextMenu" Value="{StaticResource rowContextMenu}"/>
+                                            </Style>
+                                        </DataGrid.RowStyle>
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Header="图件中标准曲线名" Binding="{Binding Path=CURVE_NAME}"/>
+                                            <DataGridTextColumn Header="图件编码" Binding="{Binding Path=MAPS_CODING}"/>
+                                            <DataGridTextColumn x:Name="curveNameCol" Header="文件中曲线名" Binding="{Binding Path=CURVE_CD}"/>
+                                            <DataGridTemplateColumn x:Name="curveNameCol1" Visibility="Collapsed" Header="文件中曲线名" >
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <ComboBox Name="curveNameCbox" DisplayMemberPath="Key" SelectedValuePath="Key" SelectedValue="{Binding Path=CURVE_CD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectionChanged="curveNameCbox_SelectionChanged" Initialized="curveNameCbox_Initialized">
+                                                        </ComboBox>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                            <DataGridTextColumn Header="维数信息" Binding="{Binding Path=DATA_INFO}"/>
+                                            <DataGridTextColumn Header="曲线单位" Binding="{Binding Path=CURVE_UNIT}"/>
+                                            <DataGridTextColumn Header="曲线始深度" Binding="{Binding Path=CURVE_START_DEP}"/>
+                                            <DataGridTextColumn Header="曲线止深度" Binding="{Binding Path=CURVE_END_DEP}"/>
+                                            <DataGridTextColumn Header="曲线深度采样" Binding="{Binding Path=CURVE_RLEV}"/>
+                                            <DataGridTextColumn Header="T轴单位" Binding="{Binding Path=CURVE_T_UNIT}"/>
+                                            <DataGridTextColumn Header="数据类型" Binding="{Binding Path=CURVE_DATA_TYPE}"/>
+                                            <DataGridTextColumn Header="数据长度" Binding="{Binding Path=CURVE_DATA_LENGTH}"/>
+                                            <DataGridTextColumn Header="T轴采样点数" Binding="{Binding Path=CURVE_T_SAMPLE}"/>
+                                            <DataGridTextColumn Header="T轴最小值" Binding="{Binding Path=CURVE_T_MIN_VALUE}"/>
+                                            <DataGridTextColumn Header="T轴最大值" Binding="{Binding Path=CURVE_T_MAX_VALUE}"/>
+                                            <DataGridTextColumn Header="T轴采样间距" Binding="{Binding Path=CURVE_T_RELV}"/>
+                                            <DataGridTextColumn Header="数据总字节数" Binding="{Binding Path=DATA_SIZE}"/>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </DockPanel>
+                            </StackPanel>
+                        </TabItem>
+                        <TabItem Header="成果大块数据" Name="tabItem8">
+                            <DataGrid CanUserAddRows="False" CanUserDeleteRows="True" IsReadOnly="True" AutoGenerateColumns="False" MinHeight="100" Name="dataGrid8" Margin="2" PreviewKeyDown="dataGrid_PreviewKeyDown">
+                                <DataGrid.Columns>
+                                    <DataGridTemplateColumn Header="解释处理项目编码">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <ComboBox SelectedValuePath="PROCESSING_ITEM_ID" DisplayMemberPath="PROCESSING_ITEM_NAME" SelectedValue="{Binding Path=PROCESSING_ITEM_ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Loaded="ProcessingItemComboBox_Loaded" ItemsSource="{Binding}" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="文件名" Binding="{Binding Path=FILENAME}"/>
+                                    <DataGridTextColumn Header="文件大小" Binding="{Binding Path=LENGTH}"/>
+                                    <DataGridTextColumn Header="文件类型" Binding="{Binding Path=EXTENSION}"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </TabItem>
+                        <TabItem Header="原始大块数据" Name="tabItem9" >
+                            <DataGrid CanUserAddRows="False" CanUserDeleteRows="True" IsReadOnly="True" AutoGenerateColumns="False" MinHeight="100" Name="dataGrid9" Margin="2" PreviewKeyDown="dataGrid_PreviewKeyDown">
+                                <DataGrid.Columns>
+                                    
+                                    <DataGridTemplateColumn Header="解释处理项目编码">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <ComboBox SelectedValuePath="PROCESSING_ITEM_ID" DisplayMemberPath="PROCESSING_ITEM_NAME" SelectedValue="{Binding Path=PROCESSING_ITEM_ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Loaded="ProcessingItemComboBox_Loaded" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="文件名" Binding="{Binding Path=FILENAME}"/>
+                                    <DataGridTextColumn Header="文件大小" Binding="{Binding Path=LENGTH}"/>
+                                    <DataGridTextColumn Header="文件类型" Binding="{Binding Path=EXTENSION}"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </TabItem>
+                        <TabItem Header="成果文档" Name="tabItem10" >
+                            <DataGrid CanUserAddRows="False" CanUserDeleteRows="True" IsReadOnly="True" AutoGenerateColumns="False" MinHeight="100" Name="dataGrid10" Margin="2" PreviewKeyDown="dataGrid_PreviewKeyDown" DataContext="{Binding}">
+                                <DataGrid.Columns>
+                                    <DataGridTemplateColumn Header="解释处理项目编码">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <ComboBox SelectedValuePath="PROCESSING_ITEM_ID" DisplayMemberPath="PROCESSING_ITEM_NAME" SelectedValue="{Binding Path=PROCESSING_ITEM_ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Loaded="ProcessingItemComboBox_Loaded" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn Header="文档类型">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <ComboBox SelectedValuePath="DOCUMENT_TYPE" DisplayMemberPath="DOCUMENT_TYPE" SelectedValue="{Binding Path=DOCUMENT_TYPE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Loaded="DocumentTypeComboBox_Loaded" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="文件名" Binding="{Binding Path=FILENAME}"/>
+                                    <DataGridTemplateColumn Header="文件作者">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBox Text="{Binding Path=DOCUMENT_WRITER,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120"/>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn Header="审核人">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBox Text="{Binding Path=DOCUMENT_VERIFIER,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120"/>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn Header="审核日期">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <DatePicker SelectedDate="{Binding Path=DOCUMENT_COMPLETION_DATE,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}"  MinHeight="25" MinWidth="120" Focusable="False"/>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="文件大小" Binding="{Binding Path=LENGTH}"/>
+                                    <DataGridTextColumn Header="文件格式" Binding="{Binding Path=EXTENSION}"/>
+                                    <DataGridTemplateColumn Header="操作">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Button Tag="{Binding Path=EXTENSION}" Click="viewFile" Visibility="Collapsed" Loaded="viewFileButton_Loaded">查看</Button>
+                                                    <!--<Button Tag="{Binding Path=EXTENSION}" Click="Download_File" Visibility="Collapsed" Loaded="downloadButton_Loaded">下载</Button>-->
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </TabItem>
+                        <TabItem Header="成果图片" Name="tabItem11" >
+                            <DataGrid CanUserAddRows="False" CanUserDeleteRows="True" IsReadOnly="True" AutoGenerateColumns="False" MinHeight="100" Name="dataGrid11" Margin="2" PreviewKeyDown="dataGrid_PreviewKeyDown">
+                                <DataGrid.Columns>
+                                    <DataGridTemplateColumn Header="解释处理项目编码">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <ComboBox SelectedValuePath="PROCESSING_ITEM_ID" DisplayMemberPath="PROCESSING_ITEM_NAME" SelectedValue="{Binding Path=PROCESSING_ITEM_ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Loaded="ProcessingItemComboBox_Loaded" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="文件名" Binding="{Binding Path=FILENAME}"/>
+                                    <DataGridTextColumn Header="文件大小" Binding="{Binding Path=LENGTH}"/>
+                                    <DataGridTextColumn Header="文件类型" Binding="{Binding Path=EXTENSION}"/>
+                                    <DataGridTemplateColumn Header="操作">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Button Tag="{Binding Path=EXTENSION}" Click="viewFile" Visibility="Collapsed" Loaded="viewFileButton_Loaded">查看</Button>
+                                                    <!--<Button Click="Download_File" Visibility="Collapsed" Tag="{Binding Path=EXTENSION}" Loaded="downloadButton_Loaded">下载</Button>-->
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </TabItem>
+                        <TabItem Header="其它" Name="tabItem12" >
+                            <DataGrid CanUserAddRows="False" CanUserDeleteRows="True" IsReadOnly="True" AutoGenerateColumns="False" MinHeight="100" Name="dataGrid12" Margin="2" PreviewKeyDown="dataGrid_PreviewKeyDown">
+                                <DataGrid.Columns>
+                                    <DataGridTemplateColumn Header="解释处理项目编码">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <ComboBox SelectedValuePath="PROCESSING_ITEM_ID" DisplayMemberPath="PROCESSING_ITEM_NAME" SelectedValue="{Binding Path=PROCESSING_ITEM_ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" MinHeight="25" MinWidth="120" Loaded="ProcessingItemComboBox_Loaded" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="文件名" Binding="{Binding Path=FILENAME}"/>
+                                    <DataGridTextColumn Header="文件大小" Binding="{Binding Path=LENGTH}"/>
+                                    <DataGridTextColumn Header="文件类型" Binding="{Binding Path=EXTENSION}"/>
+                                    <DataGridTemplateColumn Header="操作">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Button Tag="{Binding Path=EXTENSION}" Click="viewFile" Visibility="Collapsed" Loaded="viewFileButton_Loaded">查看</Button>
+                                                    <!--<Button Click="Download_File" Visibility="Collapsed" Tag="{Binding Path=EXTENSION}" Loaded="downloadButton_Loaded" >下载</Button>-->
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </TabItem>
+                    </TabControl>
+                </DockPanel>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

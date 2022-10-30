@@ -1,0 +1,36 @@
+[记录时间：11:41:02.633]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-01438: value larger than specified precision allowed for this column
+ORA-06512: at line 1    在 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck)
+   在 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, String procedure, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, Boolean bCheck)
+   在 Oracle.DataAccess.Client.OracleCommand.ExecuteNonQuery()
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSqlTran(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 351
+   在 Logging_App.WebService.FileImport.ImportLoggingInterpretation(String job_plan_cd, String requistion_cd, DataTable data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileImport.cs:行号 167
+   在 Logging_App.WebService.DataService.Import_录井解释成果(String job_plan_cd, String requistion_cd, DataTable data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 6846
+
+消息：
+[记录时间：11:41:32.495]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-01438: value larger than specified precision allowed for this column
+ORA-06512: at line 1    在 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck)
+   在 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, String procedure, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, Boolean bCheck)
+   在 Oracle.DataAccess.Client.OracleCommand.ExecuteNonQuery()
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSqlTran(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 351
+   在 Logging_App.WebService.FileImport.ImportLoggingInterpretation(String job_plan_cd, String requistion_cd, DataTable data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileImport.cs:行号 167
+   在 Logging_App.WebService.DataService.Import_录井解释成果(String job_plan_cd, String requistion_cd, DataTable data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 6846
+
+消息：
+[记录时间：11:50:38.683]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-01438: value larger than specified precision allowed for this column
+ORA-06512: at line 1    在 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck)
+   在 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, String procedure, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, Boolean bCheck)
+   在 Oracle.DataAccess.Client.OracleCommand.ExecuteNonQuery()
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSqlTran(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 351
+   在 Logging_App.WebService.FileImport.ImportLoggingInterpretation(String job_plan_cd, String requistion_cd, DataTable data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\FileImport.cs:行号 167
+   在 Logging_App.WebService.DataService.Import_录井解释成果(String job_plan_cd, String requistion_cd, DataTable data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 6846
+
+消息：

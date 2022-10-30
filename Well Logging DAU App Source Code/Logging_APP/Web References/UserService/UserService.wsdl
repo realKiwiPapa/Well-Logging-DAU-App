@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetDeptList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDeptListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDeptListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDeptUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deptid" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDeptUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDeptUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="user_id" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="pw" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangePasswordResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserRole">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserRoleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserRoleResult" type="tns:ArrayOfUserRole" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUserRole">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UserRole" type="tns:UserRole" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="UserRole">
+        <s:restriction base="s:string">
+          <s:enumeration value="调度管理员" />
+          <s:enumeration value="解释管理员" />
+          <s:enumeration value="文件下载审核" />
+          <s:enumeration value="批量下载员" />
+          <s:enumeration value="刻盘管理员" />
+          <s:enumeration value="系统管理员" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ChangeUserRole">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="roles" type="tns:ArrayOfUserRole" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeUserRoleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangeUserRoleResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActiveUserRoles">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetActiveUserRolesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetActiveUserRolesResult" type="tns:ArrayOfUserRole" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOnlineUser">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetOnlineUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOnlineUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserChangePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwOld" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwNew" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserChangePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserChangePasswordResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SyncUser">
+        <s:complexType />
+      </s:element>
+      <s:element name="SyncUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SyncUserResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHSView">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetHSViewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHSViewResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHSGroup">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetHSGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHSGroupResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHSRelation">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetHSRelationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHSRelationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHSUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="hsItemID" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="hsItemType" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHSUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHSUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="role" type="tns:UserRole" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDeptListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDeptList" />
+  </wsdl:message>
+  <wsdl:message name="GetDeptListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDeptListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDeptUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDeptUser" />
+  </wsdl:message>
+  <wsdl:message name="GetDeptUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDeptUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserRoleSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserRole" />
+  </wsdl:message>
+  <wsdl:message name="GetUserRoleSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeUserRoleSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeUserRole" />
+  </wsdl:message>
+  <wsdl:message name="ChangeUserRoleSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeUserRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetActiveUserRolesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetActiveUserRoles" />
+  </wsdl:message>
+  <wsdl:message name="GetActiveUserRolesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetActiveUserRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOnlineUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOnlineUser" />
+  </wsdl:message>
+  <wsdl:message name="GetOnlineUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOnlineUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserChangePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:UserChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="UserChangePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:UserChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncUserSoapIn">
+    <wsdl:part name="parameters" element="tns:SyncUser" />
+  </wsdl:message>
+  <wsdl:message name="SyncUserSoapOut">
+    <wsdl:part name="parameters" element="tns:SyncUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHSViewSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHSView" />
+  </wsdl:message>
+  <wsdl:message name="GetHSViewSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHSViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHSGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHSGroup" />
+  </wsdl:message>
+  <wsdl:message name="GetHSGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHSGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHSRelationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHSRelation" />
+  </wsdl:message>
+  <wsdl:message name="GetHSRelationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHSRelationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHSUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHSUser" />
+  </wsdl:message>
+  <wsdl:message name="GetHSUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHSUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="GetUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="UserServiceSoap">
+    <wsdl:operation name="GetDeptList">
+      <wsdl:input message="tns:GetDeptListSoapIn" />
+      <wsdl:output message="tns:GetDeptListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptUser">
+      <wsdl:input message="tns:GetDeptUserSoapIn" />
+      <wsdl:output message="tns:GetDeptUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input message="tns:ChangePasswordSoapIn" />
+      <wsdl:output message="tns:ChangePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRole">
+      <wsdl:input message="tns:GetUserRoleSoapIn" />
+      <wsdl:output message="tns:GetUserRoleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserRole">
+      <wsdl:input message="tns:ChangeUserRoleSoapIn" />
+      <wsdl:output message="tns:ChangeUserRoleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveUserRoles">
+      <wsdl:input message="tns:GetActiveUserRolesSoapIn" />
+      <wsdl:output message="tns:GetActiveUserRolesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineUser">
+      <wsdl:input message="tns:GetOnlineUserSoapIn" />
+      <wsdl:output message="tns:GetOnlineUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserChangePassword">
+      <wsdl:input message="tns:UserChangePasswordSoapIn" />
+      <wsdl:output message="tns:UserChangePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncUser">
+      <wsdl:input message="tns:SyncUserSoapIn" />
+      <wsdl:output message="tns:SyncUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHSView">
+      <wsdl:input message="tns:GetHSViewSoapIn" />
+      <wsdl:output message="tns:GetHSViewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHSGroup">
+      <wsdl:input message="tns:GetHSGroupSoapIn" />
+      <wsdl:output message="tns:GetHSGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHSRelation">
+      <wsdl:input message="tns:GetHSRelationSoapIn" />
+      <wsdl:output message="tns:GetHSRelationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHSUser">
+      <wsdl:input message="tns:GetHSUserSoapIn" />
+      <wsdl:output message="tns:GetHSUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:input message="tns:GetUserSoapIn" />
+      <wsdl:output message="tns:GetUserSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UserServiceSoap" type="tns:UserServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDeptList">
+      <soap:operation soapAction="http://tempuri.org/GetDeptList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptUser">
+      <soap:operation soapAction="http://tempuri.org/GetDeptUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://tempuri.org/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRole">
+      <soap:operation soapAction="http://tempuri.org/GetUserRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserRole">
+      <soap:operation soapAction="http://tempuri.org/ChangeUserRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveUserRoles">
+      <soap:operation soapAction="http://tempuri.org/GetActiveUserRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineUser">
+      <soap:operation soapAction="http://tempuri.org/GetOnlineUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserChangePassword">
+      <soap:operation soapAction="http://tempuri.org/UserChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncUser">
+      <soap:operation soapAction="http://tempuri.org/SyncUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHSView">
+      <soap:operation soapAction="http://tempuri.org/GetHSView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHSGroup">
+      <soap:operation soapAction="http://tempuri.org/GetHSGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHSRelation">
+      <soap:operation soapAction="http://tempuri.org/GetHSRelation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHSUser">
+      <soap:operation soapAction="http://tempuri.org/GetHSUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap:operation soapAction="http://tempuri.org/GetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UserServiceSoap12" type="tns:UserServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDeptList">
+      <soap12:operation soapAction="http://tempuri.org/GetDeptList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptUser">
+      <soap12:operation soapAction="http://tempuri.org/GetDeptUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap12:operation soapAction="http://tempuri.org/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRole">
+      <soap12:operation soapAction="http://tempuri.org/GetUserRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserRole">
+      <soap12:operation soapAction="http://tempuri.org/ChangeUserRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveUserRoles">
+      <soap12:operation soapAction="http://tempuri.org/GetActiveUserRoles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineUser">
+      <soap12:operation soapAction="http://tempuri.org/GetOnlineUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserChangePassword">
+      <soap12:operation soapAction="http://tempuri.org/UserChangePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncUser">
+      <soap12:operation soapAction="http://tempuri.org/SyncUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHSView">
+      <soap12:operation soapAction="http://tempuri.org/GetHSView" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHSGroup">
+      <soap12:operation soapAction="http://tempuri.org/GetHSGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHSRelation">
+      <soap12:operation soapAction="http://tempuri.org/GetHSRelation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHSUser">
+      <soap12:operation soapAction="http://tempuri.org/GetHSUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap12:operation soapAction="http://tempuri.org/GetUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserService">
+    <wsdl:port name="UserServiceSoap" binding="tns:UserServiceSoap">
+      <soap:address location="http://localhost:9366/UserService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UserServiceSoap12" binding="tns:UserServiceSoap12">
+      <soap12:address location="http://localhost:9366/UserService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

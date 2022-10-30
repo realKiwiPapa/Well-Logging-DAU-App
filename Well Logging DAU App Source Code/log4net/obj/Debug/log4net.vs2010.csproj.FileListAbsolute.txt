@@ -1,0 +1,12 @@
+C:\Documents and Settings\Administrator\桌面\Logging_App\build\bin\net\2.0\debug\log4net.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\build\bin\net\2.0\debug\log4net.pdb
+C:\Documents and Settings\Administrator\桌面\Logging_App\build\bin\net\2.0\debug\log4net.xml
+C:\Documents and Settings\Administrator\桌面\Logging_App\log4net\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\Logging_App\log4net\obj\Debug\log4net.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\log4net\obj\Debug\log4net.pdb
+G:\测井源码\数据采集器\build\bin\net\2.0\debug\log4net.dll
+G:\测井源码\数据采集器\build\bin\net\2.0\debug\log4net.pdb
+G:\测井源码\数据采集器\build\bin\net\2.0\debug\log4net.xml
+G:\测井源码\数据采集器\log4net\obj\Debug\ResolveAssemblyReference.cache
+G:\测井源码\数据采集器\log4net\obj\Debug\log4net.dll
+G:\测井源码\数据采集器\log4net\obj\Debug\log4net.pdb

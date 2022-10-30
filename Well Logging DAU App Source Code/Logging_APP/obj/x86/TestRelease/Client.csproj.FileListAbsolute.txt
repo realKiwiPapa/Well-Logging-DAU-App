@@ -1,0 +1,613 @@
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\bin\Release\Logging_App.exe.config
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\bin\Release\Logging_App.exe
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\bin\Release\Logging_App.XmlSerializers.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\bin\Release\Logging_App.Model.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\bin\Release\Logging_App.Utility.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\bin\Release\NPOI.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\bin\Release\NPOI.OOXML.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\bin\Release\NPOI.OpenXml4Net.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\bin\Release\NPOI.OpenXmlFormats.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\bin\Release\WinShell.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\bin\Release\Xceed.Wpf.Toolkit.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\bin\Release\ManagedOpenSsl.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\A1_Check.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\A1_Submit.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\AppUpdatePage.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Controls\EventHelper.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\MainPage.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\OnlineUserPage.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\testPage.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Themes\DataGrid.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Themes\Style.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Themes\WindowTheme.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\ViewFileWindow.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\App.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\A1_Check.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\A1_Submit.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\AppUpdatePage.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\AutoUpdateWindow.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\COM_WELL_BASIC_Window.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Controls\DataPager.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Controls\EventHelper.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Controls\MyMessageBox.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\DataDownloadPage.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\editWindow.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Job_Info_Page.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\LoginPage.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\LOG_OPS_PLAN_Page.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Log_Task_Page.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\MainPage.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\MainWindow.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\MyHomePage.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\OnlineUserPage.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\SelectUserWindow.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\StaticWorkflowPage.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\testPage.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\UploadErrorMessageBox.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\UploadWindow.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\UserMangerPage.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\ViewFileWindow.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Well_Basic_Page.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\SelectUserWindow1.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Controls\WorkFlowControl.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Window_A1.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Window_测井曲线编码.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\FileListWindow.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\DataPush.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\WELL_JOB_NAME_Window.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\DataPushYTHPT.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\小队施工信息_Page.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\小队施工信息_放射源_Window.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\小队施工信息_设备列表_Window.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\归档入库_Page.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\数据同步.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\测井作业收集信息_Page.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\测井现场提交信息_Page.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\解释处理作业_Page.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\解释处理项目编码_Window.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\预测项目_Window.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\App.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Logging_App_Content.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\GeneratedInternalTypeHelper.g.cs
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Logging_App_MarkupCompile.cache
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Logging_App_MarkupCompile.lref
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\AutoUpdateWindow.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\COM_WELL_BASIC_Window.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Controls\DataPager.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Controls\MyMessageBox.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\DataDownloadPage.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\editWindow.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Job_Info_Page.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\LoginPage.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\LOG_OPS_PLAN_Page.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Log_Task_Page.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\MainWindow.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\MyHomePage.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\SelectUserWindow.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\StaticWorkflowPage.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Themes\ControlsTheme.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\UploadErrorMessageBox.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\UploadWindow.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\UserMangerPage.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Well_Basic_Page.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\SelectUserWindow1.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Controls\WorkFlowControl.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Window_A1.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Window_测井曲线编码.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\FileListWindow.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\DataPush.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\WELL_JOB_NAME_Window.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\DataPushYTHPT.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\小队施工信息_Page.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\小队施工信息_放射源_Window.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\小队施工信息_设备列表_Window.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\归档入库_Page.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\数据同步.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\测井作业收集信息_Page.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\测井现场提交信息_Page.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\解释处理作业_Page.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\解释处理项目编码_Window.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\预测项目_Window.baml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Logging_App.g.resources
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Logging_App.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\GenerateResource.read.1.tlog
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\GenerateResource.write.1.tlog
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Logging_App.exe
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP\obj\x86\TestRelease\Logging_App.XmlSerializers.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\bin\Release\Logging_App.exe.config
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\bin\Release\Logging_App.exe
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\bin\Release\Logging_App.XmlSerializers.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\bin\Release\Logging_App.Model.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\bin\Release\Logging_App.Utility.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\bin\Release\NPOI.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\bin\Release\NPOI.OOXML.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\bin\Release\NPOI.OpenXml4Net.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\bin\Release\NPOI.OpenXmlFormats.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\bin\Release\WinShell.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\bin\Release\Xceed.Wpf.Toolkit.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\bin\Release\ManagedOpenSsl.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\A1_Check.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\A1_Submit.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\AppUpdatePage.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Controls\EventHelper.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\MainPage.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\OnlineUserPage.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\testPage.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Themes\DataGrid.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Themes\Style.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Themes\WindowTheme.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\ViewFileWindow.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\App.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\A1_Check.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\A1_Submit.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\AppUpdatePage.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\AutoUpdateWindow.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\COM_WELL_BASIC_Window.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Controls\DataPager.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Controls\EventHelper.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Controls\MyMessageBox.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\DataDownloadPage.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\editWindow.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Job_Info_Page.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\LoginPage.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\LOG_OPS_PLAN_Page.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Log_Task_Page.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\MainPage.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\MainWindow.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\MyHomePage.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\OnlineUserPage.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\SelectUserWindow.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\StaticWorkflowPage.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\testPage.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\UploadErrorMessageBox.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\UploadWindow.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\UserMangerPage.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\ViewFileWindow.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Well_Basic_Page.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\SelectUserWindow1.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Controls\WorkFlowControl.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Window_A1.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Window_测井曲线编码.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\FileListWindow.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\DataPush.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\WELL_JOB_NAME_Window.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\DataPushYTHPT.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\小队施工信息_Page.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\小队施工信息_放射源_Window.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\小队施工信息_设备列表_Window.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\归档入库_Page.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\测井作业收集信息_Page.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\测井现场提交信息_Page.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\解释处理作业_Page.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\解释处理项目编码_Window.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\预测项目_Window.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\App.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Logging_App_Content.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\GeneratedInternalTypeHelper.g.cs
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Logging_App_MarkupCompile.cache
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Logging_App_MarkupCompile.lref
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\AutoUpdateWindow.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\COM_WELL_BASIC_Window.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Controls\DataPager.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Controls\MyMessageBox.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\DataDownloadPage.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\editWindow.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Job_Info_Page.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\LoginPage.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\LOG_OPS_PLAN_Page.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Log_Task_Page.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\MainWindow.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\MyHomePage.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\SelectUserWindow.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\StaticWorkflowPage.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Themes\ControlsTheme.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\UploadErrorMessageBox.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\UploadWindow.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\UserMangerPage.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Well_Basic_Page.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\SelectUserWindow1.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Controls\WorkFlowControl.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Window_A1.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Window_测井曲线编码.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\FileListWindow.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\DataPush.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\WELL_JOB_NAME_Window.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\DataPushYTHPT.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\小队施工信息_Page.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\小队施工信息_放射源_Window.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\小队施工信息_设备列表_Window.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\归档入库_Page.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\测井作业收集信息_Page.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\测井现场提交信息_Page.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\解释处理作业_Page.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\解释处理项目编码_Window.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\预测项目_Window.baml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Logging_App.g.resources
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Logging_App.Properties.Resources.resources
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\GenerateResource.read.1.tlog
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\GenerateResource.write.1.tlog
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Logging_App.exe
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP\obj\x86\TestRelease\Logging_App.XmlSerializers.dll
+G:\测井源码\数据采集器\Logging_APP\bin\Release\Logging_App.exe.config
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Logging_App.exe
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Logging_App.XmlSerializers.dll
+G:\测井源码\数据采集器\Logging_APP\bin\Release\Logging_App.exe
+G:\测井源码\数据采集器\Logging_APP\bin\Release\Logging_App.XmlSerializers.dll
+G:\测井源码\数据采集器\Logging_APP\bin\Release\ICSharpCode.SharpZipLib.dll
+G:\测井源码\数据采集器\Logging_APP\bin\Release\Logging_App.Model.dll
+G:\测井源码\数据采集器\Logging_APP\bin\Release\Logging_App.Utility.dll
+G:\测井源码\数据采集器\Logging_APP\bin\Release\NPOI.dll
+G:\测井源码\数据采集器\Logging_APP\bin\Release\NPOI.OOXML.dll
+G:\测井源码\数据采集器\Logging_APP\bin\Release\NPOI.OpenXml4Net.dll
+G:\测井源码\数据采集器\Logging_APP\bin\Release\NPOI.OpenXmlFormats.dll
+G:\测井源码\数据采集器\Logging_APP\bin\Release\WinShell.dll
+G:\测井源码\数据采集器\Logging_APP\bin\Release\Xceed.Wpf.Toolkit.dll
+G:\测井源码\数据采集器\Logging_APP\bin\Release\ManagedOpenSsl.dll
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\ResolveAssemblyReference.cache
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\A1_Check.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\A1_Submit.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\AppUpdatePage.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\EventHelper.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\MainPage.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\OnlineUserPage.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\testPage.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Themes\DataGrid.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Themes\Style.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Themes\WindowTheme.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\ViewFileWindow.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\App.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\A1_Check.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\A1_Submit.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\AppUpdatePage.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\AutoUpdateWindow.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\COM_WELL_BASIC_Window.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\DataPager.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\EventHelper.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\MyMessageBox.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\DataDownloadPage.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\editWindow.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Job_Info_Page.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\LoginPage.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\LOG_OPS_PLAN_Page.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Log_Task_Page.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\MainPage.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\MainWindow.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\MyHomePage.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\OnlineUserPage.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\SelectUserWindow.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\StaticWorkflowPage.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\testPage.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\UploadErrorMessageBox.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\UploadWindow.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\UserMangerPage.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\ViewFileWindow.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Well_Basic_Page.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\SelectUserWindow1.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\WorkFlowControl.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Window_A1.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Window_测井曲线编码.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\FileListWindow.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\DataPush.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\WELL_JOB_NAME_Window.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\DataPushYTHPT.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_Page.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_放射源_Window.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_设备列表_Window.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\归档入库_Page.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\测井作业收集信息_Page.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\测井现场提交信息_Page.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\解释处理作业_Page.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\解释处理项目编码_Window.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\预测项目_Window.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\App.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Logging_App_Content.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\GeneratedInternalTypeHelper.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Logging_App_MarkupCompile.cache
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Logging_App_MarkupCompile.lref
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\AutoUpdateWindow.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\COM_WELL_BASIC_Window.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\DataPager.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\MyMessageBox.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\DataDownloadPage.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\editWindow.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Job_Info_Page.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\LoginPage.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\LOG_OPS_PLAN_Page.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Log_Task_Page.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\MainWindow.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\MyHomePage.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\SelectUserWindow.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\StaticWorkflowPage.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Themes\ControlsTheme.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\UploadErrorMessageBox.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\UploadWindow.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\UserMangerPage.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Well_Basic_Page.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\SelectUserWindow1.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\WorkFlowControl.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Window_A1.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Window_测井曲线编码.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\FileListWindow.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\DataPush.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\WELL_JOB_NAME_Window.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\DataPushYTHPT.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_Page.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_放射源_Window.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_设备列表_Window.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\归档入库_Page.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\测井作业收集信息_Page.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\测井现场提交信息_Page.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\解释处理作业_Page.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\解释处理项目编码_Window.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\预测项目_Window.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Logging_App.g.resources
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Logging_App.Properties.Resources.resources
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\GenerateResource.read.1.tlog
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\GenerateResource.write.1.tlog
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\Client.csproj.ResolveComReference.cache
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\CurveDataWindow.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\CurveDataWindow.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\bin\Release\Logging_App.exe.config
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Client.csproj.ResolveComReference.cache
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Logging_App.exe
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Logging_App.XmlSerializers.dll
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\bin\Release\Logging_App.exe
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\bin\Release\Logging_App.XmlSerializers.dll
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\bin\Release\Logging_App.Model.dll
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\bin\Release\Logging_App.Utility.dll
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\bin\Release\NPOI.dll
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\bin\Release\NPOI.OOXML.dll
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\bin\Release\NPOI.OpenXml4Net.dll
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\bin\Release\NPOI.OpenXmlFormats.dll
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\bin\Release\WinShell.dll
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\bin\Release\Xceed.Wpf.Toolkit.dll
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\bin\Release\ManagedOpenSsl.dll
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\A1_Check.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\A1_Submit.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\AppUpdatePage.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\EventHelper.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\CurveDataWindow.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\MainPage.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\OnlineUserPage.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\testPage.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Themes\DataGrid.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Themes\Style.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Themes\WindowTheme.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\ViewFileWindow.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\App.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\A1_Check.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\A1_Submit.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\AppUpdatePage.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\AutoUpdateWindow.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\COM_WELL_BASIC_Window.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\DataPager.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\EventHelper.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\MyMessageBox.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\CurveDataWindow.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\DataDownloadPage.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\editWindow.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Job_Info_Page.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\LoginPage.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\LOG_OPS_PLAN_Page.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Log_Task_Page.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\MainPage.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\MainWindow.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\MyHomePage.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\OnlineUserPage.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\SelectUserWindow.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\StaticWorkflowPage.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\testPage.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\UploadErrorMessageBox.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\UploadWindow.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\UserMangerPage.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\ViewFileWindow.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Well_Basic_Page.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\SelectUserWindow1.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\WorkFlowControl.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Window_A1.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Window_测井曲线编码.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\FileListWindow.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\DataPush.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\WELL_JOB_NAME_Window.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\DataPushYTHPT.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_Page.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_放射源_Window.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_设备列表_Window.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\归档入库_Page.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\测井作业收集信息_Page.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\测井现场提交信息_Page.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\解释处理作业_Page.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\解释处理项目编码_Window.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\预测项目_Window.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\App.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Logging_App_Content.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\GeneratedInternalTypeHelper.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Logging_App_MarkupCompile.cache
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Logging_App_MarkupCompile.lref
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\AutoUpdateWindow.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\COM_WELL_BASIC_Window.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\DataPager.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\MyMessageBox.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\DataDownloadPage.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\editWindow.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Job_Info_Page.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\LoginPage.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\LOG_OPS_PLAN_Page.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Log_Task_Page.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\MainWindow.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\MyHomePage.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\SelectUserWindow.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\StaticWorkflowPage.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Themes\ControlsTheme.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\UploadErrorMessageBox.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\UploadWindow.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\UserMangerPage.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Well_Basic_Page.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\SelectUserWindow1.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\WorkFlowControl.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Window_A1.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Window_测井曲线编码.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\FileListWindow.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\DataPush.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\WELL_JOB_NAME_Window.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\DataPushYTHPT.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_Page.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_放射源_Window.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_设备列表_Window.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\归档入库_Page.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\测井作业收集信息_Page.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\测井现场提交信息_Page.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\解释处理作业_Page.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\解释处理项目编码_Window.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\预测项目_Window.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Logging_App.g.resources
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\Logging_App.Properties.Resources.resources
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\GenerateResource.read.1.tlog
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\GenerateResource.write.1.tlog
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\DataPushXY.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\DataPushXY.baml
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_车辆_Window.g.cs
+G:\测井源码\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_车辆_Window.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\FileRecoveyPage.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\FileRecoveyPage.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\DataPushXY.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_车辆_Window.g.cs
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\DataPushXY.baml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_车辆_Window.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\bin\Release\Logging_App.exe.config
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\bin\Release\Logging_App.exe
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\bin\Release\Logging_App.XmlSerializers.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\bin\Release\Logging_App.Model.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\bin\Release\Logging_App.Utility.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\bin\Release\NPOI.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\bin\Release\NPOI.OOXML.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\bin\Release\NPOI.OpenXml4Net.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\bin\Release\NPOI.OpenXmlFormats.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\bin\Release\WinShell.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\bin\Release\Xceed.Wpf.Toolkit.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\bin\Release\ManagedOpenSsl.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Client.csproj.ResolveComReference.cache
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\A1_Check.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\A1_Submit.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\AppUpdatePage.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\EventHelper.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\CurveDataWindow.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\FileRecoveyPage.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\MainPage.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\OnlineUserPage.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\testPage.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Themes\DataGrid.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Themes\Style.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Themes\WindowTheme.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\ViewFileWindow.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\App.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\A1_Check.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\A1_Submit.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\AppUpdatePage.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\AutoUpdateWindow.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\COM_WELL_BASIC_Window.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\DataPager.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\EventHelper.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\MyMessageBox.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\CurveDataWindow.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\DataDownloadPage.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\editWindow.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\FileRecoveyPage.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Job_Info_Page.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\LoginPage.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\LOG_OPS_PLAN_Page.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Log_Task_Page.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\MainPage.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\MainWindow.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\MyHomePage.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\OnlineUserPage.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\SelectUserWindow.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\StaticWorkflowPage.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\testPage.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\UploadErrorMessageBox.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\UploadWindow.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\UserMangerPage.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\ViewFileWindow.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Well_Basic_Page.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\SelectUserWindow1.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\WorkFlowControl.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Window_A1.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Window_测井曲线编码.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\FileListWindow.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\DataPush.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\WELL_JOB_NAME_Window.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\DataPushYTHPT.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\DataPushXY.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_车辆_Window.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_Page.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_放射源_Window.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_设备列表_Window.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\归档入库_Page.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\测井作业收集信息_Page.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\测井现场提交信息_Page.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\解释处理作业_Page.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\解释处理项目编码_Window.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\预测项目_Window.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\App.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Logging_App_Content.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\GeneratedInternalTypeHelper.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Logging_App_MarkupCompile.cache
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Logging_App_MarkupCompile.lref
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\AutoUpdateWindow.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\COM_WELL_BASIC_Window.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\DataPager.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\MyMessageBox.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\DataDownloadPage.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\editWindow.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Job_Info_Page.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\LoginPage.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\LOG_OPS_PLAN_Page.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Log_Task_Page.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\MainWindow.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\MyHomePage.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\SelectUserWindow.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\StaticWorkflowPage.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Themes\ControlsTheme.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\UploadErrorMessageBox.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\UploadWindow.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\UserMangerPage.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Well_Basic_Page.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\SelectUserWindow1.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Controls\WorkFlowControl.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Window_A1.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Window_测井曲线编码.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\FileListWindow.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\DataPush.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\WELL_JOB_NAME_Window.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\DataPushYTHPT.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\DataPushXY.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_车辆_Window.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_Page.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_放射源_Window.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\小队施工信息_设备列表_Window.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\归档入库_Page.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\测井作业收集信息_Page.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\测井现场提交信息_Page.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\解释处理作业_Page.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\解释处理项目编码_Window.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\预测项目_Window.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Logging_App.g.resources
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Logging_App.Properties.Resources.resources
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\GenerateResource.read.1.tlog
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\GenerateResource.write.1.tlog
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Logging_App.exe
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Logging_App.XmlSerializers.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\A1_Page.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\A1_Page.baml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\bin\Release\LogDataFormatChangeLib.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\bin\Release\LogDataFormatChangeLib.pdb
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Log_Dvd_Info_Page.g.cs
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP\obj\x86\TestRelease\Log_Dvd_Info_Page.baml

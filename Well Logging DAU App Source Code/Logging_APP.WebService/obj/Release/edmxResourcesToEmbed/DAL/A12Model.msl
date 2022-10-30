@@ -1,0 +1,1845 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="A12ModelStoreContainer" CdmEntityContainer="EntitiesA12">
+    <EntitySetMapping Name="LOG_OPS_JOB_ACTIVITY">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_JOB_ACTIVITY">
+        <MappingFragment StoreEntitySet="LOG_OPS_JOB_ACTIVITY">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="CUSTOMER_OPINION" ColumnName="CUSTOMER_OPINION" />
+          <ScalarProperty Name="FINISH_STATUS" ColumnName="FINISH_STATUS" />
+          <ScalarProperty Name="WAITWELL_TIME" ColumnName="WAITWELL_TIME" />
+          <ScalarProperty Name="WAIT_LOG_REASON" ColumnName="WAIT_LOG_REASON" />
+          <ScalarProperty Name="SINGLE_RUN_MILES" ColumnName="SINGLE_RUN_MILES" />
+          <ScalarProperty Name="RETURN_PLACE" ColumnName="RETURN_PLACE" />
+          <ScalarProperty Name="START_POSITION" ColumnName="START_POSITION" />
+          <ScalarProperty Name="MEASURE_WELL_DEPTH" ColumnName="MEASURE_WELL_DEPTH" />
+          <ScalarProperty Name="SUCCESS_PERCENT" ColumnName="SUCCESS_PERCENT" />
+          <ScalarProperty Name="ONCE_SUCCESS_RATE" ColumnName="ONCE_SUCCESS_RATE" />
+          <ScalarProperty Name="LOSE_TIMES" ColumnName="LOSE_TIMES" />
+          <ScalarProperty Name="WORK_TIMES" ColumnName="WORK_TIMES" />
+          <ScalarProperty Name="WORK_WELL_TIME" ColumnName="WORK_WELL_TIME" />
+          <ScalarProperty Name="WORK_SECTION" ColumnName="WORK_SECTION" />
+          <ScalarProperty Name="LEAVE_WELL_TIME" ColumnName="LEAVE_WELL_TIME" />
+          <ScalarProperty Name="HANDOVERTIME" ColumnName="HANDOVERTIME" />
+          <ScalarProperty Name="DEMOLISION_TIME" ColumnName="DEMOLISION_TIME" />
+          <ScalarProperty Name="SETUP_TIME" ColumnName="SETUP_TIME" />
+          <ScalarProperty Name="HANDINTIME" ColumnName="HANDINTIME" />
+          <ScalarProperty Name="ARRIVE_TIME" ColumnName="ARRIVE_TIME" />
+          <ScalarProperty Name="JOB_TYPE" ColumnName="JOB_TYPE" />
+          <ScalarProperty Name="EQUIP_ID" ColumnName="EQUIP_ID" />
+          <ScalarProperty Name="OPS_ART" ColumnName="OPS_ART" />
+          <ScalarProperty Name="REQUISITION_ID" ColumnName="REQUISITION_ID" />
+          <ScalarProperty Name="OPS_RECORD_ID" ColumnName="OPS_RECORD_ID" />
+          <ScalarProperty Name="DISCIPLINE_ID" ColumnName="DISCIPLINE_ID" />
+          <ScalarProperty Name="CASING_NO" ColumnName="CASING_NO" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_ACH_AMPLITUDE_DATA">
+      <EntityTypeMapping TypeName="A12Model.LOG_ACH_AMPLITUDE_DATA">
+        <MappingFragment StoreEntitySet="LOG_ACH_AMPLITUDE_DATA">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="QUALITY" ColumnName="QUALITY" />
+          <ScalarProperty Name="VALUE" ColumnName="VALUE" />
+          <ScalarProperty Name="BOTTOM_DEPTH" ColumnName="BOTTOM_DEPTH" />
+          <ScalarProperty Name="TOP_DEPTH" ColumnName="TOP_DEPTH" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="AMPLITUDE_ID" ColumnName="AMPLITUDE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_ACH_CARVE_OBJECT">
+      <EntityTypeMapping TypeName="A12Model.LOG_ACH_CARVE_OBJECT">
+        <MappingFragment StoreEntitySet="LOG_ACH_CARVE_OBJECT">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="UNITS_SYSTEM" ColumnName="UNITS_SYSTEM" />
+          <ScalarProperty Name="CURVE_DIM" ColumnName="CURVE_DIM" />
+          <ScalarProperty Name="CURVE_CODE_A12" ColumnName="CURVE_CODE_A12" />
+          <ScalarProperty Name="CURVE_NAME_A12" ColumnName="CURVE_NAME_A12" />
+          <ScalarProperty Name="CURVE_NAME_ORI" ColumnName="CURVE_NAME_ORI" />
+          <ScalarProperty Name="BOTTOM_DEPTH" ColumnName="BOTTOM_DEPTH" />
+          <ScalarProperty Name="TOP_DEPTH" ColumnName="TOP_DEPTH" />
+          <ScalarProperty Name="LOG_DATE" ColumnName="LOG_DATE" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="ACQUISITION_DATA_ID" ColumnName="ACQUISITION_DATA_ID" />
+          <ScalarProperty Name="INFO_ID" ColumnName="INFO_ID" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="CURVE_CODE_ORI" ColumnName="CURVE_CODE_ORI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_ACH_CASING_COUPLING">
+      <EntityTypeMapping TypeName="A12Model.LOG_ACH_CASING_COUPLING">
+        <MappingFragment StoreEntitySet="LOG_ACH_CASING_COUPLING">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="CASING_FOOT" ColumnName="CASING_FOOT" />
+          <ScalarProperty Name="CASING_LENGTH" ColumnName="CASING_LENGTH" />
+          <ScalarProperty Name="LOG_BOTTOM" ColumnName="LOG_BOTTOM" />
+          <ScalarProperty Name="LOG_TOP" ColumnName="LOG_TOP" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="CASING_NO" ColumnName="CASING_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_ACH_CASING_PROGRAM">
+      <EntityTypeMapping TypeName="A12Model.LOG_ACH_CASING_PROGRAM">
+        <MappingFragment StoreEntitySet="LOG_ACH_CASING_PROGRAM">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="BOTTOM_DEPTH" ColumnName="BOTTOM_DEPTH" />
+          <ScalarProperty Name="TOP_DEPTH" ColumnName="TOP_DEPTH" />
+          <ScalarProperty Name="MEASURE_PROCESS" ColumnName="MEASURE_PROCESS" />
+          <ScalarProperty Name="THIKNESS" ColumnName="THIKNESS" />
+          <ScalarProperty Name="INNER_DIA" ColumnName="INNER_DIA" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="CASING_PROGRAM_NO" ColumnName="CASING_PROGRAM_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_ACH_CEMENT_QUALITYDRAWING">
+      <EntityTypeMapping TypeName="A12Model.LOG_ACH_CEMENT_QUALITYDRAWING">
+        <MappingFragment StoreEntitySet="LOG_ACH_CEMENT_QUALITYDRAWING">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="VDL_DOCDESC" ColumnName="VDL_DOCDESC" />
+          <ScalarProperty Name="INT_ID" ColumnName="INT_ID" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="PROCESS_ID" ColumnName="PROCESS_ID" />
+          <ScalarProperty Name="DOC_ID" ColumnName="DOC_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_ACH_CEMENT_QUALITY_REPORT">
+      <EntityTypeMapping TypeName="A12Model.LOG_ACH_CEMENT_QUALITY_REPORT">
+        <MappingFragment StoreEntitySet="LOG_ACH_CEMENT_QUALITY_REPORT">
+          <ScalarProperty Name="MEA_CBL" ColumnName="MEA_CBL" />
+          <ScalarProperty Name="MIN_CBL" ColumnName="MIN_CBL" />
+          <ScalarProperty Name="MAX_CBL" ColumnName="MAX_CBL" />
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="CEMENTING_QUALITY" ColumnName="CEMENTING_QUALITY" />
+          <ScalarProperty Name="END_DEPTH" ColumnName="END_DEPTH" />
+          <ScalarProperty Name="START_DEPTH" ColumnName="START_DEPTH" />
+          <ScalarProperty Name="LAY_ID" ColumnName="LAY_ID" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="PROCESS_ID" ColumnName="PROCESS_ID" />
+          <ScalarProperty Name="VDL_ID" ColumnName="VDL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_ACH_DIAGRAM_AND_TABLE">
+      <EntityTypeMapping TypeName="A12Model.LOG_ACH_DIAGRAM_AND_TABLE">
+        <MappingFragment StoreEntitySet="LOG_ACH_DIAGRAM_AND_TABLE">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="WELL_DEVIATION_DATA_TABLE" ColumnName="WELL_DEVIATION_DATA_TABLE" />
+          <ScalarProperty Name="VERTICAL_VIEW" ColumnName="VERTICAL_VIEW" />
+          <ScalarProperty Name="SIDE_ELEVATION_DRAWING" ColumnName="SIDE_ELEVATION_DRAWING" />
+          <ScalarProperty Name="PROJECTION_DRAWING" ColumnName="PROJECTION_DRAWING" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="DIAGRAM_TABLE_ID" ColumnName="DIAGRAM_TABLE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_ACH_DRILL_CASED_PROGRAM">
+      <EntityTypeMapping TypeName="A12Model.LOG_ACH_DRILL_CASED_PROGRAM">
+        <MappingFragment StoreEntitySet="LOG_ACH_DRILL_CASED_PROGRAM">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="BOTTOM_DEPTH" ColumnName="BOTTOM_DEPTH" />
+          <ScalarProperty Name="TOP_DEPTH" ColumnName="TOP_DEPTH" />
+          <ScalarProperty Name="CASING_LENGTH" ColumnName="CASING_LENGTH" />
+          <ScalarProperty Name="INNER_DIA" ColumnName="INNER_DIA" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="CASING_CASING_PROGRAM_NO" ColumnName="CASING_CASING_PROGRAM_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_ACH_ENGINEERING_LOG_REPORT">
+      <EntityTypeMapping TypeName="A12Model.LOG_ACH_ENGINEERING_LOG_REPORT">
+        <MappingFragment StoreEntitySet="LOG_ACH_ENGINEERING_LOG_REPORT">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="ALL_POROSITY" ColumnName="ALL_POROSITY" />
+          <ScalarProperty Name="MUD_AMOUNT" ColumnName="MUD_AMOUNT" />
+          <ScalarProperty Name="RESISITANCE" ColumnName="RESISITANCE" />
+          <ScalarProperty Name="VALID_THICKNESS" ColumnName="VALID_THICKNESS" />
+          <ScalarProperty Name="END_DEPTH" ColumnName="END_DEPTH" />
+          <ScalarProperty Name="START_DEPTH" ColumnName="START_DEPTH" />
+          <ScalarProperty Name="ROCK_PROPERTY" ColumnName="ROCK_PROPERTY" />
+          <ScalarProperty Name="FORMATION" ColumnName="FORMATION" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="PROCESS_ID" ColumnName="PROCESS_ID" />
+          <ScalarProperty Name="LAY_ID" ColumnName="LAY_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_ACH_HOLE_DIAMETER_DATA">
+      <EntityTypeMapping TypeName="A12Model.LOG_ACH_HOLE_DIAMETER_DATA">
+        <MappingFragment StoreEntitySet="LOG_ACH_HOLE_DIAMETER_DATA">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="WELL_DIAMETER_MAX" ColumnName="WELL_DIAMETER_MAX" />
+          <ScalarProperty Name="WELL_VOLUME" ColumnName="WELL_VOLUME" />
+          <ScalarProperty Name="WELL_DIAMETER" ColumnName="WELL_DIAMETER" />
+          <ScalarProperty Name="DEPTH" ColumnName="DEPTH" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="DATA_ID" ColumnName="DATA_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_ACH_INTERPRET_CONCLUSION">
+      <EntityTypeMapping TypeName="A12Model.LOG_ACH_INTERPRET_CONCLUSION">
+        <MappingFragment StoreEntitySet="LOG_ACH_INTERPRET_CONCLUSION">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="MEMO" ColumnName="MEMO" />
+          <ScalarProperty Name="IS_RECIEVE" ColumnName="IS_RECIEVE" />
+          <ScalarProperty Name="IS_TEST_OIL" ColumnName="IS_TEST_OIL" />
+          <ScalarProperty Name="IS_LOST_OIL" ColumnName="IS_LOST_OIL" />
+          <ScalarProperty Name="IS_SUCCESS" ColumnName="IS_SUCCESS" />
+          <ScalarProperty Name="NEW_OIL_FLAG" ColumnName="NEW_OIL_FLAG" />
+          <ScalarProperty Name="INTERPRET_RESULT" ColumnName="INTERPRET_RESULT" />
+          <ScalarProperty Name="OIL_AIR_RATE" ColumnName="OIL_AIR_RATE" />
+          <ScalarProperty Name="PENETRATE_RATE" ColumnName="PENETRATE_RATE" />
+          <ScalarProperty Name="ALL_POROSITY" ColumnName="ALL_POROSITY" />
+          <ScalarProperty Name="POROSITY" ColumnName="POROSITY" />
+          <ScalarProperty Name="MUD_AMOUNT" ColumnName="MUD_AMOUNT" />
+          <ScalarProperty Name="NEUTRON" ColumnName="NEUTRON" />
+          <ScalarProperty Name="DENSITY" ColumnName="DENSITY" />
+          <ScalarProperty Name="SOUND_WAVE" ColumnName="SOUND_WAVE" />
+          <ScalarProperty Name="QRESISITANCE" ColumnName="QRESISITANCE" />
+          <ScalarProperty Name="RESISITANCE" ColumnName="RESISITANCE" />
+          <ScalarProperty Name="VALID_THICKNESS" ColumnName="VALID_THICKNESS" />
+          <ScalarProperty Name="END_DEPTH" ColumnName="END_DEPTH" />
+          <ScalarProperty Name="START_DEPTH" ColumnName="START_DEPTH" />
+          <ScalarProperty Name="ROCK_PROPERTY" ColumnName="ROCK_PROPERTY" />
+          <ScalarProperty Name="FORMATION" ColumnName="FORMATION" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="PROCESS_ID" ColumnName="PROCESS_ID" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="LAY_ID" ColumnName="LAY_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_ACH_INTERPRET_RESULT_FILES">
+      <EntityTypeMapping TypeName="A12Model.LOG_ACH_INTERPRET_RESULT_FILES">
+        <MappingFragment StoreEntitySet="LOG_ACH_INTERPRET_RESULT_FILES">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="LOG_NUMBERERPRET_RESULT" ColumnName="LOG_NUMBERERPRET_RESULT" />
+          <ScalarProperty Name="LOG_NUMBERERPRET_REPORT" ColumnName="LOG_NUMBERERPRET_REPORT" />
+          <ScalarProperty Name="XIAOSHEN_PRNUMBER" ColumnName="XIAOSHEN_PRNUMBER" />
+          <ScalarProperty Name="XIAOSHEN_DIPLAY" ColumnName="XIAOSHEN_DIPLAY" />
+          <ScalarProperty Name="TOUYING_PRNUMBER" ColumnName="TOUYING_PRNUMBER" />
+          <ScalarProperty Name="TOUYING_DIPLAY" ColumnName="TOUYING_DIPLAY" />
+          <ScalarProperty Name="BIAOZHUN_PRNUMBER" ColumnName="BIAOZHUN_PRNUMBER" />
+          <ScalarProperty Name="BIAOZHUN_DIPLAY" ColumnName="BIAOZHUN_DIPLAY" />
+          <ScalarProperty Name="ZONGHE_PRNUMBER" ColumnName="ZONGHE_PRNUMBER" />
+          <ScalarProperty Name="ZONGHE_DIPLAY" ColumnName="ZONGHE_DIPLAY" />
+          <ScalarProperty Name="INTERPRET_PLATFORM" ColumnName="INTERPRET_PLATFORM" />
+          <ScalarProperty Name="INTERPRET_CENTER" ColumnName="INTERPRET_CENTER" />
+          <ScalarProperty Name="LOGGING_COMPANY" ColumnName="LOGGING_COMPANY" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="INTERPRET_RESULT_ID" ColumnName="INTERPRET_RESULT_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_ACH_INTERPRET_VALID_RATE">
+      <EntityTypeMapping TypeName="A12Model.LOG_ACH_INTERPRET_VALID_RATE">
+        <MappingFragment StoreEntitySet="LOG_ACH_INTERPRET_VALID_RATE">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="IS_VALID" ColumnName="IS_VALID" />
+          <ScalarProperty Name="TEST_RESULT" ColumnName="TEST_RESULT" />
+          <ScalarProperty Name="INTERPRET_RESULT" ColumnName="INTERPRET_RESULT" />
+          <ScalarProperty Name="VALID_THICKNESS" ColumnName="VALID_THICKNESS" />
+          <ScalarProperty Name="END_DEPTH" ColumnName="END_DEPTH" />
+          <ScalarProperty Name="START_DEPTH" ColumnName="START_DEPTH" />
+          <ScalarProperty Name="FORMATION" ColumnName="FORMATION" />
+          <ScalarProperty Name="PROCESS_ID" ColumnName="PROCESS_ID" />
+          <ScalarProperty Name="LAY_ID" ColumnName="LAY_ID" />
+          <ScalarProperty Name="PROCEDURE_ID" ColumnName="PROCEDURE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_ACH_PRODUCTION_LOG_REPORT">
+      <EntityTypeMapping TypeName="A12Model.LOG_ACH_PRODUCTION_LOG_REPORT">
+        <MappingFragment StoreEntitySet="LOG_ACH_PRODUCTION_LOG_REPORT">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="INTERPRET_RESULT" ColumnName="INTERPRET_RESULT" />
+          <ScalarProperty Name="INJECTION_RATE" ColumnName="INJECTION_RATE" />
+          <ScalarProperty Name="WATERCUT" ColumnName="WATERCUT" />
+          <ScalarProperty Name="GAS_PRODUCTION" ColumnName="GAS_PRODUCTION" />
+          <ScalarProperty Name="FLUID_PRODUCTION" ColumnName="FLUID_PRODUCTION" />
+          <ScalarProperty Name="VALID_THICKNESS" ColumnName="VALID_THICKNESS" />
+          <ScalarProperty Name="END_DEPTH" ColumnName="END_DEPTH" />
+          <ScalarProperty Name="START_DEPTH" ColumnName="START_DEPTH" />
+          <ScalarProperty Name="ROCK_PROPERTY" ColumnName="ROCK_PROPERTY" />
+          <ScalarProperty Name="FORMATION" ColumnName="FORMATION" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="PROCESS_ID" ColumnName="PROCESS_ID" />
+          <ScalarProperty Name="LAY_ID" ColumnName="LAY_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_ACH_WELL_DEVIATION_DATA">
+      <EntityTypeMapping TypeName="A12Model.LOG_ACH_WELL_DEVIATION_DATA">
+        <MappingFragment StoreEntitySet="LOG_ACH_WELL_DEVIATION_DATA">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="DOG_LEG" ColumnName="DOG_LEG" />
+          <ScalarProperty Name="N_ELEMENT" ColumnName="N_ELEMENT" />
+          <ScalarProperty Name="E_ELEMENT" ColumnName="E_ELEMENT" />
+          <ScalarProperty Name="ALL_MOV" ColumnName="ALL_MOV" />
+          <ScalarProperty Name="AZIMUTH" ColumnName="AZIMUTH" />
+          <ScalarProperty Name="INCLNATION" ColumnName="INCLNATION" />
+          <ScalarProperty Name="UPRIGHTNESS_DEPTH" ColumnName="UPRIGHTNESS_DEPTH" />
+          <ScalarProperty Name="MUDLOGGING_DEPTH" ColumnName="MUDLOGGING_DEPTH" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="DEV_DATA_ID" ColumnName="DEV_DATA_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_ARC_DRAWINGDATAS_INTP">
+      <EntityTypeMapping TypeName="A12Model.LOG_ARC_DRAWINGDATAS_INTP">
+        <MappingFragment StoreEntitySet="LOG_ARC_DRAWINGDATAS_INTP">
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="PROCESS_ID" ColumnName="PROCESS_ID" />
+          <ScalarProperty Name="FILE_TYPE" ColumnName="FILE_TYPE" />
+          <ScalarProperty Name="FILE_INDEX" ColumnName="FILE_INDEX" />
+          <ScalarProperty Name="DATADRAWING_ID" ColumnName="DATADRAWING_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_BASE_CURVES_DESC">
+      <EntityTypeMapping TypeName="A12Model.LOG_BASE_CURVES_DESC">
+        <MappingFragment StoreEntitySet="LOG_BASE_CURVES_DESC">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="REAL_FLAG" ColumnName="REAL_FLAG" />
+          <ScalarProperty Name="CURVE_RLEV" ColumnName="CURVE_RLEV" />
+          <ScalarProperty Name="DIMENSIONS" ColumnName="DIMENSIONS" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="CURVE_NAME" ColumnName="CURVE_NAME" />
+          <ScalarProperty Name="INSTRUMENT_NAME" ColumnName="INSTRUMENT_NAME" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="INSTRUMENT_ID" ColumnName="INSTRUMENT_ID" />
+          <ScalarProperty Name="CURVE_ID" ColumnName="CURVE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_BASE_DATAITEM_STANDARD">
+      <EntityTypeMapping TypeName="A12Model.LOG_BASE_DATAITEM_STANDARD">
+        <MappingFragment StoreEntitySet="LOG_BASE_DATAITEM_STANDARD">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="A1_CODE" ColumnName="A1_CODE" />
+          <ScalarProperty Name="A7_CODE" ColumnName="A7_CODE" />
+          <ScalarProperty Name="A12_CODE" ColumnName="A12_CODE" />
+          <ScalarProperty Name="GENERAL_CODE" ColumnName="GENERAL_CODE" />
+          <ScalarProperty Name="ENGLISH_DESC" ColumnName="ENGLISH_DESC" />
+          <ScalarProperty Name="CHINESE_DESC" ColumnName="CHINESE_DESC" />
+          <ScalarProperty Name="UMI" ColumnName="UMI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_BASE_DEVICE">
+      <EntityTypeMapping TypeName="A12Model.LOG_BASE_DEVICE">
+        <MappingFragment StoreEntitySet="LOG_BASE_DEVICE">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="ORG_EQUIP_ID" ColumnName="ORG_EQUIP_ID" />
+          <ScalarProperty Name="USE_ORG_ID" ColumnName="USE_ORG_ID" />
+          <ScalarProperty Name="EQUIP_NETTYPE" ColumnName="EQUIP_NETTYPE" />
+          <ScalarProperty Name="EQUIP_TYPE" ColumnName="EQUIP_TYPE" />
+          <ScalarProperty Name="EQUIP_CODE" ColumnName="EQUIP_CODE" />
+          <ScalarProperty Name="EQUIP_NAME" ColumnName="EQUIP_NAME" />
+          <ScalarProperty Name="EQUIP_2D" ColumnName="EQUIP_2D" />
+          <ScalarProperty Name="COLLECT_PROCESS_ID" ColumnName="COLLECT_PROCESS_ID" />
+          <ScalarProperty Name="LOG_EQUIP_ID" ColumnName="LOG_EQUIP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_BASE_INSTRUMENT">
+      <EntityTypeMapping TypeName="A12Model.LOG_BASE_INSTRUMENT">
+        <MappingFragment StoreEntitySet="LOG_BASE_INSTRUMENT">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="USE_ORG_ID" ColumnName="USE_ORG_ID" />
+          <ScalarProperty Name="RATED_TEMPERATURE" ColumnName="RATED_TEMPERATURE" />
+          <ScalarProperty Name="RATED_PRESSURE" ColumnName="RATED_PRESSURE" />
+          <ScalarProperty Name="INSTRUMENT_SHAPE" ColumnName="INSTRUMENT_SHAPE" />
+          <ScalarProperty Name="CURVES_DESC" ColumnName="CURVES_DESC" />
+          <ScalarProperty Name="CURVE_NUM" ColumnName="CURVE_NUM" />
+          <ScalarProperty Name="INSTRUMENT_SPEED" ColumnName="INSTRUMENT_SPEED" />
+          <ScalarProperty Name="MESURE_POINT" ColumnName="MESURE_POINT" />
+          <ScalarProperty Name="INSTRUMENT_LENGTH" ColumnName="INSTRUMENT_LENGTH" />
+          <ScalarProperty Name="INSTRUMENT_WEIGHT" ColumnName="INSTRUMENT_WEIGHT" />
+          <ScalarProperty Name="MAX_OUT_DIAMETER" ColumnName="MAX_OUT_DIAMETER" />
+          <ScalarProperty Name="INSTRUMENT_MANUFACTURING_CODE" ColumnName="INSTRUMENT_MANUFACTURING_CODE" />
+          <ScalarProperty Name="INSTRUMENT_SERIAL_NUMBER" ColumnName="INSTRUMENT_SERIAL_NUMBER" />
+          <ScalarProperty Name="INSTRUMENT_MANUFATURER" ColumnName="INSTRUMENT_MANUFATURER" />
+          <ScalarProperty Name="INSTRUMENT_MODEL" ColumnName="INSTRUMENT_MODEL" />
+          <ScalarProperty Name="INSTRUMENT_NAME" ColumnName="INSTRUMENT_NAME" />
+          <ScalarProperty Name="INSTRUMENT_2D" ColumnName="INSTRUMENT_2D" />
+          <ScalarProperty Name="INSTRUMENT_ID" ColumnName="INSTRUMENT_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_BASE_INS_MAINTAINRECORD">
+      <EntityTypeMapping TypeName="A12Model.LOG_BASE_INS_MAINTAINRECORD">
+        <MappingFragment StoreEntitySet="LOG_BASE_INS_MAINTAINRECORD">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="MANUMBERAINER_ID" ColumnName="MANUMBERAINER_ID" />
+          <ScalarProperty Name="INSTRUMENT_DEMO" ColumnName="INSTRUMENT_DEMO" />
+          <ScalarProperty Name="INSTRUMENT_STATUS" ColumnName="INSTRUMENT_STATUS" />
+          <ScalarProperty Name="INSTRUMENT_NAME" ColumnName="INSTRUMENT_NAME" />
+          <ScalarProperty Name="EQUIP_2D" ColumnName="EQUIP_2D" />
+          <ScalarProperty Name="INSTRUMENT_ID" ColumnName="INSTRUMENT_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_BASE_RADIOFRECORD">
+      <EntityTypeMapping TypeName="A12Model.LOG_BASE_RADIOFRECORD">
+        <MappingFragment StoreEntitySet="LOG_BASE_RADIOFRECORD">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="USE_ORG_ID" ColumnName="USE_ORG_ID" />
+          <ScalarProperty Name="INITIALIZE_CD" ColumnName="INITIALIZE_CD" />
+          <ScalarProperty Name="MANUFACTURE" ColumnName="MANUFACTURE" />
+          <ScalarProperty Name="WORKING_DATE" ColumnName="WORKING_DATE" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+          <ScalarProperty Name="INTENSION" ColumnName="INTENSION" />
+          <ScalarProperty Name="RADIATION_TYPE" ColumnName="RADIATION_TYPE" />
+          <ScalarProperty Name="RADIATION_NAME" ColumnName="RADIATION_NAME" />
+          <ScalarProperty Name="RADIATION_NO" ColumnName="RADIATION_NO" />
+          <ScalarProperty Name="RADIATION_ID" ColumnName="RADIATION_ID" />
+          <ScalarProperty Name="CONTRY_CODE" ColumnName="CONTRY_CODE" />
+          <ScalarProperty Name="EQUIP_2D" ColumnName="EQUIP_2D" />
+          <ScalarProperty Name="EQUIP_ID" ColumnName="EQUIP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_DESIGN_WORKPLAN">
+      <EntityTypeMapping TypeName="A12Model.LOG_DESIGN_WORKPLAN">
+        <MappingFragment StoreEntitySet="LOG_DESIGN_WORKPLAN">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="BOTTOM" ColumnName="BOTTOM" />
+          <ScalarProperty Name="TOP" ColumnName="TOP" />
+          <ScalarProperty Name="PROJECT_NAME" ColumnName="PROJECT_NAME" />
+          <ScalarProperty Name="PROJECT_ID" ColumnName="PROJECT_ID" />
+          <ScalarProperty Name="DESIGN_DOC" ColumnName="DESIGN_DOC" />
+          <ScalarProperty Name="AUDITOR" ColumnName="AUDITOR" />
+          <ScalarProperty Name="DESIGN_PERSON" ColumnName="DESIGN_PERSON" />
+          <ScalarProperty Name="QULIITY_DESC" ColumnName="QULIITY_DESC" />
+          <ScalarProperty Name="SEREIES" ColumnName="SEREIES" />
+          <ScalarProperty Name="JOB_TYPE" ColumnName="JOB_TYPE" />
+          <ScalarProperty Name="WELL_NAME" ColumnName="WELL_NAME" />
+          <ScalarProperty Name="DESIGN_ID" ColumnName="DESIGN_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_DEVICE_INS_RETURN">
+      <EntityTypeMapping TypeName="A12Model.LOG_DEVICE_INS_RETURN">
+        <MappingFragment StoreEntitySet="LOG_DEVICE_INS_RETURN">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="AUDIT_DATE" ColumnName="AUDIT_DATE" />
+          <ScalarProperty Name="AUDITOR" ColumnName="AUDITOR" />
+          <ScalarProperty Name="AUDIT_NOTE" ColumnName="AUDIT_NOTE" />
+          <ScalarProperty Name="MODIFI_DATE" ColumnName="MODIFI_DATE" />
+          <ScalarProperty Name="RECORD_STATUS" ColumnName="RECORD_STATUS" />
+          <ScalarProperty Name="ORG_SUBJECTION_ID" ColumnName="ORG_SUBJECTION_ID" />
+          <ScalarProperty Name="ORG_ID" ColumnName="ORG_ID" />
+          <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+          <ScalarProperty Name="VER" ColumnName="VER" />
+          <ScalarProperty Name="CREATE_SUB_ORG_ID" ColumnName="CREATE_SUB_ORG_ID" />
+          <ScalarProperty Name="CREATE_ORG_ID" ColumnName="CREATE_ORG_ID" />
+          <ScalarProperty Name="CREATOR" ColumnName="CREATOR" />
+          <ScalarProperty Name="BSFLAG" ColumnName="BSFLAG" />
+          <ScalarProperty Name="MODIFY_DATE" ColumnName="MODIFY_DATE" />
+          <ScalarProperty Name="CREATE_TIME" ColumnName="CREATE_TIME" />
+          <ScalarProperty Name="VALIDATOR" ColumnName="VALIDATOR" />
+          <ScalarProperty Name="KEEP_SUB_ORG_ID" ColumnName="KEEP_SUB_ORG_ID" />
+          <ScalarProperty Name="KEEP_ORG_ID" ColumnName="KEEP_ORG_ID" />
+          <ScalarProperty Name="KEEPER" ColumnName="KEEPER" />
+          <ScalarProperty Name="RETURN_SUB_ORG_ID" ColumnName="RETURN_SUB_ORG_ID" />
+          <ScalarProperty Name="RETURN_ORG_ID" ColumnName="RETURN_ORG_ID" />
+          <ScalarProperty Name="RETURNER" ColumnName="RETURNER" />
+          <ScalarProperty Name="RETURN_TIME" ColumnName="RETURN_TIME" />
+          <ScalarProperty Name="RETURN_ID" ColumnName="RETURN_ID" />
+          <ScalarProperty Name="VALIDAT_ORG_ID" ColumnName="VALIDAT_ORG_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_ACCEPTANCE_QUALITY">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_ACCEPTANCE_QUALITY">
+        <MappingFragment StoreEntitySet="LOG_OPS_ACCEPTANCE_QUALITY">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="ECHO_MEA_OK" ColumnName="ECHO_MEA_OK" />
+          <ScalarProperty Name="AFTER_MEA_OK" ColumnName="AFTER_MEA_OK" />
+          <ScalarProperty Name="BEFORE_MEA_OK" ColumnName="BEFORE_MEA_OK" />
+          <ScalarProperty Name="REPEAT_CURVE__VALIDITY" ColumnName="REPEAT_CURVE__VALIDITY" />
+          <ScalarProperty Name="LOG_HEAD_VALIDITY" ColumnName="LOG_HEAD_VALIDITY" />
+          <ScalarProperty Name="LOG_DATA_VALIDITY" ColumnName="LOG_DATA_VALIDITY" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="COLLECT_PROCESS_ID" ColumnName="COLLECT_PROCESS_ID" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="ACCEPTANCE_QUALITY_ID" ColumnName="ACCEPTANCE_QUALITY_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_ACQUISITION_DATA">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_ACQUISITION_DATA">
+        <MappingFragment StoreEntitySet="LOG_OPS_ACQUISITION_DATA">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="ISREGULAR" ColumnName="ISREGULAR" />
+          <ScalarProperty Name="PRESATATION_ID" ColumnName="PRESATATION_ID" />
+          <ScalarProperty Name="LOG_FILE_TYPE" ColumnName="LOG_FILE_TYPE" />
+          <ScalarProperty Name="LOG_FILE_NAME" ColumnName="LOG_FILE_NAME" />
+          <ScalarProperty Name="COLLECT_PROCESS_ID" ColumnName="COLLECT_PROCESS_ID" />
+          <ScalarProperty Name="INFO_ID" ColumnName="INFO_ID" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="ACQUISITION_DATA_ID" ColumnName="ACQUISITION_DATA_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_BASEINFO_RECORD">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_BASEINFO_RECORD">
+        <MappingFragment StoreEntitySet="LOG_OPS_BASEINFO_RECORD">
+          <ScalarProperty Name="TASK_ID" ColumnName="TASK_ID" />
+          <ScalarProperty Name="JOB_LAYER" ColumnName="JOB_LAYER" />
+          <ScalarProperty Name="P_XN_DRILL_DEPTH" ColumnName="P_XN_DRILL_DEPTH" />
+          <ScalarProperty Name="DRILL_STATUSE" ColumnName="DRILL_STATUSE" />
+          <ScalarProperty Name="WORK_STATUS" ColumnName="WORK_STATUS" />
+          <ScalarProperty Name="UPLOAD_FLAG" ColumnName="UPLOAD_FLAG" />
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="LOG_TEAM" ColumnName="LOG_TEAM" />
+          <ScalarProperty Name="PROJECT_DEPARTMENT" ColumnName="PROJECT_DEPARTMENT" />
+          <ScalarProperty Name="JOB_TYPE" ColumnName="JOB_TYPE" />
+          <ScalarProperty Name="PROJECT_ITEM" ColumnName="PROJECT_ITEM" />
+          <ScalarProperty Name="JOB_BLOCK" ColumnName="JOB_BLOCK" />
+          <ScalarProperty Name="WAIT_WELL_TIME" ColumnName="WAIT_WELL_TIME" />
+          <ScalarProperty Name="LOG_FINISH_TIME" ColumnName="LOG_FINISH_TIME" />
+          <ScalarProperty Name="ARRIVE_TIME" ColumnName="ARRIVE_TIME" />
+          <ScalarProperty Name="DATA_UPLOAD_TIME" ColumnName="DATA_UPLOAD_TIME" />
+          <ScalarProperty Name="LOG_BEGIN_TIME" ColumnName="LOG_BEGIN_TIME" />
+          <ScalarProperty Name="DEPART_TIME" ColumnName="DEPART_TIME" />
+          <ScalarProperty Name="TASK_STATUS" ColumnName="TASK_STATUS" />
+          <ScalarProperty Name="TASK_DURATION" ColumnName="TASK_DURATION" />
+          <ScalarProperty Name="TEAM_DEVICE_ID" ColumnName="TEAM_DEVICE_ID" />
+          <ScalarProperty Name="LOG_TEAM_MASTER" ColumnName="LOG_TEAM_MASTER" />
+          <ScalarProperty Name="REQUEST_TIME_ARR" ColumnName="REQUEST_TIME_ARR" />
+          <ScalarProperty Name="MEASURE_BOTTOM" ColumnName="MEASURE_BOTTOM" />
+          <ScalarProperty Name="MEASURE_TOP" ColumnName="MEASURE_TOP" />
+          <ScalarProperty Name="DEEP_DESIGN" ColumnName="DEEP_DESIGN" />
+          <ScalarProperty Name="COOR_DY" ColumnName="COOR_DY" />
+          <ScalarProperty Name="COORD_X" ColumnName="COORD_X" />
+          <ScalarProperty Name="WELL_TYPE" ColumnName="WELL_TYPE" />
+          <ScalarProperty Name="WELL_SORT" ColumnName="WELL_SORT" />
+          <ScalarProperty Name="PROJECT_GROUP" ColumnName="PROJECT_GROUP" />
+          <ScalarProperty Name="WELL_NAME" ColumnName="WELL_NAME" />
+          <ScalarProperty Name="REQUISITION_STATE" ColumnName="REQUISITION_STATE" />
+          <ScalarProperty Name="ACCESSORY" ColumnName="ACCESSORY" />
+          <ScalarProperty Name="ACTUAL_MEA_PRESS" ColumnName="ACTUAL_MEA_PRESS" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="OPS_ART" ColumnName="OPS_ART" />
+          <ScalarProperty Name="BEGIN_DATE" ColumnName="BEGIN_DATE" />
+          <ScalarProperty Name="WELLHEAD_PRESS" ColumnName="WELLHEAD_PRESS" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="CASING_STRUC" ColumnName="CASING_STRUC" />
+          <ScalarProperty Name="WELLBOTTOM_TMP" ColumnName="WELLBOTTOM_TMP" />
+          <ScalarProperty Name="SUL_HYD" ColumnName="SUL_HYD" />
+          <ScalarProperty Name="WELLBOTTOM_PRESS" ColumnName="WELLBOTTOM_PRESS" />
+          <ScalarProperty Name="HEART_HEIGHT" ColumnName="HEART_HEIGHT" />
+          <ScalarProperty Name="IS_GAS_WELL" ColumnName="IS_GAS_WELL" />
+          <ScalarProperty Name="INCLNATION_DEPTH" ColumnName="INCLNATION_DEPTH" />
+          <ScalarProperty Name="INCLNATION" ColumnName="INCLNATION" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_CABLE_REC">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_CABLE_REC">
+        <MappingFragment StoreEntitySet="LOG_OPS_CABLE_REC">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="RUNNINGSTATUS" ColumnName="RUNNINGSTATUS" />
+          <ScalarProperty Name="DOWNHOLE_NUM" ColumnName="DOWNHOLE_NUM" />
+          <ScalarProperty Name="RUNNING_TIME" ColumnName="RUNNING_TIME" />
+          <ScalarProperty Name="MILEAGE" ColumnName="MILEAGE" />
+          <ScalarProperty Name="CABLE_ID" ColumnName="CABLE_ID" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="CABLE_USING_ID" ColumnName="CABLE_USING_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_CARVEQUALITY_SUMMARY">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_CARVEQUALITY_SUMMARY">
+        <MappingFragment StoreEntitySet="LOG_OPS_CARVEQUALITY_SUMMARY">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="PROCESS_ID" ColumnName="PROCESS_ID" />
+          <ScalarProperty Name="CURVE_QUALITY_ID" ColumnName="CURVE_QUALITY_ID" />
+          <ScalarProperty Name="COLLECT_PROCESS_ID" ColumnName="COLLECT_PROCESS_ID" />
+          <ScalarProperty Name="NOTHIGHCLASREASON" ColumnName="NOTHIGHCLASREASON" />
+          <ScalarProperty Name="ACCEPT_NAMES" ColumnName="ACCEPT_NAMES" />
+          <ScalarProperty Name="ACCEPTABLE_NUM" ColumnName="ACCEPTABLE_NUM" />
+          <ScalarProperty Name="HIGHCLASS_NUM" ColumnName="HIGHCLASS_NUM" />
+          <ScalarProperty Name="ACCEPTCOMPANY" ColumnName="ACCEPTCOMPANY" />
+          <ScalarProperty Name="RECEIVE_DATE" ColumnName="RECEIVE_DATE" />
+          <ScalarProperty Name="CURVES_QUALITYSUMMARY_ID" ColumnName="CURVES_QUALITYSUMMARY_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_CARVE_QUALITY">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_CARVE_QUALITY">
+        <MappingFragment StoreEntitySet="LOG_OPS_CARVE_QUALITY">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="NO_RATING_REASON" ColumnName="NO_RATING_REASON" />
+          <ScalarProperty Name="UN_ELIGIBILITY_REASON" ColumnName="UN_ELIGIBILITY_REASON" />
+          <ScalarProperty Name="CARVE_QUALITY_TWO" ColumnName="CARVE_QUALITY_TWO" />
+          <ScalarProperty Name="CARVE_QUALITY_ONE" ColumnName="CARVE_QUALITY_ONE" />
+          <ScalarProperty Name="QUALITY_CHECK_TYPE" ColumnName="QUALITY_CHECK_TYPE" />
+          <ScalarProperty Name="QUALITY_PERSON" ColumnName="QUALITY_PERSON" />
+          <ScalarProperty Name="BOTTOM_DEPTH" ColumnName="BOTTOM_DEPTH" />
+          <ScalarProperty Name="TOP_DEPTH" ColumnName="TOP_DEPTH" />
+          <ScalarProperty Name="CURVE_NAME" ColumnName="CURVE_NAME" />
+          <ScalarProperty Name="CURVE_NO" ColumnName="CURVE_NO" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="PROCESS_ID" ColumnName="PROCESS_ID" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="COLLECT_PROCESS_ID" ColumnName="COLLECT_PROCESS_ID" />
+          <ScalarProperty Name="CURVE_QUALITY_ID" ColumnName="CURVE_QUALITY_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_COLLECT_PROCESS">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_COLLECT_PROCESS">
+        <MappingFragment StoreEntitySet="LOG_OPS_COLLECT_PROCESS">
+          <ScalarProperty Name="CABLE_CURRENT" ColumnName="CABLE_CURRENT" />
+          <ScalarProperty Name="LARGEST_CABLEHEAD_TENSION" ColumnName="LARGEST_CABLEHEAD_TENSION" />
+          <ScalarProperty Name="LARGEST_CABLE_TENSION" ColumnName="LARGEST_CABLE_TENSION" />
+          <ScalarProperty Name="CABLEHEAD_VOLTAGE" ColumnName="CABLEHEAD_VOLTAGE" />
+          <ScalarProperty Name="POWERSUPPLY_VOLTAGE" ColumnName="POWERSUPPLY_VOLTAGE" />
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="IS_SUPPLEMENT" ColumnName="IS_SUPPLEMENT" />
+          <ScalarProperty Name="FAULT_DES" ColumnName="FAULT_DES" />
+          <ScalarProperty Name="FAULT_TYPE" ColumnName="FAULT_TYPE" />
+          <ScalarProperty Name="IS_SUCCESS" ColumnName="IS_SUCCESS" />
+          <ScalarProperty Name="WELL_SECTION" ColumnName="WELL_SECTION" />
+          <ScalarProperty Name="INS_LENGTH" ColumnName="INS_LENGTH" />
+          <ScalarProperty Name="BOTTOM" ColumnName="BOTTOM" />
+          <ScalarProperty Name="TOP" ColumnName="TOP" />
+          <ScalarProperty Name="END_TIME" ColumnName="END_TIME" />
+          <ScalarProperty Name="START_TIME" ColumnName="START_TIME" />
+          <ScalarProperty Name="DOWN_WELL_SEQUENCE" ColumnName="DOWN_WELL_SEQUENCE" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="COLLECT_PROCESS_ID" ColumnName="COLLECT_PROCESS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_CORINGDETAIL">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_CORINGDETAIL">
+        <MappingFragment StoreEntitySet="LOG_OPS_CORINGDETAIL">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="CORING_NUMBER" ColumnName="CORING_NUMBER" />
+          <ScalarProperty Name="CORING_DEPTH" ColumnName="CORING_DEPTH" />
+          <ScalarProperty Name="CORING_LAYER" ColumnName="CORING_LAYER" />
+          <ScalarProperty Name="LOG_COLLECT_PROCESS_ID" ColumnName="LOG_COLLECT_PROCESS_ID" />
+          <ScalarProperty Name="COLLECT_PROCESS_ID" ColumnName="COLLECT_PROCESS_ID" />
+          <ScalarProperty Name="BAS_REMARK" ColumnName="BAS_REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="CORING_DETAILID" ColumnName="CORING_DETAILID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_CORINGINFOSUMMARY">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_CORINGINFOSUMMARY">
+        <MappingFragment StoreEntitySet="LOG_OPS_CORINGINFOSUMMARY">
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="GET_PERCENT" ColumnName="GET_PERCENT" />
+          <ScalarProperty Name="ELIGIBILITY_PERCENT" ColumnName="ELIGIBILITY_PERCENT" />
+          <ScalarProperty Name="SEND_PERCENT" ColumnName="SEND_PERCENT" />
+          <ScalarProperty Name="ELIGIBILITY_NUM" ColumnName="ELIGIBILITY_NUM" />
+          <ScalarProperty Name="GET_NUM" ColumnName="GET_NUM" />
+          <ScalarProperty Name="SUC_INFIX_NUM" ColumnName="SUC_INFIX_NUM" />
+          <ScalarProperty Name="PLAN_CORE_NUM" ColumnName="PLAN_CORE_NUM" />
+          <ScalarProperty Name="ACT_INFIX_NUM" ColumnName="ACT_INFIX_NUM" />
+          <ScalarProperty Name="SEND_NUM" ColumnName="SEND_NUM" />
+          <ScalarProperty Name="LOAD_NUM" ColumnName="LOAD_NUM" />
+          <ScalarProperty Name="DOWN_WELL_TIMES" ColumnName="DOWN_WELL_TIMES" />
+          <ScalarProperty Name="CORING_METHOD" ColumnName="CORING_METHOD" />
+          <ScalarProperty Name="LOG_JOB_ID" ColumnName="LOG_JOB_ID" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="CORINGRECD_ID" ColumnName="CORINGRECD_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_CORING_RECORD">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_CORING_RECORD">
+        <MappingFragment StoreEntitySet="LOG_OPS_CORING_RECORD">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="ELIGIBILITY_PERCENT" ColumnName="ELIGIBILITY_PERCENT" />
+          <ScalarProperty Name="LOAD_NUM" ColumnName="LOAD_NUM" />
+          <ScalarProperty Name="CORER_TYPE" ColumnName="CORER_TYPE" />
+          <ScalarProperty Name="REDO_REASONS" ColumnName="REDO_REASONS" />
+          <ScalarProperty Name="END_TIME" ColumnName="END_TIME" />
+          <ScalarProperty Name="BEGIN_TIME" ColumnName="BEGIN_TIME" />
+          <ScalarProperty Name="CORE_WELLSEC" ColumnName="CORE_WELLSEC" />
+          <ScalarProperty Name="ELIGIBILITY_NUM" ColumnName="ELIGIBILITY_NUM" />
+          <ScalarProperty Name="GET_PERCENT" ColumnName="GET_PERCENT" />
+          <ScalarProperty Name="SEND_PERCENT" ColumnName="SEND_PERCENT" />
+          <ScalarProperty Name="GET_NUM" ColumnName="GET_NUM" />
+          <ScalarProperty Name="SEND_NUM" ColumnName="SEND_NUM" />
+          <ScalarProperty Name="FIRE_NUM" ColumnName="FIRE_NUM" />
+          <ScalarProperty Name="GET_CORE_NUM" ColumnName="GET_CORE_NUM" />
+          <ScalarProperty Name="PLAN_CORE_NUM" ColumnName="PLAN_CORE_NUM" />
+          <ScalarProperty Name="SUC_INFIX_NUM" ColumnName="SUC_INFIX_NUM" />
+          <ScalarProperty Name="ACT_INFIX_NUM" ColumnName="ACT_INFIX_NUM" />
+          <ScalarProperty Name="DOWN_NUM" ColumnName="DOWN_NUM" />
+          <ScalarProperty Name="DOWN_WELL_TIMES" ColumnName="DOWN_WELL_TIMES" />
+          <ScalarProperty Name="CORING_METHOD" ColumnName="CORING_METHOD" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="CORINGRECD_ID" ColumnName="CORINGRECD_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_DANGER_GOODS_MONITOR">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_DANGER_GOODS_MONITOR">
+        <MappingFragment StoreEntitySet="LOG_OPS_DANGER_GOODS_MONITOR">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="DANGEROUS_EVNET_HANDLER_DESC" ColumnName="DANGEROUS_EVNET_HANDLER_DESC" />
+          <ScalarProperty Name="DANGEROUS_EVENT_PROCESS" ColumnName="DANGEROUS_EVENT_PROCESS" />
+          <ScalarProperty Name="DANGEROUS_EVNET_DESC" ColumnName="DANGEROUS_EVNET_DESC" />
+          <ScalarProperty Name="DANGEROUS_EVENT_LEVEL" ColumnName="DANGEROUS_EVENT_LEVEL" />
+          <ScalarProperty Name="DANGEROUS_EVENT_RADI_VALUE" ColumnName="DANGEROUS_EVENT_RADI_VALUE" />
+          <ScalarProperty Name="DANGEROUS_EVENT_LOCATION" ColumnName="DANGEROUS_EVENT_LOCATION" />
+          <ScalarProperty Name="DANGEROUS_EVENT_DATE_TIME" ColumnName="DANGEROUS_EVENT_DATE_TIME" />
+          <ScalarProperty Name="DANGEROUS_EVENT_SOURCE" ColumnName="DANGEROUS_EVENT_SOURCE" />
+          <ScalarProperty Name="DANGEROUS_TYPE" ColumnName="DANGEROUS_TYPE" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="DANGEROUS_MATERIALS_MONITOR_ID" ColumnName="DANGEROUS_MATERIALS_MONITOR_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_DATA_SUBMIT">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_DATA_SUBMIT">
+        <MappingFragment StoreEntitySet="LOG_OPS_DATA_SUBMIT">
+          <ScalarProperty Name="DATA_SIZE" ColumnName="DATA_SIZE" />
+          <ScalarProperty Name="DATA_FILE_NUMBER" ColumnName="DATA_FILE_NUMBER" />
+          <ScalarProperty Name="DATA_RECIPIENT" ColumnName="DATA_RECIPIENT" />
+          <ScalarProperty Name="DATA_RECEIVE_DEPARTMENT" ColumnName="DATA_RECEIVE_DEPARTMENT" />
+          <ScalarProperty Name="DATA_ARCHIVING_PERSON" ColumnName="DATA_ARCHIVING_PERSON" />
+          <ScalarProperty Name="DATA_ARCHIVING_DATE" ColumnName="DATA_ARCHIVING_DATE" />
+          <ScalarProperty Name="DATA_ARCHIVING_WAY" ColumnName="DATA_ARCHIVING_WAY" />
+          <ScalarProperty Name="DATA_SUMBIT_ID" ColumnName="DATA_SUMBIT_ID" />
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="SUBMIT_TYPE" ColumnName="SUBMIT_TYPE" />
+          <ScalarProperty Name="FILE_REMARK" ColumnName="FILE_REMARK" />
+          <ScalarProperty Name="FILE_NAME" ColumnName="FILE_NAME" />
+          <ScalarProperty Name="COLLECT_ID" ColumnName="COLLECT_ID" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="COLLECT_PROCESS_ID" ColumnName="COLLECT_PROCESS_ID" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_DATA_SUBMIT_FILE_INDEX">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_DATA_SUBMIT_FILE_INDEX">
+        <MappingFragment StoreEntitySet="LOG_OPS_DATA_SUBMIT_FILE_INDEX">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="SUBMIT_TITLE" ColumnName="SUBMIT_TITLE" />
+          <ScalarProperty Name="INFO_ID" ColumnName="INFO_ID" />
+          <ScalarProperty Name="DATA_SUMBIT_ID" ColumnName="DATA_SUMBIT_ID" />
+          <ScalarProperty Name="DATA_SUMBIT_FILE_LIST_ID" ColumnName="DATA_SUMBIT_FILE_LIST_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_DEVICE_FAILURE_WARNING">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_DEVICE_FAILURE_WARNING">
+        <MappingFragment StoreEntitySet="LOG_OPS_DEVICE_FAILURE_WARNING">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="EVNET_HANDLER_DESC" ColumnName="EVNET_HANDLER_DESC" />
+          <ScalarProperty Name="DEVICE_FAILURE_SOLUTION" ColumnName="DEVICE_FAILURE_SOLUTION" />
+          <ScalarProperty Name="DEVICE_FAILURE_RESULT" ColumnName="DEVICE_FAILURE_RESULT" />
+          <ScalarProperty Name="DEVICE_FAILURE_DESC" ColumnName="DEVICE_FAILURE_DESC" />
+          <ScalarProperty Name="DEVICE_FAILURE_TYPE" ColumnName="DEVICE_FAILURE_TYPE" />
+          <ScalarProperty Name="DEEP_FAILURE" ColumnName="DEEP_FAILURE" />
+          <ScalarProperty Name="DEVICE_FAILURE_TIME" ColumnName="DEVICE_FAILURE_TIME" />
+          <ScalarProperty Name="INSTRUMENT_ID" ColumnName="INSTRUMENT_ID" />
+          <ScalarProperty Name="COLLECT_PROCESS_ID" ColumnName="COLLECT_PROCESS_ID" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="DEVICE_FAILURE_ID" ColumnName="DEVICE_FAILURE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_DEVICE_USAGE">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_DEVICE_USAGE">
+        <MappingFragment StoreEntitySet="LOG_OPS_DEVICE_USAGE">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="RUNNING_INFO" ColumnName="RUNNING_INFO" />
+          <ScalarProperty Name="RUNNING_TIME" ColumnName="RUNNING_TIME" />
+          <ScalarProperty Name="ORG_EQUIP_ID" ColumnName="ORG_EQUIP_ID" />
+          <ScalarProperty Name="USE_ORG_ID" ColumnName="USE_ORG_ID" />
+          <ScalarProperty Name="EQUIP_NETTYPE" ColumnName="EQUIP_NETTYPE" />
+          <ScalarProperty Name="EQUIP_TYPE" ColumnName="EQUIP_TYPE" />
+          <ScalarProperty Name="EQUIP_CODE" ColumnName="EQUIP_CODE" />
+          <ScalarProperty Name="EQUIP_NAME" ColumnName="EQUIP_NAME" />
+          <ScalarProperty Name="EQUIP_2D" ColumnName="EQUIP_2D" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="INSTRUMENT_ID" ColumnName="INSTRUMENT_ID" />
+          <ScalarProperty Name="LOG_EQUIP_REC_ID" ColumnName="LOG_EQUIP_REC_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_FAILURE_RECORD">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_FAILURE_RECORD">
+        <MappingFragment StoreEntitySet="LOG_OPS_FAILURE_RECORD">
+          <ScalarProperty Name="C11" ColumnName="11" />
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+          <ScalarProperty Name="EVNETHANDLER" ColumnName="EVNETHANDLER" />
+          <ScalarProperty Name="FAILURE_SOLUTION" ColumnName="FAILURE_SOLUTION" />
+          <ScalarProperty Name="FAILURE_RESULT" ColumnName="FAILURE_RESULT" />
+          <ScalarProperty Name="FAILURE_DESC" ColumnName="FAILURE_DESC" />
+          <ScalarProperty Name="FAILURE_LEVEL" ColumnName="FAILURE_LEVEL" />
+          <ScalarProperty Name="DEEP_FAILURE_REC" ColumnName="DEEP_FAILURE_REC" />
+          <ScalarProperty Name="FAILURE_TIME" ColumnName="FAILURE_TIME" />
+          <ScalarProperty Name="FAILURE_TYPE_REC" ColumnName="FAILURE_TYPE_REC" />
+          <ScalarProperty Name="FAILURE_DEVICE_ID" ColumnName="FAILURE_DEVICE_ID" />
+          <ScalarProperty Name="FAILURE_ID" ColumnName="FAILURE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_GEOLOGY_RISK_WARNING">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_GEOLOGY_RISK_WARNING">
+        <MappingFragment StoreEntitySet="LOG_OPS_GEOLOGY_RISK_WARNING">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="CREATEOR" ColumnName="CREATEOR" />
+          <ScalarProperty Name="CREATE_TIME" ColumnName="CREATE_TIME" />
+          <ScalarProperty Name="LOG_RISK_DESC" ColumnName="LOG_RISK_DESC" />
+          <ScalarProperty Name="LOG_RISK_TYPE" ColumnName="LOG_RISK_TYPE" />
+          <ScalarProperty Name="LOG_RISK_LEVEL" ColumnName="LOG_RISK_LEVEL" />
+          <ScalarProperty Name="LOG_PROCESS_ID" ColumnName="LOG_PROCESS_ID" />
+          <ScalarProperty Name="PROCESS_ID" ColumnName="PROCESS_ID" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="LOG_RISK_ID" ColumnName="LOG_RISK_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_GEOSTEERING_WARNING">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_GEOSTEERING_WARNING">
+        <MappingFragment StoreEntitySet="LOG_OPS_GEOSTEERING_WARNING">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="LOG_GEOSTEERING_RISK_DESC" ColumnName="LOG_GEOSTEERING_RISK_DESC" />
+          <ScalarProperty Name="LOG_GEOSTEERING_RISK_TYPE" ColumnName="LOG_GEOSTEERING_RISK_TYPE" />
+          <ScalarProperty Name="LOG_GEOSTEERING_RISK_LEVEL" ColumnName="LOG_GEOSTEERING_RISK_LEVEL" />
+          <ScalarProperty Name="COLLECT_PROCESS_ID" ColumnName="COLLECT_PROCESS_ID" />
+          <ScalarProperty Name="LOG_GEOSTEERING_RISK_ID" ColumnName="LOG_GEOSTEERING_RISK_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_INS_RUNNINGRECORD">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_INS_RUNNINGRECORD">
+        <MappingFragment StoreEntitySet="LOG_OPS_INS_RUNNINGRECORD">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="RUN_TIME" ColumnName="RUN_TIME" />
+          <ScalarProperty Name="JOB_EFFECT" ColumnName="JOB_EFFECT" />
+          <ScalarProperty Name="INSTRUMENT_NO" ColumnName="INSTRUMENT_NO" />
+          <ScalarProperty Name="LOG_INSTRUMENT_ID" ColumnName="LOG_INSTRUMENT_ID" />
+          <ScalarProperty Name="COLLECT_PROCESS_ID" ColumnName="COLLECT_PROCESS_ID" />
+          <ScalarProperty Name="INSTRUMENT_ID" ColumnName="INSTRUMENT_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_INTERPRETATIONPLATFORM">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_INTERPRETATIONPLATFORM">
+        <MappingFragment StoreEntitySet="LOG_OPS_INTERPRETATIONPLATFORM">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="PLATFORM_DESC" ColumnName="PLATFORM_DESC" />
+          <ScalarProperty Name="PLATFORM_NAME" ColumnName="PLATFORM_NAME" />
+          <ScalarProperty Name="PROCESS_ID" ColumnName="PROCESS_ID" />
+          <ScalarProperty Name="PLATFORM_ID" ColumnName="PLATFORM_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_INTERPRET_PROCESS">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_INTERPRET_PROCESS">
+        <MappingFragment StoreEntitySet="LOG_OPS_INTERPRET_PROCESS">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="INT_STATUS" ColumnName="INT_STATUS" />
+          <ScalarProperty Name="INTERPRET_TABLE_DESC" ColumnName="INTERPRET_TABLE_DESC" />
+          <ScalarProperty Name="INTERPRET_FILE_DESC" ColumnName="INTERPRET_FILE_DESC" />
+          <ScalarProperty Name="LOG_DATA_DESC" ColumnName="LOG_DATA_DESC" />
+          <ScalarProperty Name="INTER_TYPE" ColumnName="INTER_TYPE" />
+          <ScalarProperty Name="PROCESS_END_TIME" ColumnName="PROCESS_END_TIME" />
+          <ScalarProperty Name="PROCESS_START_TIME" ColumnName="PROCESS_START_TIME" />
+          <ScalarProperty Name="AUDITPERSOON" ColumnName="AUDITPERSOON" />
+          <ScalarProperty Name="CHECKER" ColumnName="CHECKER" />
+          <ScalarProperty Name="INTERPRETOR" ColumnName="INTERPRETOR" />
+          <ScalarProperty Name="WELL_NAME" ColumnName="WELL_NAME" />
+          <ScalarProperty Name="LOG_JOB_ID" ColumnName="LOG_JOB_ID" />
+          <ScalarProperty Name="LAY_ID" ColumnName="LAY_ID" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="PROCESS_ID" ColumnName="PROCESS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_OPERATION_MONITOR">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_OPERATION_MONITOR">
+        <MappingFragment StoreEntitySet="LOG_OPS_OPERATION_MONITOR">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="OPERATION_MONITOR_DOC" ColumnName="OPERATION_MONITOR_DOC" />
+          <ScalarProperty Name="TEAM_ID" ColumnName="TEAM_ID" />
+          <ScalarProperty Name="PERSON_ID" ColumnName="PERSON_ID" />
+          <ScalarProperty Name="INS_ID" ColumnName="INS_ID" />
+          <ScalarProperty Name="RECTIFY_DESC" ColumnName="RECTIFY_DESC" />
+          <ScalarProperty Name="PUNISH_SUGGESTION" ColumnName="PUNISH_SUGGESTION" />
+          <ScalarProperty Name="REASON" ColumnName="REASON" />
+          <ScalarProperty Name="RESULT" ColumnName="RESULT" />
+          <ScalarProperty Name="WELL_LOGGING_PROJECT" ColumnName="WELL_LOGGING_PROJECT" />
+          <ScalarProperty Name="LOG_DATE" ColumnName="LOG_DATE" />
+          <ScalarProperty Name="WELL_NAME" ColumnName="WELL_NAME" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="OPERATION_MONITOR_ID" ColumnName="OPERATION_MONITOR_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_PERFORATION_ZONE">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_PERFORATION_ZONE">
+        <MappingFragment StoreEntitySet="LOG_OPS_PERFORATION_ZONE">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="PERFORATION_BOTTOM" ColumnName="PERFORATION_BOTTOM" />
+          <ScalarProperty Name="PERFORATION_TOP" ColumnName="PERFORATION_TOP" />
+          <ScalarProperty Name="PERFORATION_ID" ColumnName="PERFORATION_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_RADIATION_RECORD">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_RADIATION_RECORD">
+        <MappingFragment StoreEntitySet="LOG_OPS_RADIATION_RECORD">
+          <ScalarProperty Name="REPLACE_SOURCEPACKING_NUM" ColumnName="REPLACE_SOURCEPACKING_NUM" />
+          <ScalarProperty Name="REPLACE_SOURCEPACKING" ColumnName="REPLACE_SOURCEPACKING" />
+          <ScalarProperty Name="MAX_WORK_TEMPERATURE" ColumnName="MAX_WORK_TEMPERATURE" />
+          <ScalarProperty Name="MAX_WORK_PRESSURE" ColumnName="MAX_WORK_PRESSURE" />
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+          <ScalarProperty Name="RADIATION_USING_LOG" ColumnName="RADIATION_USING_LOG" />
+          <ScalarProperty Name="UNDER_WELL_TIME" ColumnName="UNDER_WELL_TIME" />
+          <ScalarProperty Name="DOWN_WELL_TIME" ColumnName="DOWN_WELL_TIME" />
+          <ScalarProperty Name="UNLOAD_PERSON" ColumnName="UNLOAD_PERSON" />
+          <ScalarProperty Name="LOAD_PERSON" ColumnName="LOAD_PERSON" />
+          <ScalarProperty Name="RADIATION_NO" ColumnName="RADIATION_NO" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="RADIATION_RECORD_ID" ColumnName="RADIATION_RECORD_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_SHOTINFO">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_SHOTINFO">
+        <MappingFragment StoreEntitySet="LOG_OPS_SHOTINFO">
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="FAULT" ColumnName="FAULT" />
+          <ScalarProperty Name="FAULT_TYPE" ColumnName="FAULT_TYPE" />
+          <ScalarProperty Name="SUCCESS" ColumnName="SUCCESS" />
+          <ScalarProperty Name="FIRED_BULLET_NUMBER" ColumnName="FIRED_BULLET_NUMBER" />
+          <ScalarProperty Name="LOAD_BULLET_NUMBER" ColumnName="LOAD_BULLET_NUMBER" />
+          <ScalarProperty Name="DETONATOR_NUM" ColumnName="DETONATOR_NUM" />
+          <ScalarProperty Name="PERFORATION_PHASE" ColumnName="PERFORATION_PHASE" />
+          <ScalarProperty Name="PERFORATION_DENSITY" ColumnName="PERFORATION_DENSITY" />
+          <ScalarProperty Name="CORRECTION_METHOD" ColumnName="CORRECTION_METHOD" />
+          <ScalarProperty Name="FIRING_METHOD" ColumnName="FIRING_METHOD" />
+          <ScalarProperty Name="BULLET_MODEL" ColumnName="BULLET_MODEL" />
+          <ScalarProperty Name="GUN_MODEL" ColumnName="GUN_MODEL" />
+          <ScalarProperty Name="WELL_SECTION" ColumnName="WELL_SECTION" />
+          <ScalarProperty Name="GUN_LENGTH" ColumnName="GUN_LENGTH" />
+          <ScalarProperty Name="OILLAYER_THICKNESS" ColumnName="OILLAYER_THICKNESS" />
+          <ScalarProperty Name="INNER_THICKNESS" ColumnName="INNER_THICKNESS" />
+          <ScalarProperty Name="PERFORATING_LAYERS" ColumnName="PERFORATING_LAYERS" />
+          <ScalarProperty Name="SHOT_LAYER" ColumnName="SHOT_LAYER" />
+          <ScalarProperty Name="OPEN_THICKNESS" ColumnName="OPEN_THICKNESS" />
+          <ScalarProperty Name="BOTTOM" ColumnName="BOTTOM" />
+          <ScalarProperty Name="TOP" ColumnName="TOP" />
+          <ScalarProperty Name="END_TIME" ColumnName="END_TIME" />
+          <ScalarProperty Name="START_TIME" ColumnName="START_TIME" />
+          <ScalarProperty Name="DOWN_WELL_SEQUENCE" ColumnName="DOWN_WELL_SEQUENCE" />
+          <ScalarProperty Name="LOG_COLLECT_PROCESS_ID" ColumnName="LOG_COLLECT_PROCESS_ID" />
+          <ScalarProperty Name="COLLECT_PROCESS_ID" ColumnName="COLLECT_PROCESS_ID" />
+          <ScalarProperty Name="PERORATIONID" ColumnName="PERORATIONID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_SHOTSUMMARY">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_SHOTSUMMARY">
+        <MappingFragment StoreEntitySet="LOG_OPS_SHOTSUMMARY">
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="DETON_CONSUM" ColumnName="DETON_CONSUM" />
+          <ScalarProperty Name="BULLET_EMISSIVITY" ColumnName="BULLET_EMISSIVITY" />
+          <ScalarProperty Name="SHOT_NUM" ColumnName="SHOT_NUM" />
+          <ScalarProperty Name="LOAD_NUM" ColumnName="LOAD_NUM" />
+          <ScalarProperty Name="OPEN_THICKNESS" ColumnName="OPEN_THICKNESS" />
+          <ScalarProperty Name="INTERLAYERTHICK" ColumnName="INTERLAYERTHICK" />
+          <ScalarProperty Name="OILLAYERTHICKNESS" ColumnName="OILLAYERTHICKNESS" />
+          <ScalarProperty Name="PERFOR_NUM" ColumnName="PERFOR_NUM" />
+          <ScalarProperty Name="TRANS_METHOD" ColumnName="TRANS_METHOD" />
+          <ScalarProperty Name="LOG_JOB_ID" ColumnName="LOG_JOB_ID" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="PERORATIONID" ColumnName="PERORATIONID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_TASK_ITEMS">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_TASK_ITEMS">
+        <MappingFragment StoreEntitySet="LOG_OPS_TASK_ITEMS">
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="TASK_OPS_ID" ColumnName="TASK_OPS_ID" />
+          <ScalarProperty Name="TASK_ITEM" ColumnName="TASK_ITEM" />
+          <ScalarProperty Name="MEASURE_WELL_TO" ColumnName="MEASURE_WELL_TO" />
+          <ScalarProperty Name="MEASURE_WELL_FROM" ColumnName="MEASURE_WELL_FROM" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="IS_SUCESS" ColumnName="IS_SUCESS" />
+          <ScalarProperty Name="SCALE" ColumnName="SCALE" />
+          <ScalarProperty Name="IS_ADDITIONAL" ColumnName="IS_ADDITIONAL" />
+          <ScalarProperty Name="COLLECT_PROCESS_ID" ColumnName="COLLECT_PROCESS_ID" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_TIGHT_HOLE_WARNING">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_TIGHT_HOLE_WARNING">
+        <MappingFragment StoreEntitySet="LOG_OPS_TIGHT_HOLE_WARNING">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="DANGEROUS_EVNET_DESC" ColumnName="DANGEROUS_EVNET_DESC" />
+          <ScalarProperty Name="DANGEROUS_EVENT_LEVEL" ColumnName="DANGEROUS_EVENT_LEVEL" />
+          <ScalarProperty Name="DANGEROUS_EVENT_DEEP" ColumnName="DANGEROUS_EVENT_DEEP" />
+          <ScalarProperty Name="DANGEROUS_EVENT_DATE_TIME" ColumnName="DANGEROUS_EVENT_DATE_TIME" />
+          <ScalarProperty Name="DANGEROUS_EVENT_SOURCE" ColumnName="DANGEROUS_EVENT_SOURCE" />
+          <ScalarProperty Name="COLLECT_PROCESS_ID" ColumnName="COLLECT_PROCESS_ID" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="TIGHT_HOLE_ID" ColumnName="TIGHT_HOLE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_TIME_DISTRIBUTION">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_TIME_DISTRIBUTION">
+        <MappingFragment StoreEntitySet="LOG_OPS_TIME_DISTRIBUTION">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="DURATION" ColumnName="DURATION" />
+          <ScalarProperty Name="END_TIME" ColumnName="END_TIME" />
+          <ScalarProperty Name="START_TIME" ColumnName="START_TIME" />
+          <ScalarProperty Name="EFF_TYPE" ColumnName="EFF_TYPE" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="WORK_EFFID" ColumnName="WORK_EFFID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_USER_TAILOR_RECORD">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_USER_TAILOR_RECORD">
+        <MappingFragment StoreEntitySet="LOG_OPS_USER_TAILOR_RECORD">
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="TAILOR_TASK_ID" ColumnName="TAILOR_TASK_ID" />
+          <ScalarProperty Name="USER_TAILOR_RECORD_ID" ColumnName="USER_TAILOR_RECORD_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_VEHICLE_USAGE">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_VEHICLE_USAGE">
+        <MappingFragment StoreEntitySet="LOG_OPS_VEHICLE_USAGE">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="RUNNING_STATUS" ColumnName="RUNNING_STATUS" />
+          <ScalarProperty Name="RUNING_TIME" ColumnName="RUNING_TIME" />
+          <ScalarProperty Name="DISTANCE" ColumnName="DISTANCE" />
+          <ScalarProperty Name="FUEL_CONSUM" ColumnName="FUEL_CONSUM" />
+          <ScalarProperty Name="DRIVER" ColumnName="DRIVER" />
+          <ScalarProperty Name="VEHICLEID" ColumnName="VEHICLEID" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="VEHICLEUSINGID" ColumnName="VEHICLEUSINGID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_OPS_WELLSITE_ENV">
+      <EntityTypeMapping TypeName="A12Model.LOG_OPS_WELLSITE_ENV">
+        <MappingFragment StoreEntitySet="LOG_OPS_WELLSITE_ENV">
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="SOAK_VOLUME" ColumnName="SOAK_VOLUME" />
+          <ScalarProperty Name="INJECTION_PRESSURE" ColumnName="INJECTION_PRESSURE" />
+          <ScalarProperty Name="CASING_PRESSURE" ColumnName="CASING_PRESSURE" />
+          <ScalarProperty Name="TUBING_PRESSURE" ColumnName="TUBING_PRESSURE" />
+          <ScalarProperty Name="PUMP_SPM" ColumnName="PUMP_SPM" />
+          <ScalarProperty Name="PUMP_STROKE_LENGTH" ColumnName="PUMP_STROKE_LENGTH" />
+          <ScalarProperty Name="PRODUCT_LAYER" ColumnName="PRODUCT_LAYER" />
+          <ScalarProperty Name="PUMP_DIAMETER" ColumnName="PUMP_DIAMETER" />
+          <ScalarProperty Name="PUMP_SETTING_DEPTH" ColumnName="PUMP_SETTING_DEPTH" />
+          <ScalarProperty Name="WH_TEST_WATER_CONTENT" ColumnName="WH_TEST_WATER_CONTENT" />
+          <ScalarProperty Name="CO2" ColumnName="CO2" />
+          <ScalarProperty Name="INJECTION_METHOD" ColumnName="INJECTION_METHOD" />
+          <ScalarProperty Name="WELLHEAD_GAS_PRODUCT" ColumnName="WELLHEAD_GAS_PRODUCT" />
+          <ScalarProperty Name="WELLHEAD_LIQUID_PRODUCT" ColumnName="WELLHEAD_LIQUID_PRODUCT" />
+          <ScalarProperty Name="MUD_HEAVY_MINERAL" ColumnName="MUD_HEAVY_MINERAL" />
+          <ScalarProperty Name="MUD_TYPE" ColumnName="MUD_TYPE" />
+          <ScalarProperty Name="COVERED_DISTANCE" ColumnName="COVERED_DISTANCE" />
+          <ScalarProperty Name="STANDARD_CAS_DEPTH" ColumnName="STANDARD_CAS_DEPTH" />
+          <ScalarProperty Name="CASING_DESC" ColumnName="CASING_DESC" />
+          <ScalarProperty Name="CASING_DEPTH" ColumnName="CASING_DEPTH" />
+          <ScalarProperty Name="WATER_LOSS" ColumnName="WATER_LOSS" />
+          <ScalarProperty Name="ARTIFICIAL_WELL_BOTTOM" ColumnName="ARTIFICIAL_WELL_BOTTOM" />
+          <ScalarProperty Name="MUD_FILT_TMP" ColumnName="MUD_FILT_TMP" />
+          <ScalarProperty Name="MUD_FILT_RESI" ColumnName="MUD_FILT_RESI" />
+          <ScalarProperty Name="MUD_CAKE_TMP" ColumnName="MUD_CAKE_TMP" />
+          <ScalarProperty Name="MUD_CAKE_RESI" ColumnName="MUD_CAKE_RESI" />
+          <ScalarProperty Name="DRILL_FLU_TMP" ColumnName="DRILL_FLU_TMP" />
+          <ScalarProperty Name="DRILL_FLU_RESI" ColumnName="DRILL_FLU_RESI" />
+          <ScalarProperty Name="REDO_NUM" ColumnName="REDO_NUM" />
+          <ScalarProperty Name="CURVE_NUM" ColumnName="CURVE_NUM" />
+          <ScalarProperty Name="LOG_JOB_ID" ColumnName="LOG_JOB_ID" />
+          <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+          <ScalarProperty Name="SITEENVID" ColumnName="SITEENVID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOG_RT_LOGGING_DATA">
+      <EntityTypeMapping TypeName="A12Model.LOG_RT_LOGGING_DATA">
+        <MappingFragment StoreEntitySet="LOG_RT_LOGGING_DATA">
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="SAMPLEN" ColumnName="SAMPLEN" />
+          <ScalarProperty Name="SAMPLE5" ColumnName="SAMPLE5" />
+          <ScalarProperty Name="SAMPLE4" ColumnName="SAMPLE4" />
+          <ScalarProperty Name="SAMPLE3" ColumnName="SAMPLE3" />
+          <ScalarProperty Name="SAMPLE2" ColumnName="SAMPLE2" />
+          <ScalarProperty Name="SAMPLE1" ColumnName="SAMPLE1" />
+          <ScalarProperty Name="SAMPLE_TIME" ColumnName="SAMPLE_TIME" />
+          <ScalarProperty Name="SAMPLE_DEPTH" ColumnName="SAMPLE_DEPTH" />
+          <ScalarProperty Name="PROCEDURE_ID" ColumnName="PROCEDURE_ID" />
+          <ScalarProperty Name="LOG_COLLECT_PROCESS_ID" ColumnName="LOG_COLLECT_PROCESS_ID" />
+          <ScalarProperty Name="COLLECT_PROCESS_ID" ColumnName="COLLECT_PROCESS_ID" />
+          <ScalarProperty Name="LOG_RT_DATA_ID" ColumnName="LOG_RT_DATA_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WL_ACH_BOREHOLE_INTER">
+      <EntityTypeMapping TypeName="A12Model.WL_ACH_BOREHOLE_INTER">
+        <MappingFragment StoreEntitySet="WL_ACH_BOREHOLE_INTER">
+          <ScalarProperty Name="MIN_CARBONATE_CONTENT" ColumnName="MIN_CARBONATE_CONTENT" />
+          <ScalarProperty Name="MIN_DOLOMITIC_CONTENT" ColumnName="MIN_DOLOMITIC_CONTENT" />
+          <ScalarProperty Name="MIN_LIME_CONTENT" ColumnName="MIN_LIME_CONTENT" />
+          <ScalarProperty Name="MIN_SANDY_CONTENT" ColumnName="MIN_SANDY_CONTENT" />
+          <ScalarProperty Name="MIN_SHALE_CONTENT" ColumnName="MIN_SHALE_CONTENT" />
+          <ScalarProperty Name="MIN_IRREDUCIBLE_W_SAT" ColumnName="MIN_IRREDUCIBLE_W_SAT" />
+          <ScalarProperty Name="MIN_OIL_GAS_SATURATION" ColumnName="MIN_OIL_GAS_SATURATION" />
+          <ScalarProperty Name="MIN_PERMEABILITY" ColumnName="MIN_PERMEABILITY" />
+          <ScalarProperty Name="MIN_EFFECTIVE_POROSITY" ColumnName="MIN_EFFECTIVE_POROSITY" />
+          <ScalarProperty Name="MIN_NEUTRON_POROSITY" ColumnName="MIN_NEUTRON_POROSITY" />
+          <ScalarProperty Name="MIN_SONIC_POROSITY" ColumnName="MIN_SONIC_POROSITY" />
+          <ScalarProperty Name="MIN_DENSITY_POROSITY" ColumnName="MIN_DENSITY_POROSITY" />
+          <ScalarProperty Name="MIN_LATEROLOG_FLUSHED_ZONE" ColumnName="MIN_LATEROLOG_FLUSHED_ZONE" />
+          <ScalarProperty Name="MIN_LATEROLOG_SHALLOW" ColumnName="MIN_LATEROLOG_SHALLOW" />
+          <ScalarProperty Name="MIN_LATEROLOG_DEEP" ColumnName="MIN_LATEROLOG_DEEP" />
+          <ScalarProperty Name="MIN_COMPENSATED_NEUTRON" ColumnName="MIN_COMPENSATED_NEUTRON" />
+          <ScalarProperty Name="MIN_SONIC_DIFFERENTIAL_TIME" ColumnName="MIN_SONIC_DIFFERENTIAL_TIME" />
+          <ScalarProperty Name="MIN_FORMATION_VOLUME_DENSITY" ColumnName="MIN_FORMATION_VOLUME_DENSITY" />
+          <ScalarProperty Name="MIN_WELL_DIAMETER" ColumnName="MIN_WELL_DIAMETER" />
+          <ScalarProperty Name="MIN_SP_GAMMA_RADIANT_INTENSITY" ColumnName="MIN_SP_GAMMA_RADIANT_INTENSITY" />
+          <ScalarProperty Name="MIN_SPONTANEOUS_POTENTIAL" ColumnName="MIN_SPONTANEOUS_POTENTIAL" />
+          <ScalarProperty Name="MAX_CARBONATE_CONTENT" ColumnName="MAX_CARBONATE_CONTENT" />
+          <ScalarProperty Name="MAX_DOLOMITIC_CONTENT" ColumnName="MAX_DOLOMITIC_CONTENT" />
+          <ScalarProperty Name="MAX_LIME_CONTENT" ColumnName="MAX_LIME_CONTENT" />
+          <ScalarProperty Name="MAX_SANDY_CONTENT" ColumnName="MAX_SANDY_CONTENT" />
+          <ScalarProperty Name="MAX_SHALE_CONTENT" ColumnName="MAX_SHALE_CONTENT" />
+          <ScalarProperty Name="MAX_IRREDUCIBLE_W_SAT" ColumnName="MAX_IRREDUCIBLE_W_SAT" />
+          <ScalarProperty Name="OPS_BASEINFO_ID" ColumnName="OPS_BASEINFO_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+          <ScalarProperty Name="INTERPRETATION_RESULT" ColumnName="INTERPRETATION_RESULT" />
+          <ScalarProperty Name="IDX_TYPE" ColumnName="IDX_TYPE" />
+          <ScalarProperty Name="MAX_OIL_GAS_SATURATION" ColumnName="MAX_OIL_GAS_SATURATION" />
+          <ScalarProperty Name="MAX_PERMEABILITY" ColumnName="MAX_PERMEABILITY" />
+          <ScalarProperty Name="TOTAL_POROSITY" ColumnName="TOTAL_POROSITY" />
+          <ScalarProperty Name="MAX_EFFECTIVE_POROSITY" ColumnName="MAX_EFFECTIVE_POROSITY" />
+          <ScalarProperty Name="MAX_NEUTRON_POROSITY" ColumnName="MAX_NEUTRON_POROSITY" />
+          <ScalarProperty Name="MAX_SONIC_POROSITY" ColumnName="MAX_SONIC_POROSITY" />
+          <ScalarProperty Name="MAX_DENSITY_POROSITY" ColumnName="MAX_DENSITY_POROSITY" />
+          <ScalarProperty Name="MAX_LATEROLOG_FLUSHED_ZONE" ColumnName="MAX_LATEROLOG_FLUSHED_ZONE" />
+          <ScalarProperty Name="MAX_LATEROLOG_SHALLOW" ColumnName="MAX_LATEROLOG_SHALLOW" />
+          <ScalarProperty Name="MAX_LATEROLOG_DEEP" ColumnName="MAX_LATEROLOG_DEEP" />
+          <ScalarProperty Name="MAX_COMPENSATED_NEUTRON" ColumnName="MAX_COMPENSATED_NEUTRON" />
+          <ScalarProperty Name="MAX_SONIC_DIFFERENTIAL_TIME" ColumnName="MAX_SONIC_DIFFERENTIAL_TIME" />
+          <ScalarProperty Name="MAX_FORMATION_VOLUME_DENSITY" ColumnName="MAX_FORMATION_VOLUME_DENSITY" />
+          <ScalarProperty Name="MAX_WELL_DIAMETER" ColumnName="MAX_WELL_DIAMETER" />
+          <ScalarProperty Name="MAX_SP_GAMMA_RADIANT_INTENSITY" ColumnName="MAX_SP_GAMMA_RADIANT_INTENSITY" />
+          <ScalarProperty Name="MAX_SPONTANEOUS_POTENTIAL" ColumnName="MAX_SPONTANEOUS_POTENTIAL" />
+          <ScalarProperty Name="LITHOLOGY_CLASS" ColumnName="LITHOLOGY_CLASS" />
+          <ScalarProperty Name="THICKNESS" ColumnName="THICKNESS" />
+          <ScalarProperty Name="END_DEPTH" ColumnName="END_DEPTH" />
+          <ScalarProperty Name="START_DEPTH" ColumnName="START_DEPTH" />
+          <ScalarProperty Name="BOREHOLE_INTER_TYPE" ColumnName="BOREHOLE_INTER_TYPE" />
+          <ScalarProperty Name="ZONE_NO" ColumnName="ZONE_NO" />
+          <ScalarProperty Name="ZONE_ID" ColumnName="ZONE_ID" />
+          <ScalarProperty Name="WELLBORE_ID" ColumnName="WELLBORE_ID" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+          <ScalarProperty Name="PROCESS_ID" ColumnName="PROCESS_ID" />
+          <ScalarProperty Name="INTERP_BOREHOLE_ID" ColumnName="INTERP_BOREHOLE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COM_BASE_WELL">
+      <EntityTypeMapping TypeName="A12Model.COM_BASE_WELL">
+        <MappingFragment StoreEntitySet="COM_BASE_WELL">
+          <ScalarProperty Name="COORDINATE_SYSTEM" ColumnName="COORDINATE_SYSTEM" />
+          <ScalarProperty Name="THIRD_GRADE_STRUCTURE" ColumnName="THIRD_GRADE_STRUCTURE" />
+          <ScalarProperty Name="SECOND_GRADE_STRUCTURE" ColumnName="SECOND_GRADE_STRUCTURE" />
+          <ScalarProperty Name="FIRST_GRADE_STRUCTURE" ColumnName="FIRST_GRADE_STRUCTURE" />
+          <ScalarProperty Name="THREE_OR_SIX_DEGREE_BELT" ColumnName="THREE_OR_SIX_DEGREE_BELT" />
+          <ScalarProperty Name="ACTUAL_LATITUDE_SECONDS" ColumnName="ACTUAL_LATITUDE_SECONDS" />
+          <ScalarProperty Name="ACTUAL_LATITUDE_POINTS" ColumnName="ACTUAL_LATITUDE_POINTS" />
+          <ScalarProperty Name="DESIGN_LATITUDE_SECONDS" ColumnName="DESIGN_LATITUDE_SECONDS" />
+          <ScalarProperty Name="DESIGN_LATITUDE_POINTS" ColumnName="DESIGN_LATITUDE_POINTS" />
+          <ScalarProperty Name="ACTUAL_LONGITUDE_SECONDS" ColumnName="ACTUAL_LONGITUDE_SECONDS" />
+          <ScalarProperty Name="ACTUAL_LONGITUDE_POINTS" ColumnName="ACTUAL_LONGITUDE_POINTS" />
+          <ScalarProperty Name="DESIGN_LONGITUDE_SECONDS" ColumnName="DESIGN_LONGITUDE_SECONDS" />
+          <ScalarProperty Name="DESIGN_LONGITUDE_POINTS" ColumnName="DESIGN_LONGITUDE_POINTS" />
+          <ScalarProperty Name="BUSHING_ELEVATION" ColumnName="BUSHING_ELEVATION" />
+          <ScalarProperty Name="BASIN" ColumnName="BASIN" />
+          <ScalarProperty Name="KOH" ColumnName="KOH" />
+          <ScalarProperty Name="SITE_ID" ColumnName="SITE_ID" />
+          <ScalarProperty Name="WELL_ID_A7" ColumnName="WELL_ID_A7" />
+          <ScalarProperty Name="ISUPLOAD" ColumnName="ISUPLOAD" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_ORG" ColumnName="UPDATE_ORG" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_ORG" ColumnName="CREATE_ORG" />
+          <ScalarProperty Name="ROW_STATE" ColumnName="ROW_STATE" />
+          <ScalarProperty Name="WELL_FIELD_UNIT_NAME" ColumnName="WELL_FIELD_UNIT_NAME" />
+          <ScalarProperty Name="WELL_BLOCK" ColumnName="WELL_BLOCK" />
+          <ScalarProperty Name="WELL_UWI" ColumnName="WELL_UWI" />
+          <ScalarProperty Name="MAGNETIC_FIELDINTENSITY" ColumnName="MAGNETIC_FIELDINTENSITY" />
+          <ScalarProperty Name="ANGLE_DIP" ColumnName="ANGLE_DIP" />
+          <ScalarProperty Name="MAGNETIC_DIP" ColumnName="MAGNETIC_DIP" />
+          <ScalarProperty Name="TERRACE_CODE" ColumnName="TERRACE_CODE" />
+          <ScalarProperty Name="SEA_WATER_DEPTH" ColumnName="SEA_WATER_DEPTH" />
+          <ScalarProperty Name="TRAVERSE_LINE_Y_AXIS" ColumnName="TRAVERSE_LINE_Y_AXIS" />
+          <ScalarProperty Name="TRAVERSE_LINE_X_AXIS" ColumnName="TRAVERSE_LINE_X_AXIS" />
+          <ScalarProperty Name="ACTUAL_GROUND_ELEVATION" ColumnName="ACTUAL_GROUND_ELEVATION" />
+          <ScalarProperty Name="DESIGN_GROUND_ELEVATION" ColumnName="DESIGN_GROUND_ELEVATION" />
+          <ScalarProperty Name="ACTUAL_Y_AXIS" ColumnName="ACTUAL_Y_AXIS" />
+          <ScalarProperty Name="ACTUAL_X_AXIS" ColumnName="ACTUAL_X_AXIS" />
+          <ScalarProperty Name="DESIGN_Y_AXIS" ColumnName="DESIGN_Y_AXIS" />
+          <ScalarProperty Name="DESIGN_X_AXIS" ColumnName="DESIGN_X_AXIS" />
+          <ScalarProperty Name="ACTUAL_LATITUDE" ColumnName="ACTUAL_LATITUDE" />
+          <ScalarProperty Name="ACTUAL_LONGITUDE" ColumnName="ACTUAL_LONGITUDE" />
+          <ScalarProperty Name="DESIGN_LATITUDE" ColumnName="DESIGN_LATITUDE" />
+          <ScalarProperty Name="DESIGN_LONGITUDE" ColumnName="DESIGN_LONGITUDE" />
+          <ScalarProperty Name="GEOGRAPHIC_LOCATION" ColumnName="GEOGRAPHIC_LOCATION" />
+          <ScalarProperty Name="RELATIVE_AZIMUTH" ColumnName="RELATIVE_AZIMUTH" />
+          <ScalarProperty Name="RELATIVE_SPACE" ColumnName="RELATIVE_SPACE" />
+          <ScalarProperty Name="RELATIVE_WELL_NAME" ColumnName="RELATIVE_WELL_NAME" />
+          <ScalarProperty Name="THREE_DIM_POSITION" ColumnName="THREE_DIM_POSITION" />
+          <ScalarProperty Name="TWO_DIM_POSITION" ColumnName="TWO_DIM_POSITION" />
+          <ScalarProperty Name="STRUCTURE_DESCRIPTION" ColumnName="STRUCTURE_DESCRIPTION" />
+          <ScalarProperty Name="STRUCTURE_LOCATION" ColumnName="STRUCTURE_LOCATION" />
+          <ScalarProperty Name="STRUCT_CODE" ColumnName="STRUCT_CODE" />
+          <ScalarProperty Name="DISTRICT" ColumnName="DISTRICT" />
+          <ScalarProperty Name="LOC_COUNTY" ColumnName="LOC_COUNTY" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="LOC_STATE" ColumnName="LOC_STATE" />
+          <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+          <ScalarProperty Name="WELL_SORT" ColumnName="WELL_SORT" />
+          <ScalarProperty Name="WELL_TYPE" ColumnName="WELL_TYPE" />
+          <ScalarProperty Name="WELL_LEGALNAME" ColumnName="WELL_LEGALNAME" />
+          <ScalarProperty Name="WELL_NAME" ColumnName="WELL_NAME" />
+          <ScalarProperty Name="WELL_ID" ColumnName="WELL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

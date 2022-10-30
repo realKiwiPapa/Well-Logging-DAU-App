@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\Users\Administrator\Desktop\web" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/ManagedOpenSsl.dll" publishTime="07/14/2016 14:14:29" />
+    <file relUrl="bin/libeay32.dll" publishTime="07/14/2016 14:14:45" />
+    <file relUrl="FileDownload.ashx" publishTime="07/14/2016 14:14:30" />
+    <file relUrl="FileService.asmx" publishTime="07/14/2016 14:14:31" />
+    <file relUrl="bin/Interop.ANTCOMLib.dll" publishTime="07/14/2016 14:14:35" />
+    <file relUrl="bin/Aspose.Words.dll" publishTime="07/14/2016 14:14:47" />
+    <file relUrl="bin/log4net.dll" publishTime="11/24/2017 15:08:33" />
+    <file relUrl="DataService.asmx" publishTime="07/14/2016 14:14:30" />
+    <file relUrl="bin/wix.dll" publishTime="07/14/2016 14:14:41" />
+    <file relUrl="Templates/上井解释登记卡.doc" publishTime="08/03/2016 11:17:47" />
+    <file relUrl="bin/Logging_App.Utility.dll" publishTime="01/03/2018 11:23:23" />
+    <file relUrl="Workflow/WorkflowService.asmx" publishTime="07/14/2016 14:14:45" />
+    <file relUrl="bin/lessmsi.exe" publishTime="07/14/2016 14:14:33" />
+    <file relUrl="DataPushYTHPT.ashx" publishTime="07/14/2016 14:14:30" />
+    <file relUrl="DataPushXY.ashx" publishTime="04/01/2017 11:09:07" />
+    <file relUrl="packages.config" publishTime="07/14/2016 14:14:31" />
+    <file relUrl="bin/libmspackn.dll" publishTime="07/14/2016 14:14:35" />
+    <file relUrl="bin/lessmsi.core.dll" publishTime="07/14/2016 14:14:33" />
+    <file relUrl="bin/Logging_App.Model.dll" publishTime="11/24/2017 15:08:31" />
+    <file relUrl="bin/Logging_App.WebService.pdb" publishTime="01/03/2018 11:23:30" />
+    <file relUrl="bin/Oracle.DataAccess.dll" publishTime="08/31/2012 06:21:24" />
+    <file relUrl="DataPush.ashx" publishTime="07/14/2016 14:14:30" />
+    <file relUrl="bin/Logging_App.WebService.dll" publishTime="01/03/2018 11:23:30" />
+    <file relUrl="bin/mspack.dll" publishTime="07/14/2016 14:14:41" />
+    <file relUrl="bin/Maticsoft.DBUtility.dll" publishTime="11/24/2017 15:08:33" />
+    <file relUrl="Web.config" publishTime="12/08/2017 09:40:47" />
+    <file relUrl="bin/EntityFramework.dll" publishTime="07/14/2016 14:14:38" />
+    <file relUrl="TestSpeed.ashx" publishTime="07/14/2016 14:14:31" />
+    <file relUrl="UserService.asmx" publishTime="07/14/2016 14:14:31" />
+    <file relUrl="bin/AntCom.dll" publishTime="07/14/2016 14:14:33" />
+    <file relUrl="bin/log4net.xml" publishTime="11/24/2017 15:08:33" />
+    <file relUrl="log4net.config" publishTime="07/14/2016 14:14:31" />
+  </publishProfile>
+</publishData>

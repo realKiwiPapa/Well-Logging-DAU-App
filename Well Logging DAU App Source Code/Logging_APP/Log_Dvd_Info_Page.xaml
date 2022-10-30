@@ -1,0 +1,102 @@
+﻿<Page x:Class="Logging_App.Log_Dvd_Info_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:my="clr-namespace:Logging_App.Controls"
+      mc:Ignorable="d" Title="Log_Dvd_Info_Page"  Loaded="Page_Loaded">
+<ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="2" x:Name="search_panel">
+                <Label Content="解释处理作业名" Height="25" VerticalContentAlignment="Center"></Label>
+                <TextBox Width="100" Height="25" Text="{Binding Path=PROCESS_NAME,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                <Label Content="光盘编号" Height="25" VerticalContentAlignment="Center"></Label>
+                <TextBox Width="100" Height="25" Text="{Binding Path=DVD_NUMBER,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                <Label Content="柜号" Height="25" VerticalContentAlignment="Center"/>
+                <TextBox Height="25" Width="100" Text="{Binding Path=STORAGE_TANK_NO,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                <Button Content="查询" Click="Search_Click"></Button>
+            </StackPanel>
+            <DataGrid MinHeight="100" MaxHeight="200" CanUserDeleteRows="False" CanUserAddRows="False" SelectionMode="Single" IsReadOnly="True" AutoGenerateColumns="False" Margin="2" x:Name="dataGrid1" SelectionChanged="dataGrid1_SelectionChanged">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Path=PROCESS_NAME}" Header="解释处理作业名"/>
+                    <DataGridTextColumn Binding="{Binding Path=DVD_DIR_NAME}" Header="光盘目录"/>
+                    <DataGridTextColumn Binding="{Binding Path=DVD_NUMBER}" Header="光盘编号"/>
+                    <DataGridTextColumn Binding="{Binding Path=STORAGE_TANK_NO}" Header="存储柜号"/>
+                    <DataGridTextColumn Binding="{Binding Path=COPY_DVD_MAN}" Header="刻盘人" />
+                    <DataGridTextColumn Binding="{Binding Path=COPY_DVD_DATE, StringFormat=\{0:yyyy-MM-dd\}}" Header="刻盘日期" />
+                    <DataGridTextColumn Binding="{Binding Path=DVD_STATE}" Header="备注"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <my:DataPager x:Name="dataPager1" PageSize="50" TotalCount="0" PageChanged="dataPager1_PageChanged"/>
+            <!--<StackPanel Orientation="Horizontal">
+                <RadioButton  Content="新建" GroupName="RadioButtonJobInfo" Name="Button_NewJobInfo" HorizontalAlignment="Center" VerticalAlignment="Center" Checked="Button_NewJobInfo_Checked" />
+                <RadioButton  Content="编辑" IsEnabled="False" GroupName="RadioButtonJobInfo" Name="Button_ChangeJobInfo" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>-->
+            <Menu>
+                <MenuItem Header="保存" Click="Save_DvdInfo">
+                    <MenuItem.Icon>
+                        <Image Source="/Logging_APP;component/Images/filesave.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </Menu>
+            <ScrollViewer VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto">
+                <Grid>
+                    <Border BorderBrush="CadetBlue" BorderThickness="1" HorizontalAlignment="Left" Padding="20">
+                        <Grid Name="DVDINFO" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                            <Grid.Resources>
+                                <Style TargetType="Label">
+                                    <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+                                    <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                                    <Setter Property="Width" Value="70"/>
+                                </Style>
+                                <Style TargetType="TextBox">
+                                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                                    <Setter Property="Margin" Value="3"/>
+                                    <Setter Property="Width" Value="120"/>
+                                </Style>
+                            </Grid.Resources>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20*"></ColumnDefinition>
+                                <ColumnDefinition Width="80" ></ColumnDefinition>
+                                <ColumnDefinition Width="200"></ColumnDefinition>
+                                <ColumnDefinition Width="30*"></ColumnDefinition>
+                                <ColumnDefinition Width="80" ></ColumnDefinition>
+                                <ColumnDefinition Width="200"></ColumnDefinition>
+                                <ColumnDefinition Width="600*"></ColumnDefinition>
+                                <ColumnDefinition Width="80"></ColumnDefinition>
+                                <ColumnDefinition Width="200"></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                            </Grid.RowDefinitions>
+<!--标号布局-->
+                            <Label Content="光驱选择" Height="25" Grid.Column="1" />
+                            <Label Content="存储柜号" Height="25" Grid.Column="6" Grid.ColumnSpan="2"  />
+                            <Label Content="刻盘人" Height="25" Grid.Column="1" Grid.Row="2" />
+                            <Label Content="光盘编号" Height="25" Grid.Column="4"  />
+                            <Label Content="刻盘日期" Height="25" Grid.Column="4" Grid.Row="2"  />
+                            <Label Content="备注" Height="25" Grid.Column="1" Grid.Row="3"  />
+                            <Label Content="解释处理作业名" Height="25" Grid.Column="1" Grid.Row="1"  />
+                            <Label Content="光盘目录名" Height="25" Grid.Column="4" Grid.Row="1" />
+
+                            <ComboBox x:Name="disk_no"  Grid.Column="2" Margin="3,3,0,3" Width="120" HorizontalAlignment="Left" SelectionChanged="disk_no_SelectionChanged"></ComboBox>
+                            <TextBox Name="DVD_N" Margin="3,3,0,3" Width="200" Text="{Binding Path=DVD_NUMBER,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Grid.Column="5" />
+                            <TextBox Text="{Binding Path=COPY_DVD_MAN,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="2" Grid.Row="2" Margin="3,3,0,3" Width="120" />
+                            <!--<TextBox Text="{Binding Path=DVD_NUMBER,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="5" Margin="3,3,0,3" Width="200" />-->
+                            <DatePicker Margin="3,3,0,3" Width="120" HorizontalAlignment="Left" Text="{Binding Path=COPY_DVD_DATE,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,StringFormat=\{0:yyyy-MM-dd\}}" Grid.Column="5" Grid.Row="2" />
+                            <TextBox Grid.ColumnSpan="7" Text="{Binding Path=NOTE,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="700" Grid.Column="2" Grid.Row="3" AcceptsReturn="True" Margin="3,3,0,3" />
+                            <ComboBox Margin="3,3,0,3" HorizontalAlignment="Left" Width="403" Name="cd_pathname" Grid.Column="5" Grid.Row="1" DisplayMemberPath="Value" SelectedValuePath="Value" SelectedValue="{Binding Path=DVD_DIR_NAME,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="4" />
+                            <!--<ComboBox Margin="22,6,33,0" Name="cd_pathname" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="3" SelectedValue="{Binding Path=DVD_DIR_NAME,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" />-->
+                            <TextBox Name="Item" IsReadOnly="true" Margin="3,3,0,3" Text="{Binding Path=PROCESS_NAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="200" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" />
+                            <TextBox Margin="3,3,0,3" Width="120" Text="{Binding Path=STORAGE_TANK_NO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Grid.Column="8" />
+                        </Grid>
+                    </Border>
+                </Grid>
+            </ScrollViewer>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

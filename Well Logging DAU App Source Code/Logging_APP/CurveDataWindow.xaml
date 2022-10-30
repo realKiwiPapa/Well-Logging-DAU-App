@@ -1,0 +1,11 @@
+﻿<Window x:Class="Logging_App.CurveDataWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="图件曲线数据" Height="350" Width="450" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Button Content="导出Excel" Width="70" Height="25" HorizontalAlignment="Left" Click="Button_Click"></Button>
+            <DataGrid x:Name="datagrid1" Height="285" AutoGenerateColumns="True" IsReadOnly="True"  CanUserAddRows="False" CanUserDeleteRows="False" SelectionMode="Single"/>
+        </StackPanel>
+    </Grid>
+</Window>

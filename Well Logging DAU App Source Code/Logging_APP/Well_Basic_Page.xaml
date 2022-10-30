@@ -1,0 +1,268 @@
+﻿<Page x:Class="Logging_App.Well_Basic_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:xctk="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+      mc:Ignorable="d"
+      xmlns:controls="clr-namespace:Logging_App.Controls"
+	Title="Well_Basic_Page" Initialized="Page_Initialized" Loaded="Page_Loaded">
+    <!--Width="1000" Margin="5" Height="1040" HorizontalAlignment="Left" VerticalAlignment="Top"-->
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <StackPanel>
+            <GroupBox Header="数据列表">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" Margin="2" Name="SearchWellBasic" Grid.ColumnSpan="2">
+                        <Label Content="标准井名" Height="25"  VerticalContentAlignment="Center" />
+                        <TextBox Height="25" Width="120" Text="{Binding Path=WELL_LEGAL_NAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <Label Content="构造单元" Height="25" VerticalContentAlignment="Center" />
+                        <TextBox Height="25" Width="120" Text="{Binding Path=WELL_STRUCT_UNIT_NAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <Label Content="甲方单位" Height="25" VerticalContentAlignment="Center" />
+                        <!--<TextBox Height="25" Width="120" Text="{Binding Path=PART_UNITS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>-->
+                        <ComboBox Name="PART_UNITS1" SelectedValue="{Binding Path=PART_UNITS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"></ComboBox>
+                        <Button Margin="15,0,0,0" Click="SearchWellBasic_Click">查询</Button>
+                    </StackPanel>
+                    <DataGrid Grid.Row="1" AutoGenerateColumns="False" x:Name="dataGrid1" Background="White" SelectionMode="Single" IsReadOnly="True" CanUserAddRows="False" CanUserDeleteRows="False" MinHeight="100" MaxHeight="200" MaxWidth="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Grid, AncestorLevel=1}, Path=ActualWidth, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Margin="1" SelectionChanged="dataGrid1_SelectionChanged">
+                        <DataGrid.Resources>
+                            <ContextMenu x:Key="rowContextMenu" Visibility="Collapsed">
+                                <MenuItem Header="删除" Click="Del_Well_Basic"></MenuItem>
+                            </ContextMenu>
+                        </DataGrid.Resources>
+                        <DataGrid.RowStyle>
+                            <Style TargetType="{x:Type DataGridRow}">
+                                <Setter Property="ContextMenu" Value="{StaticResource rowContextMenu}"/>
+                            </Style>
+                        </DataGrid.RowStyle>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Path=WELL_ID}" Header="ID" Visibility="Hidden" />
+                            <DataGridTextColumn Binding="{Binding Path=PART_UNITS}" Header="甲方单位"/>
+                            <DataGridTextColumn Binding="{Binding Path=WELL_STRUCT_UNIT_NAME}" Header="构造单元" />
+                            <DataGridTextColumn Binding="{Binding Path=WELL_NAME}" Header="通用井名" />
+                            <DataGridTextColumn Binding="{Binding Path=WELL_LEGAL_NAME}" Header="标准井名" /> 
+                            <DataGridTextColumn Binding="{Binding Path=BEOG_LOCATION}" Header="地理位置" />
+                            <DataGridTextColumn Binding="{Binding Path=STRUCTURAL_LOCATION}" Header="构造位置" />      
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <DataGrid Grid.Column="1" Grid.Row="1" x:Name="dataGrid2" Background="White" SelectionMode="Single" IsReadOnly="True" CanUserAddRows="False" CanUserDeleteRows="False" MinHeight="100" MaxHeight="200" SelectionChanged="dataGrid2_SelectionChanged" Margin="1" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Path=WELLBORE_NAME}" Header="井筒名" />
+                            <DataGridTextColumn Binding="{Binding Path=MAX_WELL_DEVIATION}" Header="最大井斜" />
+                            <DataGridTextColumn Binding="{Binding Path=MAX_WELL_DEVIATION_MD}" Header="最大井斜对应井深" />
+                            <DataGridTextColumn Binding="{Binding Path=DESIGN_VERTICAL_TVD}" Header="设计垂深" />
+                            <DataGridTextColumn Binding="{Binding Path=WELLBORE_PRODUCTION_DATE, StringFormat=\{0:yyyy-MM-dd\}}" Header="井筒产生日期" />
+                            <DataGridTextColumn Binding="{Binding Path=MD}" Header="实际井深" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="井基本信息" Margin="0,3,0,0">
+                <ScrollViewer VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <RadioButton  Content="新建井" GroupName="RadioButtonWell" Name="Button_NewWell" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="True" Checked="Button_NewWell_Checked" />
+                            <RadioButton  Content="编辑井" IsEnabled="False" GroupName="RadioButtonWell" Name="Button_ChangeWell" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <Menu>
+                            <MenuItem Header="保存" Click="MenuItemSaveWellBasic_Click">
+                                <MenuItem.Icon>
+                                    <Image Source="/Logging_APP;component/Images/filesave.png" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </Menu>
+                        <Grid Name="grid1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="243" />
+                                <ColumnDefinition Width="43*" />
+                                <ColumnDefinition Width="240" />
+                                <ColumnDefinition Width="38*" />
+                                <ColumnDefinition Width="227" />
+                                <ColumnDefinition Width="50*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Margin="12,10,0,0" Content="工区唯一标识符" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                            <TextBox Margin="121,10,0,0" Name="site_id" Text="{Binding Path=SITE_ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Label Margin="3,10,0,0" Content="通用井名" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                            <TextBox Margin="117,10,0,0" Name="well_name" Text="{Binding Path=WELL_NAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" />
+                            <Label Margin="3,10,0,0" Content="标准井名" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="4" />
+                            <TextBox Margin="105,10,0,0" Name="well_legal_name" Text="{Binding Path=WELL_LEGAL_NAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="4" />
+                            <Label Margin="12,45,0,0" Content="井唯一标识" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                            <TextBox Margin="121,45,0,0" Name="well_uwi" Text="{Binding Path=WELL_UWI, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Label Margin="3,45,0,0" Content="井构造单元详细描述" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                            <TextBox Margin="117,45,0,0" Name="well_struct_unit_description" Text="{Binding Path=WELL_STRUCT_UNIT_DESCRIPTION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" />
+                            <Label Margin="3,45,0,0" Content="井油气田单元名称" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="4" />
+                            <TextBox Margin="105,45,0,0" Name="well_field_unit_name" Text="{Binding Path=WELL_FIELD_UNIT_NAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="4" />
+                            <Label Style="{StaticResource JsCardStyle}" Margin="12,80,0,0" Content="井构造单元名称" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                            <TextBox Margin="0,80,2,0" Name="well_struct_unit_name" Text="{Binding Path=WELL_STRUCT_UNIT_NAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Right" VerticalAlignment="Top" />
+                            <Label Style="{StaticResource JsCardStyle}" Margin="3,80,0,0" Content="地理位置" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                            <TextBox Margin="117,80,0,0" Name="beog_location" Text="{Binding Path=BEOG_LOCATION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" />
+                            <Label Margin="3,80,0,0" Content="构造位置" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="4" />
+                            <TextBox Margin="105,80,0,0" Name="structural_location" Text="{Binding Path=STRUCTURAL_LOCATION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="4" />
+                            <Label Margin="12,115,0,0" Content="测线位置" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                            <TextBox Margin="121,115,0,0" Name="traverse_line_location" Text="{Binding Path=TRAVERSE_LINE_LOCATION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Label Margin="3,115,0,0" Content="设计井口横坐标" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                            <controls:NumberBox Margin="117,115,0,0" x:Name="survey_x_axis" DecValue="{Binding Path=SURVEY_X_AXIS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" />
+                            <Label Margin="3,115,0,0" Content="设计井口纵坐标" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="4" />
+                            <controls:NumberBox Margin="105,115,0,0" x:Name="survey_y_axis" DecValue="{Binding Path=SURVEY_Y_AXIS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="4" />
+                            <Label Margin="12,150,0,0" Content="地面海拔" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                            <controls:NumberBox Margin="121,150,0,0" x:Name="ground_elevation" DecValue="{Binding Path=GROUND_ELEVATION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Label Margin="3,150,0,0" Content="基准面海拔" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                            <controls:NumberBox Margin="117,150,0,0" x:Name="system_datum_offset" DecValue="{Binding Path=SYSTEM_DATUM_OFFSET, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" />
+                            <Label Margin="3,150,0,0" Content="实际井口横坐标" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="4" />
+                            <controls:NumberBox Margin="105,150,0,0" x:Name="ranger_x_axis" DecValue="{Binding Path=RANGER_X_AXIS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="4" />
+                            <Label Margin="12,185,0,0" Content="实际井口纵坐标" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                            <controls:NumberBox Margin="121,185,0,0" x:Name="ranger_y_axis" DecValue="{Binding Path=RANGER_Y_AXIS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Label Margin="3,185,0,0" Content="磁偏角" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                            <controls:NumberBox Margin="117,185,0,0" x:Name="magnetic_declination" DecValue="{Binding Path=MAGNETIC_DECLINATION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" />
+                            <Label Margin="3,185,0,0" Content="联入深度" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="4" />
+                            <controls:NumberBox Margin="105,185,0,0" x:Name="casing_top_depth" DecValue="{Binding Path=CASING_TOP_DEPTH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="4" />
+                            <Label Margin="12,220,0,0" Content="实际井口经度" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                            <TextBox Margin="121,220,0,0" Name="well_head_longitude" Text="{Binding Path=WELL_HEAD_LONGITUDE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Label Margin="3,220,0,0" Content="实际井口纬度" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                            <TextBox Margin="117,220,0,0" Name="well_head_latitude" Text="{Binding Path=WELL_HEAD_LATITUDE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" />
+                            <Label Content="国家" Height="25" HorizontalAlignment="Left" Margin="3,220,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="4" />
+                            <TextBox Height="25" HorizontalAlignment="Left" Margin="105,220,0,0" Text="{Binding Path=LOC_COUNTRY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120" Grid.Column="4" />
+                            <Label Content="省市位置" Height="25" HorizontalAlignment="Left" Margin="12,255,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                            <TextBox Height="25" HorizontalAlignment="Left" Margin="121,255,0,0" Text="{Binding Path=LOC_STATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120" />
+                            <Label Content="地级市" Height="25" HorizontalAlignment="Left" Margin="3,255,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                            <TextBox Height="25" HorizontalAlignment="Left" Margin="117,255,0,0" Text="{Binding Path=P_LOC_CITY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120" Grid.Column="2" />
+                            <Label Content="县" Height="25" HorizontalAlignment="Left" Margin="3,255,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="12" Grid.Column="4" />
+                            <TextBox Height="25" HorizontalAlignment="Left" Margin="105,255,0,0" Text="{Binding Path=LOC_COUNTY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120" Grid.Column="4" />
+                            <Label Style="{StaticResource JsCardStyle}" Content="甲方单位" Height="25" HorizontalAlignment="Left" Margin="13,293,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+                            <!--<TextBox Height="25" HorizontalAlignment="Left" Margin="120,293,0,0" Text="{Binding Path=PART_UNITS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120" />-->
+                            <ComboBox Margin="120,293,0,0" Name="PART_UNITS" SelectedValue="{Binding Path=PART_UNITS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"></ComboBox>
+                            <Label Content="井口法兰" Height="25" HorizontalAlignment="Left" Margin="1,292,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2"/>
+                            <TextBox Height="25" HorizontalAlignment="Left" Margin="117,292,0,0" Text="{Binding Path=WELL_HEAD_FLANGE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120" Grid.Column="2" />
+                            <Label Content="临井钻头情况" Height="25" HorizontalAlignment="Left" Margin="1,292,0,0" VerticalAlignment="Top" Grid.Column="4"></Label>
+                            <TextBox Height="25" HorizontalAlignment="Left" Margin="105,292,0,0" VerticalAlignment="Top" Width="120" Grid.Column="4" Text="{Binding Path=WELL_DRILL_CONDITION,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                            <Label Margin="12,330,0,0" Content="补心高" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                            <TextBox Height="25" HorizontalAlignment="Left" Margin="120,330,0,0" VerticalAlignment="Top" Width="120" Text="{Binding Path=BX_HEIGHT,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                            <StackPanel Height="30" VerticalAlignment="Top" Margin="12,367,0,0" Grid.ColumnSpan="5" Orientation="Horizontal">
+                                <Label Content="钻井地质设计" Height="25" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Center" VerticalContentAlignment="Center" />
+                                <TextBox Height="25" HorizontalAlignment="Left" Margin="20,0,0,0" Name="DRILL_GEO_DES_FILENAME" IsReadOnly="True" VerticalAlignment="Center" Width="200" />
+                                <Button HorizontalAlignment="Left"  Height="25" Margin="5,0,0,0" VerticalAlignment="Center" Width="60" Content="选择文件" Grid.Column="2" Click="Button_Click" />
+                                <Button HorizontalAlignment="Left" Height="25" Margin="5,0,0,0" VerticalAlignment="Center" Width="40" Content="查看" Grid.Column="2" Click="Button_Click_1" />
+                            </StackPanel>
+                            <StackPanel Height="30" VerticalAlignment="Top" Margin="12,405,0,0" Grid.ColumnSpan="5" Orientation="Horizontal">
+                                <Label Content="钻井工程设计" Height="25" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Center" VerticalContentAlignment="Center" />
+                                <TextBox Height="25" HorizontalAlignment="Left" Margin="20,0,0,0" Name="DRILL_ENG_DES_FILENAME" IsReadOnly="True" VerticalAlignment="Center" Width="200" />
+                                <Button HorizontalAlignment="Left"  Height="25" Margin="5,0,0,0" VerticalAlignment="Center" Width="60" Content="选择文件" Grid.Column="2" Click="Button_Click_2" />
+                                <Button HorizontalAlignment="Left" Height="25" Margin="5,0,0,0" VerticalAlignment="Center" Width="40" Content="查看" Grid.Column="2" Click="Button_Click_3" />
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+            </GroupBox>
+            <GroupBox Header="井筒信息" Margin="0,3,0,0" Name="gbWellbore" IsEnabled="False">
+                <ScrollViewer VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <RadioButton  Content="新建井筒" GroupName="RadioButtonWellbore" Name="Button_NewWellbore" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="True" Checked="Button_NewWellbore_Checked" />
+                            <RadioButton  Content="编辑井筒" IsEnabled="False" GroupName="RadioButtonWellbore" Name="Button_ChangeWellbore" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <Menu>
+                            <MenuItem Header="保存" Click="MenuItemSaveWellbore_Click">
+                                <MenuItem.Icon>
+                                    <Image Source="/Logging_APP;component/Images/filesave.png" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </Menu>
+                        <Grid Name="grid2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="243" />
+                                <ColumnDefinition Width="43*" />
+                                <ColumnDefinition Width="240" />
+                                <ColumnDefinition Width="38*" />
+                                <ColumnDefinition Width="227" />
+                                <ColumnDefinition Width="50*" />
+                            </Grid.ColumnDefinitions>
+                            <!--<Label Margin="12,365,0,0" Content="井名" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+            <TextBox Margin="121,365,0,0" Name="well_id" Text="{Binding Path=WELL_ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <Label Margin="3,365,0,0" Content="井筒唯一标识" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+            <TextBox Margin="117,365,0,0" Name="wellbore_wui" Text="{Binding Path=WELLBORE_WUI, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" />
+            <Label Margin="3,365,0,0" Content="父井筒代号" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="4" />
+            <TextBox Margin="105,365,0,0" Name="p_wellbore_id" Text="{Binding Path=P_WELLBORE_ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"  Grid.Column="4"/>-->
+                            <Label Margin="10,15,0,0" Content="井筒名" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                            <TextBox Margin="119,15,0,0" Name="wellbore_name" Text="{Binding Path=WELLBORE_NAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Label Margin="1,15,0,0" Content="井筒目的" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                            <TextBox Margin="115,15,0,0" Name="purpose" Text="{Binding Path=PURPOSE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" />
+                            <Label Margin="1,15,0,0" Content="最大井斜" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="4" />
+                            <controls:NumberBox Margin="103,15,0,0" x:Name="max_well_deviation" DecValue="{Binding Path=MAX_WELL_DEVIATION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="4" />
+                            <Label Margin="10,50,0,0" Content="最大井斜对应井深" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                            <controls:NumberBox Margin="119,50,0,0" x:Name="max_well_deviation_md" DecValue="{Binding Path=MAX_WELL_DEVIATION_MD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Label Margin="1,50,0,0" Content="设计垂深" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                            <controls:NumberBox Margin="115,50,0,0" x:Name="design_vertical_tvd" DecValue="{Binding Path=DESIGN_VERTICAL_TVD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" />
+                            <Label Margin="1,50,0,0" Content="井筒产生日期" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="4" />
+                            <xctk:DateTimePicker Format="Custom" ShowButtonSpinner="False" FormatString="yyyy-MM-dd HH:mm" Margin="103,50,0,0" Name="wellbore_production_date" Value="{Binding Path=WELLBORE_PRODUCTION_DATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="4" />
+                            <Label Margin="10,85,0,0" Content="造斜(侧钻)点井深" HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="28" VerticalAlignment="Top" />
+                            <controls:NumberBox Margin="119,85,0,0" x:Name="deflection_point_md" DecValue="{Binding Path=DEFLECTION_POINT_MD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Width="120" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" />
+                            <Label Margin="1,85,0,0" Content="实际井深" HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="28" VerticalAlignment="Top" Grid.Column="2" />
+                            <controls:NumberBox Margin="115,85,0,0" x:Name="md" DecValue="{Binding Path=MD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Width="120" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Grid.Column="2" />
+                            <Label Margin="1,85,0,0" Content="实际垂深" HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="28" VerticalAlignment="Top" Grid.Column="4" />
+                            <controls:NumberBox Margin="103,85,0,0" x:Name="vertical_well_tvd" DecValue="{Binding Path=VERTICAL_WELL_TVD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Width="120" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Grid.Column="4" />
+                            <Label Margin="10,120,0,0" Content="回填深度" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                            <controls:NumberBox Margin="119,120,0,0" x:Name="plugback_md" DecValue="{Binding Path=PLUGBACK_MD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Label Margin="1,120,0,0" Content="回填垂深" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                            <controls:NumberBox Margin="115,120,0,0" x:Name="plugback_tvd" DecValue="{Binding Path=PLUGBACK_TVD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" />
+                            <Label Margin="1,120,0,0" Content="人工井底" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="4" />
+                            <controls:NumberBox Margin="103,120,0,0" x:Name="true_plugbacktotal_depth" DecValue="{Binding Path=TRUE_PLUGBACKTOTAL_DEPTH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="4" />
+                            <Label Margin="10,155,0,0" Content="设计层位" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                            <TextBox Margin="119,155,0,0" Name="design_horizon" Text="{Binding Path=DESIGN_HORIZON, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Label Margin="1,155,0,0" Content="设计井深" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                            <controls:NumberBox Margin="115,155,0,0" x:Name="design_md" DecValue="{Binding Path=DESIGN_MD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" />
+                            <Label Margin="1,155,0,0" Content="实际层位" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="4" />
+                            <TextBox Margin="103,155,0,0" Name="actual_horizon" Text="{Binding Path=ACTUAL_HORIZON, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="4" />
+                        </Grid>
+                        <Grid Name="grid3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="243" />
+                                <ColumnDefinition Width="43*" />
+                                <ColumnDefinition Width="240" />
+                                <ColumnDefinition Width="38*" />
+                                <ColumnDefinition Width="227" />
+                                <ColumnDefinition Width="50*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Margin="10,15,0,120" Content="套管名称" HorizontalAlignment="Left" VerticalContentAlignment="Center"/>
+                            <TextBox Margin="115,15,0,0" x:Name="casing_name" Text="{Binding CASING_NAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <Label Margin="1,15,0,0" Content="固井时井深" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                            <controls:NumberBox Margin="115,15,0,120" x:Name="cement_md" DecValue="{Binding CEMENT_MD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Width="120" HorizontalAlignment="Left" Grid.Column="2" />
+                            <Label Margin="1,15,0,0" Content="固井时层位" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="4"/>
+                            <TextBox Margin="103,15,0,0" x:Name="cement_horizon" Text="{Binding CEMENT_HORIZON, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="4" />
+                            <Label Margin="10,45,0,0" Content="固井时井眼尺寸" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+                            <controls:NumberBox Margin="115,45,0,0" x:Name="cement_bore_size" DecValue="{Binding CEMENT_BORE_SIZE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <Label Margin="1,45,0,0" Content="套管外径" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                            <controls:NumberBox Margin="115,45,0,0" x:Name="casing_od" DecValue="{Binding CASING_OD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" />
+                            <Label Margin="1,45,0,0" Content="套管顶部深度" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="4"/>
+                            <controls:NumberBox Margin="103,45,0,0" x:Name="boingtool_bottom_depth" DecValue="{Binding BOINGTOOL_BOTTOM_DEPTH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="4" />
+                            <Label Margin="10,75,0,0" Content="套管下深" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+                            <controls:NumberBox Margin="115,75,0,0" x:Name="setting_depth" DecValue="{Binding SETTING_DEPTH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <Label Margin="1,75,0,0" Content="阻流环深度" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                            <controls:NumberBox Margin="115,75,0,0" x:Name="choke_coil_depth" DecValue="{Binding CHOKE_COIL_DEPTH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Height="22" Grid.Column="2" />
+                            <Label Margin="1,75,0,0" Content="分级箍1下深" HorizontalAlignment="Left" VerticalContentAlignment="Center" VerticalAlignment="Top" Grid.Column="4"/>
+                            <controls:NumberBox Margin="103,75,0,0" x:Name="stage_collar1_depth" DecValue="{Binding STAGE_COLLAR1_DEPTH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="4" />
+                            <Label Margin="10,105,0,0" Content="分级箍2下深" HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="22" VerticalAlignment="Top"/>
+                            <controls:NumberBox Margin="115,105,0,0" x:Name="stage_collar2_depth" DecValue="{Binding STAGE_COLLAR2_DEPTH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Width="120" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top"/>
+                            <Label Margin="1,105,0,0" Content="一级水泥返深" HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="22" VerticalAlignment="Top" Grid.Column="2" />
+                            <controls:NumberBox Margin="115,105,0,0" x:Name="first_cement_top" DecValue="{Binding FIRST_CEMENT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Width="120" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Grid.Column="2" />
+                            <Label Margin="1,105,0,0" Content="二级水泥返深" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="4"/>
+                            <controls:NumberBox Margin="103,105,0,0" x:Name="second_cement_top" DecValue="{Binding SECOND_CEMENT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="4" />
+                            <Label Margin="10,135,0,0" Content="三级水泥返深" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+                            <controls:NumberBox Margin="115,135,0,0" x:Name="third_cement_top" DecValue="{Binding THIRD_CEMENT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <Label Margin="1,135,0,0" Content="固井方法" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="2" />
+                            <TextBox Margin="115,135,0,0" x:Name="cement_method" Text="{Binding CEMENT_METHOD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" />
+                            <Label Margin="1,135,0,0" Content="人工井底" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Column="4"/>
+                            <controls:NumberBox Margin="103,135,0,0" x:Name="artificial_well_bottom_depth" DecValue="{Binding ARTIFICIAL_WELL_BOTTOM_DEPTH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="4" />
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+            </GroupBox>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

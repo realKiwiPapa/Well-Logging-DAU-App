@@ -1,0 +1,36 @@
+﻿<gui:BaseWindow x:Class="Logging_App.COM_WELL_BASIC_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+        xmlns:gui="clr-namespace:Logging_App.GUI" xmlns:controls="clr-namespace:Logging_App.Controls" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" 
+        Title="新建井" Height="500" Width="550" Loaded="BaseWindow_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="274*" />
+            <RowDefinition Height="35" />
+        </Grid.RowDefinitions>
+        <DataGrid AutoGenerateColumns="False" Name="dataGrid1" Grid.Row="1" IsReadOnly="True" SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=WELL_NAME}" Width="150" Header="井名" />
+                <DataGridTextColumn Binding="{Binding Path=WELL_LEGALNAME}" Width="150" Header="标准井名" />
+                <DataGridTextColumn Binding="{Binding Path=WELL_JOB_NAME}" Width="150" Header="作业井名" />
+                <DataGridTextColumn Binding="{Binding Path=JOB_ID}" Header="作业井名" Visibility="Hidden"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="井名" Height="28" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="24,6,0,6" />
+        <TextBox HorizontalAlignment="Left" Margin="54,9,0,8" Name="txt井名" Width="120" />
+        <Label Content="作业井名" Height="28" HorizontalAlignment="Left" Margin="184,6,0,6" VerticalContentAlignment="Center" />
+        <TextBox HorizontalAlignment="Left" Margin="238,9,0,8" Name="txt作业井名" Width="109" />
+        <Label Content="库" Height="28" HorizontalAlignment="Left" Margin="357,6,0,6" VerticalContentAlignment="Center" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="374,9,0,0" Name="comboBox1" VerticalAlignment="Top" Width="71" SelectionChanged="comboBox1_SelectionChanged">
+            <ComboBoxItem Content="测井库" />
+            <ComboBoxItem Content="中心库" />
+        </ComboBox>
+        <Button Content="查询" Height="23" HorizontalAlignment="Left" Margin="451,9,0,0" Name="button3" VerticalAlignment="Top" Width="65" Click="button3_Click" />
+        <Button Content="确定" Height="23" HorizontalAlignment="Left" Margin="116,5,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" Grid.Row="2" />
+        <Button Content="取消" Height="23" HorizontalAlignment="Left" Margin="314,5,0,0" Name="button2" VerticalAlignment="Top" Width="75" Click="button2_Click" Grid.Row="2"/>
+    </Grid>
+</gui:BaseWindow>

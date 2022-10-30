@@ -1,0 +1,75 @@
+﻿<gui:BaseWindow x:Class="Logging_App.UploadWindow"
+                xmlns:gui="clr-namespace:Logging_App.GUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="文件上传中" Height="515" Width="852" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Closing="BaseWindow_Closing" Loaded="BaseWindow_Loaded">
+    <Grid>
+        <DataGrid Name="dataGrid" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="文件名">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Label VerticalContentAlignment="Center" Content="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Width="200" Header="进度">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ProgressBar Value="{Binding Path=Progress, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="已完成">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                                <Label Content="{Binding Path=CompletedSize, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
+                                <Label>/</Label>
+                                <Label Content="{Binding Path=Size, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="已用时" Visibility="Collapsed" x:Name="timeUsedCol">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                                <Label VerticalContentAlignment="Center" Content="{Binding Path=TimeUsed, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="剩余时间" Visibility="Collapsed" x:Name="timeLeftCol">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                                <Label VerticalContentAlignment="Center" Content="{Binding Path=TimeLeft, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="速度" Visibility="Collapsed" x:Name="speedCol">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                                <Label VerticalContentAlignment="Center" Content="{Binding Path=Speed, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="状态">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Label VerticalContentAlignment="Center" Content="{Binding Path=Msg, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}">
+                                <Label.ToolTip>
+                                    <ToolTip Style="{StaticResource WrapToolTip}" Content="{Binding Path=Msg, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"></ToolTip>
+                                </Label.ToolTip>
+                            </Label>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</gui:BaseWindow>

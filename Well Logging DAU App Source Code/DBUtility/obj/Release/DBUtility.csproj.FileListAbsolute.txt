@@ -1,0 +1,21 @@
+E:\Logging_App\DBUtility\bin\Release\Maticsoft.DBUtility.dll
+E:\Logging_App\DBUtility\bin\Release\Oracle.DataAccess.dll
+E:\Logging_App\DBUtility\obj\Release\Maticsoft.DBUtility.dll
+D:\Logging_App\DBUtility\bin\Release\Maticsoft.DBUtility.dll
+D:\Logging_App\DBUtility\bin\Release\Oracle.DataAccess.dll
+D:\Logging_App\DBUtility\obj\Release\Maticsoft.DBUtility.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\DBUtility\bin\Release\Maticsoft.DBUtility.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\DBUtility\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\Logging_App\DBUtility\obj\Release\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\DBUtility\bin\Release\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\DBUtility\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\DBUtility\obj\Release\Maticsoft.DBUtility.dll
+G:\测井源码\数据采集器\DBUtility\bin\Release\Maticsoft.DBUtility.dll
+G:\测井源码\数据采集器\DBUtility\obj\Release\ResolveAssemblyReference.cache
+G:\测井源码\数据采集器\DBUtility\obj\Release\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\数据采集器\DBUtility\bin\Release\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\数据采集器\DBUtility\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\数据采集器\DBUtility\obj\Release\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\bin\Release\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\obj\Release\Maticsoft.DBUtility.dll

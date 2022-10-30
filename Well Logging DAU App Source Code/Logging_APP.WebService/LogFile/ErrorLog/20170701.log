@@ -1,0 +1,40 @@
+[记录时间：07:57:16.084]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00942: table or view does not exist
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 285
+   在 Logging_App.WebService.DataService.GetFileTemplate() 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 684
+
+消息：
+[记录时间：08:14:23.947]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00942: table or view does not exist
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetA1DataByView(String view_name, String process_id) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 690
+
+消息：
+[记录时间：08:14:33.943]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00942: table or view does not exist
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetA1DataByView(String view_name, String process_id) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 690
+
+消息：
+[记录时间：08:19:32.403]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00904: "PROCESS_ID": invalid identifier
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetA1DataByView(String view_name, String process_id) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 690
+
+消息：
+[记录时间：08:27:41.584]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01858: a non-numeric character was found where a numeric was expected
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetA1DataByView(String view_name, String process_id) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 690
+
+消息：

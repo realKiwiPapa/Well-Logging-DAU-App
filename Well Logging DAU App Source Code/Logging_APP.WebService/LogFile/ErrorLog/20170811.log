@@ -1,0 +1,13 @@
+[记录时间：08:53:07.350]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-06550: line 1, column 744:
+PL/SQL: ORA-00911: invalid character
+ORA-06550: line 1, column 7:
+PL/SQL: SQL Statement ignored    在 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck)
+   在 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, String procedure, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, Boolean bCheck)
+   在 Oracle.DataAccess.Client.OracleCommand.ExecuteNonQuery()
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSqlTran(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 351
+   在 Logging_App.WebService.DataService.Save_作业明细(Byte[] data_作业明细, Byte[] data_遇阻情况, Byte[] data_放射源使用情况, Byte[] dataChangedList_测井项目, Byte[] dataRemoveList_测井项目, Byte[] dataChangedList_井下设备, Byte[] dataRemoveList_井下设备) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 2072
+
+消息：

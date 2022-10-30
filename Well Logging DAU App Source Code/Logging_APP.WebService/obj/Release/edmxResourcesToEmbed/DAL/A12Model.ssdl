@@ -1,0 +1,1869 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="A12Model.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="11.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="A12ModelStoreContainer">
+    <EntitySet Name="COM_BASE_WELL" EntityType="A12Model.Store.COM_BASE_WELL" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_ACH_AMPLITUDE_DATA" EntityType="A12Model.Store.LOG_ACH_AMPLITUDE_DATA" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_ACH_CARVE_OBJECT" EntityType="A12Model.Store.LOG_ACH_CARVE_OBJECT" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_ACH_CASING_COUPLING" EntityType="A12Model.Store.LOG_ACH_CASING_COUPLING" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_ACH_CASING_PROGRAM" EntityType="A12Model.Store.LOG_ACH_CASING_PROGRAM" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_ACH_CEMENT_QUALITYDRAWING" EntityType="A12Model.Store.LOG_ACH_CEMENT_QUALITYDRAWING" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_ACH_CEMENT_QUALITY_REPORT" EntityType="A12Model.Store.LOG_ACH_CEMENT_QUALITY_REPORT" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_ACH_DIAGRAM_AND_TABLE" EntityType="A12Model.Store.LOG_ACH_DIAGRAM_AND_TABLE" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_ACH_DRILL_CASED_PROGRAM" EntityType="A12Model.Store.LOG_ACH_DRILL_CASED_PROGRAM" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_ACH_ENGINEERING_LOG_REPORT" EntityType="A12Model.Store.LOG_ACH_ENGINEERING_LOG_REPORT" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_ACH_HOLE_DIAMETER_DATA" EntityType="A12Model.Store.LOG_ACH_HOLE_DIAMETER_DATA" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_ACH_INTERPRET_CONCLUSION" EntityType="A12Model.Store.LOG_ACH_INTERPRET_CONCLUSION" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_ACH_INTERPRET_RESULT_FILES" EntityType="A12Model.Store.LOG_ACH_INTERPRET_RESULT_FILES" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_ACH_INTERPRET_VALID_RATE" EntityType="A12Model.Store.LOG_ACH_INTERPRET_VALID_RATE" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_ACH_PRODUCTION_LOG_REPORT" EntityType="A12Model.Store.LOG_ACH_PRODUCTION_LOG_REPORT" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_ACH_WELL_DEVIATION_DATA" EntityType="A12Model.Store.LOG_ACH_WELL_DEVIATION_DATA" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_ARC_DRAWINGDATAS_INTP" EntityType="A12Model.Store.LOG_ARC_DRAWINGDATAS_INTP" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_BASE_CURVES_DESC" EntityType="A12Model.Store.LOG_BASE_CURVES_DESC" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_BASE_DATAITEM_STANDARD" EntityType="A12Model.Store.LOG_BASE_DATAITEM_STANDARD" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_BASE_DEVICE" EntityType="A12Model.Store.LOG_BASE_DEVICE" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_BASE_INSTRUMENT" EntityType="A12Model.Store.LOG_BASE_INSTRUMENT" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_BASE_INS_MAINTAINRECORD" EntityType="A12Model.Store.LOG_BASE_INS_MAINTAINRECORD" store:Type="Tables" store:Schema="CQA12WAS" store:Name="LOG_BASE_INS_MAINTAINRECORD">
+      <DefiningQuery>SELECT 
+      "LOG_BASE_INS_MAINTAINRECORD"."INSTRUMENT_ID" AS "INSTRUMENT_ID", 
+      "LOG_BASE_INS_MAINTAINRECORD"."EQUIP_2D" AS "EQUIP_2D", 
+      "LOG_BASE_INS_MAINTAINRECORD"."INSTRUMENT_NAME" AS "INSTRUMENT_NAME", 
+      "LOG_BASE_INS_MAINTAINRECORD"."INSTRUMENT_STATUS" AS "INSTRUMENT_STATUS", 
+      "LOG_BASE_INS_MAINTAINRECORD"."INSTRUMENT_DEMO" AS "INSTRUMENT_DEMO", 
+      "LOG_BASE_INS_MAINTAINRECORD"."MANUMBERAINER_ID" AS "MANUMBERAINER_ID", 
+      "LOG_BASE_INS_MAINTAINRECORD"."ROW_STATE" AS "ROW_STATE", 
+      "LOG_BASE_INS_MAINTAINRECORD"."CREATE_ORG" AS "CREATE_ORG", 
+      "LOG_BASE_INS_MAINTAINRECORD"."CREATE_USER" AS "CREATE_USER", 
+      "LOG_BASE_INS_MAINTAINRECORD"."UPDATE_ORG" AS "UPDATE_ORG", 
+      "LOG_BASE_INS_MAINTAINRECORD"."UPDATE_USER" AS "UPDATE_USER", 
+      "LOG_BASE_INS_MAINTAINRECORD"."CREATE_DATE" AS "CREATE_DATE", 
+      "LOG_BASE_INS_MAINTAINRECORD"."UPDATE_DATE" AS "UPDATE_DATE", 
+      "LOG_BASE_INS_MAINTAINRECORD"."REMARK" AS "REMARK", 
+      "LOG_BASE_INS_MAINTAINRECORD"."WELL_ID" AS "WELL_ID", 
+      "LOG_BASE_INS_MAINTAINRECORD"."WELLBORE_ID" AS "WELLBORE_ID", 
+      "LOG_BASE_INS_MAINTAINRECORD"."ISUPLOAD" AS "ISUPLOAD", 
+      "LOG_BASE_INS_MAINTAINRECORD"."OPS_BASEINFO_ID" AS "OPS_BASEINFO_ID"
+      FROM "CQA12WAS"."LOG_BASE_INS_MAINTAINRECORD" "LOG_BASE_INS_MAINTAINRECORD"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LOG_BASE_RADIOFRECORD" EntityType="A12Model.Store.LOG_BASE_RADIOFRECORD" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_DESIGN_WORKPLAN" EntityType="A12Model.Store.LOG_DESIGN_WORKPLAN" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_DEVICE_INS_RETURN" EntityType="A12Model.Store.LOG_DEVICE_INS_RETURN" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_ACCEPTANCE_QUALITY" EntityType="A12Model.Store.LOG_OPS_ACCEPTANCE_QUALITY" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_ACQUISITION_DATA" EntityType="A12Model.Store.LOG_OPS_ACQUISITION_DATA" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_BASEINFO_RECORD" EntityType="A12Model.Store.LOG_OPS_BASEINFO_RECORD" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_CABLE_REC" EntityType="A12Model.Store.LOG_OPS_CABLE_REC" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_CARVEQUALITY_SUMMARY" EntityType="A12Model.Store.LOG_OPS_CARVEQUALITY_SUMMARY" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_CARVE_QUALITY" EntityType="A12Model.Store.LOG_OPS_CARVE_QUALITY" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_COLLECT_PROCESS" EntityType="A12Model.Store.LOG_OPS_COLLECT_PROCESS" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_CORINGDETAIL" EntityType="A12Model.Store.LOG_OPS_CORINGDETAIL" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_CORINGINFOSUMMARY" EntityType="A12Model.Store.LOG_OPS_CORINGINFOSUMMARY" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_CORING_RECORD" EntityType="A12Model.Store.LOG_OPS_CORING_RECORD" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_DANGER_GOODS_MONITOR" EntityType="A12Model.Store.LOG_OPS_DANGER_GOODS_MONITOR" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_DATA_SUBMIT" EntityType="A12Model.Store.LOG_OPS_DATA_SUBMIT" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_DATA_SUBMIT_FILE_INDEX" EntityType="A12Model.Store.LOG_OPS_DATA_SUBMIT_FILE_INDEX" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_DEVICE_FAILURE_WARNING" EntityType="A12Model.Store.LOG_OPS_DEVICE_FAILURE_WARNING" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_DEVICE_USAGE" EntityType="A12Model.Store.LOG_OPS_DEVICE_USAGE" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_FAILURE_RECORD" EntityType="A12Model.Store.LOG_OPS_FAILURE_RECORD" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_GEOLOGY_RISK_WARNING" EntityType="A12Model.Store.LOG_OPS_GEOLOGY_RISK_WARNING" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_GEOSTEERING_WARNING" EntityType="A12Model.Store.LOG_OPS_GEOSTEERING_WARNING" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_INS_RUNNINGRECORD" EntityType="A12Model.Store.LOG_OPS_INS_RUNNINGRECORD" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_INTERPRETATIONPLATFORM" EntityType="A12Model.Store.LOG_OPS_INTERPRETATIONPLATFORM" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_INTERPRET_PROCESS" EntityType="A12Model.Store.LOG_OPS_INTERPRET_PROCESS" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_JOB_ACTIVITY" EntityType="A12Model.Store.LOG_OPS_JOB_ACTIVITY" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_OPERATION_MONITOR" EntityType="A12Model.Store.LOG_OPS_OPERATION_MONITOR" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_PERFORATION_ZONE" EntityType="A12Model.Store.LOG_OPS_PERFORATION_ZONE" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_RADIATION_RECORD" EntityType="A12Model.Store.LOG_OPS_RADIATION_RECORD" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_SHOTINFO" EntityType="A12Model.Store.LOG_OPS_SHOTINFO" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_SHOTSUMMARY" EntityType="A12Model.Store.LOG_OPS_SHOTSUMMARY" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_TASK_ITEMS" EntityType="A12Model.Store.LOG_OPS_TASK_ITEMS" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_TIGHT_HOLE_WARNING" EntityType="A12Model.Store.LOG_OPS_TIGHT_HOLE_WARNING" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_TIME_DISTRIBUTION" EntityType="A12Model.Store.LOG_OPS_TIME_DISTRIBUTION" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_USER_TAILOR_RECORD" EntityType="A12Model.Store.LOG_OPS_USER_TAILOR_RECORD" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_VEHICLE_USAGE" EntityType="A12Model.Store.LOG_OPS_VEHICLE_USAGE" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_OPS_WELLSITE_ENV" EntityType="A12Model.Store.LOG_OPS_WELLSITE_ENV" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="LOG_RT_LOGGING_DATA" EntityType="A12Model.Store.LOG_RT_LOGGING_DATA" store:Type="Tables" Schema="CQA12WAS" />
+    <EntitySet Name="WL_ACH_BOREHOLE_INTER" EntityType="A12Model.Store.WL_ACH_BOREHOLE_INTER" store:Type="Tables" Schema="CQA12WAS" />
+  </EntityContainer>
+  <EntityType Name="COM_BASE_WELL">
+    <Key>
+      <PropertyRef Name="WELL_ID" />
+    </Key>
+    <Property Name="WELL_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="WELL_NAME" Type="nvarchar2" MaxLength="60" />
+    <Property Name="WELL_LEGALNAME" Type="nvarchar2" MaxLength="60" />
+    <Property Name="WELL_TYPE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELL_SORT" Type="nvarchar2" MaxLength="32" />
+    <Property Name="COUNTRY" Type="nvarchar2" MaxLength="35" />
+    <Property Name="LOC_STATE" Type="nvarchar2" MaxLength="35" />
+    <Property Name="CITY" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LOC_COUNTY" Type="nvarchar2" MaxLength="35" />
+    <Property Name="DISTRICT" Type="nvarchar2" MaxLength="100" />
+    <Property Name="STRUCT_CODE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="STRUCTURE_LOCATION" Type="nvarchar2" MaxLength="200" />
+    <Property Name="STRUCTURE_DESCRIPTION" Type="nvarchar2" MaxLength="200" />
+    <Property Name="TWO_DIM_POSITION" Type="nvarchar2" MaxLength="200" />
+    <Property Name="THREE_DIM_POSITION" Type="nvarchar2" MaxLength="200" />
+    <Property Name="RELATIVE_WELL_NAME" Type="nvarchar2" MaxLength="200" />
+    <Property Name="RELATIVE_SPACE" Type="number" Precision="7" Scale="2" />
+    <Property Name="RELATIVE_AZIMUTH" Type="nvarchar2" MaxLength="200" />
+    <Property Name="GEOGRAPHIC_LOCATION" Type="nvarchar2" MaxLength="200" />
+    <Property Name="DESIGN_LONGITUDE" Type="float" Precision="126" />
+    <Property Name="DESIGN_LATITUDE" Type="float" Precision="126" />
+    <Property Name="ACTUAL_LONGITUDE" Type="float" Precision="126" />
+    <Property Name="ACTUAL_LATITUDE" Type="float" Precision="126" />
+    <Property Name="DESIGN_X_AXIS" Type="number" Precision="12" Scale="2" />
+    <Property Name="DESIGN_Y_AXIS" Type="number" Precision="12" Scale="2" />
+    <Property Name="ACTUAL_X_AXIS" Type="number" Precision="12" Scale="3" />
+    <Property Name="ACTUAL_Y_AXIS" Type="number" Precision="12" Scale="3" />
+    <Property Name="DESIGN_GROUND_ELEVATION" Type="float" Precision="126" />
+    <Property Name="ACTUAL_GROUND_ELEVATION" Type="float" Precision="126" />
+    <Property Name="TRAVERSE_LINE_X_AXIS" Type="number" Precision="12" Scale="2" />
+    <Property Name="TRAVERSE_LINE_Y_AXIS" Type="number" Precision="12" Scale="2" />
+    <Property Name="SEA_WATER_DEPTH" Type="number" Precision="6" Scale="2" />
+    <Property Name="TERRACE_CODE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="MAGNETIC_DIP" Type="number" Precision="6" Scale="2" />
+    <Property Name="ANGLE_DIP" Type="number" Precision="6" Scale="2" />
+    <Property Name="MAGNETIC_FIELDINTENSITY" Type="number" Precision="6" Scale="2" />
+    <Property Name="WELL_UWI" Type="nvarchar2" MaxLength="60" />
+    <Property Name="WELL_BLOCK" Type="nvarchar2" MaxLength="100" />
+    <Property Name="WELL_FIELD_UNIT_NAME" Type="nvarchar2" MaxLength="100" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="WELL_ID_A7" Type="nvarchar2" MaxLength="32" />
+    <Property Name="SITE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="KOH" Type="number" Precision="8" Scale="2" />
+    <Property Name="BASIN" Type="nvarchar2" MaxLength="32" />
+    <Property Name="BUSHING_ELEVATION" Type="number" Precision="8" Scale="2" />
+    <Property Name="DESIGN_LONGITUDE_POINTS" Type="float" Precision="126" />
+    <Property Name="DESIGN_LONGITUDE_SECONDS" Type="float" Precision="126" />
+    <Property Name="ACTUAL_LONGITUDE_POINTS" Type="float" Precision="126" />
+    <Property Name="ACTUAL_LONGITUDE_SECONDS" Type="float" Precision="126" />
+    <Property Name="DESIGN_LATITUDE_POINTS" Type="float" Precision="126" />
+    <Property Name="DESIGN_LATITUDE_SECONDS" Type="float" Precision="126" />
+    <Property Name="ACTUAL_LATITUDE_POINTS" Type="float" Precision="126" />
+    <Property Name="ACTUAL_LATITUDE_SECONDS" Type="float" Precision="126" />
+    <Property Name="THREE_OR_SIX_DEGREE_BELT" Type="nvarchar2" MaxLength="32" />
+    <Property Name="FIRST_GRADE_STRUCTURE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="SECOND_GRADE_STRUCTURE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="THIRD_GRADE_STRUCTURE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="COORDINATE_SYSTEM" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_ACH_AMPLITUDE_DATA">
+    <Key>
+      <PropertyRef Name="AMPLITUDE_ID" />
+    </Key>
+    <Property Name="AMPLITUDE_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="TOP_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="BOTTOM_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="VALUE" Type="float" Precision="126" />
+    <Property Name="QUALITY" Type="number" Precision="7" Scale="2" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_ACH_CARVE_OBJECT">
+    <Key>
+      <PropertyRef Name="CURVE_CODE_ORI" />
+    </Key>
+    <Property Name="CURVE_CODE_ORI" Type="nvarchar2" Nullable="false" MaxLength="60" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="INFO_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ACQUISITION_DATA_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LOG_DATE" Type="date" />
+    <Property Name="TOP_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="BOTTOM_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="CURVE_NAME_ORI" Type="nvarchar2" MaxLength="200" />
+    <Property Name="CURVE_NAME_A12" Type="nvarchar2" MaxLength="60" />
+    <Property Name="CURVE_CODE_A12" Type="nvarchar2" MaxLength="100" />
+    <Property Name="CURVE_DIM" Type="number" Precision="4" />
+    <Property Name="UNITS_SYSTEM" Type="number" Precision="4" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_ACH_CASING_COUPLING">
+    <Key>
+      <PropertyRef Name="CASING_NO" />
+    </Key>
+    <Property Name="CASING_NO" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LOG_TOP" Type="number" Precision="7" Scale="2" />
+    <Property Name="LOG_BOTTOM" Type="number" Precision="7" Scale="2" />
+    <Property Name="CASING_LENGTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="CASING_FOOT" Type="float" Precision="126" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_ACH_CASING_PROGRAM">
+    <Key>
+      <PropertyRef Name="CASING_PROGRAM_NO" />
+    </Key>
+    <Property Name="CASING_PROGRAM_NO" Type="number" Nullable="false" Precision="4" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="INNER_DIA" Type="number" Precision="7" Scale="2" />
+    <Property Name="THIKNESS" Type="number" Precision="7" Scale="2" />
+    <Property Name="MEASURE_PROCESS" Type="number" Precision="7" Scale="2" />
+    <Property Name="TOP_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="BOTTOM_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_ACH_CEMENT_QUALITYDRAWING">
+    <Key>
+      <PropertyRef Name="DOC_ID" />
+    </Key>
+    <Property Name="DOC_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="INT_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="VDL_DOCDESC" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_ACH_CEMENT_QUALITY_REPORT">
+    <Key>
+      <PropertyRef Name="VDL_ID" />
+    </Key>
+    <Property Name="VDL_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LAY_ID" Type="number" />
+    <Property Name="START_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="END_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="CEMENTING_QUALITY" Type="nvarchar2" MaxLength="10" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="MAX_CBL" Type="number" Precision="12" Scale="2" />
+    <Property Name="MIN_CBL" Type="number" Precision="12" Scale="2" />
+    <Property Name="MEA_CBL" Type="number" Precision="12" Scale="2" />
+  </EntityType>
+  <EntityType Name="LOG_ACH_DIAGRAM_AND_TABLE">
+    <Key>
+      <PropertyRef Name="DIAGRAM_TABLE_ID" />
+    </Key>
+    <Property Name="DIAGRAM_TABLE_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="PROJECTION_DRAWING" Type="nvarchar2" MaxLength="200" />
+    <Property Name="SIDE_ELEVATION_DRAWING" Type="nvarchar2" MaxLength="200" />
+    <Property Name="VERTICAL_VIEW" Type="nvarchar2" MaxLength="200" />
+    <Property Name="WELL_DEVIATION_DATA_TABLE" Type="nvarchar2" MaxLength="200" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_ACH_DRILL_CASED_PROGRAM">
+    <Key>
+      <PropertyRef Name="CASING_CASING_PROGRAM_NO" />
+    </Key>
+    <Property Name="CASING_CASING_PROGRAM_NO" Type="number" Nullable="false" Precision="7" Scale="2" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="INNER_DIA" Type="number" Precision="7" Scale="2" />
+    <Property Name="CASING_LENGTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="TOP_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="BOTTOM_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_ACH_ENGINEERING_LOG_REPORT">
+    <Key>
+      <PropertyRef Name="LAY_ID" />
+    </Key>
+    <Property Name="LAY_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="FORMATION" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ROCK_PROPERTY" Type="nvarchar2" MaxLength="32" />
+    <Property Name="START_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="END_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="VALID_THICKNESS" Type="number" Precision="7" Scale="2" />
+    <Property Name="RESISITANCE" Type="number" Precision="7" Scale="2" />
+    <Property Name="MUD_AMOUNT" Type="number" Precision="7" Scale="2" />
+    <Property Name="ALL_POROSITY" Type="number" Precision="7" Scale="2" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_ACH_HOLE_DIAMETER_DATA">
+    <Key>
+      <PropertyRef Name="DATA_ID" />
+    </Key>
+    <Property Name="DATA_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="DEPTH" Type="float" Precision="126" />
+    <Property Name="WELL_DIAMETER" Type="float" Precision="126" />
+    <Property Name="WELL_VOLUME" Type="float" Precision="126" />
+    <Property Name="WELL_DIAMETER_MAX" Type="float" Precision="126" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_ACH_INTERPRET_CONCLUSION">
+    <Key>
+      <PropertyRef Name="LAY_ID" />
+    </Key>
+    <Property Name="LAY_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="FORMATION" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ROCK_PROPERTY" Type="nvarchar2" MaxLength="32" />
+    <Property Name="START_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="END_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="VALID_THICKNESS" Type="number" Precision="7" Scale="2" />
+    <Property Name="RESISITANCE" Type="number" Precision="7" Scale="2" />
+    <Property Name="QRESISITANCE" Type="number" Precision="7" Scale="2" />
+    <Property Name="SOUND_WAVE" Type="number" Precision="7" Scale="2" />
+    <Property Name="DENSITY" Type="number" Precision="7" Scale="2" />
+    <Property Name="NEUTRON" Type="number" Precision="7" Scale="2" />
+    <Property Name="MUD_AMOUNT" Type="number" Precision="7" Scale="2" />
+    <Property Name="POROSITY" Type="number" Precision="7" Scale="2" />
+    <Property Name="ALL_POROSITY" Type="number" Precision="7" Scale="2" />
+    <Property Name="PENETRATE_RATE" Type="number" Precision="7" Scale="2" />
+    <Property Name="OIL_AIR_RATE" Type="number" Precision="7" Scale="2" />
+    <Property Name="INTERPRET_RESULT" Type="nvarchar2" MaxLength="500" />
+    <Property Name="NEW_OIL_FLAG" Type="char" MaxLength="1" />
+    <Property Name="IS_SUCCESS" Type="char" MaxLength="1" />
+    <Property Name="IS_LOST_OIL" Type="char" MaxLength="1" />
+    <Property Name="IS_TEST_OIL" Type="char" MaxLength="1" />
+    <Property Name="IS_RECIEVE" Type="char" MaxLength="1" />
+    <Property Name="MEMO" Type="nvarchar2" MaxLength="300" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_ACH_INTERPRET_RESULT_FILES">
+    <Key>
+      <PropertyRef Name="INTERPRET_RESULT_ID" />
+    </Key>
+    <Property Name="INTERPRET_RESULT_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="LOGGING_COMPANY" Type="nvarchar2" MaxLength="200" />
+    <Property Name="INTERPRET_CENTER" Type="nvarchar2" MaxLength="200" />
+    <Property Name="INTERPRET_PLATFORM" Type="nvarchar2" MaxLength="200" />
+    <Property Name="ZONGHE_DIPLAY" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ZONGHE_PRNUMBER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="BIAOZHUN_DIPLAY" Type="nvarchar2" MaxLength="32" />
+    <Property Name="BIAOZHUN_PRNUMBER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="TOUYING_DIPLAY" Type="nvarchar2" MaxLength="32" />
+    <Property Name="TOUYING_PRNUMBER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="XIAOSHEN_DIPLAY" Type="nvarchar2" MaxLength="32" />
+    <Property Name="XIAOSHEN_PRNUMBER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LOG_NUMBERERPRET_REPORT" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LOG_NUMBERERPRET_RESULT" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_ACH_INTERPRET_VALID_RATE">
+    <Key>
+      <PropertyRef Name="LAY_ID" />
+    </Key>
+    <Property Name="PROCEDURE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LAY_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="FORMATION" Type="nvarchar2" MaxLength="32" />
+    <Property Name="START_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="END_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="VALID_THICKNESS" Type="number" Precision="7" Scale="2" />
+    <Property Name="INTERPRET_RESULT" Type="nvarchar2" MaxLength="500" />
+    <Property Name="TEST_RESULT" Type="nvarchar2" MaxLength="32" />
+    <Property Name="IS_VALID" Type="char" MaxLength="1" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_ACH_PRODUCTION_LOG_REPORT">
+    <Key>
+      <PropertyRef Name="LAY_ID" />
+    </Key>
+    <Property Name="LAY_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="FORMATION" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ROCK_PROPERTY" Type="nvarchar2" MaxLength="32" />
+    <Property Name="START_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="END_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="VALID_THICKNESS" Type="number" Precision="7" Scale="2" />
+    <Property Name="FLUID_PRODUCTION" Type="number" Precision="7" Scale="2" />
+    <Property Name="GAS_PRODUCTION" Type="number" Precision="7" Scale="2" />
+    <Property Name="WATERCUT" Type="number" Precision="7" Scale="2" />
+    <Property Name="INJECTION_RATE" Type="number" Precision="7" Scale="2" />
+    <Property Name="INTERPRET_RESULT" Type="nvarchar2" MaxLength="500" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_ACH_WELL_DEVIATION_DATA">
+    <Key>
+      <PropertyRef Name="DEV_DATA_ID" />
+    </Key>
+    <Property Name="DEV_DATA_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="MUDLOGGING_DEPTH" Type="number" Nullable="false" Precision="7" Scale="2" />
+    <Property Name="UPRIGHTNESS_DEPTH" Type="number" Nullable="false" Precision="7" Scale="2" />
+    <Property Name="INCLNATION" Type="number" Precision="7" Scale="2" />
+    <Property Name="AZIMUTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="ALL_MOV" Type="number" Precision="7" Scale="2" />
+    <Property Name="E_ELEMENT" Type="number" Precision="7" Scale="2" />
+    <Property Name="N_ELEMENT" Type="number" Precision="7" Scale="2" />
+    <Property Name="DOG_LEG" Type="number" Precision="7" Scale="2" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_ARC_DRAWINGDATAS_INTP">
+    <Key>
+      <PropertyRef Name="DATADRAWING_ID" />
+    </Key>
+    <Property Name="DATADRAWING_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="FILE_INDEX" Type="nvarchar2" MaxLength="32" />
+    <Property Name="FILE_TYPE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="LOG_BASE_CURVES_DESC">
+    <Key>
+      <PropertyRef Name="CURVE_ID" />
+    </Key>
+    <Property Name="CURVE_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="INSTRUMENT_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="INSTRUMENT_NAME" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CURVE_NAME" Type="nvarchar2" MaxLength="60" />
+    <Property Name="UNIT" Type="number" Precision="4" />
+    <Property Name="DIMENSIONS" Type="number" Precision="4" />
+    <Property Name="CURVE_RLEV" Type="number" Precision="7" Scale="2" />
+    <Property Name="REAL_FLAG" Type="number" Precision="4" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_BASE_DATAITEM_STANDARD">
+    <Key>
+      <PropertyRef Name="UMI" />
+    </Key>
+    <Property Name="UMI" Type="nvarchar2" Nullable="false" MaxLength="60" />
+    <Property Name="CHINESE_DESC" Type="nvarchar2" MaxLength="60" />
+    <Property Name="ENGLISH_DESC" Type="nvarchar2" MaxLength="60" />
+    <Property Name="GENERAL_CODE" Type="nvarchar2" MaxLength="60" />
+    <Property Name="A12_CODE" Type="nvarchar2" MaxLength="60" />
+    <Property Name="A7_CODE" Type="nvarchar2" MaxLength="60" />
+    <Property Name="A1_CODE" Type="nvarchar2" MaxLength="60" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_BASE_DEVICE">
+    <Key>
+      <PropertyRef Name="LOG_EQUIP_ID" />
+    </Key>
+    <Property Name="LOG_EQUIP_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="COLLECT_PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="EQUIP_2D" Type="blob" />
+    <Property Name="EQUIP_NAME" Type="nvarchar2" MaxLength="60" />
+    <Property Name="EQUIP_CODE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="EQUIP_TYPE" Type="number" />
+    <Property Name="EQUIP_NETTYPE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="USE_ORG_ID" Type="nvarchar2" MaxLength="100" />
+    <Property Name="ORG_EQUIP_ID" Type="nvarchar2" MaxLength="100" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_BASE_INSTRUMENT">
+    <Key>
+      <PropertyRef Name="INSTRUMENT_ID" />
+    </Key>
+    <Property Name="INSTRUMENT_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="INSTRUMENT_2D" Type="blob" />
+    <Property Name="INSTRUMENT_NAME" Type="nvarchar2" MaxLength="60" />
+    <Property Name="INSTRUMENT_MODEL" Type="nvarchar2" MaxLength="60" />
+    <Property Name="INSTRUMENT_MANUFATURER" Type="nvarchar2" MaxLength="60" />
+    <Property Name="INSTRUMENT_SERIAL_NUMBER" Type="nvarchar2" MaxLength="60" />
+    <Property Name="INSTRUMENT_MANUFACTURING_CODE" Type="nvarchar2" MaxLength="60" />
+    <Property Name="MAX_OUT_DIAMETER" Type="float" Precision="126" />
+    <Property Name="INSTRUMENT_WEIGHT" Type="float" Precision="126" />
+    <Property Name="INSTRUMENT_LENGTH" Type="float" Precision="126" />
+    <Property Name="MESURE_POINT" Type="float" Precision="126" />
+    <Property Name="INSTRUMENT_SPEED" Type="float" Precision="126" />
+    <Property Name="CURVE_NUM" Type="number" Precision="4" />
+    <Property Name="CURVES_DESC" Type="nvarchar2" MaxLength="32" />
+    <Property Name="INSTRUMENT_SHAPE" Type="blob" />
+    <Property Name="RATED_PRESSURE" Type="float" Precision="126" />
+    <Property Name="RATED_TEMPERATURE" Type="float" Precision="126" />
+    <Property Name="USE_ORG_ID" Type="nvarchar2" MaxLength="100" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“CQA12WAS.LOG_BASE_INS_MAINTAINRECORD”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="LOG_BASE_INS_MAINTAINRECORD">
+    <Key>
+      <PropertyRef Name="INSTRUMENT_ID" />
+    </Key>
+    <Property Name="INSTRUMENT_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="EQUIP_2D" Type="blob" />
+    <Property Name="INSTRUMENT_NAME" Type="nvarchar2" MaxLength="60" />
+    <Property Name="INSTRUMENT_STATUS" Type="nvarchar2" MaxLength="60" />
+    <Property Name="INSTRUMENT_DEMO" Type="nvarchar2" MaxLength="500" />
+    <Property Name="MANUMBERAINER_ID" Type="nvarchar2" MaxLength="60" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_BASE_RADIOFRECORD">
+    <Key>
+      <PropertyRef Name="EQUIP_ID" />
+    </Key>
+    <Property Name="EQUIP_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="EQUIP_2D" Type="blob" />
+    <Property Name="CONTRY_CODE" Type="nvarchar2" MaxLength="10" />
+    <Property Name="RADIATION_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="RADIATION_NO" Type="nvarchar2" MaxLength="32" />
+    <Property Name="RADIATION_NAME" Type="nvarchar2" MaxLength="32" />
+    <Property Name="RADIATION_TYPE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="INTENSION" Type="float" Precision="126" />
+    <Property Name="ACTIVE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UNIT" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WORKING_DATE" Type="date" />
+    <Property Name="MANUFACTURE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="INITIALIZE_CD" Type="nvarchar2" MaxLength="32" />
+    <Property Name="USE_ORG_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_DESIGN_WORKPLAN">
+    <Key>
+      <PropertyRef Name="DESIGN_ID" />
+    </Key>
+    <Property Name="DESIGN_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="WELL_NAME" Type="nvarchar2" MaxLength="100" />
+    <Property Name="JOB_TYPE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="SEREIES" Type="nvarchar2" MaxLength="100" />
+    <Property Name="QULIITY_DESC" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="DESIGN_PERSON" Type="nvarchar2" MaxLength="60" />
+    <Property Name="AUDITOR" Type="nvarchar2" MaxLength="60" />
+    <Property Name="DESIGN_DOC" Type="nvarchar2" MaxLength="32" />
+    <Property Name="PROJECT_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="PROJECT_NAME" Type="nvarchar2" MaxLength="60" />
+    <Property Name="TOP" Type="number" Precision="6" Scale="2" />
+    <Property Name="BOTTOM" Type="number" Precision="6" Scale="2" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_DEVICE_INS_RETURN">
+    <Key>
+      <PropertyRef Name="RETURN_ID" />
+    </Key>
+    <Property Name="VALIDAT_ORG_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="RETURN_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="RETURN_TIME" Type="date" />
+    <Property Name="RETURNER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="RETURN_ORG_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="RETURN_SUB_ORG_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="KEEPER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="KEEP_ORG_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="KEEP_SUB_ORG_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="VALIDATOR" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_TIME" Type="date" />
+    <Property Name="MODIFY_DATE" Type="date" />
+    <Property Name="BSFLAG" Type="nvarchar2" MaxLength="1" />
+    <Property Name="CREATOR" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_SUB_ORG_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="VER" Type="number" />
+    <Property Name="NOTE" Type="nvarchar2" MaxLength="400" />
+    <Property Name="ORG_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ORG_SUBJECTION_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="RECORD_STATUS" Type="nvarchar2" MaxLength="1" />
+    <Property Name="MODIFI_DATE" Type="date" />
+    <Property Name="AUDIT_NOTE" Type="nvarchar2" MaxLength="400" />
+    <Property Name="AUDITOR" Type="nvarchar2" MaxLength="32" />
+    <Property Name="AUDIT_DATE" Type="date" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_ACCEPTANCE_QUALITY">
+    <Key>
+      <PropertyRef Name="ACCEPTANCE_QUALITY_ID" />
+    </Key>
+    <Property Name="ACCEPTANCE_QUALITY_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="COMMENTS" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="COLLECT_PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LOG_DATA_VALIDITY" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LOG_HEAD_VALIDITY" Type="nvarchar2" MaxLength="32" />
+    <Property Name="REPEAT_CURVE__VALIDITY" Type="nvarchar2" MaxLength="32" />
+    <Property Name="BEFORE_MEA_OK" Type="nvarchar2" MaxLength="32" />
+    <Property Name="AFTER_MEA_OK" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ECHO_MEA_OK" Type="nvarchar2" MaxLength="32" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="255" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_ACQUISITION_DATA">
+    <Key>
+      <PropertyRef Name="ACQUISITION_DATA_ID" />
+    </Key>
+    <Property Name="ACQUISITION_DATA_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="INFO_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="COLLECT_PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LOG_FILE_NAME" Type="nvarchar2" MaxLength="100" />
+    <Property Name="LOG_FILE_TYPE" Type="nvarchar2" MaxLength="100" />
+    <Property Name="PRESATATION_ID" Type="nvarchar2" MaxLength="100" />
+    <Property Name="ISREGULAR" Type="number" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_BASEINFO_RECORD">
+    <Key>
+      <PropertyRef Name="OPS_BASEINFO_ID" />
+    </Key>
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="INCLNATION" Type="float" Precision="126" />
+    <Property Name="INCLNATION_DEPTH" Type="float" Precision="126" />
+    <Property Name="IS_GAS_WELL" Type="nvarchar2" MaxLength="32" />
+    <Property Name="HEART_HEIGHT" Type="float" Precision="126" />
+    <Property Name="WELLBOTTOM_PRESS" Type="float" Precision="126" />
+    <Property Name="SUL_HYD" Type="float" Precision="126" />
+    <Property Name="WELLBOTTOM_TMP" Type="float" Precision="126" />
+    <Property Name="CASING_STRUC" Type="nvarchar2" MaxLength="255" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLHEAD_PRESS" Type="number" Precision="12" Scale="2" />
+    <Property Name="BEGIN_DATE" Type="date" />
+    <Property Name="OPS_ART" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="ACTUAL_MEA_PRESS" Type="number" Precision="6" Scale="2" />
+    <Property Name="ACCESSORY" Type="nvarchar2" MaxLength="100" />
+    <Property Name="REQUISITION_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELL_NAME" Type="nvarchar2" MaxLength="32" />
+    <Property Name="PROJECT_GROUP" Type="nvarchar2" MaxLength="60" />
+    <Property Name="WELL_SORT" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELL_TYPE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="COORD_X" Type="number" Precision="12" Scale="4" />
+    <Property Name="COOR_DY" Type="number" Precision="12" Scale="4" />
+    <Property Name="DEEP_DESIGN" Type="number" Precision="6" Scale="2" />
+    <Property Name="MEASURE_TOP" Type="number" Precision="6" Scale="2" />
+    <Property Name="MEASURE_BOTTOM" Type="number" Precision="6" Scale="2" />
+    <Property Name="REQUEST_TIME_ARR" Type="date" />
+    <Property Name="LOG_TEAM_MASTER" Type="nvarchar2" MaxLength="60" />
+    <Property Name="TEAM_DEVICE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="TASK_DURATION" Type="number" Precision="6" Scale="3" />
+    <Property Name="TASK_STATUS" Type="nvarchar2" MaxLength="32" />
+    <Property Name="DEPART_TIME" Type="date" />
+    <Property Name="LOG_BEGIN_TIME" Type="date" />
+    <Property Name="DATA_UPLOAD_TIME" Type="date" />
+    <Property Name="ARRIVE_TIME" Type="date" />
+    <Property Name="LOG_FINISH_TIME" Type="date" />
+    <Property Name="WAIT_WELL_TIME" Type="number" Precision="6" Scale="3" />
+    <Property Name="JOB_BLOCK" Type="nvarchar2" MaxLength="32" />
+    <Property Name="PROJECT_ITEM" Type="nvarchar2" MaxLength="500" />
+    <Property Name="JOB_TYPE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="PROJECT_DEPARTMENT" Type="nvarchar2" MaxLength="60" />
+    <Property Name="LOG_TEAM" Type="nvarchar2" MaxLength="60" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="UPLOAD_FLAG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WORK_STATUS" Type="nvarchar2" MaxLength="32" />
+    <Property Name="DRILL_STATUSE" Type="nvarchar2" MaxLength="16" />
+    <Property Name="P_XN_DRILL_DEPTH" Type="number" Precision="10" Scale="2" />
+    <Property Name="JOB_LAYER" Type="nvarchar2" MaxLength="60" />
+    <Property Name="TASK_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_CABLE_REC">
+    <Key>
+      <PropertyRef Name="CABLE_USING_ID" />
+    </Key>
+    <Property Name="CABLE_USING_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="COMMENTS" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CABLE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="MILEAGE" Type="number" Precision="8" Scale="2" />
+    <Property Name="RUNNING_TIME" Type="number" Precision="6" Scale="2" />
+    <Property Name="DOWNHOLE_NUM" Type="number" />
+    <Property Name="RUNNINGSTATUS" Type="nvarchar2" MaxLength="32" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="255" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_CARVEQUALITY_SUMMARY">
+    <Key>
+      <PropertyRef Name="CURVES_QUALITYSUMMARY_ID" />
+    </Key>
+    <Property Name="CURVES_QUALITYSUMMARY_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="RECEIVE_DATE" Type="date" />
+    <Property Name="ACCEPTCOMPANY" Type="nvarchar2" MaxLength="60" />
+    <Property Name="HIGHCLASS_NUM" Type="number" Precision="4" />
+    <Property Name="ACCEPTABLE_NUM" Type="number" Precision="4" />
+    <Property Name="ACCEPT_NAMES" Type="nvarchar2" MaxLength="200" />
+    <Property Name="NOTHIGHCLASREASON" Type="nvarchar2" MaxLength="300" />
+    <Property Name="COLLECT_PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CURVE_QUALITY_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_CARVE_QUALITY">
+    <Key>
+      <PropertyRef Name="CURVE_QUALITY_ID" />
+    </Key>
+    <Property Name="CURVE_QUALITY_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="COLLECT_PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CURVE_NO" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CURVE_NAME" Type="nvarchar2" MaxLength="60" />
+    <Property Name="TOP_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="BOTTOM_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="QUALITY_PERSON" Type="nvarchar2" MaxLength="32" />
+    <Property Name="QUALITY_CHECK_TYPE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CARVE_QUALITY_ONE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CARVE_QUALITY_TWO" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UN_ELIGIBILITY_REASON" Type="nvarchar2" MaxLength="200" />
+    <Property Name="NO_RATING_REASON" Type="nvarchar2" MaxLength="200" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_COLLECT_PROCESS">
+    <Key>
+      <PropertyRef Name="COLLECT_PROCESS_ID" />
+    </Key>
+    <Property Name="COLLECT_PROCESS_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="COMMENTS" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="DOWN_WELL_SEQUENCE" Type="number" />
+    <Property Name="START_TIME" Type="date" />
+    <Property Name="END_TIME" Type="date" />
+    <Property Name="TOP" Type="number" Precision="6" Scale="2" />
+    <Property Name="BOTTOM" Type="number" Precision="6" Scale="2" />
+    <Property Name="INS_LENGTH" Type="number" Precision="6" Scale="2" />
+    <Property Name="WELL_SECTION" Type="nvarchar2" MaxLength="255" />
+    <Property Name="IS_SUCCESS" Type="nvarchar2" MaxLength="32" />
+    <Property Name="FAULT_TYPE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="FAULT_DES" Type="nvarchar2" MaxLength="255" />
+    <Property Name="IS_SUPPLEMENT" Type="nvarchar2" MaxLength="32" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="255" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="POWERSUPPLY_VOLTAGE" Type="number" Precision="12" Scale="2" />
+    <Property Name="CABLEHEAD_VOLTAGE" Type="number" Precision="12" Scale="2" />
+    <Property Name="LARGEST_CABLE_TENSION" Type="number" Precision="12" Scale="2" />
+    <Property Name="LARGEST_CABLEHEAD_TENSION" Type="number" Precision="12" Scale="2" />
+    <Property Name="CABLE_CURRENT" Type="number" Precision="12" Scale="2" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_CORINGDETAIL">
+    <Key>
+      <PropertyRef Name="CORING_DETAILID" />
+    </Key>
+    <Property Name="CORING_DETAILID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="BAS_REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="COLLECT_PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LOG_COLLECT_PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CORING_LAYER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CORING_DEPTH" Type="number" Precision="6" Scale="2" />
+    <Property Name="CORING_NUMBER" Type="number" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="50" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_CORINGINFOSUMMARY">
+    <Key>
+      <PropertyRef Name="CORINGRECD_ID" />
+    </Key>
+    <Property Name="CORINGRECD_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LOG_JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CORING_METHOD" Type="nvarchar2" MaxLength="32" />
+    <Property Name="DOWN_WELL_TIMES" Type="number" />
+    <Property Name="LOAD_NUM" Type="number" />
+    <Property Name="SEND_NUM" Type="number" />
+    <Property Name="ACT_INFIX_NUM" Type="number" />
+    <Property Name="PLAN_CORE_NUM" Type="number" />
+    <Property Name="SUC_INFIX_NUM" Type="number" />
+    <Property Name="GET_NUM" Type="number" />
+    <Property Name="ELIGIBILITY_NUM" Type="number" />
+    <Property Name="SEND_PERCENT" Type="number" Precision="6" Scale="2" />
+    <Property Name="ELIGIBILITY_PERCENT" Type="number" Precision="6" Scale="2" />
+    <Property Name="GET_PERCENT" Type="number" Precision="6" Scale="2" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_CORING_RECORD">
+    <Key>
+      <PropertyRef Name="CORINGRECD_ID" />
+    </Key>
+    <Property Name="CORINGRECD_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CORING_METHOD" Type="nvarchar2" MaxLength="32" />
+    <Property Name="DOWN_WELL_TIMES" Type="number" />
+    <Property Name="DOWN_NUM" Type="number" />
+    <Property Name="ACT_INFIX_NUM" Type="number" />
+    <Property Name="SUC_INFIX_NUM" Type="number" />
+    <Property Name="PLAN_CORE_NUM" Type="number" />
+    <Property Name="GET_CORE_NUM" Type="number" />
+    <Property Name="FIRE_NUM" Type="number" />
+    <Property Name="SEND_NUM" Type="number" />
+    <Property Name="GET_NUM" Type="number" />
+    <Property Name="SEND_PERCENT" Type="number" Precision="6" Scale="2" />
+    <Property Name="GET_PERCENT" Type="number" Precision="6" Scale="2" />
+    <Property Name="ELIGIBILITY_NUM" Type="number" />
+    <Property Name="CORE_WELLSEC" Type="nvarchar2" MaxLength="60" />
+    <Property Name="BEGIN_TIME" Type="date" />
+    <Property Name="END_TIME" Type="date" />
+    <Property Name="REDO_REASONS" Type="nvarchar2" MaxLength="300" />
+    <Property Name="CORER_TYPE" Type="nvarchar2" MaxLength="60" />
+    <Property Name="LOAD_NUM" Type="number" />
+    <Property Name="ELIGIBILITY_PERCENT" Type="float" Precision="126" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_DANGER_GOODS_MONITOR">
+    <Key>
+      <PropertyRef Name="DANGEROUS_MATERIALS_MONITOR_ID" />
+    </Key>
+    <Property Name="DANGEROUS_MATERIALS_MONITOR_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="DANGEROUS_TYPE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="DANGEROUS_EVENT_SOURCE" Type="nvarchar2" MaxLength="60" />
+    <Property Name="DANGEROUS_EVENT_DATE_TIME" Type="date" />
+    <Property Name="DANGEROUS_EVENT_LOCATION" Type="nvarchar2" MaxLength="100" />
+    <Property Name="DANGEROUS_EVENT_RADI_VALUE" Type="nvarchar2" MaxLength="60" />
+    <Property Name="DANGEROUS_EVENT_LEVEL" Type="nvarchar2" MaxLength="32" />
+    <Property Name="DANGEROUS_EVNET_DESC" Type="nvarchar2" MaxLength="500" />
+    <Property Name="DANGEROUS_EVENT_PROCESS" Type="nvarchar2" MaxLength="60" />
+    <Property Name="DANGEROUS_EVNET_HANDLER_DESC" Type="nvarchar2" MaxLength="500" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_DATA_SUBMIT">
+    <Key>
+      <PropertyRef Name="DATA_SUMBIT_ID" />
+    </Key>
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="COLLECT_PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="COLLECT_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="FILE_NAME" Type="nvarchar2" MaxLength="255" />
+    <Property Name="FILE_REMARK" Type="nvarchar2" MaxLength="255" />
+    <Property Name="SUBMIT_TYPE" Type="nvarchar2" MaxLength="255" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="DATA_SUMBIT_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="DATA_ARCHIVING_WAY" Type="varchar2" MaxLength="32" />
+    <Property Name="DATA_ARCHIVING_DATE" Type="date" />
+    <Property Name="DATA_ARCHIVING_PERSON" Type="varchar2" MaxLength="32" />
+    <Property Name="DATA_RECEIVE_DEPARTMENT" Type="varchar2" MaxLength="64" />
+    <Property Name="DATA_RECIPIENT" Type="varchar2" MaxLength="32" />
+    <Property Name="DATA_FILE_NUMBER" Type="number" />
+    <Property Name="DATA_SIZE" Type="number" Precision="12" Scale="2" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_DATA_SUBMIT_FILE_INDEX">
+    <Key>
+      <PropertyRef Name="DATA_SUMBIT_FILE_LIST_ID" />
+    </Key>
+    <Property Name="DATA_SUMBIT_FILE_LIST_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="DATA_SUMBIT_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="INFO_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="SUBMIT_TITLE" Type="nvarchar2" MaxLength="100" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_DEVICE_FAILURE_WARNING">
+    <Key>
+      <PropertyRef Name="DEVICE_FAILURE_ID" />
+    </Key>
+    <Property Name="DEVICE_FAILURE_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="COMMENTS" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="COLLECT_PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="INSTRUMENT_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="DEVICE_FAILURE_TIME" Type="date" />
+    <Property Name="DEEP_FAILURE" Type="number" Precision="6" Scale="2" />
+    <Property Name="DEVICE_FAILURE_TYPE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="DEVICE_FAILURE_DESC" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="DEVICE_FAILURE_RESULT" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="DEVICE_FAILURE_SOLUTION" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="EVNET_HANDLER_DESC" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="50" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_DEVICE_USAGE">
+    <Key>
+      <PropertyRef Name="LOG_EQUIP_REC_ID" />
+    </Key>
+    <Property Name="LOG_EQUIP_REC_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="INSTRUMENT_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="EQUIP_2D" Type="blob" />
+    <Property Name="EQUIP_NAME" Type="nvarchar2" MaxLength="60" />
+    <Property Name="EQUIP_CODE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="EQUIP_TYPE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="EQUIP_NETTYPE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="USE_ORG_ID" Type="nvarchar2" MaxLength="100" />
+    <Property Name="ORG_EQUIP_ID" Type="nvarchar2" MaxLength="100" />
+    <Property Name="RUNNING_TIME" Type="number" Precision="6" Scale="2" />
+    <Property Name="RUNNING_INFO" Type="nvarchar2" MaxLength="500" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_FAILURE_RECORD">
+    <Key>
+      <PropertyRef Name="FAILURE_ID" />
+    </Key>
+    <Property Name="FAILURE_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="FAILURE_DEVICE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="FAILURE_TYPE_REC" Type="nvarchar2" MaxLength="32" />
+    <Property Name="FAILURE_TIME" Type="date" />
+    <Property Name="DEEP_FAILURE_REC" Type="number" Precision="6" Scale="2" />
+    <Property Name="FAILURE_LEVEL" Type="nvarchar2" MaxLength="32" />
+    <Property Name="FAILURE_DESC" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="FAILURE_RESULT" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="FAILURE_SOLUTION" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="EVNETHANDLER" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="COMMENTS" Type="nvarchar2" MaxLength="255" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="11" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_GEOLOGY_RISK_WARNING">
+    <Key>
+      <PropertyRef Name="LOG_RISK_ID" />
+    </Key>
+    <Property Name="LOG_RISK_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LOG_PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LOG_RISK_LEVEL" Type="number" />
+    <Property Name="LOG_RISK_TYPE" Type="number" />
+    <Property Name="LOG_RISK_DESC" Type="nvarchar2" MaxLength="300" />
+    <Property Name="CREATE_TIME" Type="date" />
+    <Property Name="CREATEOR" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_GEOSTEERING_WARNING">
+    <Key>
+      <PropertyRef Name="LOG_GEOSTEERING_RISK_ID" />
+    </Key>
+    <Property Name="LOG_GEOSTEERING_RISK_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="COLLECT_PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LOG_GEOSTEERING_RISK_LEVEL" Type="char" MaxLength="1" />
+    <Property Name="LOG_GEOSTEERING_RISK_TYPE" Type="char" MaxLength="1" />
+    <Property Name="LOG_GEOSTEERING_RISK_DESC" Type="nvarchar2" MaxLength="300" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_INS_RUNNINGRECORD">
+    <Key>
+      <PropertyRef Name="INSTRUMENT_ID" />
+    </Key>
+    <Property Name="INSTRUMENT_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="COLLECT_PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LOG_INSTRUMENT_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="INSTRUMENT_NO" Type="number" />
+    <Property Name="JOB_EFFECT" Type="nvarchar2" MaxLength="32" />
+    <Property Name="RUN_TIME" Type="number" Precision="6" Scale="2" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_INTERPRETATIONPLATFORM">
+    <Key>
+      <PropertyRef Name="PLATFORM_ID" />
+    </Key>
+    <Property Name="PLATFORM_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="PLATFORM_NAME" Type="nvarchar2" MaxLength="100" />
+    <Property Name="PLATFORM_DESC" Type="nvarchar2" MaxLength="500" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_INTERPRET_PROCESS">
+    <Key>
+      <PropertyRef Name="PROCESS_ID" />
+    </Key>
+    <Property Name="PROCESS_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LAY_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LOG_JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELL_NAME" Type="nvarchar2" MaxLength="60" />
+    <Property Name="INTERPRETOR" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CHECKER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="AUDITPERSOON" Type="nvarchar2" MaxLength="32" />
+    <Property Name="PROCESS_START_TIME" Type="date" />
+    <Property Name="PROCESS_END_TIME" Type="date" />
+    <Property Name="INTER_TYPE" Type="number" />
+    <Property Name="LOG_DATA_DESC" Type="nvarchar2" MaxLength="200" />
+    <Property Name="INTERPRET_FILE_DESC" Type="nvarchar2" MaxLength="200" />
+    <Property Name="INTERPRET_TABLE_DESC" Type="nvarchar2" MaxLength="200" />
+    <Property Name="INT_STATUS" Type="number" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_JOB_ACTIVITY">
+    <Key>
+      <PropertyRef Name="JOB_ID" />
+    </Key>
+    <Property Name="JOB_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="COMMENTS" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="CASING_NO" Type="nvarchar2" MaxLength="32" />
+    <Property Name="DISCIPLINE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="OPS_RECORD_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="REQUISITION_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="OPS_ART" Type="nvarchar2" MaxLength="32" />
+    <Property Name="EQUIP_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="JOB_TYPE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ARRIVE_TIME" Type="date" />
+    <Property Name="HANDINTIME" Type="date" />
+    <Property Name="SETUP_TIME" Type="date" />
+    <Property Name="DEMOLISION_TIME" Type="date" />
+    <Property Name="HANDOVERTIME" Type="date" />
+    <Property Name="LEAVE_WELL_TIME" Type="date" />
+    <Property Name="WORK_SECTION" Type="nvarchar2" MaxLength="50" />
+    <Property Name="WORK_WELL_TIME" Type="number" Precision="6" Scale="2" />
+    <Property Name="WORK_TIMES" Type="number" />
+    <Property Name="LOSE_TIMES" Type="number" />
+    <Property Name="ONCE_SUCCESS_RATE" Type="number" Precision="6" Scale="2" />
+    <Property Name="SUCCESS_PERCENT" Type="number" Precision="6" Scale="2" />
+    <Property Name="MEASURE_WELL_DEPTH" Type="number" Precision="6" Scale="2" />
+    <Property Name="START_POSITION" Type="nvarchar2" MaxLength="60" />
+    <Property Name="RETURN_PLACE" Type="nvarchar2" MaxLength="60" />
+    <Property Name="SINGLE_RUN_MILES" Type="number" Precision="6" Scale="2" />
+    <Property Name="WAIT_LOG_REASON" Type="nvarchar2" MaxLength="300" />
+    <Property Name="WAITWELL_TIME" Type="number" Precision="6" Scale="2" />
+    <Property Name="FINISH_STATUS" Type="nvarchar2" MaxLength="255" />
+    <Property Name="CUSTOMER_OPINION" Type="nvarchar2" MaxLength="255" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="255" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_OPERATION_MONITOR">
+    <Key>
+      <PropertyRef Name="OPERATION_MONITOR_ID" />
+    </Key>
+    <Property Name="OPERATION_MONITOR_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELL_NAME" Type="nvarchar2" MaxLength="60" />
+    <Property Name="LOG_DATE" Type="date" />
+    <Property Name="WELL_LOGGING_PROJECT" Type="nvarchar2" MaxLength="60" />
+    <Property Name="RESULT" Type="nvarchar2" MaxLength="500" />
+    <Property Name="REASON" Type="nvarchar2" MaxLength="500" />
+    <Property Name="PUNISH_SUGGESTION" Type="nvarchar2" MaxLength="500" />
+    <Property Name="RECTIFY_DESC" Type="nvarchar2" MaxLength="500" />
+    <Property Name="INS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="PERSON_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="TEAM_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="OPERATION_MONITOR_DOC" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_PERFORATION_ZONE">
+    <Key>
+      <PropertyRef Name="PERFORATION_ID" />
+    </Key>
+    <Property Name="PERFORATION_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="PERFORATION_TOP" Type="float" Precision="126" />
+    <Property Name="PERFORATION_BOTTOM" Type="float" Precision="126" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_RADIATION_RECORD">
+    <Key>
+      <PropertyRef Name="RADIATION_RECORD_ID" />
+    </Key>
+    <Property Name="RADIATION_RECORD_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="RADIATION_NO" Type="nvarchar2" MaxLength="50" />
+    <Property Name="LOAD_PERSON" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UNLOAD_PERSON" Type="nvarchar2" MaxLength="32" />
+    <Property Name="DOWN_WELL_TIME" Type="number" />
+    <Property Name="UNDER_WELL_TIME" Type="number" Precision="6" Scale="2" />
+    <Property Name="RADIATION_USING_LOG" Type="nvarchar2" MaxLength="255" />
+    <Property Name="NOTE" Type="nvarchar2" MaxLength="500" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="MAX_WORK_PRESSURE" Type="number" Precision="12" Scale="2" />
+    <Property Name="MAX_WORK_TEMPERATURE" Type="number" Precision="12" Scale="2" />
+    <Property Name="REPLACE_SOURCEPACKING" Type="varchar2" MaxLength="6" />
+    <Property Name="REPLACE_SOURCEPACKING_NUM" Type="number" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_SHOTINFO">
+    <Key>
+      <PropertyRef Name="PERORATIONID" />
+    </Key>
+    <Property Name="PERORATIONID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="COLLECT_PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LOG_COLLECT_PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="DOWN_WELL_SEQUENCE" Type="number" />
+    <Property Name="START_TIME" Type="date" />
+    <Property Name="END_TIME" Type="date" />
+    <Property Name="TOP" Type="number" Precision="6" Scale="2" />
+    <Property Name="BOTTOM" Type="number" Precision="6" Scale="2" />
+    <Property Name="OPEN_THICKNESS" Type="number" Precision="7" Scale="2" />
+    <Property Name="SHOT_LAYER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="PERFORATING_LAYERS" Type="number" Precision="4" />
+    <Property Name="INNER_THICKNESS" Type="number" Precision="6" Scale="2" />
+    <Property Name="OILLAYER_THICKNESS" Type="number" Precision="6" Scale="2" />
+    <Property Name="GUN_LENGTH" Type="number" Precision="6" Scale="2" />
+    <Property Name="WELL_SECTION" Type="nvarchar2" MaxLength="50" />
+    <Property Name="GUN_MODEL" Type="nvarchar2" MaxLength="32" />
+    <Property Name="BULLET_MODEL" Type="nvarchar2" MaxLength="32" />
+    <Property Name="FIRING_METHOD" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CORRECTION_METHOD" Type="nvarchar2" MaxLength="32" />
+    <Property Name="PERFORATION_DENSITY" Type="number" Precision="6" Scale="2" />
+    <Property Name="PERFORATION_PHASE" Type="number" Precision="6" Scale="2" />
+    <Property Name="DETONATOR_NUM" Type="number" />
+    <Property Name="LOAD_BULLET_NUMBER" Type="number" Precision="4" />
+    <Property Name="FIRED_BULLET_NUMBER" Type="number" Precision="4" />
+    <Property Name="SUCCESS" Type="char" MaxLength="1" />
+    <Property Name="FAULT_TYPE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="FAULT" Type="nvarchar2" MaxLength="255" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_SHOTSUMMARY">
+    <Key>
+      <PropertyRef Name="PERORATIONID" />
+    </Key>
+    <Property Name="PERORATIONID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LOG_JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="TRANS_METHOD" Type="nvarchar2" MaxLength="32" />
+    <Property Name="PERFOR_NUM" Type="number" />
+    <Property Name="OILLAYERTHICKNESS" Type="number" Precision="6" Scale="2" />
+    <Property Name="INTERLAYERTHICK" Type="number" Precision="8" Scale="2" />
+    <Property Name="OPEN_THICKNESS" Type="number" Precision="6" Scale="2" />
+    <Property Name="LOAD_NUM" Type="number" />
+    <Property Name="SHOT_NUM" Type="number" />
+    <Property Name="BULLET_EMISSIVITY" Type="number" Precision="6" Scale="2" />
+    <Property Name="DETON_CONSUM" Type="number" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_TASK_ITEMS">
+    <Key>
+      <PropertyRef Name="TASK_OPS_ID" />
+    </Key>
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="COMMENTS" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="COLLECT_PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="IS_ADDITIONAL" Type="nvarchar2" MaxLength="32" />
+    <Property Name="SCALE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="IS_SUCESS" Type="nvarchar2" MaxLength="32" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="255" />
+    <Property Name="MEASURE_WELL_FROM" Type="number" Precision="6" Scale="2" />
+    <Property Name="MEASURE_WELL_TO" Type="number" Precision="6" Scale="2" />
+    <Property Name="TASK_ITEM" Type="nvarchar2" MaxLength="32" />
+    <Property Name="TASK_OPS_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_TIGHT_HOLE_WARNING">
+    <Key>
+      <PropertyRef Name="TIGHT_HOLE_ID" />
+    </Key>
+    <Property Name="TIGHT_HOLE_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="COMMENTS" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="COLLECT_PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="DANGEROUS_EVENT_SOURCE" Type="nvarchar2" MaxLength="60" />
+    <Property Name="DANGEROUS_EVENT_DATE_TIME" Type="date" />
+    <Property Name="DANGEROUS_EVENT_DEEP" Type="number" Precision="8" Scale="2" />
+    <Property Name="DANGEROUS_EVENT_LEVEL" Type="nvarchar2" MaxLength="32" />
+    <Property Name="DANGEROUS_EVNET_DESC" Type="nvarchar2" MaxLength="500" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="255" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_TIME_DISTRIBUTION">
+    <Key>
+      <PropertyRef Name="WORK_EFFID" />
+    </Key>
+    <Property Name="WORK_EFFID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="EFF_TYPE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="START_TIME" Type="date" />
+    <Property Name="END_TIME" Type="date" />
+    <Property Name="DURATION" Type="number" Precision="7" Scale="2" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_USER_TAILOR_RECORD">
+    <Key>
+      <PropertyRef Name="USER_TAILOR_RECORD_ID" />
+    </Key>
+    <Property Name="USER_TAILOR_RECORD_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="TAILOR_TASK_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="USER_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="TYPE" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_VEHICLE_USAGE">
+    <Key>
+      <PropertyRef Name="VEHICLEUSINGID" />
+    </Key>
+    <Property Name="VEHICLEUSINGID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="COMMENTS" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="VEHICLEID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="DRIVER" Type="nvarchar2" MaxLength="100" />
+    <Property Name="FUEL_CONSUM" Type="number" Precision="7" Scale="2" />
+    <Property Name="DISTANCE" Type="number" Precision="7" Scale="2" />
+    <Property Name="RUNING_TIME" Type="number" Precision="7" Scale="2" />
+    <Property Name="RUNNING_STATUS" Type="nvarchar2" MaxLength="32" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ISUPLOAD" Type="nvarchar2" MaxLength="1" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_OPS_WELLSITE_ENV">
+    <Key>
+      <PropertyRef Name="SITEENVID" />
+    </Key>
+    <Property Name="SITEENVID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LOG_JOB_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CURVE_NUM" Type="number" />
+    <Property Name="REDO_NUM" Type="number" />
+    <Property Name="DRILL_FLU_RESI" Type="number" Precision="6" Scale="2" />
+    <Property Name="DRILL_FLU_TMP" Type="number" Precision="6" Scale="2" />
+    <Property Name="MUD_CAKE_RESI" Type="number" Precision="6" Scale="2" />
+    <Property Name="MUD_CAKE_TMP" Type="number" Precision="6" Scale="2" />
+    <Property Name="MUD_FILT_RESI" Type="number" Precision="6" Scale="2" />
+    <Property Name="MUD_FILT_TMP" Type="number" Precision="6" Scale="2" />
+    <Property Name="ARTIFICIAL_WELL_BOTTOM" Type="number" Precision="7" Scale="2" />
+    <Property Name="WATER_LOSS" Type="number" Precision="6" Scale="3" />
+    <Property Name="CASING_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="CASING_DESC" Type="nvarchar2" MaxLength="500" />
+    <Property Name="STANDARD_CAS_DEPTH" Type="number" Precision="6" Scale="2" />
+    <Property Name="COVERED_DISTANCE" Type="number" Precision="6" Scale="2" />
+    <Property Name="MUD_TYPE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="MUD_HEAVY_MINERAL" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLHEAD_LIQUID_PRODUCT" Type="number" Precision="6" Scale="2" />
+    <Property Name="WELLHEAD_GAS_PRODUCT" Type="number" Precision="6" Scale="2" />
+    <Property Name="INJECTION_METHOD" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CO2" Type="number" Precision="6" Scale="2" />
+    <Property Name="WH_TEST_WATER_CONTENT" Type="number" Precision="6" Scale="2" />
+    <Property Name="PUMP_SETTING_DEPTH" Type="number" Precision="6" Scale="2" />
+    <Property Name="PUMP_DIAMETER" Type="number" Precision="6" Scale="2" />
+    <Property Name="PRODUCT_LAYER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="PUMP_STROKE_LENGTH" Type="number" Precision="6" Scale="2" />
+    <Property Name="PUMP_SPM" Type="number" Precision="6" Scale="2" />
+    <Property Name="TUBING_PRESSURE" Type="number" Precision="6" Scale="2" />
+    <Property Name="CASING_PRESSURE" Type="number" Precision="6" Scale="2" />
+    <Property Name="INJECTION_PRESSURE" Type="number" Precision="6" Scale="2" />
+    <Property Name="SOAK_VOLUME" Type="number" Precision="6" Scale="2" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LOG_RT_LOGGING_DATA">
+    <Key>
+      <PropertyRef Name="LOG_RT_DATA_ID" />
+    </Key>
+    <Property Name="LOG_RT_DATA_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="COLLECT_PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="LOG_COLLECT_PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="PROCEDURE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="SAMPLE_DEPTH" Type="float" Precision="126" />
+    <Property Name="SAMPLE_TIME" Type="nvarchar2" MaxLength="24" />
+    <Property Name="SAMPLE1" Type="float" Precision="126" />
+    <Property Name="SAMPLE2" Type="float" Precision="126" />
+    <Property Name="SAMPLE3" Type="float" Precision="126" />
+    <Property Name="SAMPLE4" Type="float" Precision="126" />
+    <Property Name="SAMPLE5" Type="blob" />
+    <Property Name="SAMPLEN" Type="blob" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="WL_ACH_BOREHOLE_INTER">
+    <Key>
+      <PropertyRef Name="INTERP_BOREHOLE_ID" />
+    </Key>
+    <Property Name="INTERP_BOREHOLE_ID" Type="nvarchar2" Nullable="false" MaxLength="32" />
+    <Property Name="PROCESS_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELL_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="WELLBORE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ZONE_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="ZONE_NO" Type="nvarchar2" MaxLength="30" />
+    <Property Name="BOREHOLE_INTER_TYPE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="START_DEPTH" Type="float" Precision="126" />
+    <Property Name="END_DEPTH" Type="number" Precision="7" Scale="2" />
+    <Property Name="THICKNESS" Type="float" Precision="126" />
+    <Property Name="LITHOLOGY_CLASS" Type="nvarchar2" MaxLength="16" />
+    <Property Name="MAX_SPONTANEOUS_POTENTIAL" Type="number" Precision="7" Scale="2" />
+    <Property Name="MAX_SP_GAMMA_RADIANT_INTENSITY" Type="number" Precision="5" Scale="2" />
+    <Property Name="MAX_WELL_DIAMETER" Type="number" Precision="6" Scale="2" />
+    <Property Name="MAX_FORMATION_VOLUME_DENSITY" Type="number" Precision="4" Scale="2" />
+    <Property Name="MAX_SONIC_DIFFERENTIAL_TIME" Type="number" Precision="6" Scale="2" />
+    <Property Name="MAX_COMPENSATED_NEUTRON" Type="number" Precision="7" Scale="2" />
+    <Property Name="MAX_LATEROLOG_DEEP" Type="float" Precision="126" />
+    <Property Name="MAX_LATEROLOG_SHALLOW" Type="float" Precision="126" />
+    <Property Name="MAX_LATEROLOG_FLUSHED_ZONE" Type="float" Precision="126" />
+    <Property Name="MAX_DENSITY_POROSITY" Type="number" Precision="5" Scale="2" />
+    <Property Name="MAX_SONIC_POROSITY" Type="number" Precision="5" Scale="2" />
+    <Property Name="MAX_NEUTRON_POROSITY" Type="number" Precision="5" Scale="2" />
+    <Property Name="MAX_EFFECTIVE_POROSITY" Type="number" Precision="5" Scale="2" />
+    <Property Name="TOTAL_POROSITY" Type="number" Precision="5" Scale="2" />
+    <Property Name="MAX_PERMEABILITY" Type="number" Precision="5" Scale="1" />
+    <Property Name="MAX_OIL_GAS_SATURATION" Type="number" Precision="5" Scale="2" />
+    <Property Name="IDX_TYPE" Type="nvarchar2" MaxLength="50" />
+    <Property Name="INTERPRETATION_RESULT" Type="nvarchar2" MaxLength="6" />
+    <Property Name="COMMENTS" Type="nvarchar2" />
+    <Property Name="ROW_STATE" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_ORG" Type="nvarchar2" MaxLength="32" />
+    <Property Name="UPDATE_USER" Type="nvarchar2" MaxLength="32" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="REMARK" Type="nvarchar2" MaxLength="1024" />
+    <Property Name="OPS_BASEINFO_ID" Type="nvarchar2" MaxLength="32" />
+    <Property Name="MAX_IRREDUCIBLE_W_SAT" Type="number" Precision="5" Scale="2" />
+    <Property Name="MAX_SHALE_CONTENT" Type="number" Precision="5" Scale="2" />
+    <Property Name="MAX_SANDY_CONTENT" Type="number" Precision="5" Scale="2" />
+    <Property Name="MAX_LIME_CONTENT" Type="number" Precision="5" Scale="2" />
+    <Property Name="MAX_DOLOMITIC_CONTENT" Type="number" Precision="5" Scale="2" />
+    <Property Name="MAX_CARBONATE_CONTENT" Type="number" Precision="5" Scale="2" />
+    <Property Name="MIN_SPONTANEOUS_POTENTIAL" Type="number" Precision="7" Scale="2" />
+    <Property Name="MIN_SP_GAMMA_RADIANT_INTENSITY" Type="number" Precision="5" Scale="2" />
+    <Property Name="MIN_WELL_DIAMETER" Type="number" Precision="6" Scale="2" />
+    <Property Name="MIN_FORMATION_VOLUME_DENSITY" Type="number" Precision="4" Scale="2" />
+    <Property Name="MIN_SONIC_DIFFERENTIAL_TIME" Type="number" Precision="6" Scale="2" />
+    <Property Name="MIN_COMPENSATED_NEUTRON" Type="number" Precision="7" Scale="2" />
+    <Property Name="MIN_LATEROLOG_DEEP" Type="float" Precision="126" />
+    <Property Name="MIN_LATEROLOG_SHALLOW" Type="float" Precision="126" />
+    <Property Name="MIN_LATEROLOG_FLUSHED_ZONE" Type="float" Precision="126" />
+    <Property Name="MIN_DENSITY_POROSITY" Type="number" Precision="5" Scale="2" />
+    <Property Name="MIN_SONIC_POROSITY" Type="number" Precision="5" Scale="2" />
+    <Property Name="MIN_NEUTRON_POROSITY" Type="number" Precision="5" Scale="2" />
+    <Property Name="MIN_EFFECTIVE_POROSITY" Type="number" Precision="5" Scale="2" />
+    <Property Name="MIN_PERMEABILITY" Type="number" Precision="5" Scale="1" />
+    <Property Name="MIN_OIL_GAS_SATURATION" Type="number" Precision="5" Scale="2" />
+    <Property Name="MIN_IRREDUCIBLE_W_SAT" Type="number" Precision="5" Scale="2" />
+    <Property Name="MIN_SHALE_CONTENT" Type="number" Precision="5" Scale="2" />
+    <Property Name="MIN_SANDY_CONTENT" Type="number" Precision="5" Scale="2" />
+    <Property Name="MIN_LIME_CONTENT" Type="number" Precision="5" Scale="2" />
+    <Property Name="MIN_DOLOMITIC_CONTENT" Type="number" Precision="5" Scale="2" />
+    <Property Name="MIN_CARBONATE_CONTENT" Type="number" Precision="5" Scale="2" />
+  </EntityType>
+</Schema>

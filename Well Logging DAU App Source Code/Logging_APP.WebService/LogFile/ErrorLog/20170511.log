@@ -1,0 +1,48 @@
+[记录时间：20:47:57.234]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00904: "A"."REQUIREMENTS_TIME": invalid identifier
+   在 Maticsoft.DBUtility.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 E:\WorkGit\数据采集器\DBUtility\DbHelperOra.cs:行号 422
+   在 Logging_App.WebService.DataService.GetTaskList(Byte[] searchModel, Int32 page, Int32& total) 位置 E:\WorkGit\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 589
+
+消息：
+[记录时间：20:51:36.178]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00904: "REQUIREMENTS_TIME": invalid identifier
+   在 Maticsoft.DBUtility.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 E:\WorkGit\数据采集器\DBUtility\DbHelperOra.cs:行号 422
+   在 Logging_App.WebService.DataService.GetTaskList(Byte[] searchModel, Int32 page, Int32& total) 位置 E:\WorkGit\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 589
+
+消息：
+[记录时间：20:56:05.754]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00904: "A"."REQUIREMENTS_TIME": invalid identifier
+   在 Maticsoft.DBUtility.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 E:\WorkGit\数据采集器\DBUtility\DbHelperOra.cs:行号 422
+   在 Logging_App.WebService.DataService.GetTaskList(Byte[] searchModel, Int32 page, Int32& total) 位置 E:\WorkGit\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 589
+
+消息：
+[记录时间：20:58:38.910]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00904: "A"."REQUIREMENTS_TIME": invalid identifier
+   在 Maticsoft.DBUtility.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 E:\WorkGit\数据采集器\DBUtility\DbHelperOra.cs:行号 422
+   在 Logging_App.WebService.DataService.GetTaskList(Byte[] searchModel, Int32 page, Int32& total) 位置 E:\WorkGit\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 589
+
+消息：
+[记录时间：20:59:59.043]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00904: "A"."REQUIREMENTS_TIME": invalid identifier
+   在 Maticsoft.DBUtility.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 E:\WorkGit\数据采集器\DBUtility\DbHelperOra.cs:行号 422
+   在 Logging_App.WebService.DataService.GetTaskList(Byte[] searchModel, Int32 page, Int32& total) 位置 E:\WorkGit\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 589
+
+消息：
+[记录时间：21:01:16.548]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00904: "A"."REQUIREMENTS_TIME": invalid identifier
+   在 Maticsoft.DBUtility.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 E:\WorkGit\数据采集器\DBUtility\DbHelperOra.cs:行号 422
+   在 Logging_App.WebService.DataService.GetTaskList(Byte[] searchModel, Int32 page, Int32& total) 位置 E:\WorkGit\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 589
+
+消息：

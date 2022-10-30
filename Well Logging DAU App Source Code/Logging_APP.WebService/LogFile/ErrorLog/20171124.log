@@ -1,0 +1,40 @@
+[记录时间：10:36:31.096]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00918: column ambiguously defined
+   在 Maticsoft.DBUtility.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 D:\1126\一体化采集器\数据采集器\DBUtility\DbHelperOra.cs:行号 422
+   在 Logging_App.WebService.DataService.GetDvdInfoList(Byte[] _searchModel, Int32 page, Int32& total) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 4697
+
+消息：
+[记录时间：10:36:53.709]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00918: column ambiguously defined
+   在 Maticsoft.DBUtility.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 D:\1126\一体化采集器\数据采集器\DBUtility\DbHelperOra.cs:行号 422
+   在 Logging_App.WebService.DataService.GetDvdInfoList(Byte[] _searchModel, Int32 page, Int32& total) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 4697
+
+消息：
+[记录时间：10:46:12.611]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00918: column ambiguously defined
+   在 Maticsoft.DBUtility.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 D:\1126\一体化采集器\数据采集器\DBUtility\DbHelperOra.cs:行号 422
+   在 Logging_App.WebService.DataService.GetDvdInfoList(Byte[] _searchModel, Int32 page, Int32& total) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 4697
+
+消息：
+[记录时间：10:57:11.562]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00918: column ambiguously defined
+   在 Maticsoft.DBUtility.DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 位置 D:\1126\一体化采集器\数据采集器\DBUtility\DbHelperOra.cs:行号 422
+   在 Logging_App.WebService.DataService.GetDvdInfoList(Byte[] _searchModel, Int32 page, Int32& total) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 4697
+
+消息：
+[记录时间：11:05:21.117]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-12899: value too large for column "LOGGINGAPPUSER"."DM_LOG_DVD_INFO"."DVD_NUMBER" (actual: 70, maximum: 64)
+   在 Maticsoft.DBUtility.DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 位置 D:\1126\一体化采集器\数据采集器\DBUtility\DbHelperOra.cs:行号 318
+   在 Logging_App.WebService.DataService.SaveDvdInfo(Byte[] _model, String process_id) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 4653
+
+消息：

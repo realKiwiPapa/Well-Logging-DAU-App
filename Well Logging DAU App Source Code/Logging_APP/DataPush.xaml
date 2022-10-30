@@ -1,0 +1,41 @@
+﻿<Page x:Class="Logging_App.DataPush"
+      xmlns:xctk="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:gui="clr-namespace:Logging_App.GUI" xmlns:controls="clr-namespace:Logging_App.Controls"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d"
+	Title="数据推送" Loaded="Page_Loaded" d:DesignWidth="592" d:DesignHeight="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="200" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel  Orientation="Horizontal">
+            <Label Content="作业井名" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+            <TextBox Name="text_well_name" HorizontalAlignment="Left" VerticalAlignment="Center" Width="120"/>
+            <Label Content="通知单编号"  HorizontalAlignment="Left"  VerticalAlignment="Center" />
+            <TextBox  Name="text_REQUISITION_CD" HorizontalAlignment="Left" Margin="0,1,0,0" VerticalAlignment="Center" Width="120"/>
+            <Button Content="查询"  Height="23" HorizontalAlignment="Left" Name="button1" VerticalAlignment="Center" Width="75" Margin="0,1,0,0" Click="button1_Click" />
+        </StackPanel>
+        <DataGrid Margin="1" Grid.Row="1" IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False"  CanUserAddRows="False" Name="dataGrid1" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="作业井名" MaxWidth="150" Binding="{Binding Path=WELL_JOB_NAME}"/>
+                <DataGridTextColumn Header="通知单编码" Width="200" Binding="{Binding Path=REQUISITION_CD}" />
+                <DataGridComboBoxColumn x:Name="REQUISITION_TYPE" Header="通知单类型" MaxWidth="150" SelectedValueBinding="{Binding Path=REQUISITION_TYPE}"></DataGridComboBoxColumn>
+                <DataGridTextColumn Header="作业小队" MaxWidth="150" Binding="{Binding Path=LOG_TEAM_ID}"/>
+                <DataGridTextColumn Header="作业目的" MaxWidth="150" Binding="{Binding Path=JOB_CHINESE_NAME}"/>
+                <DataGridTextColumn Header="预测井段" MaxWidth="150" Binding="{Binding Path=PREDICTED_LOGGING_INTERVAL}"/>
+                <!--<DataGridTextColumn Header="要求到井时间" MaxWidth="120" Binding="{Binding Path=PREDICTED_LOGGING_DATE, StringFormat=\{0:yyyy-MM-dd\}}"/>-->
+                <DataGridTextColumn Header="通知单状态" Width="*" Binding="{Binding Path=STATE}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Grid.Row="2" Content="推送到A12数据库"  Height="25" HorizontalAlignment="Left" Name="button2" VerticalAlignment="Center" Width="120" Margin="5,0,0,0" Click="button2_Click" />
+        <Button Grid.Row="2" Content="A1审核"  Height="26" HorizontalAlignment="Left" Name="button3" VerticalAlignment="Center" Width="50" Margin="155,0,0,0" Click="button3_Click" />
+        <Button Grid.Row="2" Content="A1提交"  Height="25" HorizontalAlignment="Left" Name="button4" VerticalAlignment="Center" Width="50" Margin="220,0,0,0" Click="button4_Click" />
+        <TextBox Name="textBox1" Margin="2" Grid.Row="3" IsReadOnly="True"></TextBox>
+    </Grid>
+</Page>

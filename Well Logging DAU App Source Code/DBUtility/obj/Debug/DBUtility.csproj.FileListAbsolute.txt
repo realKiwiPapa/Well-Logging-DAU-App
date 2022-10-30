@@ -1,0 +1,63 @@
+E:\Logging_App\DBUtility\bin\Debug\Maticsoft.DBUtility.dll
+E:\Logging_App\DBUtility\bin\Debug\Maticsoft.DBUtility.pdb
+E:\Logging_App\DBUtility\bin\Debug\Oracle.DataAccess.dll
+E:\Logging_App\DBUtility\obj\Debug\Maticsoft.DBUtility.dll
+E:\Logging_App\DBUtility\obj\Debug\Maticsoft.DBUtility.pdb
+D:\Logging_App\DBUtility\bin\Debug\Maticsoft.DBUtility.dll
+D:\Logging_App\DBUtility\bin\Debug\Maticsoft.DBUtility.pdb
+D:\Logging_App\DBUtility\obj\Debug\Maticsoft.DBUtility.dll
+D:\Logging_App\DBUtility\obj\Debug\Maticsoft.DBUtility.pdb
+E:\Logging_App\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+D:\Logging_App\DBUtility\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\michael.c\Desktop\Logging_App\Logging_App\DBUtility\bin\Debug\Maticsoft.DBUtility.dll
+C:\Users\michael.c\Desktop\Logging_App\Logging_App\DBUtility\bin\Debug\Maticsoft.DBUtility.pdb
+C:\Users\michael.c\Desktop\Logging_App\Logging_App\DBUtility\bin\Debug\Oracle.DataAccess.dll
+C:\Users\michael.c\Desktop\Logging_App\Logging_App\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+C:\Users\michael.c\Desktop\Logging_App\Logging_App\DBUtility\obj\Debug\Maticsoft.DBUtility.dll
+C:\Users\michael.c\Desktop\Logging_App\Logging_App\DBUtility\obj\Debug\Maticsoft.DBUtility.pdb
+C:\Documents and Settings\Administrator\桌面\Logging_App\DBUtility\bin\Debug\Maticsoft.DBUtility.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\DBUtility\bin\Debug\Maticsoft.DBUtility.pdb
+C:\Documents and Settings\Administrator\桌面\Logging_App\DBUtility\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\Logging_App\DBUtility\obj\Debug\Maticsoft.DBUtility.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\DBUtility\obj\Debug\Maticsoft.DBUtility.pdb
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\DBUtility\bin\Debug\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\DBUtility\bin\Debug\Maticsoft.DBUtility.pdb
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\DBUtility\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\DBUtility\obj\Debug\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\DBUtility\obj\Debug\Maticsoft.DBUtility.pdb
+G:\测井源码\数据采集器\DBUtility\bin\Debug\Maticsoft.DBUtility.dll
+G:\测井源码\数据采集器\DBUtility\bin\Debug\Maticsoft.DBUtility.pdb
+G:\测井源码\数据采集器\DBUtility\obj\Debug\ResolveAssemblyReference.cache
+G:\测井源码\数据采集器\DBUtility\obj\Debug\Maticsoft.DBUtility.dll
+G:\测井源码\数据采集器\DBUtility\obj\Debug\Maticsoft.DBUtility.pdb
+C:\Users\Administrator\Desktop\数据采集器\DBUtility\bin\Debug\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\数据采集器\DBUtility\bin\Debug\Maticsoft.DBUtility.pdb
+C:\Users\Administrator\Desktop\数据采集器\DBUtility\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\数据采集器\DBUtility\obj\Debug\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\数据采集器\DBUtility\obj\Debug\Maticsoft.DBUtility.pdb
+E:\WorkGit\数据采集器\DBUtility\bin\Debug\Maticsoft.DBUtility.dll
+E:\WorkGit\数据采集器\DBUtility\bin\Debug\Maticsoft.DBUtility.pdb
+E:\WorkGit\数据采集器\DBUtility\obj\Debug\ResolveAssemblyReference.cache
+E:\WorkGit\数据采集器\DBUtility\obj\Debug\Maticsoft.DBUtility.dll
+E:\WorkGit\数据采集器\DBUtility\obj\Debug\Maticsoft.DBUtility.pdb
+C:\Users\Michael\Desktop\数据采集器\DBUtility\bin\Debug\Maticsoft.DBUtility.dll
+C:\Users\Michael\Desktop\数据采集器\DBUtility\bin\Debug\Maticsoft.DBUtility.pdb
+C:\Users\Michael\Desktop\数据采集器\DBUtility\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Michael\Desktop\数据采集器\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+C:\Users\Michael\Desktop\数据采集器\DBUtility\obj\Debug\Maticsoft.DBUtility.dll
+C:\Users\Michael\Desktop\数据采集器\DBUtility\obj\Debug\Maticsoft.DBUtility.pdb
+C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\bin\Debug\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\bin\Debug\Maticsoft.DBUtility.pdb
+C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\obj\Debug\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\obj\Debug\Maticsoft.DBUtility.pdb
+D:\1126\一体化采集器\数据采集器\DBUtility\bin\Debug\Maticsoft.DBUtility.dll
+D:\1126\一体化采集器\数据采集器\DBUtility\bin\Debug\Maticsoft.DBUtility.pdb
+D:\1126\一体化采集器\数据采集器\DBUtility\obj\Debug\ResolveAssemblyReference.cache
+D:\1126\一体化采集器\数据采集器\DBUtility\obj\Debug\Maticsoft.DBUtility.dll
+D:\1126\一体化采集器\数据采集器\DBUtility\obj\Debug\Maticsoft.DBUtility.pdb
+C:\Users\CJ\Desktop\测井数据采集系统V1.0\DBUtility\bin\Debug\Maticsoft.DBUtility.dll
+C:\Users\CJ\Desktop\测井数据采集系统V1.0\DBUtility\bin\Debug\Maticsoft.DBUtility.pdb
+C:\Users\CJ\Desktop\测井数据采集系统V1.0\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+C:\Users\CJ\Desktop\测井数据采集系统V1.0\DBUtility\obj\Debug\Maticsoft.DBUtility.dll
+C:\Users\CJ\Desktop\测井数据采集系统V1.0\DBUtility\obj\Debug\Maticsoft.DBUtility.pdb

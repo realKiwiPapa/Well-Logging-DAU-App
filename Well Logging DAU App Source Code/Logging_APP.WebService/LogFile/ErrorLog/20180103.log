@@ -1,0 +1,16 @@
+[记录时间：10:53:17.982]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-00001: unique constraint (LOGGINGAPPUSER.PK_PRO_LOG_PROCESS_DOCUMENT) violated
+ORA-06512: at line 1    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessDocument(String PROCESS_ID, Int32 filetype, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3876
+
+消息：
+[记录时间：10:54:00.690]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-00001: unique constraint (LOGGINGAPPUSER.PK_PRO_LOG_PROCESS_DOCUMENT) violated
+ORA-06512: at line 1    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessDocument(String PROCESS_ID, Int32 filetype, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3876
+
+消息：

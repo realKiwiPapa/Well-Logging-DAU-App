@@ -1,0 +1,34 @@
+[记录时间：14:39:20.092]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00900: invalid SQL statement
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.SaveProcessDocument(String PROCESS_ID, Int32 filetype, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3818
+
+消息：
+[记录时间：15:14:23.594]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.ArgumentException: 列“GUID”不属于表 data。
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.set_Item(String columnName, Object value)
+   在 Logging_App.WebService.DataService.SaveProcessDocument(String PROCESS_ID, Int32 filetype, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3837
+
+消息：
+[记录时间：15:17:03.665]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.ArgumentException: 列“GUID”不属于表 data。
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.set_Item(String columnName, Object value)
+   在 Logging_App.WebService.DataService.SaveProcessDocument(String PROCESS_ID, Int32 filetype, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3826
+
+消息：
+[记录时间：16:13:57.033]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-01722: invalid number
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetA1DataByView(String view_name, Byte[] data) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 697
+
+消息：

@@ -1,0 +1,96 @@
+[记录时间：10:48:01.941]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-02290: check constraint (LOGGINGAPPUSER.CKC_DOCUMENT_FORMAT_PRO_LOG_) violated
+ORA-06512: at line 1    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessDocument(String PROCESS_ID, Int32 filetype, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3803
+
+消息：
+[记录时间：10:52:19.288]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-02290: check constraint (LOGGINGAPPUSER.CKC_DOCUMENT_FORMAT_PRO_LOG_) violated
+ORA-06512: at line 1    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessDocument(String PROCESS_ID, Int32 filetype, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3803
+
+消息：
+[记录时间：14:02:50.910]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.ArgumentException: ORA-1843: not a valid month
+   在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessDocument(String PROCESS_ID, Int32 filetype, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3803
+
+消息：
+[记录时间：14:03:18.054]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.ArgumentException: ORA-1843: not a valid month
+   在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessDocument(String PROCESS_ID, Int32 filetype, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3803
+
+消息：
+[记录时间：14:05:19.198]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.ArgumentException: ORA-1843: not a valid month
+   在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessDocument(String PROCESS_ID, Int32 filetype, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3803
+
+消息：
+[记录时间：14:10:22.750]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.ArgumentException: ORA-1843: not a valid month
+   在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessDocument(String PROCESS_ID, Int32 filetype, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3803
+
+消息：
+[记录时间：14:20:16.470]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.ArgumentException: ORA-1843: not a valid month
+   在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessDocument(String PROCESS_ID, Int32 filetype, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3803
+
+消息：
+[记录时间：14:27:31.809]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.ArgumentException: ORA-1843: not a valid month
+   在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessDocument(String PROCESS_ID, Int32 filetype, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3803
+
+消息：
+[记录时间：14:31:08.834]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.ArgumentException: ORA-1843: not a valid month
+   在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessDocument(String PROCESS_ID, Int32 filetype, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3803
+
+消息：
+[记录时间：14:35:04.359]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.ArgumentException: ORA-1843: not a valid month
+   在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessDocument(String PROCESS_ID, Int32 filetype, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3803
+
+消息：
+[记录时间：14:42:08.535]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.ArgumentException: ORA-1843: not a valid month
+   在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessDocument(String PROCESS_ID, Int32 filetype, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3803
+
+消息：
+[记录时间：14:50:22.575]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.ArgumentException: ORA-1843: not a valid month
+   在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessDocument(String PROCESS_ID, Int32 filetype, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3803
+
+消息：

@@ -1,0 +1,150 @@
+[记录时间：13:30:32.968]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-04091: table LOGGINGAPPUSER.PRO_LOG_PROCESSING_CURVE_DATA is mutating, trigger/function may not see it
+ORA-06512: at "LOGGINGAPPUSER.SYNC_DATA_TRIGGER", line 8
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNC_DATA_TRIGGER'
+ORA-06512: at line 1    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessingCurveInfo(String PROCESS_ID, String MAPS_CHINESE_NAME, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3584
+
+消息：
+[记录时间：13:44:39.364]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-04091: table LOGGINGAPPUSER.PRO_LOG_PROCESSING_CURVE_DATA is mutating, trigger/function may not see it
+ORA-06512: at "LOGGINGAPPUSER.SYNC_DATA_TRIGGER", line 8
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNC_DATA_TRIGGER'
+ORA-06512: at line 1    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessingCurveInfo(String PROCESS_ID, String MAPS_CHINESE_NAME, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3584
+
+消息：
+[记录时间：13:51:03.248]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-04091: table LOGGINGAPPUSER.PRO_LOG_PROCESSING_CURVE_DATA is mutating, trigger/function may not see it
+ORA-06512: at "LOGGINGAPPUSER.SYNC_DATA_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNC_DATA_TRIGGER'
+ORA-06512: at line 1    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessingCurveInfo(String PROCESS_ID, String MAPS_CHINESE_NAME, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3584
+
+消息：
+[记录时间：13:52:09.519]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-04091: table LOGGINGAPPUSER.PRO_LOG_PROCESSING_CURVE_DATA is mutating, trigger/function may not see it
+ORA-06512: at "LOGGINGAPPUSER.SYNC_DATA_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNC_DATA_TRIGGER'
+ORA-06512: at line 1    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessingCurveInfo(String PROCESS_ID, String MAPS_CHINESE_NAME, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3584
+
+消息：
+[记录时间：14:11:52.645]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-04091: table LOGGINGAPPUSER.PRO_LOG_PROCESSING_CURVE_DATA is mutating, trigger/function may not see it
+ORA-06512: at "LOGGINGAPPUSER.SYNC_DATA_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNC_DATA_TRIGGER'
+ORA-06512: at line 1    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessingCurveInfo(String PROCESS_ID, String MAPS_CHINESE_NAME, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3584
+
+消息：
+[记录时间：14:27:17.314]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-04091: table LOGGINGAPPUSER.PRO_LOG_PROCESSING_CURVE_DATA is mutating, trigger/function may not see it
+ORA-06512: at "LOGGINGAPPUSER.SYNC_DATA_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNC_DATA_TRIGGER'
+ORA-06512: at line 1    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessingCurveInfo(String PROCESS_ID, String MAPS_CHINESE_NAME, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3584
+
+消息：
+[记录时间：15:52:03.826]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-00932: inconsistent datatypes: expected - got CLOB
+ORA-06512: at "LOGGINGAPPUSER.SYNC_DATA_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNC_DATA_TRIGGER'
+ORA-06512: at line 1    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessingCurveInfo(String PROCESS_ID, String MAPS_CHINESE_NAME, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3584
+
+消息：
+[记录时间：15:55:18.840]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-04091: table LOGGINGAPPUSER.PRO_LOG_PROCESSING_CURVE_DATA is mutating, trigger/function may not see it
+ORA-06512: at "LOGGINGAPPUSER.SYNC_DATA_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNC_DATA_TRIGGER'
+ORA-06512: at line 1    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessingCurveInfo(String PROCESS_ID, String MAPS_CHINESE_NAME, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3584
+
+消息：
+[记录时间：16:02:27.788]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-04091: table LOGGINGAPPUSER.PRO_LOG_PROCESSING_CURVE_DATA is mutating, trigger/function may not see it
+ORA-06512: at "LOGGINGAPPUSER.SYNC_DATA_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNC_DATA_TRIGGER'
+ORA-06512: at line 1    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessingCurveInfo(String PROCESS_ID, String MAPS_CHINESE_NAME, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3584
+
+消息：
+[记录时间：16:04:05.017]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-04091: table LOGGINGAPPUSER.PRO_LOG_PROCESSING_CURVE_DATA is mutating, trigger/function may not see it
+ORA-06512: at "LOGGINGAPPUSER.SYNC_DATA_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNC_DATA_TRIGGER'
+ORA-06512: at line 1    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessingCurveInfo(String PROCESS_ID, String MAPS_CHINESE_NAME, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3584
+
+消息：
+[记录时间：16:10:49.967]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-04091: table LOGGINGAPPUSER.PRO_LOG_PROCESSING_CURVE_DATA is mutating, trigger/function may not see it
+ORA-06512: at "LOGGINGAPPUSER.SYNC_DATA_TRIGGER", line 7
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNC_DATA_TRIGGER'
+ORA-06512: at line 1    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessingCurveInfo(String PROCESS_ID, String MAPS_CHINESE_NAME, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3584
+
+消息：
+[记录时间：16:26:20.692]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-00932: inconsistent datatypes: expected - got BLOB
+ORA-06512: at "LOGGINGAPPUSER.SYNC_DATA_TRIGGER", line 9
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNC_DATA_TRIGGER'
+ORA-06512: at line 1    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessingCurveInfo(String PROCESS_ID, String MAPS_CHINESE_NAME, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3584
+
+消息：
+[记录时间：16:33:11.861]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-04091: table LOGGINGAPPUSER.PRO_LOG_PROCESSING_CURVE_DATA is mutating, trigger/function may not see it
+ORA-06512: at "LOGGINGAPPUSER.SYNC_DATA_TRIGGER", line 8
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNC_DATA_TRIGGER'
+ORA-06512: at line 1    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessingCurveInfo(String PROCESS_ID, String MAPS_CHINESE_NAME, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3584
+
+消息：
+[记录时间：16:41:13.554]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-04091: table LOGGINGAPPUSER.PRO_LOG_PROCESSING_CURVE_DATA is mutating, trigger/function may not see it
+ORA-06512: at "LOGGINGAPPUSER.SYNC_DATA_TRIGGER", line 6
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNC_DATA_TRIGGER'
+ORA-06512: at line 1    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessingCurveInfo(String PROCESS_ID, String MAPS_CHINESE_NAME, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3584
+
+消息：
+[记录时间：16:44:48.813]
+用户帐号:admin
+IP:127.0.0.1
+异常：Oracle.DataAccess.Client.OracleException ORA-04091: table LOGGINGAPPUSER.PRO_LOG_PROCESSING_CURVE_DATA is mutating, trigger/function may not see it
+ORA-06512: at "LOGGINGAPPUSER.SYNC_DATA_TRIGGER", line 6
+ORA-04088: error during execution of trigger 'LOGGINGAPPUSER.SYNC_DATA_TRIGGER'
+ORA-06512: at line 1    在 Maticsoft.DBUtility.DbHelperOra.InsertDataTable(String insertSql, DataTable dt, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 634
+   在 Logging_App.WebService.DataService.SaveProcessingCurveInfo(String PROCESS_ID, String MAPS_CHINESE_NAME, DataTable dt) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3584
+
+消息：

@@ -1,0 +1,136 @@
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP.WebService\bin\Logging_App.WebService.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP.WebService\bin\Logging_App.WebService.pdb
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP.WebService\bin\log4net.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP.WebService\bin\Logging_App.Model.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP.WebService\bin\Logging_App.Utility.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP.WebService\bin\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP.WebService\bin\ManagedOpenSsl.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP.WebService\bin\Maticsoft.DBUtility.pdb
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP.WebService\bin\log4net.pdb
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP.WebService\bin\log4net.xml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP.WebService\bin\Logging_App.Model.pdb
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP.WebService\bin\Logging_App.Utility.pdb
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP.WebService\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP.WebService\obj\Debug\Logging_App.WebService.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\Logging_APP.WebService\obj\Debug\Logging_App.WebService.pdb
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP.WebService\bin\Logging_App.WebService.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP.WebService\bin\Logging_App.WebService.pdb
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP.WebService\bin\log4net.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP.WebService\bin\Logging_App.Model.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP.WebService\bin\Logging_App.Utility.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP.WebService\bin\Maticsoft.DBUtility.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP.WebService\bin\ManagedOpenSsl.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP.WebService\bin\Maticsoft.DBUtility.pdb
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP.WebService\bin\log4net.pdb
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP.WebService\bin\log4net.xml
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP.WebService\bin\Logging_App.Model.pdb
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP.WebService\bin\Logging_App.Utility.pdb
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP.WebService\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP.WebService\obj\Debug\Logging_App.WebService.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\Logging_APP.WebService\obj\Debug\Logging_App.WebService.pdb
+G:\测井源码\数据采集器\Logging_APP.WebService\bin\Logging_App.WebService.dll
+G:\测井源码\数据采集器\Logging_APP.WebService\bin\Logging_App.WebService.pdb
+G:\测井源码\数据采集器\Logging_APP.WebService\bin\log4net.dll
+G:\测井源码\数据采集器\Logging_APP.WebService\bin\Logging_App.Model.dll
+G:\测井源码\数据采集器\Logging_APP.WebService\bin\Logging_App.Utility.dll
+G:\测井源码\数据采集器\Logging_APP.WebService\bin\Maticsoft.DBUtility.dll
+G:\测井源码\数据采集器\Logging_APP.WebService\bin\ManagedOpenSsl.dll
+G:\测井源码\数据采集器\Logging_APP.WebService\bin\Maticsoft.DBUtility.pdb
+G:\测井源码\数据采集器\Logging_APP.WebService\bin\log4net.pdb
+G:\测井源码\数据采集器\Logging_APP.WebService\bin\log4net.xml
+G:\测井源码\数据采集器\Logging_APP.WebService\bin\Logging_App.Model.pdb
+G:\测井源码\数据采集器\Logging_APP.WebService\bin\Logging_App.Utility.pdb
+G:\测井源码\数据采集器\Logging_APP.WebService\obj\Debug\ResolveAssemblyReference.cache
+G:\测井源码\数据采集器\Logging_APP.WebService\obj\Debug\Logging_App.WebService.dll
+G:\测井源码\数据采集器\Logging_APP.WebService\obj\Debug\Logging_App.WebService.pdb
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP.WebService\bin\Logging_App.WebService.dll
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP.WebService\bin\Logging_App.WebService.pdb
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP.WebService\bin\log4net.dll
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP.WebService\bin\Logging_App.Model.dll
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP.WebService\bin\Logging_App.Utility.dll
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP.WebService\bin\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP.WebService\bin\ManagedOpenSsl.dll
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP.WebService\bin\Maticsoft.DBUtility.pdb
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP.WebService\bin\log4net.pdb
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP.WebService\bin\log4net.xml
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP.WebService\bin\Logging_App.Model.pdb
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP.WebService\bin\Logging_App.Utility.pdb
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP.WebService\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP.WebService\obj\Debug\Logging_App.WebService.dll
+C:\Users\Administrator\Desktop\数据采集器\Logging_APP.WebService\obj\Debug\Logging_App.WebService.pdb
+E:\WorkGit\数据采集器\Logging_APP.WebService\bin\Logging_App.WebService.dll
+E:\WorkGit\数据采集器\Logging_APP.WebService\bin\Logging_App.WebService.pdb
+E:\WorkGit\数据采集器\Logging_APP.WebService\bin\log4net.dll
+E:\WorkGit\数据采集器\Logging_APP.WebService\bin\Logging_App.Model.dll
+E:\WorkGit\数据采集器\Logging_APP.WebService\bin\Logging_App.Utility.dll
+E:\WorkGit\数据采集器\Logging_APP.WebService\bin\Maticsoft.DBUtility.dll
+E:\WorkGit\数据采集器\Logging_APP.WebService\bin\ManagedOpenSsl.dll
+E:\WorkGit\数据采集器\Logging_APP.WebService\bin\Maticsoft.DBUtility.pdb
+E:\WorkGit\数据采集器\Logging_APP.WebService\bin\log4net.pdb
+E:\WorkGit\数据采集器\Logging_APP.WebService\bin\log4net.xml
+E:\WorkGit\数据采集器\Logging_APP.WebService\bin\Logging_App.Model.pdb
+E:\WorkGit\数据采集器\Logging_APP.WebService\bin\Logging_App.Utility.pdb
+E:\WorkGit\数据采集器\Logging_APP.WebService\obj\Debug\ResolveAssemblyReference.cache
+E:\WorkGit\数据采集器\Logging_APP.WebService\obj\Debug\Logging_App.WebService.dll
+E:\WorkGit\数据采集器\Logging_APP.WebService\obj\Debug\Logging_App.WebService.pdb
+C:\Users\Michael\Desktop\数据采集器\Logging_APP.WebService\bin\Logging_App.WebService.dll
+C:\Users\Michael\Desktop\数据采集器\Logging_APP.WebService\bin\Logging_App.WebService.pdb
+C:\Users\Michael\Desktop\数据采集器\Logging_APP.WebService\bin\log4net.dll
+C:\Users\Michael\Desktop\数据采集器\Logging_APP.WebService\bin\Logging_App.Model.dll
+C:\Users\Michael\Desktop\数据采集器\Logging_APP.WebService\bin\Logging_App.Utility.dll
+C:\Users\Michael\Desktop\数据采集器\Logging_APP.WebService\bin\Maticsoft.DBUtility.dll
+C:\Users\Michael\Desktop\数据采集器\Logging_APP.WebService\bin\Oracle.DataAccess.dll
+C:\Users\Michael\Desktop\数据采集器\Logging_APP.WebService\bin\ManagedOpenSsl.dll
+C:\Users\Michael\Desktop\数据采集器\Logging_APP.WebService\bin\Maticsoft.DBUtility.pdb
+C:\Users\Michael\Desktop\数据采集器\Logging_APP.WebService\bin\log4net.pdb
+C:\Users\Michael\Desktop\数据采集器\Logging_APP.WebService\bin\log4net.xml
+C:\Users\Michael\Desktop\数据采集器\Logging_APP.WebService\bin\Logging_App.Model.pdb
+C:\Users\Michael\Desktop\数据采集器\Logging_APP.WebService\bin\Logging_App.Utility.pdb
+C:\Users\Michael\Desktop\数据采集器\Logging_APP.WebService\obj\Debug\WebService.csprojResolveAssemblyReference.cache
+C:\Users\Michael\Desktop\数据采集器\Logging_APP.WebService\obj\Debug\Logging_App.WebService.dll
+C:\Users\Michael\Desktop\数据采集器\Logging_APP.WebService\obj\Debug\Logging_App.WebService.pdb
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\bin\Logging_App.WebService.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\bin\Logging_App.WebService.pdb
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\bin\log4net.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\bin\Logging_App.Model.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\bin\Logging_App.Utility.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\bin\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\bin\ManagedOpenSsl.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\bin\Maticsoft.DBUtility.pdb
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\bin\log4net.pdb
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\bin\log4net.xml
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\bin\Logging_App.Model.pdb
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\bin\Logging_App.Utility.pdb
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\obj\Debug\Logging_App.WebService.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\obj\Debug\Logging_App.WebService.pdb
+D:\1126\一体化采集器\数据采集器\Logging_APP.WebService\bin\Logging_App.WebService.dll
+D:\1126\一体化采集器\数据采集器\Logging_APP.WebService\bin\Logging_App.WebService.pdb
+D:\1126\一体化采集器\数据采集器\Logging_APP.WebService\bin\log4net.dll
+D:\1126\一体化采集器\数据采集器\Logging_APP.WebService\bin\Logging_App.Model.dll
+D:\1126\一体化采集器\数据采集器\Logging_APP.WebService\bin\Logging_App.Utility.dll
+D:\1126\一体化采集器\数据采集器\Logging_APP.WebService\bin\Maticsoft.DBUtility.dll
+D:\1126\一体化采集器\数据采集器\Logging_APP.WebService\bin\ManagedOpenSsl.dll
+D:\1126\一体化采集器\数据采集器\Logging_APP.WebService\bin\Maticsoft.DBUtility.pdb
+D:\1126\一体化采集器\数据采集器\Logging_APP.WebService\bin\log4net.pdb
+D:\1126\一体化采集器\数据采集器\Logging_APP.WebService\bin\log4net.xml
+D:\1126\一体化采集器\数据采集器\Logging_APP.WebService\bin\Logging_App.Model.pdb
+D:\1126\一体化采集器\数据采集器\Logging_APP.WebService\bin\Logging_App.Utility.pdb
+D:\1126\一体化采集器\数据采集器\Logging_APP.WebService\obj\Debug\ResolveAssemblyReference.cache
+D:\1126\一体化采集器\数据采集器\Logging_APP.WebService\obj\Debug\Logging_App.WebService.dll
+D:\1126\一体化采集器\数据采集器\Logging_APP.WebService\obj\Debug\Logging_App.WebService.pdb
+C:\Users\CJ\Desktop\测井数据采集系统V1.0\Logging_APP.WebService\bin\Logging_App.WebService.dll
+C:\Users\CJ\Desktop\测井数据采集系统V1.0\Logging_APP.WebService\bin\Logging_App.WebService.pdb
+C:\Users\CJ\Desktop\测井数据采集系统V1.0\Logging_APP.WebService\bin\log4net.dll
+C:\Users\CJ\Desktop\测井数据采集系统V1.0\Logging_APP.WebService\bin\Logging_App.Model.dll
+C:\Users\CJ\Desktop\测井数据采集系统V1.0\Logging_APP.WebService\bin\Logging_App.Utility.dll
+C:\Users\CJ\Desktop\测井数据采集系统V1.0\Logging_APP.WebService\bin\Maticsoft.DBUtility.dll
+C:\Users\CJ\Desktop\测井数据采集系统V1.0\Logging_APP.WebService\bin\ManagedOpenSsl.dll
+C:\Users\CJ\Desktop\测井数据采集系统V1.0\Logging_APP.WebService\bin\Maticsoft.DBUtility.pdb
+C:\Users\CJ\Desktop\测井数据采集系统V1.0\Logging_APP.WebService\bin\log4net.pdb
+C:\Users\CJ\Desktop\测井数据采集系统V1.0\Logging_APP.WebService\bin\log4net.xml
+C:\Users\CJ\Desktop\测井数据采集系统V1.0\Logging_APP.WebService\bin\Logging_App.Model.pdb
+C:\Users\CJ\Desktop\测井数据采集系统V1.0\Logging_APP.WebService\bin\Logging_App.Utility.pdb
+C:\Users\CJ\Desktop\测井数据采集系统V1.0\Logging_APP.WebService\obj\Debug\WebService.csprojResolveAssemblyReference.cache
+C:\Users\CJ\Desktop\测井数据采集系统V1.0\Logging_APP.WebService\obj\Debug\Logging_App.WebService.dll
+C:\Users\CJ\Desktop\测井数据采集系统V1.0\Logging_APP.WebService\obj\Debug\Logging_App.WebService.pdb

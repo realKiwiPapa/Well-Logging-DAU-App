@@ -1,0 +1,26 @@
+E:\Logging_App\build\bin\net\2.0\release\log4net.dll
+E:\Logging_App\build\bin\net\2.0\release\log4net.xml
+E:\Logging_App\log4net\obj\Release\log4net.dll
+D:\Logging_App\build\bin\net\2.0\release\log4net.dll
+D:\Logging_App\build\bin\net\2.0\release\log4net.xml
+D:\Logging_App\log4net\obj\Release\log4net.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\build\bin\net\2.0\release\log4net.dll
+C:\Documents and Settings\Administrator\桌面\Logging_App\build\bin\net\2.0\release\log4net.xml
+C:\Documents and Settings\Administrator\桌面\Logging_App\log4net\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\Logging_App\log4net\obj\Release\log4net.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\build\bin\net\2.0\release\log4net.dll
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\build\bin\net\2.0\release\log4net.xml
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\log4net\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Logging_App\Logging_App\log4net\obj\Release\log4net.dll
+G:\测井源码\数据采集器\build\bin\net\2.0\release\log4net.dll
+G:\测井源码\数据采集器\build\bin\net\2.0\release\log4net.xml
+G:\测井源码\数据采集器\log4net\obj\Release\ResolveAssemblyReference.cache
+G:\测井源码\数据采集器\log4net\obj\Release\log4net.dll
+C:\Users\Administrator\Desktop\数据采集器\build\bin\net\2.0\release\log4net.dll
+C:\Users\Administrator\Desktop\数据采集器\build\bin\net\2.0\release\log4net.xml
+C:\Users\Administrator\Desktop\数据采集器\log4net\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\数据采集器\log4net\obj\Release\log4net.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\build\bin\net\2.0\release\log4net.dll
+C:\Users\Administrator\Desktop\源码\数据采集器\build\bin\net\2.0\release\log4net.xml
+C:\Users\Administrator\Desktop\源码\数据采集器\log4net\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\源码\数据采集器\log4net\obj\Release\log4net.dll

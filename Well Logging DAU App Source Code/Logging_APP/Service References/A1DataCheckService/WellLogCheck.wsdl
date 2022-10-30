@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="IsExistProject">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wellName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsExistProjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsExistProjectResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectYear">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wellName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectYearResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProjectYearResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsExistWell">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wellName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsExistWellResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsExistWellResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWellList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetWellListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWellListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProjectListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IsExistProjectSoapIn">
+    <wsdl:part name="parameters" element="tns:IsExistProject" />
+  </wsdl:message>
+  <wsdl:message name="IsExistProjectSoapOut">
+    <wsdl:part name="parameters" element="tns:IsExistProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectYearSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProjectYear" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectYearSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProjectYearResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsExistWellSoapIn">
+    <wsdl:part name="parameters" element="tns:IsExistWell" />
+  </wsdl:message>
+  <wsdl:message name="IsExistWellSoapOut">
+    <wsdl:part name="parameters" element="tns:IsExistWellResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWellListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWellList" />
+  </wsdl:message>
+  <wsdl:message name="GetWellListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWellListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProjectList" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProjectListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WellLogCheckSoap">
+    <wsdl:operation name="IsExistProject">
+      <wsdl:input message="tns:IsExistProjectSoapIn" />
+      <wsdl:output message="tns:IsExistProjectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectYear">
+      <wsdl:input message="tns:GetProjectYearSoapIn" />
+      <wsdl:output message="tns:GetProjectYearSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsExistWell">
+      <wsdl:input message="tns:IsExistWellSoapIn" />
+      <wsdl:output message="tns:IsExistWellSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWellList">
+      <wsdl:input message="tns:GetWellListSoapIn" />
+      <wsdl:output message="tns:GetWellListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectList">
+      <wsdl:input message="tns:GetProjectListSoapIn" />
+      <wsdl:output message="tns:GetProjectListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WellLogCheckSoap" type="tns:WellLogCheckSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IsExistProject">
+      <soap:operation soapAction="http://tempuri.org/IsExistProject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectYear">
+      <soap:operation soapAction="http://tempuri.org/GetProjectYear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsExistWell">
+      <soap:operation soapAction="http://tempuri.org/IsExistWell" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWellList">
+      <soap:operation soapAction="http://tempuri.org/GetWellList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectList">
+      <soap:operation soapAction="http://tempuri.org/GetProjectList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WellLogCheckSoap12" type="tns:WellLogCheckSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IsExistProject">
+      <soap12:operation soapAction="http://tempuri.org/IsExistProject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectYear">
+      <soap12:operation soapAction="http://tempuri.org/GetProjectYear" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsExistWell">
+      <soap12:operation soapAction="http://tempuri.org/IsExistWell" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWellList">
+      <soap12:operation soapAction="http://tempuri.org/GetWellList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectList">
+      <soap12:operation soapAction="http://tempuri.org/GetProjectList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WellLogCheck">
+    <wsdl:port name="WellLogCheckSoap" binding="tns:WellLogCheckSoap">
+      <soap:address location="http://10.89.145.37:5006/WellLogCheck.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WellLogCheckSoap12" binding="tns:WellLogCheckSoap12">
+      <soap12:address location="http://10.89.145.37:5006/WellLogCheck.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

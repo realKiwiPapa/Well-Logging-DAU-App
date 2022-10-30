@@ -1,0 +1,16 @@
+[记录时间：17:47:33.857]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00904: "C"."DOCUMENT_COMPLETION_DATE": invalid identifier
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetProcessDocument(String PROCESS_ID, Int32 filetype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3777
+
+消息：
+[记录时间：17:48:37.018]
+用户帐号:admin
+IP:127.0.0.1
+异常：System.Exception: ORA-00904: "C"."DOCUMENT_COMPLETION_DATE": invalid identifier
+   在 Maticsoft.DBUtility.DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\DBUtility\DbHelperOra.cs:行号 472
+   在 Logging_App.WebService.DataService.GetProcessDocument(String PROCESS_ID, Int32 filetype) 位置 C:\Users\Administrator\Desktop\源码\数据采集器\Logging_APP.WebService\DataService.asmx.cs:行号 3777
+
+消息：
